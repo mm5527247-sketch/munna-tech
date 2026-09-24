@@ -15,7 +15,7 @@
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+    <!-- ================= NAVBAR ================= -->
 
     <header class="navbar">
 
@@ -119,9 +119,9 @@
             <div class="cards">
 
 
-                <!-- ================= HTML ================= -->
+                <!-- HTML -->
 
-                <article id="html" class="card">
+                <article class="card">
 
                     <div class="card-icon">
                         🌐
@@ -136,16 +136,21 @@
                         Heading, paragraph, image, link এবং form তৈরি করা শিখুন।
                     </p>
 
-                    <a href="html-tutorial.html" class="learn-more">
+                    <button
+                        type="button"
+                        class="learn-more"
+                        onclick="window.location.href='html-tutorial.html'">
+
                         Learn HTML →
-                    </a>
+
+                    </button>
 
                 </article>
 
 
-                <!-- ================= CSS ================= -->
+                <!-- CSS -->
 
-                <article id="css" class="card">
+                <article class="card">
 
                     <div class="card-icon">
                         🎨
@@ -160,16 +165,21 @@
                         layout এবং responsive design তৈরি করা শিখুন।
                     </p>
 
-                    <a href="#" class="learn-more">
+                    <button
+                        type="button"
+                        class="learn-more"
+                        onclick="alert('CSS Tutorial খুব শীঘ্রই আসছে! 🚀')">
+
                         Learn CSS →
-                    </a>
+
+                    </button>
 
                 </article>
 
 
-                <!-- ================= JAVASCRIPT ================= -->
+                <!-- JAVASCRIPT -->
 
-                <article id="js" class="card">
+                <article class="card">
 
                     <div class="card-icon">
                         ⚡
@@ -184,9 +194,14 @@
                         buttons, events এবং dynamic functions তৈরি করুন।
                     </p>
 
-                    <a href="#" class="learn-more">
+                    <button
+                        type="button"
+                        class="learn-more"
+                        onclick="alert('JavaScript Tutorial খুব শীঘ্রই আসছে! 🚀')">
+
                         Learn JavaScript →
-                    </a>
+
+                    </button>
 
                 </article>
 
@@ -217,8 +232,6 @@
                 <div class="cards">
 
 
-                    <!-- PC SPEED -->
-
                     <article class="card">
 
                         <div class="card-icon">
@@ -234,14 +247,17 @@
                             পরিষ্কার করার সহজ tips জানুন।
                         </p>
 
-                        <a href="#" class="learn-more">
+                        <button
+                            type="button"
+                            class="learn-more"
+                            onclick="alert('PC Speed Tips খুব শীঘ্রই আসছে! 🚀')">
+
                             Read Tips →
-                        </a>
+
+                        </button>
 
                     </article>
 
-
-                    <!-- KEYBOARD -->
 
                     <article class="card">
 
@@ -258,14 +274,17 @@
                             শিখে কাজের গতি বাড়ান।
                         </p>
 
-                        <a href="#" class="learn-more">
+                        <button
+                            type="button"
+                            class="learn-more"
+                            onclick="alert('Keyboard Shortcuts খুব শীঘ্রই আসছে! 🚀')">
+
                             Learn Shortcuts →
-                        </a>
+
+                        </button>
 
                     </article>
 
-
-                    <!-- TOOLS -->
 
                     <article class="card">
 
@@ -282,9 +301,14 @@
                             এবং tools সম্পর্কে জানুন।
                         </p>
 
-                        <a href="#" class="learn-more">
+                        <button
+                            type="button"
+                            class="learn-more"
+                            onclick="alert('Developer Tools খুব শীঘ্রই আসছে! 🚀')">
+
                             Explore Tools →
-                        </a>
+
+                        </button>
 
                     </article>
 
@@ -301,10 +325,10 @@
 
             <div class="about-card">
 
-
                 <div class="about-image">
 
-                    <img src="profile.png"
+                    <img
+                        src="profile.png"
                         alt="Munna Profile Picture"
                         class="profile-img">
 
@@ -386,25 +410,26 @@
                         type="text"
                         name="name"
                         placeholder="আপনার নাম"
-                        required
-                    >
+                        required>
 
                     <input
                         type="email"
                         name="email"
                         placeholder="আপনার ইমেইল"
-                        required
-                    >
+                        required>
 
                     <textarea
                         name="message"
                         rows="6"
                         placeholder="আপনার বার্তা লিখুন..."
-                        required
-                    ></textarea>
+                        required></textarea>
 
-                    <button type="submit" class="btn">
+                    <button
+                        type="submit"
+                        class="btn">
+
                         Send Message →
+
                     </button>
 
                 </form>
@@ -437,21 +462,10 @@
 
             <div class="footer-links">
 
-                <a href="#home">
-                    Home
-                </a>
-
-                <a href="#tutorials">
-                    Tutorials
-                </a>
-
-                <a href="#about">
-                    About
-                </a>
-
-                <a href="#contact">
-                    Contact
-                </a>
+                <a href="#home">Home</a>
+                <a href="#tutorials">Tutorials</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
 
             </div>
 
@@ -471,8 +485,12 @@
 
     <!-- ================= DARK MODE ================= -->
 
-    <button id="theme-toggle" class="btn-theme">
+    <button
+        id="theme-toggle"
+        class="btn-theme">
+
         🌙 Dark Mode
+
     </button>
 
 
