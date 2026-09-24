@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Tutorial | Munna Tech</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .tutorial-page {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+
+        .tutorial-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .tutorial-header h1 {
+            font-size: 45px;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .lesson {
+            background: #ffffff;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 16px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+        }
+
+        .lesson h2 {
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+
+        .lesson p {
+            color: #64748b;
+        }
+
+        .code-box {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin-top: 15px;
+            font-family: Consolas, monospace;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 10px 18px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .back-button:hover {
+            background: #1d4ed8;
+        }
+
+        @media (max-width: 600px) {
+            .tutorial-header h1 {
+                font-size: 35px;
+            }
+
+            .lesson {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            <h1>Munna<span>Tech</span></h1>
+            <p>Web Development & PC Tips</p>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="html-tutorial.html">HTML</a>
+        </nav>
+
+    </header>
+
+
+    <main class="tutorial-page">
+
+        <a href="index.html" class="back-button">
+            ← Back to Home
+        </a>
+
+
+        <div class="tutorial-header">
+
+            <p class="section-tag">HTML TUTORIAL</p>
+
+            <h1>HTML শেখা শুরু করুন 🚀</h1>
+
+            <p>
+                Beginnerদের জন্য সহজভাবে HTML শেখার প্রথম ধাপ।
+            </p>
+
+        </div>
+
+
+        <section class="lesson">
+
+            <h2>Lesson 1: HTML কী?</h2>
+
+            <p>
+                HTML-এর পূর্ণরূপ হলো
+                <strong>HyperText Markup Language</strong>।
+                Website-এর structure তৈরি করতে HTML ব্যবহার করা হয়।
+            </p>
+
+        </section>
+
+
+        <section class="lesson">
+
+            <h2>Lesson 2: প্রথম HTML Code</h2>
+
+            <p>
+                নিচের code দিয়ে আপনার প্রথম HTML page তৈরি করতে পারেন:
+            </p>
+
+            <pre class="code-box"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;My Website&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+
+    &lt;p&gt;This is my first website.&lt;/p&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+        </section>
+
+
+        <section class="lesson">
+
+            <h2>Lesson 3: Heading</h2>
+
+            <p>
+                HTML-এ heading তৈরি করতে
+                <strong>h1 থেকে h6</strong> পর্যন্ত ব্যবহার করা হয়।
+            </p>
+
+            <pre class="code-box"><code>&lt;h1&gt;My Website&lt;/h1&gt;
+
+&lt;h2&gt;About Me&lt;/h2&gt;
+
+&lt;h3&gt;My Skills&lt;/h3&gt;</code></pre>
+
+        </section>
+
+
+        <section class="lesson">
+
+            <h2>Lesson 4: Paragraph</h2>
+
+            <p>
+                সাধারণ লেখা বা paragraph তৈরি করতে
+                <strong>p</strong> tag ব্যবহার করা হয়।
+            </p>
+
+            <pre class="code-box"><code>&lt;p&gt;
+আমি Web Development শিখছি।
+&lt;/p&gt;</code></pre>
+
+        </section>
+
+
+        <section class="lesson">
+
+            <h2>🎯 আজকের Practice</h2>
+
+            <p>
+                নিজের নাম দিয়ে একটি HTML page তৈরি করুন।
+                সেখানে একটি heading এবং একটি paragraph লিখুন।
+            </p>
+
+            <pre class="code-box"><code>&lt;h1&gt;My Name is Munna&lt;/h1&gt;
+
+&lt;p&gt;
+I am learning Web Development.
+&lt;/p&gt;</code></pre>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <div class="copyright">
+
+            <p>
+                © 2026 Munna Tech. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
