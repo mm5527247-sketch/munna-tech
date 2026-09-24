@@ -9,3 +9,4 @@ themeButton.addEventListener("click", function () {
         themeButton.textContent = "🌙 Dark Mode";
     }
 });
+alert("JavaScript চলছে!");
