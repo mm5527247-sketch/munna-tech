@@ -409,3 +409,19 @@ body.dark-mode p,
 body.dark-mode a {
     color: #e2e8f0;
 }
+   .whatsapp-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 12px 22px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.whatsapp-button:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+}
