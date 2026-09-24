@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const themeButton = document.getElementById("theme-toggle");
 
+    // Dark Mode
     if (themeButton) {
-
         themeButton.addEventListener("click", function () {
 
             document.body.classList.toggle("dark-mode");
@@ -15,9 +15,21 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
         });
-
     }
 
-    alert("JavaScript চলছে!");
+    // Contact Form
+    const contactForm = document.querySelector(".contact-form");
+
+    if (contactForm) {
+        contactForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            alert("আপনার মেসেজ সফলভাবে পাঠানো হয়েছে! ✅");
+
+            contactForm.reset();
+
+        });
+    }
 
 });
