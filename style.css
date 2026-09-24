@@ -378,3 +378,6 @@ body.dark-mode .card h3,
 body.dark-mode .about-content h2 {
     color: #ffffff !important;
 }
+   body.dark-mode {
+    background: black !important;
+}
