@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="bn">
 
@@ -87,53 +86,419 @@
 
 <body>
 
-    <header class="navbar">
+<header class="navbar">
 
-        <div class="logo">
-            <h1>Munna<span>Tech</span></h1>
-            <p>Web Development & PC Tips</p>
+    <div class="logo">
+        <h1>Munna<span>Tech</span></h1>
+        <p>Web Development & PC Tips</p>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="html-tutorial.html">HTML</a>
+        <a href="css-tutorial.html">CSS</a>
+    </nav>
+
+</header>
+
+<main class="tutorial-page">
+
+    <a href="index.html" class="back-button">
+        ← Back to Home
+    </a>
+
+    <div class="tutorial-header">
+
+        <p class="section-tag">
+            CSS TUTORIAL
+        </p>
+
+        <h1>
+            CSS শেখা শুরু করুন 🎨
+        </h1>
+
+        <p>
+            Beginnerদের জন্য সহজভাবে CSS শেখার সম্পূর্ণ basic tutorial।
+        </p>
+
+    </div>
+
+
+    <!-- Lesson 1 -->
+    <section class="lesson">
+        <h2>Lesson 1: CSS কী?</h2>
+
+        <p>
+            CSS-এর পূর্ণরূপ হলো
+            <strong>Cascading Style Sheets</strong>।
+            Website-এর design, color, size, spacing এবং layout
+            পরিবর্তন করতে CSS ব্যবহার করা হয়।
+        </p>
+
+        <div class="code-box">
+<pre><code>p {
+    color: blue;
+}</code></pre>
+        </div>
+    </section>
+
+
+    <!-- Lesson 2 -->
+    <section class="lesson">
+        <h2>Lesson 2: CSS Syntax</h2>
+
+        <p>
+            CSS-এর সাধারণ structure হলো selector, property এবং value।
+        </p>
+
+        <div class="code-box">
+<pre><code>h1 {
+    color: red;
+    font-size: 30px;
+}</code></pre>
         </div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="html-tutorial.html">HTML</a>
-            <a href="css-tutorial.html">CSS</a>
-        </nav>
-
-    </header>
+        <p>
+            এখানে <strong>h1</strong> হলো selector,
+            <strong>color</strong> ও <strong>font-size</strong> হলো property।
+        </p>
+    </section>
 
 
-    <main class="tutorial-page">
+    <!-- Lesson 3 -->
+    <section class="lesson">
+        <h2>Lesson 3: CSS Colors</h2>
 
-        <a href="index.html" class="back-button">
-            ← Back to Home
-        </a>
+        <p>
+            CSS দিয়ে text এবং background-এর color পরিবর্তন করা যায়।
+        </p>
+
+        <div class="code-box">
+<pre><code>h1 {
+    color: blue;
+}
+
+body {
+    background-color: lightgray;
+}</code></pre>
+        </div>
+    </section>
 
 
-        <div class="tutorial-header">
+    <!-- Lesson 4 -->
+    <section class="lesson">
+        <h2>Lesson 4: CSS Font Size</h2>
 
-            <p class="section-tag">
-                CSS TUTORIAL
-            </p>
+        <p>
+            <strong>font-size</strong> property দিয়ে লেখার size পরিবর্তন করা হয়।
+        </p>
 
-            <h1>
-                CSS শেখা শুরু করুন 🎨
-            </h1>
+        <div class="code-box">
+<pre><code>h1 {
+    font-size: 40px;
+}
 
-            <p>
-                Beginnerদের জন্য সহজভাবে CSS শেখার প্রথম ধাপ।
-            </p>
+p {
+    font-size: 18px;
+}</code></pre>
+        </div>
+    </section>
 
+
+    <!-- Lesson 5 -->
+    <section class="lesson">
+        <h2>Lesson 5: CSS Text Alignment</h2>
+
+        <p>
+            Text-এর অবস্থান পরিবর্তন করতে <strong>text-align</strong> ব্যবহার করা হয়।
+        </p>
+
+        <div class="code-box">
+<pre><code>h1 {
+    text-align: center;
+}
+
+p {
+    text-align: left;
+}</code></pre>
+        </div>
+    </section>
+
+
+    <!-- Lesson 6 -->
+    <section class="lesson">
+        <h2>Lesson 6: CSS Background</h2>
+
+        <p>
+            Element-এর background color পরিবর্তন করা যায়।
+        </p>
+
+        <div class="code-box">
+<pre><code>.box {
+    background-color: black;
+    color: white;
+}</code></pre>
+        </div>
+    </section>
+
+
+    <!-- Lesson 7 -->
+    <section class="lesson">
+        <h2>Lesson 7: CSS Border</h2>
+
+        <p>
+            Element-এর চারপাশে border তৈরি করতে <strong>border</strong> property ব্যবহার করা হয়।
+        </p>
+
+        <div class="code-box">
+<pre><code>.box {
+    border: 2px solid black;
+}</code></pre>
+        </div>
+    </section>
+
+
+    <!-- Lesson 8 -->
+    <section class="lesson">
+        <h2>Lesson 8: CSS Border Radius</h2>
+
+        <p>
+            Box-এর corner গোল করতে <strong>border-radius</strong> ব্যবহার করা হয়।
+        </p>
+
+        <div class="code-box">
+<pre><code>.box {
+    border-radius: 10px;
+}</code></pre>
+        </div>
+    </section>
+
+
+    <!-- Lesson 9 -->
+    <section class="lesson">
+        <h2>Lesson 9: CSS Padding</h2>
+
+        <p>
+            Element-এর ভিতরের space নিয়ন্ত্রণ করতে padding ব্যবহার করা হয়।
+        </p>
+
+        <div class="code-box">
+<pre><code>.box {
+    padding: 20px;
+}</code></pre>
+        </div>
+    </section>
+
+
+    <!-- Lesson 10 -->
+    <section class="lesson">
+        <h2>Lesson 10: CSS Margin</h2>
+
+        <p>
+            একটি element থেকে অন্য element-এর বাইরের distance নিয়ন্ত্রণ করতে margin ব্যবহার করা হয়।
+        </p>
+
+        <div class="code-box">
+<pre><code>.box {
+    margin: 20px;
+}</code></pre>
+        </div>
+    </section>
+
+
+    <!-- Lesson 11 -->
+    <section class="lesson">
+        <h2>Lesson 11: CSS Width & Height</h2>
+
+        <p>
+            Element-এর width এবং height নির্ধারণ করা যায়।
+        </p>
+
+        <div class="code-box">
+<pre><code>.box {
+    width: 300px;
+    height: 150px;
+}</code></pre>
+        </div>
+    </section>
+
+
+    <!-- Lesson 12 -->
+    <section class="lesson">
+        <h2>Lesson 12: CSS Fonts</h2>
+
+        <p>
+            CSS দিয়ে font family এবং font weight পরিবর্তন করা যায়।
+        </p>
+
+        <div class="code-box">
+<pre><code>body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+}</code></pre>
+        </div>
+    </section>
+
+
+    <!-- Lesson 13 -->
+    <section class="lesson">
+        <h2>Lesson 13: CSS Box Shadow</h2>
+
+        <p>
+            Box-এর চারপাশে shadow তৈরি করতে <strong>box-shadow</strong> ব্যবহার করা হয়।
+        </p>
+
+        <div class="code-box">
+<pre><code>.card {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}</code></pre>
+        </div>
+    </section>
+
+
+    <!-- Lesson 14 -->
+    <section class="lesson">
+        <h2>Lesson 14: CSS Display</h2>
+
+        <p>
+            Element কীভাবে display হবে তা নিয়ন্ত্রণ করতে display property ব্যবহার করা হয়।
+        </p>
+
+        <div class="code-box">
+<pre><code>.box {
+    display: block;
+}
+
+.button {
+    display: inline-block;
+}</code></pre>
+        </div>
+    </section>
+
+
+    <!-- Lesson 15 -->
+    <section class="lesson">
+        <h2>Lesson 15: CSS Flexbox</h2>
+
+        <p>
+            Flexbox ব্যবহার করে element-গুলোকে সহজে row বা column আকারে সাজানো যায়।
+        </p>
+
+        <div class="code-box">
+<pre><code>.container {
+    display: flex;
+    gap: 20px;
+}</code></pre>
+        </div>
+    </section>
+
+
+    <!-- Lesson 16 -->
+    <section class="lesson">
+        <h2>Lesson 16: CSS Justify Content</h2>
+
+        <p>
+            Flexbox-এর ভিতরের element-এর horizontal position নিয়ন্ত্রণ করতে justify-content ব্যবহার করা হয়।
+        </p>
+
+        <div class="code-box">
+<pre><code>.container {
+    display: flex;
+    justify-content: center;
+}</code></pre>
+        </div>
+    </section>
+
+
+    <!-- Lesson 17 -->
+    <section class="lesson">
+        <h2>Lesson 17: CSS Align Items</h2>
+
+        <p>
+            Flexbox-এর element vertical direction-এ align করতে align-items ব্যবহার করা হয়।
+        </p>
+
+        <div class="code-box">
+<pre><code>.container {
+    display: flex;
+    align-items: center;
+}</code></pre>
+        </div>
+    </section>
+
+
+    <!-- Lesson 18 -->
+    <section class="lesson">
+        <h2>Lesson 18: CSS Hover</h2>
+
+        <p>
+            Mouse কোনো element-এর উপর নিলে তার style পরিবর্তন করতে :hover ব্যবহার করা হয়।
+        </p>
+
+        <div class="code-box">
+<pre><code>button:hover {
+    transform: translateY(-2px);
+}</code></pre>
+        </div>
+    </section>
+
+
+    <!-- Lesson 19 -->
+    <section class="lesson">
+        <h2>Lesson 19: CSS Responsive Design</h2>
+
+        <p>
+            বিভিন্ন screen size-এর জন্য website responsive করতে media query ব্যবহার করা হয়।
+        </p>
+
+        <div class="code-box">
+<pre><code>@media (max-width: 600px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+}</code></pre>
+        </div>
+    </section>
+
+
+    <!-- Lesson 20 -->
+    <section class="lesson">
+        <h2>Lesson 20: Complete CSS Example</h2>
+
+        <p>
+            এখন HTML element-এর সাথে CSS একসাথে ব্যবহার করি।
+        </p>
+
+        <div class="code-box">
+<pre><code>.card {
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    color: blue;
+}
+
+.card p {
+    color: gray;
+}</code></pre>
         </div>
 
+        <p>
+            🎉 Congratulations! আপনি CSS-এর গুরুত্বপূর্ণ basic concepts শেষ করেছেন।
+            এখন JavaScript শিখলে website-এ interaction এবং functionality যোগ করতে পারবেন।
+        </p>
+    </section>
 
-        <section class="lesson">
+</main>
 
-            <h2>Lesson 1: CSS কী?</h2>
-
-            <p>
-                CSS-এর পূর্ণরূপ হলো
-                <strong>Cascading Style Sheets</strong>।
-                Website-এর design, color, size, spacing এবং layout
-                পরিবর্তন করতে CSS ব্যবহার করা
-```
+</body>
+</html>
