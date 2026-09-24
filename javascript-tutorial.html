@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="bn">
 
@@ -7,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>JavaScript Tutorial | Munna Tech</title>
+
+    <meta name="description"
+        content="Munna Tech JavaScript Tutorial - Beginnerদের জন্য সহজ JavaScript শেখার সম্পূর্ণ গাইড।">
 
     <link rel="stylesheet" href="style.css">
 
@@ -26,6 +28,10 @@
             font-size: 45px;
             color: #2563eb;
             margin-bottom: 10px;
+        }
+
+        .tutorial-header p {
+            line-height: 1.8;
         }
 
         .lesson {
@@ -55,6 +61,7 @@
             overflow-x: auto;
             margin-top: 15px;
             font-family: Consolas, monospace;
+            line-height: 1.7;
         }
 
         .back-button {
@@ -72,6 +79,10 @@
             background: #1d4ed8;
         }
 
+        .practice {
+            border: 2px solid #2563eb;
+        }
+
         @media (max-width: 600px) {
             .tutorial-header h1 {
                 font-size: 35px;
@@ -86,6 +97,8 @@
 </head>
 
 <body>
+
+    <!-- Navbar -->
 
     <header class="navbar">
 
@@ -111,6 +124,8 @@
         </a>
 
 
+        <!-- Header -->
+
         <div class="tutorial-header">
 
             <p class="section-tag">
@@ -122,11 +137,13 @@
             </h1>
 
             <p>
-                Beginnerদের জন্য সহজভাবে JavaScript শেখার প্রথম ধাপ।
+                Beginnerদের জন্য সহজভাবে JavaScript শেখার সম্পূর্ণ গাইড।
             </p>
 
         </div>
 
+
+        <!-- Lesson 1 -->
 
         <section class="lesson">
 
@@ -137,15 +154,19 @@
                 এটি website-কে interactive এবং dynamic করতে ব্যবহার করা হয়।
             </p>
 
+            <pre class="code-box"><code>JavaScript = Website-এর আচরণ নিয়ন্ত্রণ করা</code></pre>
+
         </section>
 
+
+        <!-- Lesson 2 -->
 
         <section class="lesson">
 
             <h2>Lesson 2: প্রথম JavaScript Code</h2>
 
             <p>
-                নিচের code দিয়ে JavaScript-এর একটি simple message দেখানো যায়:
+                console.log() ব্যবহার করে browser console-এ message দেখানো যায়।
             </p>
 
             <pre class="code-box"><code>console.log("Hello Munna Tech!");</code></pre>
@@ -153,12 +174,14 @@
         </section>
 
 
+        <!-- Lesson 3 -->
+
         <section class="lesson">
 
             <h2>Lesson 3: Button Click</h2>
 
             <p>
-                JavaScript দিয়ে button click করলে কোনো কাজ করানো যায়।
+                JavaScript দিয়ে button click করলে কোনো action করানো যায়।
             </p>
 
             <pre class="code-box"><code>&lt;button onclick="showMessage()"&gt;
@@ -176,12 +199,14 @@ function showMessage() {
         </section>
 
 
+        <!-- Lesson 4 -->
+
         <section class="lesson">
 
             <h2>Lesson 4: Variable</h2>
 
             <p>
-                কোনো তথ্য সংরক্ষণ করার জন্য JavaScript-এ variable ব্যবহার করা হয়।
+                কোনো তথ্য সংরক্ষণ করার জন্য variable ব্যবহার করা হয়।
             </p>
 
             <pre class="code-box"><code>let name = "Munna";
@@ -191,12 +216,14 @@ console.log(name);</code></pre>
         </section>
 
 
+        <!-- Lesson 5 -->
+
         <section class="lesson">
 
             <h2>Lesson 5: Simple Calculation</h2>
 
             <p>
-                JavaScript দিয়ে সহজ mathematical calculation করা যায়।
+                JavaScript দিয়ে mathematical calculation করা যায়।
             </p>
 
             <pre class="code-box"><code>let a = 10;
@@ -209,23 +236,367 @@ console.log(result);</code></pre>
         </section>
 
 
+        <!-- Lesson 6 -->
+
         <section class="lesson">
 
-            <h2>🎯 আজকের Practice</h2>
+            <h2>Lesson 6: Data Types</h2>
 
             <p>
-                একটি button তৈরি করুন। Button-এ click করলে
-                আপনার নাম দেখাবে।
+                JavaScript-এ বিভিন্ন ধরনের data রাখা যায়।
+                যেমন String, Number এবং Boolean।
             </p>
 
-            <pre class="code-box"><code>&lt;button onclick="showName()"&gt;
+            <pre class="code-box"><code>let name = "Munna";
+let age = 20;
+let student = true;
+
+console.log(name);
+console.log(age);
+console.log(student);</code></pre>
+
+        </section>
+
+
+        <!-- Lesson 7 -->
+
+        <section class="lesson">
+
+            <h2>Lesson 7: if Statement</h2>
+
+            <p>
+                কোনো condition সত্য হলে নির্দিষ্ট code চালানোর জন্য if ব্যবহার করা হয়।
+            </p>
+
+            <pre class="code-box"><code>let age = 20;
+
+if (age >= 18) {
+    console.log("You are an adult");
+}</code></pre>
+
+        </section>
+
+
+        <!-- Lesson 8 -->
+
+        <section class="lesson">
+
+            <h2>Lesson 8: if...else</h2>
+
+            <p>
+                Condition সত্য বা মিথ্যা অনুযায়ী দুই ধরনের কাজ করাতে if...else ব্যবহার করা হয়।
+            </p>
+
+            <pre class="code-box"><code>let age = 16;
+
+if (age >= 18) {
+    console.log("Adult");
+} else {
+    console.log("Not Adult");
+}</code></pre>
+
+        </section>
+
+
+        <!-- Lesson 9 -->
+
+        <section class="lesson">
+
+            <h2>Lesson 9: Function</h2>
+
+            <p>
+                একই কাজ বারবার করার প্রয়োজন হলে function তৈরি করা যায়।
+            </p>
+
+            <pre class="code-box"><code>function sayHello() {
+    console.log("Hello Munna!");
+}
+
+sayHello();</code></pre>
+
+        </section>
+
+
+        <!-- Lesson 10 -->
+
+        <section class="lesson">
+
+            <h2>Lesson 10: Function Parameter</h2>
+
+            <p>
+                Function-এর মধ্যে data পাঠানোর জন্য parameter ব্যবহার করা হয়।
+            </p>
+
+            <pre class="code-box"><code>function greet(name) {
+    console.log("Hello " + name);
+}
+
+greet("Munna");</code></pre>
+
+        </section>
+
+
+        <!-- Lesson 11 -->
+
+        <section class="lesson">
+
+            <h2>Lesson 11: Array</h2>
+
+            <p>
+                একাধিক value একসাথে রাখার জন্য Array ব্যবহার করা হয়।
+            </p>
+
+            <pre class="code-box"><code>let fruits = ["Apple", "Mango", "Banana"];
+
+console.log(fruits);</code></pre>
+
+        </section>
+
+
+        <!-- Lesson 12 -->
+
+        <section class="lesson">
+
+            <h2>Lesson 12: Array থেকে Data নেওয়া</h2>
+
+            <p>
+                Array-এর নির্দিষ্ট item নিতে index ব্যবহার করা হয়।
+                Index 0 থেকে শুরু হয়।
+            </p>
+
+            <pre class="code-box"><code>let fruits = ["Apple", "Mango", "Banana"];
+
+console.log(fruits[0]);
+console.log(fruits[1]);</code></pre>
+
+        </section>
+
+
+        <!-- Lesson 13 -->
+
+        <section class="lesson">
+
+            <h2>Lesson 13: for Loop</h2>
+
+            <p>
+                একই কাজ বারবার করার জন্য loop ব্যবহার করা হয়।
+            </p>
+
+            <pre class="code-box"><code>for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}</code></pre>
+
+        </section>
+
+
+        <!-- Lesson 14 -->
+
+        <section class="lesson">
+
+            <h2>Lesson 14: Object</h2>
+
+            <p>
+                একজন ব্যক্তি বা কোনো বিষয় সম্পর্কিত একাধিক information রাখার জন্য Object ব্যবহার করা যায়।
+            </p>
+
+            <pre class="code-box"><code>let user = {
+    name: "Munna",
+    age: 20,
+    city: "Dhaka"
+};
+
+console.log(user.name);
+console.log(user.age);</code></pre>
+
+        </section>
+
+
+        <!-- Lesson 15 -->
+
+        <section class="lesson">
+
+            <h2>Lesson 15: DOM কী?</h2>
+
+            <p>
+                DOM-এর মাধ্যমে JavaScript দিয়ে HTML element পরিবর্তন করা যায়।
+            </p>
+
+            <pre class="code-box"><code>&lt;h1 id="title"&gt;Hello&lt;/h1&gt;
+
+&lt;script&gt;
+
+document.getElementById("title").innerText = "Munna Tech";
+
+&lt;/script&gt;</code></pre>
+
+        </section>
+
+
+        <!-- Lesson 16 -->
+
+        <section class="lesson">
+
+            <h2>Lesson 16: HTML Element Change</h2>
+
+            <p>
+                JavaScript দিয়ে HTML element-এর text পরিবর্তন করা যায়।
+            </p>
+
+            <pre class="code-box"><code>&lt;p id="message"&gt;Old Text&lt;/p&gt;
+
+&lt;script&gt;
+
+document.getElementById("message").innerText =
+    "New Text";
+
+&lt;/script&gt;</code></pre>
+
+        </section>
+
+
+        <!-- Lesson 17 -->
+
+        <section class="lesson">
+
+            <h2>Lesson 17: CSS Change</h2>
+
+            <p>
+                JavaScript দিয়ে HTML element-এর CSS style পরিবর্তন করা যায়।
+            </p>
+
+            <pre class="code-box"><code>&lt;h1 id="title"&gt;Munna Tech&lt;/h1&gt;
+
+&lt;script&gt;
+
+document.getElementById("title").style.color = "blue";
+
+&lt;/script&gt;</code></pre>
+
+        </section>
+
+
+        <!-- Lesson 18 -->
+
+        <section class="lesson">
+
+            <h2>Lesson 18: Event Listener</h2>
+
+            <p>
+                addEventListener() ব্যবহার করে কোনো event-এর পরে JavaScript code চালানো যায়।
+            </p>
+
+            <pre class="code-box"><code>&lt;button id="btn"&gt;
     Click Me
 &lt;/button&gt;
 
 &lt;script&gt;
 
+document.getElementById("btn")
+.addEventListener("click", function() {
+
+    alert("Button Clicked!");
+
+});</code></pre>
+
+        </section>
+
+
+        <!-- Lesson 19 -->
+
+        <section class="lesson">
+
+            <h2>Lesson 19: Input থেকে Data নেওয়া</h2>
+
+            <p>
+                User-এর input নেওয়া এবং JavaScript দিয়ে সেটি ব্যবহার করা যায়।
+            </p>
+
+            <pre class="code-box"><code>&lt;input id="name" placeholder="Your Name"&gt;
+
+&lt;button onclick="showName()"&gt;
+    Submit
+&lt;/button&gt;
+
+&lt;script&gt;
+
 function showName() {
-    alert("My name is Munna");
+
+    let name =
+        document.getElementById("name").value;
+
+    alert("Hello " + name);
+
+}
+
+&lt;/script&gt;</code></pre>
+
+        </section>
+
+
+        <!-- Lesson 20 -->
+
+        <section class="lesson">
+
+            <h2>Lesson 20: Complete JavaScript Example 🚀</h2>
+
+            <p>
+                এবার HTML এবং JavaScript একসাথে ব্যবহার করে একটি ছোট project তৈরি করি।
+            </p>
+
+            <pre class="code-box"><code>&lt;h2 id="title"&gt;My Website&lt;/h2&gt;
+
+&lt;button onclick="changeText()"&gt;
+    Change Text
+&lt;/button&gt;
+
+&lt;script&gt;
+
+function changeText() {
+
+    document.getElementById("title").innerText =
+        "Welcome to Munna Tech!";
+
+}
+
+&lt;/script&gt;</code></pre>
+
+        </section>
+
+
+        <!-- Practice -->
+
+        <section class="lesson practice">
+
+            <h2>🎯 Final Practice</h2>
+
+            <p>
+                নিজে একটি ছোট JavaScript project তৈরি করুন।
+            </p>
+
+            <p>
+                Project-এ একটি input box এবং একটি button থাকবে।
+                User নিজের নাম লিখবে এবং button click করলে
+                তার নাম screen-এ দেখাবে।
+            </p>
+
+            <pre class="code-box"><code>&lt;input id="name" placeholder="Enter your name"&gt;
+
+&lt;button onclick="showName()"&gt;
+    Show Name
+&lt;/button&gt;
+
+&lt;p id="result"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+
+function showName() {
+
+    let name =
+        document.getElementById("name").value;
+
+    document.getElementById("result").innerText =
+        "Hello " + name + "!";
+
 }
 
 &lt;/script&gt;</code></pre>
@@ -235,6 +606,8 @@ function showName() {
 
     </main>
 
+
+    <!-- Footer -->
 
     <footer>
 
@@ -254,4 +627,3 @@ function showName() {
 </body>
 
 </html>
-```
