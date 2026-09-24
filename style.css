@@ -1243,3 +1243,128 @@ body.dark-mode footer {
         margin-bottom: 30px;
     }
 }
+/* ================= ABOUT ME - PROFESSIONAL ================= */
+
+.about-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.about-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 45px;
+    border-radius: 25px;
+}
+
+/* Profile Picture Center */
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.profile-img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    border: 5px solid #2563eb;
+    box-shadow: 0 12px 35px rgba(37, 99, 235, 0.25);
+}
+
+/* About Text */
+.about-content {
+    max-width: 650px;
+}
+
+.about-content h2 {
+    margin-bottom: 18px;
+}
+
+.about-content p {
+    line-height: 1.8;
+}
+
+
+/* Social Buttons */
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+
+/* Facebook */
+
+.facebook-link {
+    background: #1877f2;
+    color: white !important;
+}
+
+.facebook-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(24, 119, 242, 0.35);
+}
+
+
+/* Instagram */
+
+.instagram-link {
+    background: linear-gradient(
+        135deg,
+        #833ab4,
+        #fd1d1d,
+        #fcb045
+    );
+    color: white !important;
+}
+
+.instagram-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(225, 48, 108, 0.35);
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .about-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .profile-img {
+        width: 160px;
+        height: 160px;
+    }
+
+}
