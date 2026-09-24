@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munna Tech - Web Development & PC Tips</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>Munna Tech</h1>
+            <p>Web Development & PC Tips</p>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#html">HTML</a>
+            <a href="#css">CSS</a>
+            <a href="#js">JavaScript</a>
+            <a href="#pc-tips">PC Tips</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="home" class="hero">
+        <h2>Learn Web Development</h2>
+        <p>সহজভাবে Web Development শিখুন</p>
+        <a href="#html" class="btn">টিউটোরিয়াল শুরু করুন</a>
+    </section>
+
+    <!-- Content Cards Container -->
+    <main class="container">
+
+        <div class="card">
+            <h2>Web Development কী?</h2>
+            <p>Web Development হলো website তৈরি ও উন্নত করার প্রক্রিয়া। HTML দিয়ে structure, CSS দিয়ে design এবং JavaScript দিয়ে interactive features তৈরি করা যায়।</p>
+        </div>
+
+        <div id="html" class="card">
+            <h2>HTML কী?</h2>
+            <p>HTML (HyperText Markup Language) দিয়ে website-এর মূল structure তৈরি করা হয়। Heading, paragraph, image, link এবং form তৈরি করতে HTML ব্যবহার করা হয়।</p>
+        </div>
+
+        <div id="css" class="card">
+            <h2>CSS কী?</h2>
+            <p>CSS (Cascading Style Sheets) দিয়ে website-এর design সুন্দর করা হয়। Color, size, spacing এবং layout CSS দিয়ে পরিবর্তন করা যায়।</p>
+        </div>
+
+        <div id="js" class="card">
+            <h2>JavaScript কী?</h2>
+            <p>JavaScript একটি প্রোগ্রামিং ল্যাঙ্গুয়েজ যা ওয়েবসাইটকে ডাইনামিক ও ইন্টারঅ্যাক্টিভ করে তোলে। এর মাধ্যমে ক্লিক ইভেন্ট, পপ-আপ, এবং ডাটা প্রসেসিং এর কাজ করা হয়।</p>
+        </div>
+
+        <div id="pc-tips" class="card">
+            <h2>PC Tips & Tricks</h2>
+            <p>আপনার পিসি ফাস্ট রাখা, প্রয়োজনীয় শর্টকাট কি (Shortcuts) জানা এবং ডেভেলপমেন্টের জন্য সেরা সফটওয়্যার সেটআপ করার টিপস জানতে আমাদের সাথে থাকুন।</p>
+        </div>
+
+        <!-- About Section -->
+        <div class="card about-card">
+            <h2>আমার সম্পর্কে</h2>
+            <div class="about-content">
+                <img src="profile.png" alt="Munna Profile Picture" class="profile-img">
+                <div>
+                    <p>আমার নাম Munna। আমি Web Development শিখছি। আমার লক্ষ্য একজন professional web developer হওয়া।</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank">Facebook</a>
+                        <a href="#" target="_blank">GitHub</a>
+                        <a href="#" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="card">
+            <h2>যোগাযোগ করুন</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="আপনার নাম" required>
+                <input type="email" placeholder="আপনার ইমেইল" required>
+                <textarea rows="4" placeholder="আপনার বার্তা বা প্রশ্ন লিখুন..." required></textarea>
+                <button type="submit" class="btn">মেসেজ পাঠান</button>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Munna Tech. All Rights Reserved.</p>
+    </footer>
+   
+    <button id="theme-toggle" class="btn-theme">🌙 Dark Mode</button>
+    <script src="script.js"></script>
+</body>
+</html>
