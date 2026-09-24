@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,131 +8,243 @@
     <title>CSS কী? Beginner Guide | Munna Tech</title>
 
     <meta name="description"
-        content="CSS কী এবং HTML website-কে সুন্দর করার জন্য CSS কীভাবে ব্যবহার করবেন। Beginner guide।">
-
-    <meta name="keywords"
-        content="CSS tutorial Bangla, CSS beginner, learn CSS, web design, Munna Tech">
-
-    <meta name="author" content="Munna Tech">
+        content="CSS কী, CSS কেন শেখা দরকার এবং কীভাবে CSS দিয়ে website design শুরু করবেন—সহজ Beginner Guide।">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <h1>Munna Tech</h1>
-    <p>Web Development & PC Tips</p>
-</header>
+    <!-- NAVBAR -->
 
-<main class="article-container">
+    <header class="navbar">
 
-<article>
+        <h1>Munna Tech</h1>
 
-<h1>CSS কী? Beginner-এর জন্য সহজ গাইড</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#tutorials">Tutorials</a>
+            <a href="index.html#articles">Articles</a>
+            <a href="pc-tips.html">PC Tips</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
 
-<p>
-CSS ব্যবহার করে HTML webpage-এর design এবং appearance পরিবর্তন করা হয়।
-Color, font, spacing, size এবং layout পরিবর্তন করতে CSS ব্যবহার করা যায়।
-</p>
+    </header>
 
-<h2>CSS-এর পূর্ণরূপ কী?</h2>
 
-<p>
-CSS-এর পূর্ণরূপ হলো <strong>Cascading Style Sheets</strong>।
-</p>
+    <!-- ARTICLE -->
 
-<h2>CSS কেন প্রয়োজন?</h2>
+    <main class="container article-page">
 
-<p>
-শুধু HTML ব্যবহার করলে webpage-এর structure তৈরি হয়।
-CSS ব্যবহার করলে সেই webpage আরও সুন্দর এবং user-friendly করা যায়।
-</p>
+        <article class="article-card">
 
-<h2>Basic CSS Example</h2>
+            <p class="section-tag">WEB DEVELOPMENT</p>
 
-<pre><code>
-h1 {
+            <h2>CSS কী? Beginner Guide</h2>
+
+            <p class="article-intro">
+                HTML দিয়ে website-এর structure তৈরি করার পর
+                website সুন্দর ও professional করার জন্য CSS শেখা প্রয়োজন।
+                এই guide-এ সহজভাবে CSS সম্পর্কে জানব।
+            </p>
+
+
+            <h3>CSS কী?</h3>
+
+            <p>
+                CSS-এর পূর্ণরূপ হলো
+                <strong>Cascading Style Sheets</strong>।
+            </p>
+
+            <p>
+                CSS ব্যবহার করে website-এর color, font, size,
+                spacing, layout এবং responsive design তৈরি করা যায়।
+            </p>
+
+
+            <h3>CSS কেন ব্যবহার করা হয়?</h3>
+
+            <p>
+                শুধু HTML ব্যবহার করলে website সাধারণ দেখতে হতে পারে।
+                CSS ব্যবহার করে website-এর design সুন্দর করা যায়।
+            </p>
+
+
+            <h3>CSS-এর Basic Syntax</h3>
+
+            <pre><code>p {
     color: blue;
-    font-size: 40px;
-}
-</code></pre>
+    font-size: 18px;
+}</code></pre>
 
-<h2>Color পরিবর্তন</h2>
 
-<pre><code>
-p {
-    color: green;
-}
-</code></pre>
+            <h3>Text Color পরিবর্তন</h3>
 
-<h2>Font Size পরিবর্তন</h2>
+            <p>
+                <strong>color</strong> property ব্যবহার করে text-এর color
+                পরিবর্তন করা যায়।
+            </p>
 
-<pre><code>
-p {
-    font-size: 20px;
-}
-</code></pre>
+            <pre><code>h1 {
+    color: blue;
+}</code></pre>
 
-<h2>Background Color</h2>
 
-<pre><code>
-body {
+            <h3>Background Color</h3>
+
+            <p>
+                <strong>background-color</strong> ব্যবহার করে কোনো element-এর
+                background color পরিবর্তন করা যায়।
+            </p>
+
+            <pre><code>body {
     background-color: lightgray;
-}
-</code></pre>
+}</code></pre>
 
-<h2>Text Alignment</h2>
 
-<pre><code>
-h1 {
+            <h3>Font Size</h3>
+
+            <p>
+                Text-এর আকার পরিবর্তনের জন্য
+                <strong>font-size</strong> ব্যবহার করা হয়।
+            </p>
+
+            <pre><code>p {
+    font-size: 18px;
+}</code></pre>
+
+
+            <h3>Text Alignment</h3>
+
+            <p>
+                Text কোথায় থাকবে তা নির্ধারণ করতে
+                <strong>text-align</strong> ব্যবহার করা হয়।
+            </p>
+
+            <pre><code>h1 {
     text-align: center;
-}
-</code></pre>
+}</code></pre>
 
-<h2>Padding কী?</h2>
 
-<p>
-Element-এর ভিতরের space তৈরি করতে padding ব্যবহার করা হয়।
-</p>
+            <h3>Margin এবং Padding</h3>
 
-<pre><code>
-.box {
-    padding: 20px;
-}
-</code></pre>
+            <p>
+                Element-এর বাইরের space-এর জন্য
+                <strong>margin</strong> এবং ভেতরের space-এর জন্য
+                <strong>padding</strong> ব্যবহার করা হয়।
+            </p>
 
-<h2>Margin কী?</h2>
-
-<p>
-একটি element-এর বাইরে space তৈরি করতে margin ব্যবহার করা হয়।
-</p>
-
-<pre><code>
-.box {
+            <pre><code>.box {
     margin: 20px;
-}
-</code></pre>
+    padding: 20px;
+}</code></pre>
 
-<h2>CSS শেখার পর কী করবেন?</h2>
 
-<p>
-CSS-এর basic শেখার পরে Flexbox, Grid এবং Responsive Design শেখা গুরুত্বপূর্ণ।
-</p>
+            <h3>Border তৈরি করা</h3>
 
-<h2>শেষ কথা</h2>
+            <p>
+                কোনো element-এর চারপাশে border দেওয়ার জন্য
+                <strong>border</strong> property ব্যবহার করা হয়।
+            </p>
 
-<p>
-HTML এবং CSS একসাথে practice করলে webpage design করা অনেক সহজ হয়ে যায়।
-</p>
+            <pre><code>.box {
+    border: 1px solid black;
+}</code></pre>
 
-</article>
 
-</main>
+            <h3>CSS দিয়ে Button Design</h3>
 
-<footer>
-<p>© 2026 Munna Tech. All Rights Reserved.</p>
-</footer>
+            <pre><code>.btn {
+    background: blue;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+}</code></pre>
+
+
+            <h3>Responsive Design</h3>
+
+            <p>
+                Responsive design ব্যবহার করলে website
+                computer, tablet এবং mobile screen-এ সুন্দরভাবে দেখা যায়।
+            </p>
+
+            <pre><code>@media (max-width: 768px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+}</code></pre>
+
+
+            <h3>CSS শেখার পর কী শিখবেন?</h3>
+
+            <p>
+                HTML এবং CSS-এর basic শেখার পর
+                <strong>JavaScript</strong> শেখা শুরু করুন।
+            </p>
+
+            <p>
+                JavaScript ব্যবহার করে website-এ interactive
+                features এবং বিভিন্ন functionality যোগ করা যায়।
+            </p>
+
+
+            <!-- TIP -->
+
+            <div class="article-tip">
+
+                <h3>💡 Beginner Tip</h3>
+
+                <p>
+                    CSS শেখার সবচেয়ে ভালো উপায় হলো নিজে হাতে practice করা।
+                    একটি ছোট HTML page তৈরি করে প্রতিদিন নতুন CSS property
+                    ব্যবহার করে দেখুন।
+                </p>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="article-buttons">
+
+                <a href="index.html#articles" class="btn">
+                    ← Articles-এ ফিরে যান
+                </a>
+
+                <a href="css-tutorial.html" class="btn">
+                    CSS Tutorial →
+                </a>
+
+            </div>
+
+        </article>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Munna Tech. All Rights Reserved.
+        </p>
+
+        <p>
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
