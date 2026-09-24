@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,139 +8,231 @@
     <title>JavaScript কী? Beginner Guide | Munna Tech</title>
 
     <meta name="description"
-        content="JavaScript কী, কীভাবে কাজ করে এবং beginner হিসেবে JavaScript শেখা কীভাবে শুরু করবেন।">
-
-    <meta name="keywords"
-        content="JavaScript tutorial Bangla, JavaScript beginner, learn JavaScript, web development, Munna Tech">
-
-    <meta name="author" content="Munna Tech">
+        content="JavaScript কী, JavaScript কেন শেখা দরকার এবং কীভাবে JavaScript শেখা শুরু করবেন—সহজ Beginner Guide।">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <h1>Munna Tech</h1>
-    <p>Web Development & PC Tips</p>
-</header>
+    <!-- NAVBAR -->
 
-<main class="article-container">
+    <header class="navbar">
 
-<article>
+        <h1>Munna Tech</h1>
 
-<h1>JavaScript কী? Beginner-এর জন্য সহজ গাইড</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#tutorials">Tutorials</a>
+            <a href="index.html#articles">Articles</a>
+            <a href="pc-tips.html">PC Tips</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
 
-<p>
-JavaScript একটি programming language যা webpage-কে interactive এবং dynamic করতে ব্যবহার করা হয়।
-</p>
+    </header>
 
-<h2>JavaScript দিয়ে কী করা যায়?</h2>
 
-<p>
-JavaScript ব্যবহার করে button click-এর কাজ,
-form validation, calculation, interactive menu এবং
-অনেক ধরনের dynamic feature তৈরি করা যায়।
-</p>
+    <!-- ARTICLE -->
 
-<h2>প্রথম JavaScript Code</h2>
+    <main class="container article-page">
 
-<pre><code>
-console.log("Hello World");
-</code></pre>
+        <article class="article-card">
 
-<p>
-এই code browser-এর Developer Tools-এর Console-এ message দেখাতে পারে।
-</p>
+            <p class="section-tag">WEB DEVELOPMENT</p>
 
-<h2>Variable</h2>
+            <h2>JavaScript কী? Beginner Guide</h2>
 
-<p>
-Data সংরক্ষণ করার জন্য variable ব্যবহার করা হয়।
-</p>
+            <p class="article-intro">
+                HTML website-এর structure তৈরি করে এবং CSS website-এর design করে।
+                JavaScript ব্যবহার করে website-এ interaction এবং functionality
+                যোগ করা যায়।
+            </p>
 
-<pre><code>
-let name = "Munna";
 
-console.log(name);
-</code></pre>
+            <h3>JavaScript কী?</h3>
 
-<h2>Calculation</h2>
+            <p>
+                JavaScript হলো একটি জনপ্রিয় programming language,
+                যা web page-কে interactive এবং dynamic করতে ব্যবহার করা হয়।
+            </p>
 
-<pre><code>
-let a = 10;
-let b = 5;
+
+            <h3>JavaScript দিয়ে কী করা যায়?</h3>
+
+            <p>
+                JavaScript ব্যবহার করে button click, menu, form validation,
+                calculator, image slider এবং আরও অনেক interactive feature
+                তৈরি করা যায়।
+            </p>
+
+
+            <h3>JavaScript কীভাবে HTML-এর সাথে ব্যবহার করবেন?</h3>
+
+            <p>
+                HTML-এর ভিতরে <strong>script</strong> tag ব্যবহার করে
+                JavaScript code লেখা যায়।
+            </p>
+
+            <pre><code>&lt;script&gt;
+
+    alert("Hello World!");
+
+&lt;/script&gt;</code></pre>
+
+
+            <h3>Variable</h3>
+
+            <p>
+                Data সংরক্ষণ করার জন্য JavaScript-এ variable ব্যবহার করা হয়।
+            </p>
+
+            <pre><code>let name = "Munna";
+
+console.log(name);</code></pre>
+
+
+            <h3>Numbers</h3>
+
+            <p>
+                JavaScript দিয়ে number নিয়ে calculation করা যায়।
+            </p>
+
+            <pre><code>let a = 10;
+let b = 20;
 
 let result = a + b;
 
-console.log(result);
-</code></pre>
+console.log(result);</code></pre>
 
-<h2>if Statement</h2>
 
-<pre><code>
-let age = 20;
+            <h3>Function</h3>
+
+            <p>
+                একই ধরনের কাজ বারবার করার প্রয়োজন হলে function ব্যবহার করা যায়।
+            </p>
+
+            <pre><code>function greet() {
+
+    console.log("Hello!");
+
+}
+
+greet();</code></pre>
+
+
+            <h3>Button Click</h3>
+
+            <p>
+                JavaScript ব্যবহার করে button click করলে কোনো action
+                চালানো যায়।
+            </p>
+
+            <pre><code>&lt;button onclick="showMessage()"&gt;
+    Click Me
+&lt;/button&gt;
+
+&lt;script&gt;
+
+function showMessage() {
+
+    alert("Button clicked!");
+
+}
+
+&lt;/script&gt;</code></pre>
+
+
+            <h3>Condition</h3>
+
+            <p>
+                কোনো condition সত্য বা মিথ্যা অনুযায়ী আলাদা কাজ করার জন্য
+                <strong>if</strong> ব্যবহার করা হয়।
+            </p>
+
+            <pre><code>let age = 20;
 
 if (age >= 18) {
+
     console.log("Adult");
-}
-</code></pre>
 
-<h2>Function</h2>
+}</code></pre>
 
-<p>
-একই ধরনের কাজ বারবার করার প্রয়োজন হলে function ব্যবহার করা যায়।
-</p>
 
-<pre><code>
-function greet() {
-    console.log("Hello Munna Tech");
-}
+            <h3>JavaScript শেখার সময় কী করবেন?</h3>
 
-greet();
-</code></pre>
+            <p>
+                প্রথমে variable, data type, operator, condition,
+                function এবং loop-এর মতো basic বিষয়গুলো ভালোভাবে practice করুন।
+            </p>
 
-<h2>Button Click</h2>
 
-<pre><code>
-<button onclick="showMessage()">
-    Click Me
-</button>
+            <h3>HTML + CSS + JavaScript</h3>
 
-<script>
-function showMessage() {
-    alert("Hello!");
-}
-</script>
-</code></pre>
+            <p>
+                Web Development-এর মূল foundation হিসেবে
+                HTML, CSS এবং JavaScript একসাথে শেখা খুব গুরুত্বপূর্ণ।
+            </p>
 
-<h2>DOM কী?</h2>
+            <p>
+                HTML দিয়ে structure, CSS দিয়ে design এবং JavaScript দিয়ে
+                interaction তৈরি করা যায়।
+            </p>
 
-<p>
-DOM-এর মাধ্যমে JavaScript HTML element-এর content এবং style পরিবর্তন করতে পারে।
-</p>
 
-<h2>JavaScript শেখার পর কী করবেন?</h2>
+            <!-- TIP -->
 
-<p>
-JavaScript basic শেখার পরে DOM, Events, Array, Object,
-Fetch API এবং ছোট ছোট project practice করা ভালো।
-</p>
+            <div class="article-tip">
 
-<h2>শেষ কথা</h2>
+                <h3>💡 Beginner Tip</h3>
 
-<p>
-HTML দিয়ে structure, CSS দিয়ে design এবং JavaScript দিয়ে interaction তৈরি করা যায়।
-এই তিনটি technology web development-এর গুরুত্বপূর্ণ ভিত্তি।
-</p>
+                <p>
+                    JavaScript শেখার সময় শুধু tutorial দেখবেন না।
+                    নিজে code লিখে ছোট ছোট project তৈরি করুন।
+                    যেমন Calculator, To-Do List বা Digital Clock।
+                </p>
 
-</article>
+            </div>
 
-</main>
 
-<footer>
-<p>© 2026 Munna Tech. All Rights Reserved.</p>
-</footer>
+            <!-- BUTTONS -->
+
+            <div class="article-buttons">
+
+                <a href="index.html#articles" class="btn">
+                    ← Articles-এ ফিরে যান
+                </a>
+
+                <a href="javascript-tutorial.html" class="btn">
+                    JavaScript Tutorial →
+                </a>
+
+            </div>
+
+        </article>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Munna Tech. All Rights Reserved.
+        </p>
+
+        <p>
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
