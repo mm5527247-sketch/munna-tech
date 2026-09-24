@@ -329,3 +329,52 @@ body {
     background:
         linear-gradient(
 ```
+/* FINAL DARK MODE FIX */
+
+body.dark-mode {
+    background: #0b1120 !important;
+    color: #e2e8f0 !important;
+}
+
+body.dark-mode .navbar {
+    background: #0f172a !important;
+}
+
+body.dark-mode .hero {
+    background: #0f172a !important;
+}
+
+body.dark-mode .intro,
+body.dark-mode .about-section {
+    background: #0b1120 !important;
+}
+
+body.dark-mode .card,
+body.dark-mode .about-card {
+    background: #111827 !important;
+    color: #e2e8f0 !important;
+    border-color: #334155 !important;
+}
+
+body.dark-mode .pc-section {
+    background: #0f172a !important;
+}
+
+body.dark-mode .contact-section {
+    background: #0b1120 !important;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    background: #111827 !important;
+    color: #ffffff !important;
+    border-color: #475569 !important;
+}
+
+body.dark-mode .hero h2,
+body.dark-mode .intro h2,
+body.dark-mode .section-heading h2,
+body.dark-mode .card h3,
+body.dark-mode .about-content h2 {
+    color: #ffffff !important;
+}
