@@ -1,35 +1,13 @@
-document.addEventListener("DOMContentLoaded", function () {
+const themeButton = document.getElementById("theme-toggle");
 
-    const themeButton = document.getElementById("theme-toggle");
+themeButton.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
 
-    // Dark Mode
-    if (themeButton) {
-        themeButton.addEventListener("click", function () {
-
-            document.body.classList.toggle("dark-mode");
-
-            if (document.body.classList.contains("dark-mode")) {
-                themeButton.textContent = "☀️ Light Mode";
-            } else {
-                themeButton.textContent = "🌙 Dark Mode";
-            }
-
-        });
+    if (document.body.classList.contains("dark-mode")) {
+        document.body.style.backgroundColor = "#0b1120";
+        themeButton.textContent = "☀️ Light Mode";
+    } else {
+        document.body.style.backgroundColor = "";
+        themeButton.textContent = "🌙 Dark Mode";
     }
-
-    // Contact Form
-    const contactForm = document.querySelector(".contact-form");
-
-    if (contactForm) {
-        contactForm.addEventListener("submit", function (event) {
-
-            event.preventDefault();
-
-            alert("আপনার মেসেজ সফলভাবে পাঠানো হয়েছে! ✅");
-
-            contactForm.reset();
-
-        });
-    }
-
 });
