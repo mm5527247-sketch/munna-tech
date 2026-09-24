@@ -8,7 +8,7 @@
     <title>PC Tips & Tricks | Munna Tech</title>
 
     <meta name="description"
-        content="Munna Tech PC Tips - Windows, computer, keyboard shortcuts, security এবং web development-এর প্রয়োজনীয় PC tips।">
+        content="Munna Tech PC Tips - Windows, computer, keyboard shortcuts, Developer Tools, security এবং web development-এর প্রয়োজনীয় PC tips।">
 
     <link rel="stylesheet" href="style.css">
 
@@ -59,6 +59,15 @@
             color: #475569;
         }
 
+        .code-box {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 18px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
         .back-button {
             display: inline-block;
             margin-bottom: 30px;
@@ -75,6 +84,7 @@
         }
 
         @media (max-width: 600px) {
+
             .tips-header h1 {
                 font-size: 35px;
             }
@@ -82,6 +92,7 @@
             .tip-card {
                 padding: 22px;
             }
+
         }
     </style>
 
@@ -92,21 +103,35 @@
     <header class="navbar">
 
         <div class="logo">
+
             <h1>Munna<span>Tech</span></h1>
-            <p>Web Development & PC Tips</p>
+
+            <p>
+                Web Development & PC Tips
+            </p>
+
         </div>
 
+
         <nav>
+
             <a href="index.html">Home</a>
+
             <a href="html-tutorial.html">HTML</a>
+
             <a href="css-tutorial.html">CSS</a>
+
             <a href="javascript-tutorial.html">JavaScript</a>
+
+            <a href="pc-tips.html">PC Tips</a>
+
         </nav>
 
     </header>
 
 
     <main class="tips-page">
+
 
         <a href="index.html" class="back-button">
             ← Back to Home
@@ -134,18 +159,36 @@
 
         <section class="tip-card">
 
-            <h2>🚀 Tip 1: PC Speed বাড়ানোর Tips</h2>
+            <h2>
+                🚀 Tip 1: PC Speed বাড়ানোর Tips
+            </h2>
 
             <p>
                 PC ধীর হয়ে গেলে নিচের বিষয়গুলো চেষ্টা করতে পারেন:
             </p>
 
             <ul class="tip-list">
-                <li>অপ্রয়োজনীয় Software uninstall করুন।</li>
-                <li>Temporary files পরিষ্কার করুন।</li>
-                <li>Startup-এর অপ্রয়োজনীয় apps বন্ধ করুন।</li>
-                <li>Windows update রাখুন।</li>
-                <li>Storage-এ পর্যাপ্ত free space রাখুন।</li>
+
+                <li>
+                    অপ্রয়োজনীয় Software uninstall করুন।
+                </li>
+
+                <li>
+                    Temporary files পরিষ্কার করুন।
+                </li>
+
+                <li>
+                    Startup-এর অপ্রয়োজনীয় apps বন্ধ করুন।
+                </li>
+
+                <li>
+                    Windows update রাখুন।
+                </li>
+
+                <li>
+                    Storage-এ পর্যাপ্ত free space রাখুন।
+                </li>
+
             </ul>
 
         </section>
@@ -155,17 +198,68 @@
 
         <section class="tip-card">
 
-            <h2>⌨️ Tip 2: প্রয়োজনীয় Keyboard Shortcuts</h2>
+            <h2>
+                ⌨️ Tip 2: প্রয়োজনীয় Keyboard Shortcuts
+            </h2>
+
+            <p>
+                Keyboard shortcut ব্যবহার করলে PC-তে অনেক কাজ দ্রুত করা যায়।
+            </p>
 
             <ul class="tip-list">
-                <li><strong>Ctrl + C</strong> — Copy</li>
-                <li><strong>Ctrl + V</strong> — Paste</li>
-                <li><strong>Ctrl + X</strong> — Cut</li>
-                <li><strong>Ctrl + Z</strong> — Undo</li>
-                <li><strong>Ctrl + S</strong> — Save</li>
-                <li><strong>Ctrl + A</strong> — Select All</li>
-                <li><strong>Alt + Tab</strong> — Window Change</li>
-                <li><strong>Win + E</strong> — File Explorer</li>
+
+                <li>
+                    <strong>Ctrl + C</strong> — Copy
+                </li>
+
+                <li>
+                    <strong>Ctrl + V</strong> — Paste
+                </li>
+
+                <li>
+                    <strong>Ctrl + X</strong> — Cut
+                </li>
+
+                <li>
+                    <strong>Ctrl + Z</strong> — Undo
+                </li>
+
+                <li>
+                    <strong>Ctrl + Y</strong> — Redo
+                </li>
+
+                <li>
+                    <strong>Ctrl + S</strong> — Save
+                </li>
+
+                <li>
+                    <strong>Ctrl + A</strong> — Select All
+                </li>
+
+                <li>
+                    <strong>Ctrl + F</strong> — Find
+                </li>
+
+                <li>
+                    <strong>Ctrl + P</strong> — Print
+                </li>
+
+                <li>
+                    <strong>Alt + Tab</strong> — Window Change
+                </li>
+
+                <li>
+                    <strong>Win + E</strong> — File Explorer
+                </li>
+
+                <li>
+                    <strong>Win + S</strong> — Windows Search
+                </li>
+
+                <li>
+                    <strong>Win + V</strong> — Clipboard History
+                </li>
+
             </ul>
 
         </section>
@@ -175,14 +269,68 @@
 
         <section class="tip-card">
 
-            <h2>🛠️ Tip 3: Web Development Tools</h2>
+            <h2>
+                🛠️ Tip 3: Developer Tools
+            </h2>
+
+            <p>
+                Web Development শেখার সময় Browser-এর Developer Tools
+                খুব গুরুত্বপূর্ণ। এটি ব্যবহার করে website-এর HTML,
+                CSS এবং JavaScript পরীক্ষা করা যায়।
+            </p>
 
             <ul class="tip-list">
-                <li>Visual Studio Code — Code লেখার জন্য</li>
-                <li>Google Chrome — Website test করার জন্য</li>
-                <li>GitHub — Code সংরক্ষণ ও publish করার জন্য</li>
-                <li>Git — Version control-এর জন্য</li>
+
+                <li>
+                    Google Chrome খুলুন।
+                </li>
+
+                <li>
+                    যেকোনো website খুলুন।
+                </li>
+
+                <li>
+                    Keyboard থেকে <strong>F12</strong> চাপুন।
+                </li>
+
+                <li>
+                    অথবা <strong>Ctrl + Shift + I</strong> চাপুন।
+                </li>
+
+                <li>
+                    এখানে HTML, CSS এবং Console দেখতে পারবেন।
+                </li>
+
             </ul>
+
+            <p>
+                Developer Tools-এর গুরুত্বপূর্ণ অংশ:
+            </p>
+
+            <ul class="tip-list">
+
+                <li>
+                    <strong>Elements</strong> — HTML এবং CSS দেখার জন্য
+                </li>
+
+                <li>
+                    <strong>Console</strong> — JavaScript error ও output দেখার জন্য
+                </li>
+
+                <li>
+                    <strong>Sources</strong> — Website-এর source files দেখার জন্য
+                </li>
+
+                <li>
+                    <strong>Network</strong> — Website কীভাবে files load করছে তা দেখার জন্য
+                </li>
+
+            </ul>
+
+            <div class="code-box">
+                F12<br>
+                Ctrl + Shift + I
+            </div>
 
         </section>
 
@@ -191,14 +339,32 @@
 
         <section class="tip-card">
 
-            <h2>🔐 Tip 4: PC নিরাপদ রাখুন</h2>
+            <h2>
+                🔐 Tip 4: PC নিরাপদ রাখুন
+            </h2>
 
             <ul class="tip-list">
-                <li>অজানা Software install করার আগে সতর্ক থাকুন।</li>
-                <li>অজানা email attachment খুলবেন না।</li>
-                <li>গুরুত্বপূর্ণ files-এর backup রাখুন।</li>
-                <li>Windows Security চালু রাখুন।</li>
-                <li>Strong password ব্যবহার করুন।</li>
+
+                <li>
+                    অজানা Software install করার আগে সতর্ক থাকুন।
+                </li>
+
+                <li>
+                    অজানা email attachment খুলবেন না।
+                </li>
+
+                <li>
+                    গুরুত্বপূর্ণ files-এর backup রাখুন।
+                </li>
+
+                <li>
+                    Windows Security চালু রাখুন।
+                </li>
+
+                <li>
+                    Strong password ব্যবহার করুন।
+                </li>
+
             </ul>
 
         </section>
@@ -208,13 +374,28 @@
 
         <section class="tip-card">
 
-            <h2>💾 Tip 5: Storage পরিষ্কার করুন</h2>
+            <h2>
+                💾 Tip 5: Storage পরিষ্কার করুন
+            </h2>
 
             <ul class="tip-list">
-                <li>অপ্রয়োজনীয় files delete করুন।</li>
-                <li>Recycle Bin নিয়মিত empty করুন।</li>
-                <li>বড় video ও duplicate files খুঁজে দেখুন।</li>
-                <li>প্রয়োজনে external drive-এ backup রাখুন।</li>
+
+                <li>
+                    অপ্রয়োজনীয় files delete করুন।
+                </li>
+
+                <li>
+                    Recycle Bin নিয়মিত empty করুন।
+                </li>
+
+                <li>
+                    বড় video ও duplicate files খুঁজে দেখুন।
+                </li>
+
+                <li>
+                    প্রয়োজনে external drive-এ backup রাখুন।
+                </li>
+
             </ul>
 
         </section>
@@ -224,17 +405,29 @@
 
         <section class="tip-card">
 
-            <h2>⚡ Tip 6: Startup Apps কমান</h2>
+            <h2>
+                ⚡ Tip 6: Startup Apps কমান
+            </h2>
 
             <p>
-                PC চালু হওয়ার সময় অনেক application automatically চালু হলে
-                startup ধীর হতে পারে।
+                PC চালু হওয়ার সময় অনেক application automatically
+                চালু হলে startup ধীর হতে পারে।
             </p>
 
             <ul class="tip-list">
-                <li>Task Manager খুলুন।</li>
-                <li>Startup Apps section দেখুন।</li>
-                <li>যে app প্রয়োজন নেই সেটি Disable করুন।</li>
+
+                <li>
+                    Task Manager খুলুন।
+                </li>
+
+                <li>
+                    Startup Apps section দেখুন।
+                </li>
+
+                <li>
+                    যে app প্রয়োজন নেই সেটি Disable করুন।
+                </li>
+
             </ul>
 
         </section>
@@ -244,13 +437,28 @@
 
         <section class="tip-card">
 
-            <h2>🌐 Tip 7: Browser দ্রুত রাখুন</h2>
+            <h2>
+                🌐 Tip 7: Browser দ্রুত রাখুন
+            </h2>
 
             <ul class="tip-list">
-                <li>অপ্রয়োজনীয় browser tabs বন্ধ করুন।</li>
-                <li>অপ্রয়োজনীয় extensions remove করুন।</li>
-                <li>Browser নিয়মিত update করুন।</li>
-                <li>প্রয়োজনে cache পরিষ্কার করুন।</li>
+
+                <li>
+                    অপ্রয়োজনীয় browser tabs বন্ধ করুন।
+                </li>
+
+                <li>
+                    অপ্রয়োজনীয় extensions remove করুন।
+                </li>
+
+                <li>
+                    Browser নিয়মিত update করুন।
+                </li>
+
+                <li>
+                    প্রয়োজনে cache পরিষ্কার করুন।
+                </li>
+
             </ul>
 
         </section>
@@ -260,17 +468,32 @@
 
         <section class="tip-card">
 
-            <h2>📁 Tip 8: File Organize করুন</h2>
+            <h2>
+                📁 Tip 8: File Organize করুন
+            </h2>
 
             <p>
                 গুরুত্বপূর্ণ files আলাদা folder-এ রাখলে কাজ করা সহজ হয়।
             </p>
 
             <ul class="tip-list">
-                <li>Documents folder ব্যবহার করুন।</li>
-                <li>Images আলাদা folder-এ রাখুন।</li>
-                <li>Projects-এর জন্য আলাদা folder তৈরি করুন।</li>
-                <li>File-এর meaningful name দিন।</li>
+
+                <li>
+                    Documents folder ব্যবহার করুন।
+                </li>
+
+                <li>
+                    Images আলাদা folder-এ রাখুন।
+                </li>
+
+                <li>
+                    Projects-এর জন্য আলাদা folder তৈরি করুন।
+                </li>
+
+                <li>
+                    File-এর meaningful name দিন।
+                </li>
+
             </ul>
 
         </section>
@@ -280,7 +503,9 @@
 
         <section class="tip-card">
 
-            <h2>🔄 Tip 9: Windows Update</h2>
+            <h2>
+                🔄 Tip 9: Windows Update
+            </h2>
 
             <p>
                 Windows-এর গুরুত্বপূর্ণ security এবং bug fixes পাওয়ার জন্য
@@ -294,11 +519,22 @@
 
         <section class="tip-card">
 
-            <h2>🖥️ Tip 10: Screen Screenshot</h2>
+            <h2>
+                🖥️ Tip 10: Screenshot
+            </h2>
 
             <ul class="tip-list">
-                <li><strong>Win + Shift + S</strong> — Screen-এর নির্দিষ্ট অংশ capture</li>
-                <li><strong>PrtSc</strong> — Screenshot নেওয়া</li>
+
+                <li>
+                    <strong>Win + Shift + S</strong>
+                    — Screen-এর নির্দিষ্ট অংশ capture
+                </li>
+
+                <li>
+                    <strong>PrtSc</strong>
+                    — Screenshot নেওয়া
+                </li>
+
             </ul>
 
         </section>
@@ -308,15 +544,18 @@
 
         <section class="tip-card">
 
-            <h2>🔎 Tip 11: Windows Search</h2>
+            <h2>
+                🔎 Tip 11: Windows Search
+            </h2>
 
             <p>
-                কোনো file, application বা setting দ্রুত খুঁজতে Windows Search ব্যবহার করুন।
+                কোনো file, application বা setting দ্রুত খুঁজতে
+                Windows Search ব্যবহার করুন।
             </p>
 
-            <pre style="background:#0f172a;color:#e2e8f0;padding:18px;border-radius:10px;">
-Windows + S
-            </pre>
+            <div class="code-box">
+                Windows + S
+            </div>
 
         </section>
 
@@ -325,15 +564,18 @@ Windows + S
 
         <section class="tip-card">
 
-            <h2>📋 Tip 12: Clipboard ব্যবহার</h2>
+            <h2>
+                📋 Tip 12: Clipboard ব্যবহার
+            </h2>
 
             <p>
-                Windows-এ আগের copied items দেখার জন্য Clipboard History ব্যবহার করা যায়।
+                Windows-এ আগের copied items দেখার জন্য Clipboard History
+                ব্যবহার করা যায়।
             </p>
 
-            <pre style="background:#0f172a;color:#e2e8f0;padding:18px;border-radius:10px;">
-Windows + V
-            </pre>
+            <div class="code-box">
+                Windows + V
+            </div>
 
         </section>
 
@@ -342,13 +584,32 @@ Windows + V
 
         <section class="tip-card">
 
-            <h2>🪟 Tip 13: Window দ্রুত সাজানো</h2>
+            <h2>
+                🪟 Tip 13: Window দ্রুত সাজানো
+            </h2>
 
             <ul class="tip-list">
-                <li><strong>Win + Left Arrow</strong> — Window বামে নেওয়া</li>
-                <li><strong>Win + Right Arrow</strong> — Window ডানে নেওয়া</li>
-                <li><strong>Win + Up Arrow</strong> — Maximize</li>
-                <li><strong>Win + Down Arrow</strong> — Minimize</li>
+
+                <li>
+                    <strong>Win + Left Arrow</strong>
+                    — Window বামে নেওয়া
+                </li>
+
+                <li>
+                    <strong>Win + Right Arrow</strong>
+                    — Window ডানে নেওয়া
+                </li>
+
+                <li>
+                    <strong>Win + Up Arrow</strong>
+                    — Maximize
+                </li>
+
+                <li>
+                    <strong>Win + Down Arrow</strong>
+                    — Minimize
+                </li>
+
             </ul>
 
         </section>
@@ -358,12 +619,24 @@ Windows + V
 
         <section class="tip-card">
 
-            <h2>📦 Tip 14: Software Install করার সময় সতর্কতা</h2>
+            <h2>
+                📦 Tip 14: Software Install করার সময় সতর্কতা
+            </h2>
 
             <ul class="tip-list">
-                <li>বিশ্বস্ত source থেকে software download করুন।</li>
-                <li>Install করার সময় unnecessary bundled software দেখুন।</li>
-                <li>Unknown executable file চালানোর আগে সতর্ক থাকুন।</li>
+
+                <li>
+                    বিশ্বস্ত source থেকে software download করুন।
+                </li>
+
+                <li>
+                    Install করার সময় unnecessary bundled software দেখুন।
+                </li>
+
+                <li>
+                    Unknown executable file চালানোর আগে সতর্ক থাকুন।
+                </li>
+
             </ul>
 
         </section>
@@ -373,16 +646,28 @@ Windows + V
 
         <section class="tip-card">
 
-            <h2>☁️ Tip 15: Important Files Backup</h2>
+            <h2>
+                ☁️ Tip 15: Important Files Backup
+            </h2>
 
             <p>
                 গুরুত্বপূর্ণ project এবং documents-এর একাধিক backup রাখা ভালো।
             </p>
 
             <ul class="tip-list">
-                <li>External storage ব্যবহার করতে পারেন।</li>
-                <li>Cloud storage ব্যবহার করতে পারেন।</li>
-                <li>Website project-এর code GitHub-এ রাখতে পারেন।</li>
+
+                <li>
+                    External storage ব্যবহার করতে পারেন।
+                </li>
+
+                <li>
+                    Cloud storage ব্যবহার করতে পারেন।
+                </li>
+
+                <li>
+                    Website project-এর code GitHub-এ রাখতে পারেন।
+                </li>
+
             </ul>
 
         </section>
@@ -392,12 +677,24 @@ Windows + V
 
         <section class="tip-card">
 
-            <h2>🔒 Tip 16: Strong Password</h2>
+            <h2>
+                🔒 Tip 16: Strong Password
+            </h2>
 
             <ul class="tip-list">
-                <li>সহজ password ব্যবহার করবেন না।</li>
-                <li>একই password সব জায়গায় ব্যবহার করবেন না।</li>
-                <li>সম্ভব হলে Two-Factor Authentication চালু করুন।</li>
+
+                <li>
+                    সহজ password ব্যবহার করবেন না।
+                </li>
+
+                <li>
+                    একই password সব জায়গায় ব্যবহার করবেন না।
+                </li>
+
+                <li>
+                    সম্ভব হলে Two-Factor Authentication চালু করুন।
+                </li>
+
             </ul>
 
         </section>
@@ -407,18 +704,33 @@ Windows + V
 
         <section class="tip-card">
 
-            <h2>🧹 Tip 17: Temporary Files পরিষ্কার</h2>
+            <h2>
+                🧹 Tip 17: Temporary Files পরিষ্কার
+            </h2>
 
             <p>
-                Windows-এর temporary files পরিষ্কার করলে storage-এর কিছু জায়গা
-                খালি করা যায়।
+                Windows-এর temporary files পরিষ্কার করলে storage-এর
+                কিছু জায়গা খালি করা যায়।
             </p>
 
             <ul class="tip-list">
-                <li>Windows Settings খুলুন।</li>
-                <li>Storage section-এ যান।</li>
-                <li>Temporary files দেখুন।</li>
-                <li>প্রয়োজন নেই এমন files remove করুন।</li>
+
+                <li>
+                    Windows Settings খুলুন।
+                </li>
+
+                <li>
+                    Storage section-এ যান।
+                </li>
+
+                <li>
+                    Temporary files দেখুন।
+                </li>
+
+                <li>
+                    প্রয়োজন নেই এমন files remove করুন।
+                </li>
+
             </ul>
 
         </section>
@@ -428,9 +740,11 @@ Windows + V
 
         <section class="tip-card">
 
-            <h2>💻 Tip 18: Web Developer Folder Structure</h2>
+            <h2>
+                💻 Tip 18: Web Developer Folder Structure
+            </h2>
 
-            <pre style="background:#0f172a;color:#e2e8f0;padding:20px;border-radius:10px;overflow-x:auto;">
+            <div class="code-box">
 my-website/
 │
 ├── index.html
@@ -442,7 +756,7 @@ my-website/
 │
 └── pages/
     └── about.html
-            </pre>
+            </div>
 
         </section>
 
@@ -451,7 +765,9 @@ my-website/
 
         <section class="tip-card">
 
-            <h2>🐙 Tip 19: GitHub ব্যবহার</h2>
+            <h2>
+                🐙 Tip 19: GitHub ব্যবহার
+            </h2>
 
             <p>
                 GitHub ব্যবহার করে নিজের website-এর code online সংরক্ষণ
@@ -459,10 +775,23 @@ my-website/
             </p>
 
             <ul class="tip-list">
-                <li>Repository তৈরি করুন।</li>
-                <li>Files upload করুন।</li>
-                <li>Changes commit করুন।</li>
-                <li>GitHub Pages চালু করুন।</li>
+
+                <li>
+                    Repository তৈরি করুন।
+                </li>
+
+                <li>
+                    Files upload করুন।
+                </li>
+
+                <li>
+                    Changes commit করুন।
+                </li>
+
+                <li>
+                    GitHub Pages চালু করুন।
+                </li>
+
             </ul>
 
         </section>
@@ -472,48 +801,71 @@ my-website/
 
         <section class="tip-card">
 
-            <h2>🚀 Tip 20: PC দিয়ে Web Development শুরু করুন</h2>
+            <h2>
+                🚀 Tip 20: PC দিয়ে Web Development শুরু করুন
+            </h2>
 
             <p>
-                আপনি যদি Web Development শিখতে চান, তাহলে এই basic workflow
-                অনুসরণ করতে পারেন:
+                আপনি যদি Web Development শিখতে চান, তাহলে এই basic
+                workflow অনুসরণ করতে পারেন:
             </p>
 
             <ul class="tip-list">
-                <li>HTML শিখুন।</li>
-                <li>CSS শিখুন।</li>
-                <li>JavaScript শিখুন।</li>
-                <li>ছোট ছোট project তৈরি করুন।</li>
-                <li>GitHub-এ project রাখুন।</li>
-                <li>নিজের portfolio website তৈরি করুন।</li>
+
+                <li>
+                    HTML শিখুন।
+                </li>
+
+                <li>
+                    CSS শিখুন।
+                </li>
+
+                <li>
+                    JavaScript শিখুন।
+                </li>
+
+                <li>
+                    ছোট ছোট project তৈরি করুন।
+                </li>
+
+                <li>
+                    GitHub-এ project রাখুন।
+                </li>
+
+                <li>
+                    নিজের portfolio website তৈরি করুন।
+                </li>
+
             </ul>
 
         </section>
 
 
-        <!-- Final -->
+        <!-- Final Practice -->
 
         <section class="tip-card">
 
-            <h2>🎯 Final Practice</h2>
+            <h2>
+                🎯 Final Practice
+            </h2>
 
             <p>
                 আজ আপনার PC-তে একটি নতুন folder তৈরি করুন:
             </p>
 
-            <pre style="background:#0f172a;color:#e2e8f0;padding:20px;border-radius:10px;">
+            <div class="code-box">
 Web-Development
-            </pre>
+            </div>
 
             <p>
                 এরপর এর ভিতরে তিনটি file তৈরি করুন:
             </p>
 
-            <pre style="background:#0f172a;color:#e2e8f0;padding:20px;border-radius:10px;">
+            <div class="code-box">
 index.html
 style.css
 script.js
-            </pre>
+            </div>
 
         </section>
 
