@@ -1,0 +1,674 @@
+```html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML Form কী? সহজভাবে Form তৈরি করার সম্পূর্ণ গাইড | Munna Tech</title>
+
+  <meta name="description" content="HTML Form কী এবং কীভাবে HTML দিয়ে Form তৈরি করতে হয় তা সহজ বাংলায় শিখুন। Input, Email, Password, Radio, Checkbox, Select, Textarea এবং Submit Button সহ সম্পূর্ণ Beginner Guide।">
+
+  <meta name="keywords" content="HTML form, HTML form বাংলা, HTML form tutorial, HTML input tag, HTML form beginners, HTML contact form, HTML এ form তৈরি">
+
+  <meta name="author" content="Munna Tech">
+
+  <meta property="og:title" content="HTML Form কী? সহজভাবে Form তৈরি করার সম্পূর্ণ গাইড">
+  <meta property="og:description" content="Beginnerদের জন্য HTML Form তৈরির সহজ বাংলা গাইড।">
+  <meta property="og:type" content="article">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .article-container h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .article-container h2 {
+      margin-top: 35px;
+      color: #2563eb;
+    }
+
+    .article-container h3 {
+      margin-top: 25px;
+    }
+
+    .article-container p,
+    .article-container li {
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .article-container ul,
+    .article-container ol {
+      padding-left: 25px;
+    }
+
+    .code-box {
+      background: #111827;
+      color: #f9fafb;
+      padding: 18px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 15px 0;
+    }
+
+    .code-box code {
+      font-family: Consolas, monospace;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .tip-box {
+      background: #eff6ff;
+      border-left: 5px solid #2563eb;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 6px;
+    }
+
+    .warning-box {
+      background: #fff7ed;
+      border-left: 5px solid #f97316;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 6px;
+    }
+
+    .example-form {
+      background: #f8fafc;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .example-form input,
+    .example-form textarea,
+    .example-form select {
+      width: 100%;
+      padding: 10px;
+      margin: 7px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    .example-form button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .faq {
+      margin-top: 15px;
+    }
+
+    .related-links a {
+      display: block;
+      margin: 8px 0;
+    }
+
+    @media (max-width: 600px) {
+      .article-container h1 {
+        font-size: 28px;
+      }
+
+      .article-container p,
+      .article-container li {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div class="logo">Munna Tech</div>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="html-tutorial.html">HTML</a></li>
+        <li><a href="css-tutorial.html">CSS</a></li>
+        <li><a href="javascript-tutorial.html">JavaScript</a></li>
+        <li><a href="pc-tips.html">PC Tips</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+
+      <button id="darkModeBtn">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+
+  <!-- Article -->
+  <main class="article-container">
+
+    <h1>HTML Form কী? সহজভাবে Form তৈরি করার সম্পূর্ণ গাইড</h1>
+
+    <p>
+      Website-এ User-এর কাছ থেকে তথ্য নেওয়ার জন্য <strong>HTML Form</strong>
+      ব্যবহার করা হয়। যেমন Name, Email, Password, Phone Number, Message,
+      Gender, Country ইত্যাদি তথ্য নেওয়ার জন্য Form প্রয়োজন হয়।
+    </p>
+
+    <p>
+      এই Beginner Guide-এ আমরা একদম সহজভাবে HTML Form তৈরি করা শিখব।
+    </p>
+
+
+    <h2>1. HTML Form কী?</h2>
+
+    <p>
+      HTML Form হলো এমন একটি অংশ যেখানে Website-এর Visitor বিভিন্ন তথ্য
+      লিখে বা নির্বাচন করে Submit করতে পারে।
+    </p>
+
+    <p>যেমন:</p>
+
+    <ul>
+      <li>Contact Form</li>
+      <li>Login Form</li>
+      <li>Registration Form</li>
+      <li>Search Form</li>
+      <li>Feedback Form</li>
+      <li>Job Application Form</li>
+    </ul>
+
+
+    <h2>2. HTML Form তৈরি করতে কোন Tag ব্যবহার হয়?</h2>
+
+    <p>
+      HTML Form তৈরি করার জন্য প্রধানত <strong>&lt;form&gt;</strong> Tag ব্যবহার করা হয়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;form&gt;<br>
+        &nbsp;&nbsp;Form content এখানে থাকবে<br>
+        &lt;/form&gt;
+      </code>
+    </div>
+
+
+    <h2>3. HTML Input কী?</h2>
+
+    <p>
+      User-এর কাছ থেকে ছোট তথ্য নেওয়ার জন্য
+      <strong>&lt;input&gt;</strong> Tag ব্যবহার করা হয়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;input type="text"&gt;
+      </code>
+    </div>
+
+    <p>
+      এখানে <strong>type="text"</strong> ব্যবহার করার কারণে একটি সাধারণ
+      text input তৈরি হবে।
+    </p>
+
+
+    <h2>4. Name নেওয়ার Form</h2>
+
+    <div class="code-box">
+      <code>
+        &lt;label&gt;Your Name:&lt;/label&gt;<br>
+        &lt;input type="text" placeholder="Enter your name"&gt;
+      </code>
+    </div>
+
+    <p>
+      <strong>placeholder</strong> User-কে input-এর ভিতরে একটি নির্দেশনা দেখায়।
+    </p>
+
+
+    <h2>5. Email নেওয়ার Form</h2>
+
+    <div class="code-box">
+      <code>
+        &lt;label&gt;Email:&lt;/label&gt;<br>
+        &lt;input type="email" placeholder="Enter your email"&gt;
+      </code>
+    </div>
+
+    <p>
+      <strong>type="email"</strong> ব্যবহার করলে Browser Email-এর format
+      যাচাই করতে সাহায্য করে।
+    </p>
+
+
+    <h2>6. Password Field</h2>
+
+    <div class="code-box">
+      <code>
+        &lt;label&gt;Password:&lt;/label&gt;<br>
+        &lt;input type="password" placeholder="Enter password"&gt;
+      </code>
+    </div>
+
+    <p>
+      Password field-এ User-এর লেখা সাধারণত লুকানো অবস্থায় দেখা যায়।
+    </p>
+
+
+    <h2>7. Number Input</h2>
+
+    <div class="code-box">
+      <code>
+        &lt;label&gt;Age:&lt;/label&gt;<br>
+        &lt;input type="number" placeholder="Enter your age"&gt;
+      </code>
+    </div>
+
+
+    <h2>8. Radio Button</h2>
+
+    <p>
+      একাধিক Option থেকে সাধারণত একটি Option নির্বাচন করার জন্য
+      Radio Button ব্যবহার করা হয়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;p&gt;Gender:&lt;/p&gt;<br><br>
+
+        &lt;input type="radio" name="gender" value="male"&gt; Male<br>
+        &lt;input type="radio" name="gender" value="female"&gt; Female
+      </code>
+    </div>
+
+    <div class="tip-box">
+      <strong>Tip:</strong> একই group-এর Radio Button-এর জন্য একই
+      <strong>name</strong> ব্যবহার করা গুরুত্বপূর্ণ।
+    </div>
+
+
+    <h2>9. Checkbox</h2>
+
+    <p>
+      একাধিক Option নির্বাচন করার জন্য Checkbox ব্যবহার করা হয়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;p&gt;Your Skills:&lt;/p&gt;<br><br>
+
+        &lt;input type="checkbox" name="skill" value="html"&gt; HTML<br>
+        &lt;input type="checkbox" name="skill" value="css"&gt; CSS<br>
+        &lt;input type="checkbox" name="skill" value="javascript"&gt; JavaScript
+      </code>
+    </div>
+
+
+    <h2>10. Select Dropdown</h2>
+
+    <p>
+      অনেকগুলো Option-এর মধ্যে থেকে একটি নির্বাচন করার জন্য
+      Select Dropdown ব্যবহার করা যায়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;label&gt;Choose Country:&lt;/label&gt;<br>
+
+        &lt;select&gt;<br>
+        &nbsp;&nbsp;&lt;option&gt;Bangladesh&lt;/option&gt;<br>
+        &nbsp;&nbsp;&lt;option&gt;India&lt;/option&gt;<br>
+        &nbsp;&nbsp;&lt;option&gt;Pakistan&lt;/option&gt;<br>
+        &nbsp;&nbsp;&lt;option&gt;Nepal&lt;/option&gt;<br>
+        &lt;/select&gt;
+      </code>
+    </div>
+
+
+    <h2>11. Textarea</h2>
+
+    <p>
+      বড় আকারের Text বা Message নেওয়ার জন্য
+      <strong>&lt;textarea&gt;</strong> ব্যবহার করা হয়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;label&gt;Your Message:&lt;/label&gt;<br>
+
+        &lt;textarea rows="5" placeholder="Write your message"&gt;&lt;/textarea&gt;
+      </code>
+    </div>
+
+
+    <h2>12. Submit Button</h2>
+
+    <p>
+      Form Submit করার জন্য Button ব্যবহার করা হয়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;button type="submit"&gt;Submit&lt;/button&gt;
+      </code>
+    </div>
+
+
+    <h2>13. একটি সম্পূর্ণ HTML Form</h2>
+
+    <p>
+      এখন আমরা Name, Email, Password, Gender, Skills, Country এবং Message
+      ব্যবহার করে একটি সম্পূর্ণ Form তৈরি করব।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;form&gt;<br><br>
+
+        &nbsp;&nbsp;&lt;label&gt;Name:&lt;/label&gt;&lt;br&gt;<br>
+        &nbsp;&nbsp;&lt;input type="text" placeholder="Enter your name"&gt;&lt;br&gt;&lt;br&gt;<br><br>
+
+        &nbsp;&nbsp;&lt;label&gt;Email:&lt;/label&gt;&lt;br&gt;<br>
+        &nbsp;&nbsp;&lt;input type="email" placeholder="Enter your email"&gt;&lt;br&gt;&lt;br&gt;<br><br>
+
+        &nbsp;&nbsp;&lt;label&gt;Password:&lt;/label&gt;&lt;br&gt;<br>
+        &nbsp;&nbsp;&lt;input type="password" placeholder="Enter password"&gt;&lt;br&gt;&lt;br&gt;<br><br>
+
+        &nbsp;&nbsp;&lt;p&gt;Gender:&lt;/p&gt;<br>
+        &nbsp;&nbsp;&lt;input type="radio" name="gender"&gt; Male<br>
+        &nbsp;&nbsp;&lt;input type="radio" name="gender"&gt; Female<br><br>
+
+        &nbsp;&nbsp;&lt;p&gt;Skills:&lt;/p&gt;<br>
+        &nbsp;&nbsp;&lt;input type="checkbox"&gt; HTML<br>
+        &nbsp;&nbsp;&lt;input type="checkbox"&gt; CSS<br>
+        &nbsp;&nbsp;&lt;input type="checkbox"&gt; JavaScript<br><br>
+
+        &nbsp;&nbsp;&lt;label&gt;Country:&lt;/label&gt;&lt;br&gt;<br>
+        &nbsp;&nbsp;&lt;select&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Bangladesh&lt;/option&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;India&lt;/option&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Pakistan&lt;/option&gt;<br>
+        &nbsp;&nbsp;&lt;/select&gt;&lt;br&gt;&lt;br&gt;<br><br>
+
+        &nbsp;&nbsp;&lt;label&gt;Message:&lt;/label&gt;&lt;br&gt;<br>
+        &nbsp;&nbsp;&lt;textarea rows="5" placeholder="Write your message"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;<br><br>
+
+        &nbsp;&nbsp;&lt;button type="submit"&gt;Submit&lt;/button&gt;<br><br>
+
+        &lt;/form&gt;
+      </code>
+    </div>
+
+
+    <h2>14. Form-এর ভিতরে Label কেন ব্যবহার করব?</h2>
+
+    <p>
+      <strong>&lt;label&gt;</strong> ব্যবহার করলে Form-এর কোন Field-এ
+      কী তথ্য দিতে হবে তা User সহজে বুঝতে পারে।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;label for="email"&gt;Email&lt;/label&gt;<br>
+        &lt;input type="email" id="email"&gt;
+      </code>
+    </div>
+
+    <p>
+      এখানে <strong>for</strong> এবং <strong>id</strong> একই রাখা হয়েছে।
+      এটি Accessibility-এর জন্যও ভালো practice।
+    </p>
+
+
+    <h2>15. Required Field</h2>
+
+    <p>
+      কোনো Field অবশ্যই পূরণ করতে হবে এমন করতে
+      <strong>required</strong> attribute ব্যবহার করা যায়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;input type="text" required&gt;
+      </code>
+    </div>
+
+    <p>
+      User Field পূরণ না করে Submit করলে Browser সতর্ক করবে।
+    </p>
+
+
+    <h2>16. Email Validation</h2>
+
+    <p>
+      Email Field-এর জন্য <strong>type="email"</strong> ব্যবহার করা ভালো।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;input type="email" required&gt;
+      </code>
+    </div>
+
+
+    <h2>17. Contact Form-এর একটি সহজ Example</h2>
+
+    <div class="example-form">
+
+      <form onsubmit="event.preventDefault(); alert('Demo form submitted!');">
+
+        <label for="demo-name">Name</label>
+        <input id="demo-name" type="text" placeholder="Your name" required>
+
+        <label for="demo-email">Email</label>
+        <input id="demo-email" type="email" placeholder="Your email" required>
+
+        <label for="demo-message">Message</label>
+        <textarea id="demo-message" rows="5" placeholder="Your message" required></textarea>
+
+        <button type="submit">Send Message</button>
+
+      </form>
+
+    </div>
+
+    <div class="warning-box">
+      <strong>Important:</strong> উপরের Form-টি শুধু Demo হিসেবে কাজ করবে।
+      বাস্তবে User-এর তথ্য Email বা Server-এ পাঠাতে Backend বা কোনো
+      Form Service প্রয়োজন হতে পারে।
+    </div>
+
+
+    <!-- Adsterra Native Banner -->
+    <div style="margin:30px 0; text-align:center;">
+      <script async="async" data-cfasync="false"
+        src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js">
+      </script>
+
+      <div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+    </div>
+
+
+    <h2>18. HTML Form-এর Common Mistakes</h2>
+
+    <ul>
+      <li>Form বন্ধ করার জন্য <strong>&lt;/form&gt;</strong> দিতে ভুল করা</li>
+      <li>Radio Button-এর name ভুল দেওয়া</li>
+      <li>Email-এর জন্য text input ব্যবহার করা</li>
+      <li>Required Field-এ required না দেওয়া</li>
+      <li>Label ব্যবহার না করা</li>
+      <li>Input-এর placeholder ভুল লেখা</li>
+      <li>Form data কোথায় যাবে তা নির্ধারণ না করা</li>
+    </ul>
+
+
+    <h2>19. Beginner Practice Task</h2>
+
+    <p>
+      এখন নিজে একটি Registration Form তৈরি করার চেষ্টা করুন।
+    </p>
+
+    <ol>
+      <li>Name Field তৈরি করুন</li>
+      <li>Email Field তৈরি করুন</li>
+      <li>Password Field তৈরি করুন</li>
+      <li>Gender-এর জন্য Radio Button দিন</li>
+      <li>Skills-এর জন্য Checkbox দিন</li>
+      <li>Country-এর জন্য Dropdown দিন</li>
+      <li>Message-এর জন্য Textarea দিন</li>
+      <li>Submit Button দিন</li>
+    </ol>
+
+    <div class="tip-box">
+      <strong>Practice Tip:</strong>
+      প্রথমে দেখে দেখে Code লিখুন। পরে Code না দেখে নিজে আবার তৈরি করার চেষ্টা করুন।
+    </div>
+
+
+    <h2>20. HTML Form শেখার পর কী শিখবেন?</h2>
+
+    <p>
+      HTML Form শেখার পর CSS দিয়ে Form সুন্দরভাবে Design করা শিখতে পারেন।
+      এরপর JavaScript ব্যবহার করে Form Validation এবং Interactive Form তৈরি
+      করা যায়।
+    </p>
+
+
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="faq">
+      <h3>HTML Form কী?</h3>
+      <p>
+        Website Visitor-এর কাছ থেকে তথ্য নেওয়ার জন্য ব্যবহৃত HTML-এর একটি
+        অংশকে HTML Form বলা হয়।
+      </p>
+
+      <h3>HTML Form-এর প্রধান Tag কোনটি?</h3>
+      <p>
+        HTML Form তৈরি করার প্রধান Tag হলো <strong>&lt;form&gt;</strong>।
+      </p>
+
+      <h3>Input Tag কী কাজে লাগে?</h3>
+      <p>
+        User-এর কাছ থেকে বিভিন্ন ধরনের ছোট তথ্য নেওয়ার জন্য
+        <strong>&lt;input&gt;</strong> Tag ব্যবহার করা হয়।
+      </p>
+
+      <h3>Radio Button কী?</h3>
+      <p>
+        সাধারণত একাধিক Option থেকে একটি Option নির্বাচন করার জন্য
+        Radio Button ব্যবহার করা হয়।
+      </p>
+
+      <h3>Checkbox কী?</h3>
+      <p>
+        একাধিক Option নির্বাচন করার জন্য Checkbox ব্যবহার করা হয়।
+      </p>
+
+      <h3>Textarea কী?</h3>
+      <p>
+        বড় Text বা Message নেওয়ার জন্য Textarea ব্যবহার করা হয়।
+      </p>
+    </div>
+
+
+    <h2>Conclusion</h2>
+
+    <p>
+      HTML Form Web Development-এর একটি গুরুত্বপূর্ণ বিষয়। Form-এর মাধ্যমে
+      User-এর কাছ থেকে Name, Email, Password, Message এবং অন্যান্য তথ্য
+      নেওয়া যায়।
+    </p>
+
+    <p>
+      আপনি যদি Web Development শিখতে চান, তাহলে HTML Form ভালোভাবে Practice
+      করা খুবই গুরুত্বপূর্ণ। এরপর CSS এবং JavaScript ব্যবহার করে আরও
+      Professional Form তৈরি করতে পারবেন।
+    </p>
+
+
+    <h2>আরও পড়ুন</h2>
+
+    <div class="related-links">
+
+      <a href="html-ki-beginner-guide.html">
+        HTML কী? Beginnerদের জন্য সম্পূর্ণ গাইড
+      </a>
+
+      <a href="html-diye-website-bananor-guide.html">
+        HTML দিয়ে প্রথম Website কীভাবে বানাবেন?
+      </a>
+
+      <a href="html-tags-beginners-guide.html">
+        HTML-এর 20টি গুরুত্বপূর্ণ Tag
+      </a>
+
+      <a href="html-heading-paragraph-link-guide.html">
+        HTML Heading, Paragraph ও Link Guide
+      </a>
+
+      <a href="html-image-beginners-guide.html">
+        HTML-এ Image যোগ করার নিয়ম
+      </a>
+
+      <a href="html-tutorial.html">
+        সম্পূর্ণ HTML Tutorial
+      </a>
+
+      <a href="css-tutorial.html">
+        CSS Tutorial
+      </a>
+
+      <a href="javascript-tutorial.html">
+        JavaScript Tutorial
+      </a>
+
+    </div>
+
+
+    <div class="tip-box" style="margin-top:35px;">
+      <strong>Munna Tech:</strong>
+      সহজ বাংলায় Web Development এবং PC Tips শিখুন।
+    </div>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Munna Tech — Web Development & PC Tips</p>
+  </footer>
+
+
+  <!-- Dark Mode -->
+  <script>
+    const darkModeBtn = document.getElementById("darkModeBtn");
+
+    if (localStorage.getItem("darkMode") === "enabled") {
+      document.body.classList.add("dark-mode");
+      darkModeBtn.textContent = "☀️ Light Mode";
+    }
+
+    darkModeBtn.addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("darkMode", "enabled");
+        darkModeBtn.textContent = "☀️ Light Mode";
+      } else {
+        localStorage.setItem("darkMode", "disabled");
+        darkModeBtn.textContent = "🌙 Dark Mode";
+      }
+    });
+  </script>
+
+</body>
+</html>
+```
