@@ -1,0 +1,855 @@
+```html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Flexbox কী? Beginnerদের জন্য সম্পূর্ণ Guide | Munna Tech</title>
+
+    <meta name="description" content="CSS Flexbox সহজ বাংলায় শিখুন। display flex, flex-direction, justify-content, align-items, gap, flex-wrap, responsive layout এবং real project example সহ সম্পূর্ণ beginner guide।">
+
+    <meta name="keywords" content="CSS Flexbox, CSS Flexbox বাংলা, Flexbox tutorial বাংলা, display flex, justify content, align items, CSS layout, CSS beginners guide">
+
+    <meta name="author" content="Munna Tech">
+
+    <meta property="og:title" content="CSS Flexbox কী? Beginnerদের জন্য সম্পূর্ণ Guide | Munna Tech">
+    <meta property="og:description" content="CSS Flexbox সহজ বাংলায় শেখার সম্পূর্ণ Beginner Guide।">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mm5527247-sketch.github.io/munna-tech/css-flexbox-beginners-guide.html">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .article-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 25px;
+        }
+
+        .article-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        body.dark .article-card {
+            background: #1e1e1e;
+            color: #f1f1f1;
+        }
+
+        .article-card h1 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .article-card h2 {
+            margin-top: 35px;
+            color: #2563eb;
+        }
+
+        .article-card h3 {
+            margin-top: 25px;
+        }
+
+        .article-card p,
+        .article-card li {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .article-card pre {
+            background: #111827;
+            color: #fff;
+            padding: 18px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        .article-card code {
+            font-family: Consolas, monospace;
+        }
+
+        .tip-box {
+            background: #eff6ff;
+            border-left: 5px solid #2563eb;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        body.dark .tip-box {
+            background: #172554;
+        }
+
+        .flex-demo {
+            display: flex;
+            gap: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            background: #eef2ff;
+            border-radius: 10px;
+        }
+
+        .flex-item {
+            background: #2563eb;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1;
+        }
+
+        .center-demo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 180px;
+            background: #f1f5f9;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .center-box {
+            background: #2563eb;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .card-demo {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .demo-card {
+            flex: 1 1 220px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        body.dark .demo-card {
+            background: #252525;
+            border-color: #444;
+        }
+
+        .related-links a {
+            display: block;
+            margin: 10px 0;
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .related-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo">Munna Tech</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="html-tutorial.html">HTML</a>
+            <a href="css-tutorial.html">CSS</a>
+            <a href="javascript-tutorial.html">JavaScript</a>
+            <a href="pc-tips.html">PC Tips</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+
+        <button id="darkModeBtn">🌙 Dark Mode</button>
+
+    </nav>
+</header>
+
+<main class="article-container">
+
+<article class="article-card">
+
+<h1>CSS Flexbox কী? Beginnerদের জন্য সম্পূর্ণ Guide</h1>
+
+<p>
+CSS Flexbox হলো website-এর elementগুলোকে সুন্দরভাবে arrange এবং align করার
+একটি powerful CSS layout system।
+</p>
+
+<p>
+Navbar, card, button group, profile section এবং responsive layout তৈরি করতে
+Flexbox খুবই কাজে লাগে।
+</p>
+
+<div class="tip-box">
+💡 <strong>Beginner Tip:</strong>
+Flexbox শেখার সময় শুধু code মুখস্থ না করে প্রতিটি property পরিবর্তন করে
+browser-এ result দেখুন।
+</div>
+
+
+<h2>1. CSS Flexbox কী?</h2>
+
+<p>
+Flexbox-এর পুরো নাম হলো <strong>Flexible Box Layout</strong>।
+এটি একটি container-এর ভিতরের elements-কে row বা column আকারে সাজাতে সাহায্য করে।
+</p>
+
+<p>
+Flexbox ব্যবহার করার জন্য প্রথমে parent element-এ লিখতে হয়:
+</p>
+
+<pre><code>.container {
+    display: flex;
+}</code></pre>
+
+<p>
+এখন container-এর direct child elements flex items হিসেবে কাজ করবে।
+</p>
+
+
+<h2>2. display: flex</h2>
+
+<p>
+Flexbox শুরু করার সবচেয়ে গুরুত্বপূর্ণ property হলো:
+</p>
+
+<pre><code>.container {
+    display: flex;
+}</code></pre>
+
+<p>
+ধরুন HTML:
+</p>
+
+<pre><code>&lt;div class="container"&gt;
+    &lt;div&gt;Box 1&lt;/div&gt;
+    &lt;div&gt;Box 2&lt;/div&gt;
+    &lt;div&gt;Box 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<p>
+Parent-এ <strong>display: flex</strong> দিলে child boxes সাধারণত পাশাপাশি বসবে।
+</p>
+
+<div class="flex-demo">
+    <div class="flex-item">Box 1</div>
+    <div class="flex-item">Box 2</div>
+    <div class="flex-item">Box 3</div>
+</div>
+
+
+<h2>3. Main Axis ও Cross Axis</h2>
+
+<p>
+Flexbox বুঝতে Main Axis এবং Cross Axis বোঝা গুরুত্বপূর্ণ।
+</p>
+
+<p>
+Defaultভাবে:
+</p>
+
+<ul>
+    <li>Main Axis = Horizontal</li>
+    <li>Cross Axis = Vertical</li>
+</ul>
+
+<p>
+এই axis-এর উপর ভিত্তি করে
+<strong>justify-content</strong> এবং <strong>align-items</strong> কাজ করে।
+</p>
+
+
+<h2>4. flex-direction</h2>
+
+<p>
+Flex items কোন direction-এ থাকবে তা
+<strong>flex-direction</strong> দিয়ে নির্ধারণ করা যায়।
+</p>
+
+<h3>Row</h3>
+
+<pre><code>.container {
+    display: flex;
+    flex-direction: row;
+}</code></pre>
+
+<p>
+এটি default value এবং items পাশাপাশি থাকবে।
+</p>
+
+<h3>Column</h3>
+
+<pre><code>.container {
+    display: flex;
+    flex-direction: column;
+}</code></pre>
+
+<p>
+এতে items উপর থেকে নিচে সাজানো হবে।
+</p>
+
+<h3>Row Reverse</h3>
+
+<pre><code>.container {
+    display: flex;
+    flex-direction: row-reverse;
+}</code></pre>
+
+<h3>Column Reverse</h3>
+
+<pre><code>.container {
+    display: flex;
+    flex-direction: column-reverse;
+}</code></pre>
+
+
+<h2>5. justify-content</h2>
+
+<p>
+Main Axis বরাবর items-এর অবস্থান নিয়ন্ত্রণ করতে
+<strong>justify-content</strong> ব্যবহার করা হয়।
+</p>
+
+<h3>Center</h3>
+
+<pre><code>.container {
+    display: flex;
+    justify-content: center;
+}</code></pre>
+
+<h3>Space Between</h3>
+
+<pre><code>.container {
+    display: flex;
+    justify-content: space-between;
+}</code></pre>
+
+<h3>Space Around</h3>
+
+<pre><code>.container {
+    display: flex;
+    justify-content: space-around;
+}</code></pre>
+
+<h3>Space Evenly</h3>
+
+<pre><code>.container {
+    display: flex;
+    justify-content: space-evenly;
+}</code></pre>
+
+<p>
+আরও ব্যবহারযোগ্য value:
+</p>
+
+<ul>
+    <li>flex-start</li>
+    <li>flex-end</li>
+    <li>center</li>
+    <li>space-between</li>
+    <li>space-around</li>
+    <li>space-evenly</li>
+</ul>
+
+
+<h2>6. align-items</h2>
+
+<p>
+Cross Axis বরাবর items align করার জন্য
+<strong>align-items</strong> ব্যবহার করা হয়।
+</p>
+
+<pre><code>.container {
+    display: flex;
+    align-items: center;
+}</code></pre>
+
+<p>
+Common value:
+</p>
+
+<ul>
+    <li>stretch</li>
+    <li>flex-start</li>
+    <li>flex-end</li>
+    <li>center</li>
+    <li>baseline</li>
+</ul>
+
+
+<h2>7. Horizontal ও Vertical Center</h2>
+
+<p>
+একটি element-কে একই সাথে horizontal এবং vertical center করার
+সবচেয়ে সহজ উপায়গুলোর একটি হলো:
+</p>
+
+<pre><code>.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}</code></pre>
+
+<div class="center-demo">
+    <div class="center-box">
+        Center Box
+    </div>
+</div>
+
+
+<h2>8. gap</h2>
+
+<p>
+Flex items-এর মধ্যে সমান দূরত্ব দিতে <strong>gap</strong> ব্যবহার করা যায়।
+</p>
+
+<pre><code>.container {
+    display: flex;
+    gap: 20px;
+}</code></pre>
+
+<p>
+এটি margin দিয়ে প্রতিটি item আলাদা আলাদা করার চেয়ে অনেক সহজ।
+</p>
+
+
+<h2>9. flex-wrap</h2>
+
+<p>
+এক লাইনে জায়গা না হলে items যেন পরের লাইনে চলে যায়,
+তার জন্য <strong>flex-wrap</strong> ব্যবহার করা হয়।
+</p>
+
+<pre><code>.container {
+    display: flex;
+    flex-wrap: wrap;
+}</code></pre>
+
+<p>
+Responsive card layout তৈরিতে এটি খুব গুরুত্বপূর্ণ।
+</p>
+
+
+<h2>10. Flex Wrap-এর Demo</h2>
+
+<div class="card-demo">
+
+    <div class="demo-card">
+        <h3>HTML</h3>
+        <p>Website structure তৈরি করতে HTML ব্যবহার করা হয়।</p>
+    </div>
+
+    <div class="demo-card">
+        <h3>CSS</h3>
+        <p>Website design করতে CSS ব্যবহার করা হয়।</p>
+    </div>
+
+    <div class="demo-card">
+        <h3>JavaScript</h3>
+        <p>Website interactive করতে JavaScript ব্যবহার করা হয়।</p>
+    </div>
+
+</div>
+
+
+<h2>11. flex property</h2>
+
+<p>
+Flex item-এর available space কীভাবে ভাগ হবে তা নিয়ন্ত্রণ করতে
+<strong>flex</strong> property ব্যবহার করা যায়।
+</p>
+
+<pre><code>.item {
+    flex: 1;
+}</code></pre>
+
+<p>
+যদি তিনটি item-এ <code>flex: 1</code> থাকে,
+তাহলে তারা available space প্রায় সমানভাবে ভাগ করতে পারে।
+</p>
+
+<pre><code>.item1 {
+    flex: 1;
+}
+
+.item2 {
+    flex: 2;
+}</code></pre>
+
+<p>
+এখানে দ্বিতীয় item প্রথমটির তুলনায় বেশি space নিতে পারে।
+</p>
+
+
+<h2>12. align-self</h2>
+
+<p>
+Parent-এর সব item-এর বদলে নির্দিষ্ট একটি item আলাদাভাবে align করতে
+<strong>align-self</strong> ব্যবহার করা যায়।
+</p>
+
+<pre><code>.special-item {
+    align-self: flex-end;
+}</code></pre>
+
+
+<h2>13. order</h2>
+
+<p>
+Flex item-এর visual order পরিবর্তন করতে <strong>order</strong> ব্যবহার করা যায়।
+</p>
+
+<pre><code>.first {
+    order: 2;
+}
+
+.second {
+    order: 1;
+}</code></pre>
+
+<p>
+এখানে HTML-এর order একই থাকলেও screen-এ display order পরিবর্তিত হতে পারে।
+</p>
+
+
+<h2>14. Flexbox দিয়ে Navbar তৈরি</h2>
+
+<p>
+Flexbox দিয়ে professional navbar তৈরি করা সহজ।
+</p>
+
+<pre><code>&lt;nav class="navbar"&gt;
+
+    &lt;div class="logo"&gt;Munna Tech&lt;/div&gt;
+
+    &lt;div class="menu"&gt;
+        &lt;a href="#"&gt;Home&lt;/a&gt;
+        &lt;a href="#"&gt;Tutorials&lt;/a&gt;
+        &lt;a href="#"&gt;PC Tips&lt;/a&gt;
+        &lt;a href="#"&gt;Contact&lt;/a&gt;
+    &lt;/div&gt;
+
+&lt;/nav&gt;</code></pre>
+
+<p>CSS:</p>
+
+<pre><code>.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}</code></pre>
+
+
+<h2>15. Flexbox দিয়ে Card Layout</h2>
+
+<p>
+একাধিক card পাশাপাশি রাখার জন্য Flexbox খুব জনপ্রিয়।
+</p>
+
+<pre><code>.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 250px;
+}</code></pre>
+
+<p>
+এভাবে screen ছোট হলে cardগুলো পরের লাইনে যেতে পারে।
+</p>
+
+
+<h2>16. Responsive Flexbox</h2>
+
+<p>
+Mobile screen-এর জন্য Flexbox direction পরিবর্তন করা যায়।
+</p>
+
+<pre><code>.container {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+}</code></pre>
+
+<p>
+Desktop-এ items পাশাপাশি এবং mobile-এ উপর-নিচে রাখা যাবে।
+</p>
+
+
+<h2>17. Flexbox-এর একটি Complete Example</h2>
+
+<pre><code>&lt;div class="services"&gt;
+
+    &lt;div class="service"&gt;
+        &lt;h3&gt;HTML&lt;/h3&gt;
+        &lt;p&gt;Learn HTML basics.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="service"&gt;
+        &lt;h3&gt;CSS&lt;/h3&gt;
+        &lt;p&gt;Learn modern CSS.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="service"&gt;
+        &lt;h3&gt;JavaScript&lt;/h3&gt;
+        &lt;p&gt;Learn JavaScript.&lt;/p&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+
+<p>CSS:</p>
+
+<pre><code>.services {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service {
+    flex: 1 1 250px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}</code></pre>
+
+
+<h2>18. Flexbox-এর Common Mistakes</h2>
+
+<ul>
+    <li>Parent element-এ <code>display: flex</code> না দেওয়া</li>
+    <li>justify-content ও align-items-এর কাজ গুলিয়ে ফেলা</li>
+    <li>flex-direction পরিবর্তন করার পর axis না বোঝা</li>
+    <li>Mobile-এর জন্য flex-wrap ব্যবহার না করা</li>
+    <li>অতিরিক্ত fixed width ব্যবহার করা</li>
+    <li>gap-এর বদলে অপ্রয়োজনীয় margin ব্যবহার করা</li>
+</ul>
+
+
+<h2>19. Beginner Practice</h2>
+
+<p>
+নিজে একটি তিনটি card-এর layout তৈরি করুন।
+প্রতিটি card-এ থাকবে:
+</p>
+
+<ul>
+    <li>Title</li>
+    <li>Description</li>
+    <li>Button</li>
+</ul>
+
+<p>
+তারপর নিচের propertyগুলো ব্যবহার করুন:
+</p>
+
+<pre><code>display: flex;
+gap: 20px;
+flex-wrap: wrap;
+justify-content: center;</code></pre>
+
+<p>
+এরপর mobile screen-এর জন্য
+<code>flex-direction: column;</code> ব্যবহার করে দেখুন।
+</p>
+
+
+<h2>20. Quick Revision</h2>
+
+<pre><code>display: flex;
+→ Flexbox চালু করে
+
+flex-direction
+→ Row বা Column নির্ধারণ করে
+
+justify-content
+→ Main Axis-এ alignment
+
+align-items
+→ Cross Axis-এ alignment
+
+gap
+→ Items-এর মাঝের space
+
+flex-wrap
+→ প্রয়োজন হলে items-কে নতুন লাইনে নেয়
+
+flex
+→ Available space ভাগ করে
+
+align-self
+→ একটি নির্দিষ্ট item-এর alignment
+
+order
+→ Visual order পরিবর্তন করে</code></pre>
+
+
+<h2>21. FAQ</h2>
+
+<h3>CSS Flexbox কী?</h3>
+
+<p>
+Flexbox হলো CSS-এর একটি layout system যা elements-কে
+row বা column আকারে সাজানো এবং align করতে সাহায্য করে।
+</p>
+
+<h3>display: flex কী করে?</h3>
+
+<p>
+Parent element-কে flex container বানায় এবং তার direct children-কে
+flex items হিসেবে পরিচালনা করে।
+</p>
+
+<h3>justify-content কী?</h3>
+
+<p>
+Flex container-এর Main Axis বরাবর items-এর alignment নিয়ন্ত্রণ করে।
+</p>
+
+<h3>align-items কী?</h3>
+
+<p>
+Cross Axis বরাবর flex items-এর alignment নিয়ন্ত্রণ করে।
+</p>
+
+<h3>gap কী?</h3>
+
+<p>
+Flex items-এর মধ্যে নির্দিষ্ট দূরত্ব তৈরি করার সহজ property হলো gap।
+</p>
+
+<h3>Flexbox কি responsive website-এ ব্যবহার করা যায়?</h3>
+
+<p>
+হ্যাঁ। flex-wrap, flexible sizing এবং media query ব্যবহার করে
+responsive layout তৈরি করা যায়।
+</p>
+
+
+<h2>22. Conclusion</h2>
+
+<p>
+CSS Flexbox website layout তৈরি করার জন্য অত্যন্ত গুরুত্বপূর্ণ একটি skill।
+Navbar, cards, buttons, sections এবং responsive layouts তৈরি করতে
+Flexbox নিয়মিত ব্যবহার করা হয়।
+</p>
+
+<p>
+আপনি যদি CSS শেখা শুরু করে থাকেন, তাহলে
+<strong>Box Model → Flexbox → Grid → Responsive Design</strong>
+এই ধারায় practice করতে পারেন।
+</p>
+
+
+<h2>Related Articles</h2>
+
+<div class="related-links">
+
+    <a href="css-ki-beginner-guide.html">
+        → CSS কী? Beginnerদের জন্য CSS সম্পূর্ণ গাইড
+    </a>
+
+    <a href="css-color-font-text-style-guide.html">
+        → CSS Color, Font ও Text Style
+    </a>
+
+    <a href="css-box-model-beginners-guide.html">
+        → CSS Box Model কী?
+    </a>
+
+    <a href="css-diye-website-design-guide.html">
+        → CSS দিয়ে Website Design করার সহজ নিয়ম
+    </a>
+
+    <a href="html-ki-beginner-guide.html">
+        → HTML কী? Beginnerদের জন্য HTML শেখার সম্পূর্ণ গাইড
+    </a>
+
+    <a href="css-tutorial.html">
+        → CSS Tutorial — Munna Tech
+    </a>
+
+</div>
+
+
+<h2>Adsterra</h2>
+
+<!-- Adsterra Native Banner -->
+
+<script async="async"
+data-cfasync="false"
+src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js"></script>
+
+<div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+
+
+</article>
+
+</main>
+
+
+<footer>
+    <p>© 2026 Munna Tech. All Rights Reserved.</p>
+</footer>
+
+
+<script>
+
+const darkModeBtn = document.getElementById("darkModeBtn");
+
+if (localStorage.getItem("darkMode") === "enabled") {
+
+    document.body.classList.add("dark");
+
+    darkModeBtn.textContent = "☀️ Light Mode";
+
+}
+
+darkModeBtn.addEventListener("click", function () {
+
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+
+        darkModeBtn.textContent = "☀️ Light Mode";
+
+        localStorage.setItem("darkMode", "enabled");
+
+    } else {
+
+        darkModeBtn.textContent = "🌙 Dark Mode";
+
+        localStorage.setItem("darkMode", "disabled");
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
+```
