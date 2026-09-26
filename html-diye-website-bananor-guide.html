@@ -1,0 +1,1113 @@
+```html
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        HTML দিয়ে প্রথম Website কীভাবে বানাবেন? Beginner Guide | Munna Tech
+    </title>
+
+    <meta name="description"
+        content="HTML দিয়ে প্রথম Website কীভাবে বানাবেন তা একদম Beginner level থেকে শিখুন। HTML file তৈরি, code লেখা, browser-এ website দেখা এবং basic website তৈরি করার সম্পূর্ণ বাংলা গাইড।">
+
+    <meta name="keywords"
+        content="HTML দিয়ে website বানানো, HTML website tutorial Bangla, HTML beginner guide, HTML website তৈরি, web development Bangla">
+
+    <meta name="author"
+        content="Munna Tech">
+
+    <!-- Open Graph -->
+
+    <meta property="og:title"
+        content="HTML দিয়ে প্রথম Website কীভাবে বানাবেন?">
+
+    <meta property="og:description"
+        content="Beginnerদের জন্য HTML দিয়ে প্রথম Website তৈরি করার সহজ বাংলা গাইড।">
+
+    <meta property="og:type"
+        content="article">
+
+    <meta property="og:url"
+        content="https://mm5527247-sketch.github.io/munna-tech/html-diye-website-bananor-guide.html">
+
+
+    <!-- Existing Munna Tech CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- Article Page CSS -->
+
+    <style>
+
+        /* ==============================
+           ARTICLE PAGE
+           ============================== */
+
+        .article-page {
+
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            padding: 40px 20px 70px;
+
+        }
+
+
+        .article-container {
+
+            max-width: 850px;
+
+            margin: auto;
+
+        }
+
+
+        /* Breadcrumb */
+
+        .breadcrumb {
+
+            margin-bottom: 25px;
+
+            font-size: 14px;
+
+            color: #777;
+
+        }
+
+
+        .breadcrumb a {
+
+            color: #007bff;
+
+            text-decoration: none;
+
+        }
+
+
+        .breadcrumb a:hover {
+
+            text-decoration: underline;
+
+        }
+
+
+        /* Article Header */
+
+        .article-header {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eef6ff,
+                    #ffffff
+                );
+
+            border-radius: 18px;
+
+            padding: 40px 30px;
+
+            margin-bottom: 30px;
+
+            border: 1px solid #e5e5e5;
+
+        }
+
+
+        .article-category {
+
+            display: inline-block;
+
+            background: #007bff;
+
+            color: white;
+
+            padding: 7px 14px;
+
+            border-radius: 30px;
+
+            font-size: 13px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .article-header h1 {
+
+            font-size: 42px;
+
+            line-height: 1.25;
+
+            margin: 0 0 15px;
+
+            color: #111;
+
+        }
+
+
+        .article-intro {
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            color: #555;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .article-meta {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            color: #777;
+
+            font-size: 14px;
+
+        }
+
+
+        /* Article Content */
+
+        .article-content {
+
+            background: #ffffff;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            border: 1px solid #e5e5e5;
+
+            box-shadow:
+                0 5px 25px
+                rgba(0,0,0,0.04);
+
+        }
+
+
+        .article-content h2 {
+
+            font-size: 29px;
+
+            margin-top: 40px;
+
+            margin-bottom: 15px;
+
+            color: #111;
+
+        }
+
+
+        .article-content h3 {
+
+            font-size: 23px;
+
+            margin-top: 30px;
+
+            margin-bottom: 12px;
+
+            color: #222;
+
+        }
+
+
+        .article-content p {
+
+            font-size: 17px;
+
+            line-height: 1.9;
+
+            color: #444;
+
+            margin: 15px 0;
+
+        }
+
+
+        .article-content ul,
+        .article-content ol {
+
+            padding-left: 25px;
+
+            margin: 15px 0;
+
+        }
+
+
+        .article-content li {
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .article-content strong {
+
+            color: #111;
+
+        }
+
+
+        /* Code Box */
+
+        .code-box {
+
+            background: #111827;
+
+            color: #e5e7eb;
+
+            border-radius: 12px;
+
+            padding: 20px;
+
+            margin: 20px 0;
+
+            overflow-x: auto;
+
+        }
+
+
+        .code-box pre {
+
+            margin: 0;
+
+            white-space: pre-wrap;
+
+            word-break: break-word;
+
+        }
+
+
+        .code-box code {
+
+            font-family:
+                Consolas,
+                Monaco,
+                monospace;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* Info Box */
+
+        .info-box {
+
+            background: #eef7ff;
+
+            border-left:
+                5px solid #007bff;
+
+            padding: 18px 20px;
+
+            margin: 25px 0;
+
+            border-radius: 8px;
+
+        }
+
+
+        .info-box p {
+
+            margin: 0;
+
+        }
+
+
+        /* Steps */
+
+        .step-box {
+
+            padding: 20px;
+
+            margin: 20px 0;
+
+            border-radius: 12px;
+
+            background: #f7f9fc;
+
+            border: 1px solid #e5e5e5;
+
+        }
+
+
+        .step-number {
+
+            display: inline-block;
+
+            width: 35px;
+
+            height: 35px;
+
+            line-height: 35px;
+
+            text-align: center;
+
+            border-radius: 50%;
+
+            background: #007bff;
+
+            color: white;
+
+            font-weight: bold;
+
+            margin-right: 8px;
+
+        }
+
+
+        /* Related Articles */
+
+        .related-section {
+
+            margin-top: 40px;
+
+        }
+
+
+        .related-section h2 {
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .related-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        .related-card {
+
+            display: block;
+
+            padding: 22px;
+
+            border-radius: 14px;
+
+            background: #f7f9fc;
+
+            border: 1px solid #e5e5e5;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+
+        }
+
+
+        .related-card:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 8px 25px
+                rgba(0,0,0,0.08);
+
+        }
+
+
+        .related-card h3 {
+
+            margin: 0 0 8px;
+
+            font-size: 19px;
+
+            color: #111;
+
+        }
+
+
+        .related-card p {
+
+            margin: 0;
+
+            font-size: 14px;
+
+            color: #666;
+
+        }
+
+
+        /* CTA */
+
+        .article-cta {
+
+            margin-top: 40px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #007bff,
+                    #0056b3
+                );
+
+            color: white;
+
+        }
+
+
+        .article-cta h2 {
+
+            color: white;
+
+            margin-top: 0;
+
+        }
+
+
+        .article-cta p {
+
+            color: white;
+
+        }
+
+
+        .cta-button {
+
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 12px 22px;
+
+            background: white;
+
+            color: #007bff;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+        }
+
+
+        /* ==============================
+           DARK MODE
+           ============================== */
+
+        body.dark-mode
+        .article-header {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #172033,
+                    #111827
+                );
+
+            border-color: #293548;
+
+        }
+
+
+        body.dark-mode
+        .article-header h1 {
+
+            color: #ffffff;
+
+        }
+
+
+        body.dark-mode
+        .article-intro {
+
+            color: #cbd5e1;
+
+        }
+
+
+        body.dark-mode
+        .article-content {
+
+            background: #111827;
+
+            border-color: #293548;
+
+        }
+
+
+        body.dark-mode
+        .article-content h2,
+
+        body.dark-mode
+        .article-content h3,
+
+        body.dark-mode
+        .article-content strong {
+
+            color: #ffffff;
+
+        }
+
+
+        body.dark-mode
+        .article-content p,
+
+        body.dark-mode
+        .article-content li {
+
+            color: #d1d5db;
+
+        }
+
+
+        body.dark-mode
+        .breadcrumb {
+
+            color: #aaa;
+
+        }
+
+
+        body.dark-mode
+        .info-box {
+
+            background: #172033;
+
+            color: #ddd;
+
+        }
+
+
+        body.dark-mode
+        .step-box {
+
+            background: #172033;
+
+            border-color: #293548;
+
+        }
+
+
+        body.dark-mode
+        .related-card {
+
+            background: #172033;
+
+            border-color: #293548;
+
+        }
+
+
+        body.dark-mode
+        .related-card h3 {
+
+            color: #ffffff;
+
+        }
+
+
+        body.dark-mode
+        .related-card p {
+
+            color: #cbd5e1;
+
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 768px) {
+
+            .article-page {
+
+                padding:
+                    25px
+                    12px
+                    50px;
+
+            }
+
+
+            .article-header {
+
+                padding:
+                    28px
+                    20px;
+
+            }
+
+
+            .article-header h1 {
+
+                font-size: 30px;
+
+            }
+
+
+            .article-intro {
+
+                font-size: 16px;
+
+            }
+
+
+            .article-content {
+
+                padding:
+                    22px
+                    18px;
+
+            }
+
+
+            .article-content h2 {
+
+                font-size: 25px;
+
+            }
+
+
+            .article-content h3 {
+
+                font-size: 21px;
+
+            }
+
+
+            .article-content p,
+
+            .article-content li {
+
+                font-size: 16px;
+
+            }
+
+
+            .related-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         NAVBAR
+         ============================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <a href="index.html">
+                    Munna Tech
+                </a>
+
+            </div>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="html-tutorial.html">
+                        HTML
+                    </a>
+                </li>
+
+                <li>
+                    <a href="css-tutorial.html">
+                        CSS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript-tutorial.html">
+                        JavaScript
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pc-tips.html">
+                        PC Tips
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <button
+                id="darkModeToggle"
+                class="dark-mode-btn">
+
+                🌙 Dark Mode
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==============================
+         MAIN ARTICLE
+         ============================== -->
+
+    <main class="article-page">
+
+        <div class="article-container">
+
+
+            <!-- Breadcrumb -->
+
+            <div class="breadcrumb">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                →
+
+                <a href="html-tutorial.html">
+                    HTML Tutorial
+                </a>
+
+                →
+
+                HTML দিয়ে Website
+
+            </div>
+
+
+
+            <!-- Article Header -->
+
+            <section class="article-header">
+
+                <span class="article-category">
+                    HTML Tutorial
+                </span>
+
+
+                <h1>
+                    HTML দিয়ে প্রথম Website
+                    কীভাবে বানাবেন?
+                </h1>
+
+
+                <p class="article-intro">
+
+                    একদম Beginner level থেকে
+                    HTML ব্যবহার করে নিজের প্রথম
+                    Website তৈরি করার সম্পূর্ণ
+                    সহজ বাংলা গাইড।
+
+                </p>
+
+
+                <div class="article-meta">
+
+                    <span>
+                        ✍️ Munna Tech
+                    </span>
+
+                    <span>
+                        📚 Web Development
+                    </span>
+
+                    <span>
+                        ⏱️ 10 মিনিট পড়তে সময় লাগবে
+                    </span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- Article Content -->
+
+            <article class="article-content">
+
+
+                <p>
+
+                    আপনি যদি Web Development শেখা
+                    শুরু করে থাকেন, তাহলে আপনার
+                    প্রথম লক্ষ্য হওয়া উচিত একটি
+                    simple webpage নিজে তৈরি করা।
+
+                </p>
+
+
+                <p>
+
+                    এই tutorial-এ আমরা একদম
+                    শুরু থেকে দেখব কীভাবে একটি
+                    HTML file তৈরি করবেন, HTML code
+                    লিখবেন এবং browser-এ নিজের
+                    প্রথম Website দেখতে পারবেন।
+
+                </p>
+
+
+
+                <!-- Adsterra -->
+
+                <div
+                    style="
+                    margin:25px 0;
+                    text-align:center;
+                    "
+                >
+
+                    <script
+                        async="async"
+                        data-cfasync="false"
+                        src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js">
+                    </script>
+
+                    <div
+                        id="container-b741f1fe8be520cb1d272cd9b990d026">
+                    </div>
+
+                </div>
+
+
+
+                <h2>
+                    HTML Website তৈরি করতে কী লাগবে?
+                </h2>
+
+
+                <p>
+
+                    একটি simple HTML Website তৈরি
+                    করতে খুব বেশি কিছু প্রয়োজন নেই।
+
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        একটি PC বা Computer
+                    </li>
+
+                    <li>
+                        একটি Browser
+                    </li>
+
+                    <li>
+                        একটি Code Editor
+                    </li>
+
+                    <li>
+                        HTML-এর basic knowledge
+                    </li>
+
+                    <li>
+                        কিছু Practice
+                    </li>
+
+                </ul>
+
+
+                <p>
+
+                    Beginnerদের জন্য
+                    <strong>VS Code</strong>
+                    একটি জনপ্রিয় code editor।
+
+                </p>
+
+
+
+                <!-- STEP 1 -->
+
+                <div class="step-box">
+
+                    <h3>
+
+                        <span class="step-number">
+                            1
+                        </span>
+
+                        একটি নতুন Folder তৈরি করুন
+
+                    </h3>
+
+
+                    <p>
+
+                        প্রথমে আপনার PC-তে
+                        একটি নতুন folder তৈরি করুন।
+
+                    </p>
+
+
+                    <p>
+
+                        উদাহরণ:
+
+                    </p>
+
+
+                    <div class="code-box">
+
+<pre><code>My First Website</code></pre>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STEP 2 -->
+
+                <div class="step-box">
+
+                    <h3>
+
+                        <span class="step-number">
+                            2
+                        </span>
+
+                        VS Code দিয়ে Folder Open করুন
+
+                    </h3>
+
+
+                    <p>
+
+                        এখন VS Code open করুন।
+
+                        তারপর:
+
+                    </p>
+
+
+                    <ol>
+
+                        <li>
+                            File Explorer খুলুন
+                        </li>
+
+                        <li>
+                            আপনার folder নির্বাচন করুন
+                        </li>
+
+                        <li>
+                            VS Code-এ folderটি open করুন
+                        </li>
+
+                    </ol>
+
+                </div>
+
+
+
+                <!-- STEP 3 -->
+
+                <div class="step-box">
+
+                    <h3>
+
+                        <span class="step-number">
+                            3
+                        </span>
+
+                        index.html File তৈরি করুন
+
+                    </h3>
+
+
+                    <p>
+
+                        এখন VS Code-এর ভিতরে
+                        একটি নতুন file তৈরি করুন।
+
+                    </p>
+
+
+                    <p>
+
+                        File name হবে:
+
+                    </p>
+
+
+                    <div class="code-box">
+
+<pre><code>index.html</code></pre>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <p>
+
+                            💡 <strong>Tip:</strong>
+                            File name-এর শেষে
+                            অবশ্যই <strong>.html</strong>
+                            থাকতে হবে।
+
+                        </p>
+
+                    </div>
+
+                </d
+```
