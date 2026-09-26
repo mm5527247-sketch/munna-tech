@@ -1,0 +1,1326 @@
+```html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML-এ Image যোগ করার নিয়ম | Beginners Guide | Munna Tech</title>
+
+    <meta name="description" content="HTML-এ Image কীভাবে যোগ করতে হয় তা সহজ বাংলায় শিখুন। img tag, src, alt, image size, clickable image এবং responsive image সহ সম্পূর্ণ beginner guide।">
+
+    <meta name="keywords" content="HTML image, HTML img tag, HTML image বাংলা, HTML image tutorial, HTML এ ছবি যোগ করার নিয়ম, img tag বাংলা, HTML beginners guide">
+
+    <meta name="author" content="Munna Tech">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="HTML-এ Image যোগ করার নিয়ম | Munna Tech">
+    <meta property="og:description" content="Beginners-এর জন্য HTML-এ Image যোগ করার সম্পূর্ণ বাংলা গাইড।">
+    <meta property="og:type" content="article">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ================================
+           ARTICLE PAGE
+        ================================= */
+
+        .article-page {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .breadcrumb {
+            margin-bottom: 25px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .article-header {
+            background: linear-gradient(135deg, #007bff, #6f42c1);
+            color: white;
+            padding: 45px 30px;
+            border-radius: 18px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .article-header h1 {
+            font-size: 38px;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+
+        .article-header p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .article-content {
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            margin-top: 38px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .article-content h3 {
+            font-size: 22px;
+            margin-top: 28px;
+            color: #333;
+        }
+
+        .article-content p {
+            font-size: 17px;
+            line-height: 1.9;
+            color: #444;
+        }
+
+        .article-content li {
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+
+        /* Info Box */
+
+        .info-box {
+            background: #eef7ff;
+            border-left: 5px solid #007bff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        /* Tip Box */
+
+        .tip-box {
+            background: #fff8e6;
+            border-left: 5px solid #ffb300;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        /* Practice */
+
+        .practice-box {
+            background: #eefaf1;
+            border-left: 5px solid #28a745;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        /* Code */
+
+        .code-box {
+            background: #1e1e1e;
+            color: #f5f5f5;
+            padding: 18px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .code-box code {
+            font-family: Consolas, monospace;
+            line-height: 1.7;
+        }
+
+        /* Example */
+
+        .example-box {
+            border: 1px solid #ddd;
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        /* Demo Image */
+
+        .demo-image {
+            display: block;
+            max-width: 100%;
+            width: 500px;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 12px;
+        }
+
+        /* Ad */
+
+        .ad-box {
+            margin: 35px 0;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Related */
+
+        .related {
+            margin-top: 40px;
+            padding: 25px;
+            background: #f5f5f5;
+            border-radius: 14px;
+        }
+
+        .related a {
+            display: block;
+            margin: 12px 0;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* CTA */
+
+        .cta {
+            margin-top: 40px;
+            padding: 30px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #007bff, #6f42c1);
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .cta a {
+            display: inline-block;
+            margin-top: 15px;
+            background: white;
+            color: #007bff;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Dark Mode */
+
+        body.dark-mode .article-content {
+            background: #1e1e1e;
+        }
+
+        body.dark-mode .article-content h2,
+        body.dark-mode .article-content h3 {
+            color: white;
+        }
+
+        body.dark-mode .article-content p,
+        body.dark-mode .article-content li {
+            color: #ddd;
+        }
+
+        body.dark-mode .example-box {
+            background: #252525;
+            border-color: #444;
+        }
+
+        body.dark-mode .related {
+            background: #252525;
+        }
+
+        body.dark-mode .info-box {
+            background: #172b3a;
+        }
+
+        body.dark-mode .tip-box {
+            background: #332b18;
+        }
+
+        body.dark-mode .practice-box {
+            background: #18301f;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 768px) {
+
+            .article-page {
+                margin: 25px auto;
+                padding: 0 12px;
+            }
+
+            .article-header {
+                padding: 30px 18px;
+            }
+
+            .article-header h1 {
+                font-size: 28px;
+            }
+
+            .article-header p {
+                font-size: 16px;
+            }
+
+            .article-content {
+                padding: 22px 18px;
+            }
+
+            .article-content h2 {
+                font-size: 24px;
+            }
+
+            .article-content p {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================================
+         NAVBAR
+    ================================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="index.html">Munna Tech</a>
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="html-tutorial.html">HTML</a>
+                </li>
+
+                <li>
+                    <a href="css-tutorial.html">CSS</a>
+                </li>
+
+                <li>
+                    <a href="javascript-tutorial.html">JavaScript</a>
+                </li>
+
+                <li>
+                    <a href="pc-tips.html">PC Tips</a>
+                </li>
+
+                <li>
+                    <a href="index.html#contact">Contact</a>
+                </li>
+
+            </ul>
+
+            <button id="darkModeBtn">
+                🌙 Dark Mode
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================================
+         ARTICLE
+    ================================= -->
+
+    <main class="article-page">
+
+
+        <!-- Breadcrumb -->
+
+        <div class="breadcrumb">
+
+            <a href="index.html">Home</a>
+            →
+            <a href="html-tutorial.html">HTML</a>
+            →
+            HTML Image Guide
+
+        </div>
+
+
+
+        <!-- Article Header -->
+
+        <section class="article-header">
+
+            <h1>
+                HTML-এ Image যোগ করার নিয়ম
+            </h1>
+
+            <p>
+                Beginners-এর জন্য HTML Image-এর সম্পূর্ণ সহজ বাংলা গাইড
+            </p>
+
+        </section>
+
+
+
+        <!-- Article Content -->
+
+        <article class="article-content">
+
+
+            <p>
+                একটি সুন্দর Website-এ Text-এর পাশাপাশি Image ব্যবহার করলে
+                Website আরও আকর্ষণীয় এবং সহজে বোঝার মতো হয়।
+            </p>
+
+            <p>
+                HTML ব্যবহার করে Website-এ Image যোগ করা খুব সহজ।
+                এর জন্য মূলত <code>&lt;img&gt;</code> Tag ব্যবহার করা হয়।
+            </p>
+
+
+
+            <!-- Info -->
+
+            <div class="info-box">
+
+                <strong>📌 এই Article-এ যা শিখবেন:</strong>
+
+                <ul>
+
+                    <li>
+                        HTML Image কী?
+                    </li>
+
+                    <li>
+                        img Tag কীভাবে ব্যবহার করবেন
+                    </li>
+
+                    <li>
+                        src Attribute
+                    </li>
+
+                    <li>
+                        alt Attribute
+                    </li>
+
+                    <li>
+                        Image-এর Width ও Height
+                    </li>
+
+                    <li>
+                        Local Image ব্যবহার
+                    </li>
+
+                    <li>
+                        Clickable Image
+                    </li>
+
+                    <li>
+                        Responsive Image
+                    </li>
+
+                    <li>
+                        Common Mistakes
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- SECTION 1 -->
+
+            <h2>
+                1. HTML Image কী?
+            </h2>
+
+            <p>
+                HTML Page-এ ছবি দেখানোর জন্য
+                <code>&lt;img&gt;</code> Tag ব্যবহার করা হয়।
+            </p>
+
+            <p>
+                একটি Basic Image code হলো:
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;img src="image.jpg" alt="My Image"&gt;
+</code>
+
+            </div>
+
+
+
+            <p>
+                এখানে <code>src</code> দিয়ে Image-এর location
+                এবং <code>alt</code> দিয়ে Image-এর alternative text
+                দেওয়া হয়েছে।
+            </p>
+
+
+
+            <!-- SECTION 2 -->
+
+            <h2>
+                2. img Tag কী?
+            </h2>
+
+            <p>
+                <code>&lt;img&gt;</code> হলো HTML-এর একটি গুরুত্বপূর্ণ Tag,
+                যেটি Website-এ Image দেখানোর জন্য ব্যবহার করা হয়।
+            </p>
+
+            <p>
+                অন্য অনেক HTML Tag-এর মতো
+                <code>&lt;img&gt;</code>-এর আলাদা closing Tag লাগে না।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;img src="photo.jpg" alt="My Photo"&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- SRC -->
+
+            <h2>
+                3. src Attribute কী?
+            </h2>
+
+            <p>
+                <code>src</code> এর অর্থ হলো Source।
+                এটি Browser-কে বলে Image file কোথায় আছে।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;img src="photo.jpg" alt="My Photo"&gt;
+</code>
+
+            </div>
+
+            <p>
+                এখানে <code>photo.jpg</code> হলো Image file-এর নাম।
+            </p>
+
+
+
+            <!-- Local -->
+
+            <h2>
+                4. Local Image কীভাবে যোগ করবেন?
+            </h2>
+
+            <p>
+                আপনার Computer-এর Project Folder-এর মধ্যে
+                Image রাখলে সেটিকে Local Image হিসেবে ব্যবহার করতে পারবেন।
+            </p>
+
+            <p>
+                ধরুন আপনার folder structure এমন:
+            </p>
+
+            <div class="code-box">
+
+<code>
+Munna-Tech/
+
+    index.html
+
+    style.css
+
+    profile.jpg
+</code>
+
+            </div>
+
+            <p>
+                তাহলে HTML-এ লিখবেন:
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;img src="profile.jpg" alt="My Profile Photo"&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- Folder -->
+
+            <h3>
+                Image আলাদা Folder-এর মধ্যে থাকলে
+            </h3>
+
+            <p>
+                ধরুন Project-এর মধ্যে <code>images</code> নামে একটি Folder আছে।
+            </p>
+
+            <div class="code-box">
+
+<code>
+Munna-Tech/
+
+    index.html
+
+    images/
+
+        profile.jpg
+</code>
+
+            </div>
+
+            <p>
+                তখন code হবে:
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;img src="images/profile.jpg"
+     alt="My Profile Photo"&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- ALT -->
+
+            <h2>
+                5. alt Attribute কী?
+            </h2>
+
+            <p>
+                <code>alt</code> হলো alternative text।
+                Image load না হলে অথবা Image দেখা না গেলে
+                এই text-এর মাধ্যমে Image সম্পর্কে ধারণা পাওয়া যায়।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;img src="computer.jpg"
+     alt="A desktop computer"&gt;
+</code>
+
+            </div>
+
+
+
+            <div class="tip-box">
+
+                <strong>💡 গুরুত্বপূর্ণ:</strong>
+
+                <p>
+                    Image ব্যবহার করার সময় meaningful
+                    <code>alt</code> text দেওয়া ভালো।
+                    যেমন <code>alt="My Profile Photo"</code>।
+                </p>
+
+            </div>
+
+
+
+            <!-- WIDTH HEIGHT -->
+
+            <h2>
+                6. Image-এর Size পরিবর্তন করা
+            </h2>
+
+            <p>
+                HTML Attribute ব্যবহার করে Image-এর
+                width এবং height নির্ধারণ করা যায়।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;img src="photo.jpg"
+     alt="My Photo"
+     width="500"
+     height="300"&gt;
+</code>
+
+            </div>
+
+
+
+            <h3>
+                শুধু Width দেওয়া
+            </h3>
+
+            <div class="code-box">
+
+<code>
+&lt;img src="photo.jpg"
+     alt="My Photo"
+     width="500"&gt;
+</code>
+
+            </div>
+
+            <p>
+                অনেক ক্ষেত্রে শুধু width নির্ধারণ করে
+                height auto রাখা সুবিধাজনক।
+            </p>
+
+
+
+            <!-- CSS -->
+
+            <h2>
+                7. CSS দিয়ে Image Size পরিবর্তন
+            </h2>
+
+            <p>
+                Professional Website-এ Image styling করার জন্য
+                CSS ব্যবহার করা বেশি সুবিধাজনক।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;img class="my-image"
+     src="photo.jpg"
+     alt="My Photo"&gt;
+</code>
+
+            </div>
+
+            <p>
+                CSS:
+            </p>
+
+            <div class="code-box">
+
+<code>
+.my-image {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+</code>
+
+            </div>
+
+
+
+            <!-- ADSTERRA -->
+
+            <div class="ad-box">
+
+                <script async="async"
+                    data-cfasync="false"
+                    src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js">
+                </script>
+
+                <div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+
+            </div>
+
+
+
+            <!-- RESPONSIVE -->
+
+            <h2>
+                8. Responsive Image কী?
+            </h2>
+
+            <p>
+                Website Mobile, Tablet এবং Computer-এ বিভিন্ন Screen Size-এ
+                দেখা হয়। তাই Image যেন Screen-এর বাইরে চলে না যায়,
+                সেজন্য Responsive Image ব্যবহার করা ভালো।
+            </p>
+
+            <div class="code-box">
+
+<code>
+img {
+    max-width: 100%;
+    height: auto;
+}
+</code>
+
+            </div>
+
+            <p>
+                এতে Image তার container-এর চেয়ে বেশি বড় হবে না।
+            </p>
+
+
+
+            <!-- CENTER -->
+
+            <h2>
+                9. Image Center করার নিয়ম
+            </h2>
+
+            <p>
+                CSS ব্যবহার করে Image Center করা যায়।
+            </p>
+
+            <div class="code-box">
+
+<code>
+.my-image {
+    display: block;
+    margin: 20px auto;
+}
+</code>
+
+            </div>
+
+
+
+            <!-- BORDER -->
+
+            <h2>
+                10. Image-এ Border ও Rounded Corner
+            </h2>
+
+            <p>
+                CSS দিয়ে Image-কে আরও সুন্দর করা যায়।
+            </p>
+
+            <div class="code-box">
+
+<code>
+.my-image {
+    max-width: 100%;
+    border-radius: 15px;
+}
+</code>
+
+            </div>
+
+            <p>
+                <code>border-radius</code> ব্যবহার করলে
+                Image-এর Corner গোল হবে।
+            </p>
+
+
+
+            <!-- CLICKABLE -->
+
+            <h2>
+                11. Clickable Image তৈরি করা
+            </h2>
+
+            <p>
+                Image-এর উপর Click করলে অন্য Page বা Website-এ
+                যাওয়ার ব্যবস্থা করা যায়।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;a href="index.html"&gt;
+
+    &lt;img src="logo.png"
+         alt="Munna Tech Logo"&gt;
+
+&lt;/a&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- NEW TAB -->
+
+            <h3>
+                Image Link নতুন Tab-এ খুলতে
+            </h3>
+
+            <div class="code-box">
+
+<code>
+&lt;a href="https://example.com"
+   target="_blank"
+   rel="noopener noreferrer"&gt;
+
+    &lt;img src="photo.jpg"
+         alt="Example Image"&gt;
+
+&lt;/a&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- IMAGE FORMAT -->
+
+            <h2>
+                12. কোন Image Format ব্যবহার করবেন?
+            </h2>
+
+            <p>
+                Website-এর জন্য বিভিন্ন Image format ব্যবহার করা যায়।
+            </p>
+
+            <ul>
+
+                <li>
+                    <strong>JPG/JPEG:</strong>
+                    সাধারণ Photo-এর জন্য ভালো।
+                </li>
+
+                <li>
+                    <strong>PNG:</strong>
+                    Transparent background প্রয়োজন হলে উপকারী।
+                </li>
+
+                <li>
+                    <strong>WebP:</strong>
+                    অনেক ক্ষেত্রে Website-এর জন্য ভালো compression দিতে পারে।
+                </li>
+
+            </ul>
+
+
+
+            <!-- COMMON MISTAKES -->
+
+            <h2>
+                13. Beginners-এর Common Mistakes
+            </h2>
+
+            <ul>
+
+                <li>
+                    Image file-এর নাম ভুল লেখা
+                </li>
+
+                <li>
+                    File extension ভুল দেওয়া
+                </li>
+
+                <li>
+                    Folder path ভুল লেখা
+                </li>
+
+                <li>
+                    <code>src</code>-এ ভুল location দেওয়া
+                </li>
+
+                <li>
+                    <code>alt</code> না দেওয়া
+                </li>
+
+                <li>
+                    খুব বড় Image ব্যবহার করে Page ধীর করা
+                </li>
+
+            </ul>
+
+
+
+            <!-- DEBUG -->
+
+            <h2>
+                14. Image দেখা না গেলে কী করবেন?
+            </h2>
+
+            <p>
+                যদি Browser-এ Image না দেখা যায়,
+                তাহলে প্রথমে নিচের বিষয়গুলো পরীক্ষা করুন।
+            </p>
+
+            <ol>
+
+                <li>
+                    Image file-এর নাম ঠিক আছে কিনা।
+                </li>
+
+                <li>
+                    JPG/PNG/WebP extension ঠিক আছে কিনা।
+                </li>
+
+                <li>
+                    Image সঠিক Folder-এ আছে কিনা।
+                </li>
+
+                <li>
+                    <code>src</code> path ঠিক আছে কিনা।
+                </li>
+
+            </ol>
+
+
+
+            <div class="example-box">
+
+                <h3>
+                    Example
+                </h3>
+
+                <p>
+                    যদি আপনার Image-এর নাম হয়:
+                </p>
+
+                <div class="code-box">
+
+<code>
+profile.png
+</code>
+
+                </div>
+
+                <p>
+                    তাহলে:
+                </p>
+
+                <div class="code-box">
+
+<code>
+&lt;img src="profile.png"
+     alt="Profile Photo"&gt;
+</code>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- COMPLETE -->
+
+            <h2>
+                15. Complete HTML Image Example
+            </h2>
+
+            <p>
+                নিচের code-টি ব্যবহার করে একটি simple Image Page তৈরি করতে পারেন।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang="bn"&gt;
+
+&lt;head&gt;
+
+    &lt;meta charset="UTF-8"&gt;
+
+    &lt;title&gt;My Photo&lt;/title&gt;
+
+&lt;/head&gt;
+
+
+&lt;body&gt;
+
+    &lt;h1&gt;My Profile&lt;/h1&gt;
+
+    &lt;p&gt;
+        This is my profile photo.
+    &lt;/p&gt;
+
+    &lt;img src="profile.jpg"
+         alt="My Profile Photo"
+         width="400"&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- PRACTICE -->
+
+            <div class="practice-box">
+
+                <h3>
+                    🧑‍💻 Beginner Practice Task
+                </h3>
+
+                <p>
+                    এবার নিজে একটি HTML file তৈরি করুন এবং:
+                </p>
+
+                <ol>
+
+                    <li>
+                        একটি Image Folder তৈরি করুন।
+                    </li>
+
+                    <li>
+                        একটি Photo সেখানে রাখুন।
+                    </li>
+
+                    <li>
+                        <code>&lt;img&gt;</code> Tag দিয়ে Photo দেখান।
+                    </li>
+
+                    <li>
+                        একটি meaningful <code>alt</code> লিখুন।
+                    </li>
+
+                    <li>
+                        CSS দিয়ে Image-এর Corner গোল করুন।
+                    </li>
+
+                    <li>
+                        Image-টিকে Responsive করুন।
+                    </li>
+
+                </ol>
+
+            </div>
+
+
+
+            <!-- FAQ -->
+
+            <h2>
+                ❓ Frequently Asked Questions
+            </h2>
+
+
+            <h3>
+                HTML-এ Image যোগ করার Tag কোনটি?
+            </h3>
+
+            <p>
+                Image যোগ করার জন্য <code>&lt;img&gt;</code> Tag ব্যবহার করা হয়।
+            </p>
+
+
+            <h3>
+                src কী?
+            </h3>
+
+            <p>
+                <code>src</code> Image-এর source বা location নির্ধারণ করে।
+            </p>
+
+
+            <h3>
+                alt কেন ব্যবহার করা হয়?
+            </h3>
+
+            <p>
+                Image দেখা না গেলে alternative text হিসেবে
+                <code>alt</code> ব্যবহার করা হয়।
+            </p>
+
+
+            <h3>
+                Image Responsive করার সহজ উপায় কী?
+            </h3>
+
+            <p>
+                CSS-এ <code>max-width: 100%;</code> এবং
+                <code>height: auto;</code> ব্যবহার করা যায়।
+            </p>
+
+
+
+            <!-- CONCLUSION -->
+
+            <h2>
+                শেষ কথা
+            </h2>
+
+            <p>
+                HTML-এ Image যোগ করা খুব সহজ।
+                শুধু <code>&lt;img&gt;</code> Tag এবং
+                <code>src</code> Attribute-এর basic বুঝলেই শুরু করা যায়।
+            </p>
+
+            <p>
+                এরপর CSS ব্যবহার করে Image-এর Size,
+                Border, Rounded Corner এবং Responsive Design
+                আরও সুন্দরভাবে তৈরি করতে পারবেন।
+            </p>
+
+
+
+            <!-- RELATED ARTICLES -->
+
+            <section class="related">
+
+                <h2>
+                    📚 আরও পড়ুন
+                </h2>
+
+                <a href="html-ki-beginner-guide.html">
+                    → HTML কী? Beginners-এর জন্য সম্পূর্ণ গাইড
+                </a>
+
+                <a href="html-diye-website-bananor-guide.html">
+                    → HTML দিয়ে প্রথম Website কীভাবে বানাবেন?
+                </a>
+
+                <a href="html-tags-beginners-guide.html">
+                    → HTML-এর 20টি গুরুত্বপূর্ণ Tag
+                </a>
+
+                <a href="html-heading-paragraph-link-guide.html">
+                    → HTML Heading, Paragraph ও Link কীভাবে ব্যবহার করবেন?
+                </a>
+
+                <a href="html-tutorial.html">
+                    → HTML Tutorial — Munna Tech
+                </a>
+
+                <a href="css-tutorial.html">
+                    → CSS Tutorial — Munna Tech
+                </a>
+
+            </section>
+
+
+
+            <!-- CTA -->
+
+            <section class="cta">
+
+                <h2>
+                    🚀 Web Development শিখতে থাকুন
+                </h2>
+
+                <p>
+                    Munna Tech-এর Tutorial অনুসরণ করে
+                    ধাপে ধাপে HTML, CSS, JavaScript এবং PC Tips শিখুন।
+                </p>
+
+                <a href="index.html">
+                    Munna Tech Home →
+                </a>
+
+            </section>
+
+
+        </article>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Munna Tech — Web Development & PC Tips
+        </p>
+
+    </footer>
+
+
+
+    <!-- DARK MODE -->
+
+    <script>
+
+        const darkModeBtn =
+            document.getElementById("darkModeBtn");
+
+
+        function updateDarkModeButton() {
+
+            if (
+                document.body.classList.contains("dark-mode")
+            ) {
+
+                darkModeBtn.textContent =
+                    "☀️ Light Mode";
+
+            } else {
+
+                darkModeBtn.textContent =
+                    "🌙 Dark Mode";
+
+            }
+
+        }
+
+
+        darkModeBtn.addEventListener(
+            "click",
+            function () {
+
+                document.body.classList.toggle(
+                    "dark-mode"
+                );
+
+
+                if (
+                    document.body.classList.contains(
+                        "dark-mode"
+                    )
+                ) {
+
+                    localStorage.setItem(
+                        "theme",
+                        "dark"
+                    );
+
+                } else {
+
+                    localStorage.setItem(
+                        "theme",
+                        "light"
+                    );
+
+                }
+
+
+                updateDarkModeButton();
+
+            }
+        );
+
+
+        if (
+            localStorage.getItem("theme") === "dark"
+        ) {
+
+            document.body.classList.add(
+                "dark-mode"
+            );
+
+        }
+
+
+        updateDarkModeButton();
+
+    </script>
+
+
+</body>
+</html>
+```
