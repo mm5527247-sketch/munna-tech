@@ -1,0 +1,634 @@
+```html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Color, Font ও Text Style — Beginner Guide | Munna Tech</title>
+
+    <meta name="description" content="CSS Color, Font এবং Text Style সহজ বাংলায় শিখুন। HEX, RGB, HSL, Font Family, Font Size, Font Weight, Text Align, Line Height, Letter Spacing সহ সম্পূর্ণ Beginner Guide।">
+
+    <meta name="keywords" content="CSS color, CSS font, CSS text style, CSS color বাংলা, CSS font বাংলা, CSS text styling, CSS HEX RGB HSL, CSS beginners guide">
+
+    <meta name="author" content="Munna Tech">
+
+    <meta property="og:title" content="CSS Color, Font ও Text Style — Beginner Guide | Munna Tech">
+    <meta property="og:description" content="CSS Color, Font ও Text Style সহজভাবে শেখার সম্পূর্ণ বাংলা গাইড।">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mm5527247-sketch.github.io/munna-tech/css-color-font-text-style-guide.html">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .article-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 25px;
+        }
+
+        .article-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        body.dark .article-card {
+            background: #1e1e1e;
+            color: #f1f1f1;
+        }
+
+        .article-card h1 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .article-card h2 {
+            margin-top: 35px;
+            color: #2563eb;
+        }
+
+        .article-card h3 {
+            margin-top: 25px;
+        }
+
+        .article-card p,
+        .article-card li {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .article-card pre {
+            background: #111827;
+            color: #ffffff;
+            padding: 18px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        .article-card code {
+            font-family: Consolas, monospace;
+        }
+
+        .tip-box {
+            background: #eff6ff;
+            border-left: 5px solid #2563eb;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        body.dark .tip-box {
+            background: #172554;
+        }
+
+        .demo-text {
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            background-color: #e0f2fe;
+            color: #1e3a8a;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .faq {
+            margin-top: 15px;
+        }
+
+        .related-links a {
+            display: block;
+            margin: 10px 0;
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .related-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">Munna Tech</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="html-tutorial.html">HTML</a>
+            <a href="css-tutorial.html">CSS</a>
+            <a href="javascript-tutorial.html">JavaScript</a>
+            <a href="pc-tips.html">PC Tips</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+
+        <button id="darkModeBtn">🌙 Dark Mode</button>
+    </nav>
+</header>
+
+<main class="article-container">
+
+    <article class="article-card">
+
+        <h1>CSS Color, Font ও Text Style — Beginner Guide</h1>
+
+        <p>
+            Website সুন্দর করার জন্য শুধু HTML জানলেই হয় না।
+            Website-এর লেখা, রং, Font এবং Text Style সুন্দরভাবে সাজাতে CSS ব্যবহার করা হয়।
+        </p>
+
+        <p>
+            এই গাইডে আমরা CSS Color, HEX, RGB, HSL, Font Family,
+            Font Size, Font Weight, Text Align, Line Height,
+            Letter Spacing এবং আরও অনেক গুরুত্বপূর্ণ বিষয় শিখব।
+        </p>
+
+        <div class="tip-box">
+            💡 <strong>Beginner Tip:</strong>
+            আগে প্রতিটি CSS property নিজে লিখে browser-এ result দেখুন।
+            এভাবেই CSS সবচেয়ে দ্রুত শেখা যায়।
+        </div>
+
+        <h2>1. CSS Color কী?</h2>
+
+        <p>
+            CSS-এর <strong>color</strong> property ব্যবহার করে কোনো লেখার রং পরিবর্তন করা যায়।
+        </p>
+
+<pre><code>p {
+    color: red;
+}</code></pre>
+
+        <p>এখানে সব paragraph-এর লেখার রং লাল হবে।</p>
+
+        <h2>2. CSS Color Name</h2>
+
+        <p>
+            CSS-এ সরাসরি কিছু predefined color name ব্যবহার করা যায়।
+        </p>
+
+<pre><code>h1 {
+    color: blue;
+}
+
+p {
+    color: green;
+}</code></pre>
+
+        <p>যেমন:</p>
+
+        <ul>
+            <li>red</li>
+            <li>blue</li>
+            <li>green</li>
+            <li>black</li>
+            <li>white</li>
+            <li>orange</li>
+            <li>purple</li>
+        </ul>
+
+        <h2>3. HEX Color</h2>
+
+        <p>
+            Website design-এ HEX color অনেক বেশি ব্যবহার করা হয়।
+            HEX color সাধারণত <strong>#</strong> চিহ্ন দিয়ে শুরু হয়।
+        </p>
+
+<pre><code>h1 {
+    color: #2563eb;
+}
+
+p {
+    color: #333333;
+}</code></pre>
+
+        <p>
+            উদাহরণ হিসেবে <strong>#000000</strong> কালো এবং
+            <strong>#ffffff</strong> সাদা রং বোঝায়।
+        </p>
+
+        <h2>4. RGB Color</h2>
+
+        <p>
+            RGB-এর অর্থ হলো Red, Green এবং Blue।
+        </p>
+
+<pre><code>p {
+    color: rgb(255, 0, 0);
+}</code></pre>
+
+        <p>
+            এখানে 255 Red, 0 Green এবং 0 Blue।
+            ফলে রংটি লাল হবে।
+        </p>
+
+        <h2>5. RGBA Color</h2>
+
+        <p>
+            RGBA হলো RGB-এর সাথে Alpha যোগ করা।
+            Alpha দিয়ে transparency বা স্বচ্ছতা নিয়ন্ত্রণ করা যায়।
+        </p>
+
+<pre><code>div {
+    background-color: rgba(0, 0, 0, 0.5);
+}</code></pre>
+
+        <p>
+            এখানে 0.5 মানে প্রায় 50% transparency।
+        </p>
+
+        <h2>6. HSL Color</h2>
+
+        <p>
+            HSL-এর অর্থ Hue, Saturation এবং Lightness।
+        </p>
+
+<pre><code>h1 {
+    color: hsl(220, 80%, 50%);
+}</code></pre>
+
+        <p>
+            CSS-এর advanced color control-এর জন্য HSL বেশ কার্যকর।
+        </p>
+
+        <h2>7. Background Color</h2>
+
+        <p>
+            <strong>background-color</strong> property দিয়ে কোনো element-এর background-এর রং পরিবর্তন করা যায়।
+        </p>
+
+<pre><code>body {
+    background-color: #f5f7fb;
+}
+
+.card {
+    background-color: white;
+}</code></pre>
+
+        <h2>8. Font Family</h2>
+
+        <p>
+            <strong>font-family</strong> দিয়ে লেখার Font নির্ধারণ করা হয়।
+        </p>
+
+<pre><code>body {
+    font-family: Arial, sans-serif;
+}</code></pre>
+
+        <p>
+            একটি ভালো Font website-এর readability অনেক বাড়াতে পারে।
+        </p>
+
+        <h2>9. Font Size</h2>
+
+        <p>
+            <strong>font-size</strong> দিয়ে লেখার আকার নির্ধারণ করা হয়।
+        </p>
+
+<pre><code>h1 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+}</code></pre>
+
+        <h2>10. Font Weight</h2>
+
+        <p>
+            লেখাকে কতটা মোটা বা পাতলা দেখাবে তা
+            <strong>font-weight</strong> দিয়ে নিয়ন্ত্রণ করা যায়।
+        </p>
+
+<pre><code>h1 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+}</code></pre>
+
+        <p>
+            সাধারণভাবে 400 normal এবং 700 bold-এর কাছাকাছি।
+        </p>
+
+        <h2>11. Font Style</h2>
+
+        <p>
+            <strong>font-style</strong> দিয়ে italic text তৈরি করা যায়।
+        </p>
+
+<pre><code>p {
+    font-style: italic;
+}</code></pre>
+
+        <h2>12. Text Align</h2>
+
+        <p>
+            Text কোন দিকে থাকবে তা <strong>text-align</strong> দিয়ে নির্ধারণ করা যায়।
+        </p>
+
+<pre><code>h1 {
+    text-align: center;
+}
+
+p {
+    text-align: left;
+}</code></pre>
+
+        <p>প্রধান value:</p>
+
+        <ul>
+            <li>left</li>
+            <li>center</li>
+            <li>right</li>
+            <li>justify</li>
+        </ul>
+
+        <h2>13. Text Decoration</h2>
+
+        <p>
+            লেখার নিচে underline বা অন্য decoration দিতে
+            <strong>text-decoration</strong> ব্যবহার করা হয়।
+        </p>
+
+<pre><code>a {
+    text-decoration: none;
+}
+
+.underline {
+    text-decoration: underline;
+}</code></pre>
+
+        <h2>14. Text Transform</h2>
+
+        <p>
+            Text-এর uppercase বা lowercase পরিবর্তনের জন্য
+            <strong>text-transform</strong> ব্যবহার করা যায়।
+        </p>
+
+<pre><code>h2 {
+    text-transform: uppercase;
+}</code></pre>
+
+        <p>অন্য value:</p>
+
+        <ul>
+            <li>uppercase</li>
+            <li>lowercase</li>
+            <li>capitalize</li>
+        </ul>
+
+        <h2>15. Line Height</h2>
+
+        <p>
+            এক লাইনের সাথে পরের লাইনের vertical distance নিয়ন্ত্রণ করতে
+            <strong>line-height</strong> ব্যবহার করা হয়।
+        </p>
+
+<pre><code>p {
+    line-height: 1.8;
+}</code></pre>
+
+        <p>
+            বাংলা article-এর ক্ষেত্রে ভালো line-height রাখলে পড়তে অনেক আরাম হয়।
+        </p>
+
+        <h2>16. Letter Spacing</h2>
+
+        <p>
+            অক্ষরের মধ্যে দূরত্ব বাড়াতে বা কমাতে
+            <strong>letter-spacing</strong> ব্যবহার করা হয়।
+        </p>
+
+<pre><code>h1 {
+    letter-spacing: 2px;
+}</code></pre>
+
+        <h2>17. Word Spacing</h2>
+
+        <p>
+            শব্দগুলোর মধ্যকার দূরত্ব নিয়ন্ত্রণ করতে
+            <strong>word-spacing</strong> ব্যবহার করা যায়।
+        </p>
+
+<pre><code>p {
+    word-spacing: 5px;
+}</code></pre>
+
+        <h2>18. Text Shadow</h2>
+
+        <p>
+            Text-এর পিছনে shadow তৈরি করতে <strong>text-shadow</strong> ব্যবহার করা হয়।
+        </p>
+
+<pre><code>h1 {
+    text-shadow: 2px 2px 4px #999;
+}</code></pre>
+
+        <h2>19. Color + Font + Text Style একসাথে</h2>
+
+        <p>
+            এবার কয়েকটি property একসাথে ব্যবহার করে একটি সুন্দর heading তৈরি করি।
+        </p>
+
+<pre><code>.title {
+    color: #2563eb;
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+}</code></pre>
+
+        <h2>20. একটি Live Text Design Example</h2>
+
+        <div class="demo-text">
+            Munna Tech
+        </div>
+
+        <p>
+            উপরের example-এ আমরা background color, text color,
+            font family, font size, font weight, text-align এবং letter-spacing
+            একসাথে ব্যবহার করেছি।
+        </p>
+
+        <h2>21. Beginner Practice</h2>
+
+        <p>
+            এখন নিজে একটি ছোট Text Card তৈরি করুন।
+        </p>
+
+<pre><code>&lt;div class="text-card"&gt;
+    &lt;h2&gt;Learn Web Development&lt;/h2&gt;
+    &lt;p&gt;HTML, CSS এবং JavaScript শিখুন।&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>তারপর CSS লিখুন:</p>
+
+<pre><code>.text-card {
+    background-color: #ffffff;
+    color: #222222;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.text-card h2 {
+    color: #2563eb;
+    font-size: 28px;
+}
+
+.text-card p {
+    font-size: 17px;
+    line-height: 1.8;
+}</code></pre>
+
+        <h2>22. Common CSS Mistakes</h2>
+
+        <ul>
+            <li>CSS property-এর শেষে semicolon না দেওয়া</li>
+            <li>color এবং background-color গুলিয়ে ফেলা</li>
+            <li>font-size-এর unit ভুলে যাওয়া</li>
+            <li>font-family সঠিকভাবে লেখা না</li>
+            <li>CSS file HTML-এর সাথে link না করা</li>
+            <li>একই selector-এর CSS ভুল জায়গায় লেখা</li>
+        </ul>
+
+        <div class="tip-box">
+            💡 <strong>Tip:</strong>
+            CSS শেখার সময় শুধু code মুখস্থ করবেন না।
+            Property পরিবর্তন করে browser-এ কী পরিবর্তন হচ্ছে তা দেখুন।
+        </div>
+
+        <h2>23. পরবর্তী ধাপে কী শিখবেন?</h2>
+
+        <p>
+            Color, Font এবং Text Style শেখার পর CSS-এর আরও গুরুত্বপূর্ণ বিষয়
+            যেমন Box Model, Flexbox, Grid এবং Responsive Design শেখা উচিত।
+        </p>
+
+        <h2>24. FAQ</h2>
+
+        <div class="faq">
+            <h3>CSS-এ color কীভাবে পরিবর্তন করব?</h3>
+            <p>
+                color property ব্যবহার করে। যেমন:
+                <code>color: blue;</code>
+            </p>
+        </div>
+
+        <div class="faq">
+            <h3>HEX color কী?</h3>
+            <p>
+                HEX হলো CSS-এ color নির্ধারণের একটি জনপ্রিয় পদ্ধতি,
+                যেমন <code>#2563eb</code>।
+            </p>
+        </div>
+
+        <div class="faq">
+            <h3>Text-এর size কীভাবে পরিবর্তন করব?</h3>
+            <p>
+                <code>font-size</code> property ব্যবহার করতে হবে।
+            </p>
+        </div>
+
+        <div class="faq">
+            <h3>বাংলা লেখার জন্য line-height কেন গুরুত্বপূর্ণ?</h3>
+            <p>
+                ভালো line-height রাখলে paragraph-এর লাইনগুলোর মধ্যে পর্যাপ্ত
+                জায়গা থাকে এবং লেখা পড়তে সহজ হয়।
+            </p>
+        </div>
+
+        <h2>25. Conclusion</h2>
+
+        <p>
+            CSS Color, Font এবং Text Style হলো website design-এর অন্যতম গুরুত্বপূর্ণ অংশ।
+            এগুলো ভালোভাবে বুঝতে পারলে আপনার website-এর text অনেক বেশি পরিষ্কার,
+            সুন্দর এবং professional করা সম্ভব।
+        </p>
+
+        <p>
+            নিয়মিত practice করুন এবং প্রতিটি property browser-এ পরীক্ষা করুন।
+            এরপর CSS Box Model এবং Flexbox শেখার দিকে এগিয়ে যান।
+        </p>
+
+        <h2>Related Articles</h2>
+
+        <div class="related-links">
+
+            <a href="css-ki-beginner-guide.html">
+                → CSS কী? Beginnerদের জন্য CSS সম্পূর্ণ গাইড
+            </a>
+
+            <a href="css-diye-website-design-guide.html">
+                → CSS দিয়ে Website Design করার সহজ নিয়ম
+            </a>
+
+            <a href="html-ki-beginner-guide.html">
+                → HTML কী? Beginnerদের জন্য HTML শেখার সম্পূর্ণ গাইড
+            </a>
+
+            <a href="html-diye-website-bananor-guide.html">
+                → HTML দিয়ে প্রথম Website কীভাবে বানাবেন?
+            </a>
+
+            <a href="html-tags-beginners-guide.html">
+                → HTML-এর 20টি গুরুত্বপূর্ণ Tag
+            </a>
+
+            <a href="css-tutorial.html">
+                → CSS Tutorial — Munna Tech
+            </a>
+
+        </div>
+
+        <h2>Adsterra</h2>
+
+        <!-- Adsterra Native Banner -->
+        <script async="async" data-cfasync="false"
+        src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js"></script>
+
+        <div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+
+    </article>
+
+</main>
+
+<footer>
+    <p>© 2026 Munna Tech. All Rights Reserved.</p>
+</footer>
+
+<script>
+    const darkModeBtn = document.getElementById("darkModeBtn");
+
+    if (localStorage.getItem("darkMode") === "enabled") {
+        document.body.classList.add("dark");
+        darkModeBtn.textContent = "☀️ Light Mode";
+    }
+
+    darkModeBtn.addEventListener("click", function () {
+
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+            darkModeBtn.textContent = "☀️ Light Mode";
+            localStorage.setItem("darkMode", "enabled");
+        } else {
+            darkModeBtn.textContent = "🌙 Dark Mode";
+            localStorage.setItem("darkMode", "disabled");
+        }
+
+    });
+</script>
+
+</body>
+</html>
+```
