@@ -1,0 +1,1052 @@
+```html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML-এর 20টি গুরুত্বপূর্ণ Tag যা Beginners-এর জানা দরকার | Munna Tech</title>
+
+    <meta name="description" content="HTML-এর 20টি গুরুত্বপূর্ণ Tag সহজ বাংলায় শিখুন। প্রতিটি HTML Tag-এর ব্যবহার, code example এবং beginner practice task সহ সম্পূর্ণ গাইড।">
+    <meta name="keywords" content="HTML tags, HTML Tag বাংলা, HTML tags beginners, HTML শেখার নিয়ম, HTML tutorial বাংলা, HTML basic tags">
+    <meta name="author" content="Munna Tech">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="HTML-এর 20টি গুরুত্বপূর্ণ Tag | Munna Tech">
+    <meta property="og:description" content="Beginners-এর জন্য HTML-এর 20টি গুরুত্বপূর্ণ Tag সহজ বাংলায় শিখুন।">
+    <meta property="og:type" content="article">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ================================
+           ARTICLE PAGE
+        ================================= */
+
+        .article-page {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .breadcrumb {
+            margin-bottom: 25px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .article-header {
+            background: linear-gradient(135deg, #007bff, #6f42c1);
+            color: white;
+            padding: 45px 30px;
+            border-radius: 18px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .article-header h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .article-header p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .article-content {
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .article-content h3 {
+            font-size: 22px;
+            margin-top: 28px;
+            color: #333;
+        }
+
+        .article-content p {
+            font-size: 17px;
+            line-height: 1.9;
+            color: #444;
+        }
+
+        .article-content li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
+        .tag-card {
+            border: 1px solid #e5e5e5;
+            border-radius: 14px;
+            padding: 22px;
+            margin: 20px 0;
+            background: #fafafa;
+        }
+
+        .tag-card h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        .tag-name {
+            display: inline-block;
+            background: #222;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 7px;
+            font-family: monospace;
+            margin-bottom: 12px;
+        }
+
+        .code-box {
+            background: #1e1e1e;
+            color: #f5f5f5;
+            padding: 18px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .code-box code {
+            font-family: Consolas, monospace;
+            line-height: 1.7;
+        }
+
+        .info-box {
+            background: #eef7ff;
+            border-left: 5px solid #007bff;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .tip-box {
+            background: #fff8e6;
+            border-left: 5px solid #ffb300;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .practice-box {
+            background: #eefaf1;
+            border-left: 5px solid #28a745;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .ad-box {
+            margin: 35px 0;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .related {
+            margin-top: 40px;
+            padding: 25px;
+            background: #f5f5f5;
+            border-radius: 14px;
+        }
+
+        .related a {
+            display: block;
+            margin: 12px 0;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .cta {
+            margin-top: 40px;
+            padding: 30px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #007bff, #6f42c1);
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .cta a {
+            display: inline-block;
+            margin-top: 15px;
+            background: white;
+            color: #007bff;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Dark Mode */
+        body.dark-mode .article-content {
+            background: #1e1e1e;
+            color: #eee;
+        }
+
+        body.dark-mode .article-content p,
+        body.dark-mode .article-content li {
+            color: #ddd;
+        }
+
+        body.dark-mode .article-content h2,
+        body.dark-mode .article-content h3 {
+            color: #fff;
+        }
+
+        body.dark-mode .tag-card {
+            background: #252525;
+            border-color: #444;
+        }
+
+        body.dark-mode .related {
+            background: #252525;
+        }
+
+        body.dark-mode .breadcrumb {
+            color: #bbb;
+        }
+
+        body.dark-mode .info-box {
+            background: #172b3a;
+        }
+
+        body.dark-mode .tip-box {
+            background: #332b18;
+        }
+
+        body.dark-mode .practice-box {
+            background: #18301f;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            .article-page {
+                margin: 25px auto;
+                padding: 0 12px;
+            }
+
+            .article-header {
+                padding: 30px 18px;
+            }
+
+            .article-header h1 {
+                font-size: 28px;
+            }
+
+            .article-header p {
+                font-size: 16px;
+            }
+
+            .article-content {
+                padding: 22px 18px;
+            }
+
+            .article-content h2 {
+                font-size: 24px;
+            }
+
+            .article-content p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================================
+         NAVBAR
+    ================================= -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="index.html">Munna Tech</a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="html-tutorial.html">HTML</a></li>
+                <li><a href="css-tutorial.html">CSS</a></li>
+                <li><a href="javascript-tutorial.html">JavaScript</a></li>
+                <li><a href="pc-tips.html">PC Tips</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <button id="darkModeBtn">🌙 Dark Mode</button>
+
+        </nav>
+    </header>
+
+
+    <!-- ================================
+         ARTICLE
+    ================================= -->
+
+    <main class="article-page">
+
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> →
+            <a href="html-tutorial.html">HTML</a> →
+            HTML-এর 20টি গুরুত্বপূর্ণ Tag
+        </div>
+
+
+        <!-- Article Header -->
+
+        <section class="article-header">
+
+            <h1>
+                HTML-এর 20টি গুরুত্বপূর্ণ Tag যা Beginners-এর জানা দরকার
+            </h1>
+
+            <p>
+                সহজ বাংলায় HTML-এর সবচেয়ে গুরুত্বপূর্ণ 20টি Tag শিখুন
+            </p>
+
+        </section>
+
+
+        <article class="article-content">
+
+            <p>
+                আপনি যদি নতুন করে Web Development শেখা শুরু করেন,
+                তাহলে HTML হলো আপনার প্রথম গুরুত্বপূর্ণ ধাপ।
+                HTML দিয়ে একটি Website-এর মূল structure তৈরি করা হয়।
+            </p>
+
+            <p>
+                HTML শেখার সময় অনেকগুলো Tag দেখতে পাওয়া যায়।
+                তবে শুরুতে সব Tag শেখার প্রয়োজন নেই।
+                কিছু গুরুত্বপূর্ণ Tag ভালোভাবে বুঝে practice করলেই
+                আপনি সহজ HTML Website তৈরি করতে পারবেন।
+            </p>
+
+
+            <div class="info-box">
+                <strong>📌 এই Article-এ কী শিখবেন?</strong>
+
+                <ul>
+                    <li>HTML Tag কী</li>
+                    <li>20টি গুরুত্বপূর্ণ HTML Tag</li>
+                    <li>প্রতিটি Tag-এর ব্যবহার</li>
+                    <li>Real code example</li>
+                    <li>Beginner practice task</li>
+                </ul>
+            </div>
+
+
+            <!-- TAG 1 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;html&gt;</span>
+
+                <h3>1. HTML Tag</h3>
+
+                <p>
+                    <code>&lt;html&gt;</code> হলো একটি HTML document-এর
+                    মূল বা root element।
+                </p>
+
+                <div class="code-box">
+<code>&lt;html&gt;
+
+    Website content
+
+&lt;/html&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 2 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;head&gt;</span>
+
+                <h3>2. Head Tag</h3>
+
+                <p>
+                    <code>&lt;head&gt;</code> এর মধ্যে Website-এর
+                    বিভিন্ন গুরুত্বপূর্ণ information থাকে।
+                </p>
+
+                <div class="code-box">
+<code>&lt;head&gt;
+    &lt;title&gt;My Website&lt;/title&gt;
+&lt;/head&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 3 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;title&gt;</span>
+
+                <h3>3. Title Tag</h3>
+
+                <p>
+                    Browser tab-এ Website-এর নাম দেখানোর জন্য
+                    <code>&lt;title&gt;</code> ব্যবহার করা হয়।
+                </p>
+
+                <div class="code-box">
+<code>&lt;title&gt;Munna Tech&lt;/title&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 4 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;body&gt;</span>
+
+                <h3>4. Body Tag</h3>
+
+                <p>
+                    Website-এর যেসব content visitor দেখতে পাবে,
+                    সেগুলো সাধারণত <code>&lt;body&gt;</code>-এর মধ্যে থাকে।
+                </p>
+
+                <div class="code-box">
+<code>&lt;body&gt;
+
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+
+&lt;/body&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 5 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;h1&gt;</span>
+
+                <h3>5. Heading Tag</h3>
+
+                <p>
+                    Heading তৈরি করার জন্য <code>&lt;h1&gt;</code>
+                    থেকে <code>&lt;h6&gt;</code> পর্যন্ত Tag ব্যবহার করা হয়।
+                </p>
+
+                <div class="code-box">
+<code>&lt;h1&gt;My Website&lt;/h1&gt;
+&lt;h2&gt;About Me&lt;/h2&gt;
+&lt;h3&gt;My Skills&lt;/h3&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 6 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;p&gt;</span>
+
+                <h3>6. Paragraph Tag</h3>
+
+                <p>
+                    Paragraph বা সাধারণ লেখা দেখানোর জন্য
+                    <code>&lt;p&gt;</code> Tag ব্যবহার করা হয়।
+                </p>
+
+                <div class="code-box">
+<code>&lt;p&gt;
+আমি Web Development শিখছি।
+&lt;/p&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 7 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;a&gt;</span>
+
+                <h3>7. Anchor Tag</h3>
+
+                <p>
+                    অন্য Website বা অন্য Page-এর সাথে link তৈরি করতে
+                    <code>&lt;a&gt;</code> Tag ব্যবহার করা হয়।
+                </p>
+
+                <div class="code-box">
+<code>&lt;a href="https://example.com"&gt;
+Visit Website
+&lt;/a&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 8 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;img&gt;</span>
+
+                <h3>8. Image Tag</h3>
+
+                <p>
+                    Website-এ ছবি দেখানোর জন্য
+                    <code>&lt;img&gt;</code> Tag ব্যবহার করা হয়।
+                </p>
+
+                <div class="code-box">
+<code>&lt;img src="image.jpg" alt="My Photo"&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 9 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;br&gt;</span>
+
+                <h3>9. Line Break Tag</h3>
+
+                <p>
+                    নতুন লাইনে যাওয়ার জন্য <code>&lt;br&gt;</code>
+                    ব্যবহার করা হয়।
+                </p>
+
+                <div class="code-box">
+<code>Hello&lt;br&gt;
+World</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 10 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;hr&gt;</span>
+
+                <h3>10. Horizontal Rule</h3>
+
+                <p>
+                    Content-এর মধ্যে একটি horizontal line তৈরি করতে
+                    <code>&lt;hr&gt;</code> ব্যবহার করা হয়।
+                </p>
+
+                <div class="code-box">
+<code>&lt;hr&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- ADSTERRA -->
+
+            <div class="ad-box">
+
+                <!-- Adsterra Native Banner -->
+
+                <script async="async"
+                    data-cfasync="false"
+                    src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js">
+                </script>
+
+                <div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+
+            </div>
+
+
+            <!-- TAG 11 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;strong&gt;</span>
+
+                <h3>11. Strong Tag</h3>
+
+                <p>
+                    গুরুত্বপূর্ণ text বোঝাতে
+                    <code>&lt;strong&gt;</code> ব্যবহার করা হয়।
+                </p>
+
+                <div class="code-box">
+<code>&lt;strong&gt;Important Text&lt;/strong&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 12 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;em&gt;</span>
+
+                <h3>12. Emphasis Tag</h3>
+
+                <p>
+                    কোনো text-এ emphasis বা বিশেষ গুরুত্ব দিতে
+                    <code>&lt;em&gt;</code> ব্যবহার করা হয়।
+                </p>
+
+                <div class="code-box">
+<code>&lt;em&gt;Learn HTML&lt;/em&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 13 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;ul&gt;</span>
+
+                <h3>13. Unordered List</h3>
+
+                <p>
+                    Bullet list তৈরি করতে <code>&lt;ul&gt;</code>
+                    ব্যবহার করা হয়।
+                </p>
+
+                <div class="code-box">
+<code>&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 14 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;ol&gt;</span>
+
+                <h3>14. Ordered List</h3>
+
+                <p>
+                    Numbered list তৈরি করার জন্য
+                    <code>&lt;ol&gt;</code> ব্যবহার করা হয়।
+                </p>
+
+                <div class="code-box">
+<code>&lt;ol&gt;
+    &lt;li&gt;Learn HTML&lt;/li&gt;
+    &lt;li&gt;Learn CSS&lt;/li&gt;
+    &lt;li&gt;Learn JavaScript&lt;/li&gt;
+&lt;/ol&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 15 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;li&gt;</span>
+
+                <h3>15. List Item Tag</h3>
+
+                <p>
+                    List-এর প্রতিটি item তৈরি করতে
+                    <code>&lt;li&gt;</code> ব্যবহার করা হয়।
+                </p>
+
+                <div class="code-box">
+<code>&lt;ul&gt;
+    &lt;li&gt;Gaming&lt;/li&gt;
+    &lt;li&gt;Coding&lt;/li&gt;
+&lt;/ul&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 16 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;div&gt;</span>
+
+                <h3>16. Div Tag</h3>
+
+                <p>
+                    Website-এর বিভিন্ন section বা content group করার জন্য
+                    <code>&lt;div&gt;</code> খুব বেশি ব্যবহার করা হয়।
+                </p>
+
+                <div class="code-box">
+<code>&lt;div&gt;
+
+    &lt;h2&gt;About Me&lt;/h2&gt;
+    &lt;p&gt;I am learning Web Development.&lt;/p&gt;
+
+&lt;/div&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 17 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;span&gt;</span>
+
+                <h3>17. Span Tag</h3>
+
+                <p>
+                    কোনো ছোট অংশের text আলাদাভাবে style করার জন্য
+                    <code>&lt;span&gt;</code> ব্যবহার করা হয়।
+                </p>
+
+                <div class="code-box">
+<code>&lt;p&gt;
+I love &lt;span&gt;Web Development&lt;/span&gt;.
+&lt;/p&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 18 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;button&gt;</span>
+
+                <h3>18. Button Tag</h3>
+
+                <p>
+                    Website-এ button তৈরি করতে
+                    <code>&lt;button&gt;</code> ব্যবহার করা হয়।
+                </p>
+
+                <div class="code-box">
+<code>&lt;button&gt;Click Me&lt;/button&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 19 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;form&gt;</span>
+
+                <h3>19. Form Tag</h3>
+
+                <p>
+                    User-এর কাছ থেকে information নেওয়ার জন্য
+                    form তৈরি করতে <code>&lt;form&gt;</code> ব্যবহার করা হয়।
+                </p>
+
+                <div class="code-box">
+<code>&lt;form&gt;
+
+    &lt;input type="text" placeholder="Your Name"&gt;
+
+    &lt;button type="submit"&gt;
+        Submit
+    &lt;/button&gt;
+
+&lt;/form&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- TAG 20 -->
+
+            <div class="tag-card">
+
+                <span class="tag-name">&lt;input&gt;</span>
+
+                <h3>20. Input Tag</h3>
+
+                <p>
+                    User-এর কাছ থেকে name, email, password ইত্যাদি
+                    information নেওয়ার জন্য <code>&lt;input&gt;</code>
+                    ব্যবহার করা হয়।
+                </p>
+
+                <div class="code-box">
+<code>&lt;input type="text" placeholder="Enter your name"&gt;
+
+&lt;input type="email" placeholder="Enter your email"&gt;</code>
+                </div>
+
+            </div>
+
+
+            <!-- SUMMARY -->
+
+            <h2>🎯 এই 20টি Tag মনে রাখার সহজ উপায়</h2>
+
+            <p>
+                শুরুতে সব HTML Tag মুখস্থ করার দরকার নেই।
+                আগে এই 20টি Tag নিয়মিত practice করুন।
+            </p>
+
+            <ul>
+                <li>Structure → html, head, title, body</li>
+                <li>Text → h1, h2, h3, p, strong, em</li>
+                <li>Link & Image → a, img</li>
+                <li>List → ul, ol, li</li>
+                <li>Layout → div, span</li>
+                <li>Interaction → button, form, input</li>
+                <li>Other → br, hr</li>
+            </ul>
+
+
+            <!-- PRACTICE -->
+
+            <div class="practice-box">
+
+                <h3>🧑‍💻 Beginner Practice Task</h3>
+
+                <p>
+                    এখন নিজে একটি ছোট Website তৈরি করুন।
+                    সেখানে নিচের বিষয়গুলো রাখুন:
+                </p>
+
+                <ol>
+                    <li>একটি Heading</li>
+                    <li>একটি Paragraph</li>
+                    <li>একটি Image</li>
+                    <li>একটি Link</li>
+                    <li>একটি List</li>
+                    <li>একটি Button</li>
+                    <li>একটি Input Box</li>
+                </ol>
+
+                <p>
+                    নিজে code লিখে Browser-এ খুলে result দেখুন।
+                    এভাবেই practice করলে HTML দ্রুত বুঝতে পারবেন।
+                </p>
+
+            </div>
+
+
+            <!-- TIP -->
+
+            <div class="tip-box">
+
+                <strong>💡 Pro Tip:</strong>
+
+                <p>
+                    শুধু code দেখে HTML শেখা যায় না।
+                    প্রতিটি Tag নিজে লিখে Browser-এ result দেখুন।
+                    ভুল হলে সেই ভুল থেকেই শেখার চেষ্টা করুন।
+                </p>
+
+            </div>
+
+
+            <!-- FAQ -->
+
+            <h2>❓ Frequently Asked Questions</h2>
+
+            <h3>HTML Tag কী?</h3>
+
+            <p>
+                HTML Tag হলো এমন একটি markup element যার মাধ্যমে
+                Browser-কে Website-এর content কীভাবে structure করতে হবে
+                তা বোঝানো হয়।
+            </p>
+
+
+            <h3>HTML শেখার জন্য কতগুলো Tag জানা দরকার?</h3>
+
+            <p>
+                Beginner হিসেবে প্রথমে গুরুত্বপূর্ণ কয়েকটি Tag ভালোভাবে
+                শেখাই যথেষ্ট। পরে প্রয়োজন অনুযায়ী আরও Tag শেখা যায়।
+            </p>
+
+
+            <h3>HTML শেখার পর কী শিখব?</h3>
+
+            <p>
+                HTML-এর basic ভালোভাবে শেখার পর CSS শেখা উচিত।
+                CSS দিয়ে Website-এর design ও layout তৈরি করা যায়।
+                এরপর JavaScript শিখলে Website-এ interaction যোগ করতে পারবেন।
+            </p>
+
+
+            <!-- CONCLUSION -->
+
+            <h2>শেষ কথা</h2>
+
+            <p>
+                HTML হলো Web Development শেখার অন্যতম গুরুত্বপূর্ণ ভিত্তি।
+                এই Article-এর 20টি Tag ভালোভাবে practice করলে
+                আপনি নিজের basic Website তৈরি করার জন্য একটি শক্ত foundation পাবেন।
+            </p>
+
+            <p>
+                এরপর HTML-এর পাশাপাশি CSS এবং JavaScript শেখার মাধ্যমে
+                ধীরে ধীরে professional Website তৈরি করতে পারবেন।
+            </p>
+
+
+            <!-- RELATED ARTICLES -->
+
+            <section class="related">
+
+                <h2>📚 আরও পড়ুন</h2>
+
+                <a href="html-ki-beginner-guide.html">
+                    → HTML কী? Beginners-এর জন্য সম্পূর্ণ গাইড
+                </a>
+
+                <a href="html-diye-website-bananor-guide.html">
+                    → HTML দিয়ে প্রথম Website কীভাবে বানাবেন?
+                </a>
+
+                <a href="html-tutorial.html">
+                    → HTML Tutorial — Munna Tech
+                </a>
+
+                <a href="css-tutorial.html">
+                    → CSS Tutorial — Munna Tech
+                </a>
+
+                <a href="javascript-tutorial.html">
+                    → JavaScript Tutorial — Munna Tech
+                </a>
+
+            </section>
+
+
+            <!-- CTA -->
+
+            <section class="cta">
+
+                <h2>🚀 Web Development শিখতে চান?</h2>
+
+                <p>
+                    Munna Tech-এর Tutorial অনুসরণ করে
+                    ধাপে ধাপে HTML, CSS, JavaScript এবং PC Tips শিখুন।
+                </p>
+
+                <a href="index.html">
+                    Munna Tech Home →
+                </a>
+
+            </section>
+
+        </article>
+
+    </main>
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Munna Tech — Web Development & PC Tips
+        </p>
+
+    </footer>
+
+
+    <!-- ================================
+         DARK MODE
+    ================================= -->
+
+    <script>
+
+        const darkModeBtn = document.getElementById("darkModeBtn");
+
+        function updateDarkModeButton() {
+
+            if (document.body.classList.contains("dark-mode")) {
+
+                darkModeBtn.textContent = "☀️ Light Mode";
+
+            } else {
+
+                darkModeBtn.textContent = "🌙 Dark Mode";
+
+            }
+
+        }
+
+
+        darkModeBtn.addEventListener("click", function () {
+
+            document.body.classList.toggle("dark-mode");
+
+            if (document.body.classList.contains("dark-mode")) {
+
+                localStorage.setItem("theme", "dark");
+
+            } else {
+
+                localStorage.setItem("theme", "light");
+
+            }
+
+            updateDarkModeButton();
+
+        });
+
+
+        if (localStorage.getItem("theme") === "dark") {
+
+            document.body.classList.add("dark-mode");
+
+        }
+
+        updateDarkModeButton();
+
+    </script>
+
+</body>
+</html>
+```
