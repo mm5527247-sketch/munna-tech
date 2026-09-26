@@ -1,0 +1,846 @@
+```html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSS দিয়ে Website Design করার সহজ নিয়ম | Munna Tech</title>
+
+  <meta name="description" content="CSS দিয়ে Website সুন্দর ও Professional Design করার সহজ বাংলা গাইড। Color, Font, Button, Card, Navbar, Flexbox, Spacing, Hover Effect এবং Responsive Design শিখুন।">
+
+  <meta name="keywords" content="CSS দিয়ে website design, CSS website design বাংলা, CSS design tutorial, CSS beginners, CSS card design, CSS navbar, CSS button design, CSS responsive design">
+
+  <meta name="author" content="Munna Tech">
+
+  <meta property="og:title" content="CSS দিয়ে Website Design করার সহজ নিয়ম">
+  <meta property="og:description" content="Beginnerদের জন্য CSS দিয়ে Professional Website Design শেখার সহজ বাংলা গাইড।">
+  <meta property="og:type" content="article">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .article-container h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .article-container h2 {
+      margin-top: 35px;
+      color: #2563eb;
+    }
+
+    .article-container h3 {
+      margin-top: 25px;
+    }
+
+    .article-container p,
+    .article-container li {
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .article-container ul,
+    .article-container ol {
+      padding-left: 25px;
+    }
+
+    .code-box {
+      background: #111827;
+      color: #f9fafb;
+      padding: 18px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 15px 0;
+    }
+
+    .code-box code {
+      font-family: Consolas, monospace;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .tip-box {
+      background: #eff6ff;
+      border-left: 5px solid #2563eb;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 6px;
+    }
+
+    .warning-box {
+      background: #fff7ed;
+      border-left: 5px solid #f97316;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 6px;
+    }
+
+    .demo-section {
+      margin: 25px 0;
+      padding: 25px;
+      background: #f8fafc;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+    }
+
+    .demo-navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #111827;
+      border-radius: 8px;
+    }
+
+    .demo-logo {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .demo-nav-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .demo-nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .demo-card-container {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .demo-card {
+      flex: 1;
+      min-width: 180px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .demo-button {
+      display: inline-block;
+      padding: 11px 20px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 7px;
+      transition: 0.3s;
+    }
+
+    .demo-button:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .faq {
+      margin-top: 15px;
+    }
+
+    .related-links a {
+      display: block;
+      margin: 8px 0;
+    }
+
+    @media (max-width: 700px) {
+      .article-container h1 {
+        font-size: 28px;
+      }
+
+      .article-container p,
+      .article-container li {
+        font-size: 16px;
+      }
+
+      .demo-navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .demo-nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div class="logo">Munna Tech</div>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="html-tutorial.html">HTML</a></li>
+        <li><a href="css-tutorial.html">CSS</a></li>
+        <li><a href="javascript-tutorial.html">JavaScript</a></li>
+        <li><a href="pc-tips.html">PC Tips</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+
+      <button id="darkModeBtn">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+
+  <!-- Article -->
+  <main class="article-container">
+
+    <h1>CSS দিয়ে Website Design করার সহজ নিয়ম</h1>
+
+    <p>
+      HTML দিয়ে Website-এর Structure তৈরি করার পর Website-কে সুন্দর ও
+      Professional করার জন্য CSS ব্যবহার করা হয়।
+    </p>
+
+    <p>
+      এই গাইডে আমরা Beginner level থেকে CSS ব্যবহার করে Website Design
+      করার গুরুত্বপূর্ণ বিষয়গুলো শিখব।
+    </p>
+
+
+    <h2>1. Website Design-এর জন্য CSS কেন গুরুত্বপূর্ণ?</h2>
+
+    <p>
+      একটি Website শুধু তথ্য দেখালেই যথেষ্ট নয়। Website যেন দেখতে সুন্দর,
+      পড়তে সহজ এবং Mobile ও Desktop উভয় জায়গায় ঠিকভাবে কাজ করে,
+      সেজন্য CSS গুরুত্বপূর্ণ।
+    </p>
+
+    <ul>
+      <li>Color ও Background পরিবর্তন</li>
+      <li>Font ও Text Style</li>
+      <li>Button Design</li>
+      <li>Card Design</li>
+      <li>Navbar Design</li>
+      <li>Spacing</li>
+      <li>Flexbox Layout</li>
+      <li>Hover Effect</li>
+      <li>Responsive Design</li>
+    </ul>
+
+
+    <h2>2. প্রথমে Website-এর Basic Structure তৈরি করুন</h2>
+
+    <p>
+      CSS দেওয়ার আগে HTML-এর মাধ্যমে Website-এর প্রয়োজনীয় Structure
+      তৈরি করতে হবে।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;header&gt;Website Header&lt;/header&gt;<br>
+        &lt;nav&gt;Navigation&lt;/nav&gt;<br>
+        &lt;main&gt;Main Content&lt;/main&gt;<br>
+        &lt;footer&gt;Footer&lt;/footer&gt;
+      </code>
+    </div>
+
+
+    <h2>3. External CSS ব্যবহার করুন</h2>
+
+    <p>
+      Professional Website-এর জন্য আলাদা CSS File ব্যবহার করা ভালো।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;link rel="stylesheet" href="style.css"&gt;
+      </code>
+    </div>
+
+    <p>
+      এতে HTML File পরিষ্কার থাকে এবং একই CSS অনেকগুলো Page-এ ব্যবহার
+      করা যায়।
+    </p>
+
+
+    <h2>4. Website-এর Main Font ঠিক করুন</h2>
+
+    <div class="code-box">
+      <code>
+        body {<br>
+        &nbsp;&nbsp;font-family: Arial, sans-serif;<br>
+        &nbsp;&nbsp;line-height: 1.6;<br>
+        }
+      </code>
+    </div>
+
+    <p>
+      ভালো Font এবং Line Height Website-এর Content পড়তে সহজ করে।
+    </p>
+
+
+    <h2>5. Website-এর Background Color</h2>
+
+    <div class="code-box">
+      <code>
+        body {<br>
+        &nbsp;&nbsp;background-color: #f8fafc;<br>
+        }
+      </code>
+    </div>
+
+    <p>
+      খুব বেশি উজ্জ্বল Background ব্যবহার না করে Content পড়ার জন্য
+      আরামদায়ক Background ব্যবহার করা ভালো।
+    </p>
+
+
+    <h2>6. Color Palette নির্বাচন</h2>
+
+    <p>
+      Website Design করার সময় কয়েকটি নির্দিষ্ট Color ব্যবহার করলে
+      Design বেশি Consistent দেখায়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        :root {<br>
+        &nbsp;&nbsp;--primary: #2563eb;<br>
+        &nbsp;&nbsp;--dark: #111827;<br>
+        &nbsp;&nbsp;--light: #f8fafc;<br>
+        &nbsp;&nbsp;--text: #1f2937;<br>
+        }
+      </code>
+    </div>
+
+    <p>
+      CSS Variable ব্যবহার করলে পরে পুরো Website-এর Color পরিবর্তন করা সহজ হয়।
+    </p>
+
+
+    <h2>7. Professional Navbar তৈরি</h2>
+
+    <p>
+      Website-এর Navigation User-কে বিভিন্ন Page-এ যেতে সাহায্য করে।
+    </p>
+
+    <div class="code-box">
+      <code>
+        nav {<br>
+        &nbsp;&nbsp;display: flex;<br>
+        &nbsp;&nbsp;justify-content: space-between;<br>
+        &nbsp;&nbsp;align-items: center;<br>
+        &nbsp;&nbsp;padding: 15px 25px;<br>
+        &nbsp;&nbsp;background: #111827;<br>
+        }<br><br>
+
+        nav a {<br>
+        &nbsp;&nbsp;color: white;<br>
+        &nbsp;&nbsp;text-decoration: none;<br>
+        }
+      </code>
+    </div>
+
+
+    <h2>8. Navbar-এর Demo</h2>
+
+    <div class="demo-section">
+
+      <div class="demo-navbar">
+        <div class="demo-logo">Munna Tech</div>
+
+        <div class="demo-nav-links">
+          <a href="#" onclick="return false;">Home</a>
+          <a href="#" onclick="return false;">Tutorial</a>
+          <a href="#" onclick="return false;">Contact</a>
+        </div>
+      </div>
+
+    </div>
+
+
+    <h2>9. CSS Flexbox ব্যবহার করুন</h2>
+
+    <p>
+      Website-এর বিভিন্ন Element পাশাপাশি সাজানোর জন্য Flexbox খুবই
+      গুরুত্বপূর্ণ।
+    </p>
+
+    <div class="code-box">
+      <code>
+        .container {<br>
+        &nbsp;&nbsp;display: flex;<br>
+        &nbsp;&nbsp;gap: 20px;<br>
+        &nbsp;&nbsp;flex-wrap: wrap;<br>
+        }
+      </code>
+    </div>
+
+
+    <h2>10. Card Design</h2>
+
+    <p>
+      Tutorial, Product, Service বা Feature দেখানোর জন্য Card Design
+      ব্যবহার করা যায়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        .card {<br>
+        &nbsp;&nbsp;padding: 20px;<br>
+        &nbsp;&nbsp;background: white;<br>
+        &nbsp;&nbsp;border-radius: 12px;<br>
+        &nbsp;&nbsp;box-shadow: 0 4px 15px rgba(0,0,0,0.08);<br>
+        }
+      </code>
+    </div>
+
+
+    <h2>11. Card Demo</h2>
+
+    <div class="demo-section">
+
+      <div class="demo-card-container">
+
+        <div class="demo-card">
+          <h3>HTML</h3>
+          <p>Website Structure শেখার জন্য HTML শিখুন।</p>
+          <a href="#" class="demo-button" onclick="return false;">Learn More</a>
+        </div>
+
+        <div class="demo-card">
+          <h3>CSS</h3>
+          <p>Website সুন্দর করার জন্য CSS শিখুন।</p>
+          <a href="#" class="demo-button" onclick="return false;">Learn More</a>
+        </div>
+
+        <div class="demo-card">
+          <h3>JavaScript</h3>
+          <p>Website Interactive করার জন্য JavaScript শিখুন।</p>
+          <a href="#" class="demo-button" onclick="return false;">Learn More</a>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <h2>12. Margin এবং Padding ঠিকভাবে ব্যবহার</h2>
+
+    <p>
+      Website-এর বিভিন্ন অংশের মধ্যে Space রাখার জন্য Margin এবং Padding
+      ব্যবহার করা হয়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        .section {<br>
+        &nbsp;&nbsp;margin: 40px 0;<br>
+        &nbsp;&nbsp;padding: 30px;<br>
+        }
+      </code>
+    </div>
+
+    <div class="tip-box">
+      <strong>মনে রাখুন:</strong><br>
+      Margin = Element-এর বাইরের Space<br>
+      Padding = Element-এর ভিতরের Space
+    </div>
+
+
+    <h2>13. Button Design</h2>
+
+    <div class="code-box">
+      <code>
+        .btn {<br>
+        &nbsp;&nbsp;padding: 12px 20px;<br>
+        &nbsp;&nbsp;background: #2563eb;<br>
+        &nbsp;&nbsp;color: white;<br>
+        &nbsp;&nbsp;border: none;<br>
+        &nbsp;&nbsp;border-radius: 8px;<br>
+        &nbsp;&nbsp;cursor: pointer;<br>
+        }
+      </code>
+    </div>
+
+
+    <h2>14. Hover Effect</h2>
+
+    <p>
+      Mouse কোনো Button বা Link-এর উপর নিলে Style পরিবর্তন করার জন্য
+      <strong>:hover</strong> ব্যবহার করা হয়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        .btn:hover {<br>
+        &nbsp;&nbsp;transform: translateY(-2px);<br>
+        &nbsp;&nbsp;opacity: 0.9;<br>
+        }
+      </code>
+    </div>
+
+    <div class="demo-section">
+      <a href="#" class="demo-button" onclick="return false;">Hover Me</a>
+    </div>
+
+
+    <h2>15. Border Radius দিয়ে Design সুন্দর করুন</h2>
+
+    <div class="code-box">
+      <code>
+        .card {<br>
+        &nbsp;&nbsp;border-radius: 15px;<br>
+        }
+      </code>
+    </div>
+
+    <p>
+      Border Radius ব্যবহার করলে Box, Image, Card এবং Button-এর Corner
+      সুন্দরভাবে Round করা যায়।
+    </p>
+
+
+    <h2>16. Box Shadow</h2>
+
+    <p>
+      Card বা Box-কে Background থেকে আলাদা করে দেখানোর জন্য Box Shadow
+      ব্যবহার করা যায়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        .card {<br>
+        &nbsp;&nbsp;box-shadow: 0 4px 15px rgba(0,0,0,0.08);<br>
+        }
+      </code>
+    </div>
+
+
+    <h2>17. Image Design</h2>
+
+    <div class="code-box">
+      <code>
+        img {<br>
+        &nbsp;&nbsp;max-width: 100%;<br>
+        &nbsp;&nbsp;height: auto;<br>
+        &nbsp;&nbsp;border-radius: 10px;<br>
+        }
+      </code>
+    </div>
+
+    <p>
+      <strong>max-width: 100%</strong> ব্যবহার করলে Image ছোট Screen-এ
+      Container-এর বাইরে চলে যাওয়ার সম্ভাবনা কমে।
+    </p>
+
+
+    <h2>18. Content-এর Maximum Width নির্ধারণ</h2>
+
+    <p>
+      Website-এর Content অনেক বেশি চওড়া হলে পড়তে অসুবিধা হতে পারে।
+      তাই Container-এর Maximum Width নির্ধারণ করা যায়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        .container {<br>
+        &nbsp;&nbsp;max-width: 1100px;<br>
+        &nbsp;&nbsp;margin: auto;<br>
+        &nbsp;&nbsp;padding: 20px;<br>
+        }
+      </code>
+    </div>
+
+
+    <h2>19. Responsive Website তৈরি</h2>
+
+    <p>
+      Website যেন Mobile, Tablet এবং Desktop-এ ভালোভাবে দেখা যায়,
+      তার জন্য Media Query ব্যবহার করা হয়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        @media (max-width: 700px) {<br>
+        &nbsp;&nbsp;.container {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;padding: 15px;<br>
+        &nbsp;&nbsp;}<br><br>
+
+        &nbsp;&nbsp;h1 {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 28px;<br>
+        &nbsp;&nbsp;}<br>
+        }
+      </code>
+    </div>
+
+
+    <h2>20. Mobile Menu-এর জন্য Basic ধারণা</h2>
+
+    <p>
+      Mobile Screen-এ Navbar-এর Link অনেক সময় ছোট জায়গায় ঠিকমতো দেখা যায় না।
+      তাই Responsive Navbar তৈরি করতে Media Query এবং পরে JavaScript ব্যবহার
+      করা যায়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        @media (max-width: 600px) {<br>
+        &nbsp;&nbsp;nav ul {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;flex-direction: column;<br>
+        &nbsp;&nbsp;}<br>
+        }
+      </code>
+    </div>
+
+
+    <h2>21. CSS Transition</h2>
+
+    <p>
+      কোনো Element-এর Style পরিবর্তনকে Smooth করার জন্য Transition ব্যবহার
+      করা যায়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        .btn {<br>
+        &nbsp;&nbsp;transition: 0.3s;<br>
+        }
+      </code>
+    </div>
+
+
+    <h2>22. Professional Website Design-এর কিছু নিয়ম</h2>
+
+    <ul>
+      <li>অতিরিক্ত Color ব্যবহার করবেন না</li>
+      <li>Website-এর Font readable রাখুন</li>
+      <li>Section-এর মধ্যে পর্যাপ্ত Space রাখুন</li>
+      <li>Button সহজে চেনা যায় এমন রাখুন</li>
+      <li>Mobile Responsive করুন</li>
+      <li>Navigation সহজ রাখুন</li>
+      <li>Content-এর Width নিয়ন্ত্রণ করুন</li>
+      <li>একই ধরনের Design পুরো Website-এ ব্যবহার করুন</li>
+      <li>অতিরিক্ত Animation এড়িয়ে চলুন</li>
+    </ul>
+
+
+    <!-- Adsterra Native Banner -->
+    <div style="margin:30px 0; text-align:center;">
+      <script async="async" data-cfasync="false"
+        src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js">
+      </script>
+
+      <div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+    </div>
+
+
+    <h2>23. Beginner Practice Project</h2>
+
+    <p>
+      এখন একটি Simple Website Homepage তৈরি করার চেষ্টা করুন।
+    </p>
+
+    <ol>
+      <li>একটি Navbar তৈরি করুন</li>
+      <li>একটি Hero Section তৈরি করুন</li>
+      <li>৩টি Card তৈরি করুন</li>
+      <li>একটি Button যোগ করুন</li>
+      <li>Background Color দিন</li>
+      <li>Box Shadow ব্যবহার করুন</li>
+      <li>Hover Effect দিন</li>
+      <li>Mobile Responsive করুন</li>
+    </ol>
+
+
+    <h2>24. HTML + CSS দিয়ে Simple Homepage</h2>
+
+    <div class="code-box">
+      <code>
+        &lt;section class="hero"&gt;<br>
+        &nbsp;&nbsp;&lt;h1&gt;Welcome to My Website&lt;/h1&gt;<br>
+        &nbsp;&nbsp;&lt;p&gt;Learn Web Development Easily&lt;/p&gt;<br>
+        &nbsp;&nbsp;&lt;a href="#" class="btn"&gt;Get Started&lt;/a&gt;<br>
+        &lt;/section&gt;
+      </code>
+    </div>
+
+    <p>CSS:</p>
+
+    <div class="code-box">
+      <code>
+        .hero {<br>
+        &nbsp;&nbsp;text-align: center;<br>
+        &nbsp;&nbsp;padding: 80px 20px;<br>
+        &nbsp;&nbsp;background: #eff6ff;<br>
+        }<br><br>
+
+        .hero h1 {<br>
+        &nbsp;&nbsp;font-size: 42px;<br>
+        }<br><br>
+
+        .hero .btn {<br>
+        &nbsp;&nbsp;display: inline-block;<br>
+        &nbsp;&nbsp;margin-top: 15px;<br>
+        }
+      </code>
+    </div>
+
+
+    <h2>25. CSS শেখার পর কী শিখবেন?</h2>
+
+    <p>
+      CSS Basic শেখার পর Flexbox, CSS Grid, Responsive Design,
+      Animation এবং Advanced Layout শেখা উচিত।
+    </p>
+
+    <p>
+      এরপর JavaScript শেখা শুরু করলে Website-এ Interactive Features,
+      Form Validation, Menu Toggle এবং অন্যান্য Dynamic Function যোগ
+      করতে পারবেন।
+    </p>
+
+
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="faq">
+
+      <h3>CSS কী?</h3>
+      <p>
+        CSS হলো Cascading Style Sheets। Website-এর Design ও Layout
+        পরিবর্তনের জন্য CSS ব্যবহার করা হয়।
+      </p>
+
+      <h3>CSS দিয়ে কী কী করা যায়?</h3>
+      <p>
+        Color, Font, Background, Button, Card, Navbar, Spacing, Layout,
+        Responsive Design এবং অনেক ধরনের Visual Style তৈরি করা যায়।
+      </p>
+
+      <h3>Website Design করার জন্য HTML নাকি CSS?</h3>
+      <p>
+        HTML Website-এর Structure তৈরি করে এবং CSS সেই Structure-এর
+        Design ও Presentation নিয়ন্ত্রণ করে। দুটো একসাথে ব্যবহার করা হয়।
+      </p>
+
+      <h3>CSS-এর জন্য আলাদা File ব্যবহার করা ভালো?</h3>
+      <p>
+        বড় Website-এর ক্ষেত্রে External CSS File ব্যবহার করলে Code
+        Organize করা সহজ হয় এবং একাধিক Page-এ একই Style ব্যবহার করা যায়।
+      </p>
+
+      <h3>CSS দিয়ে Mobile Responsive Website বানানো যায়?</h3>
+      <p>
+        হ্যাঁ। Media Query, Flexible Layout, Flexbox, Grid এবং Responsive
+        Units ব্যবহার করে Mobile Responsive Website তৈরি করা যায়।
+      </p>
+
+    </div>
+
+
+    <h2>Conclusion</h2>
+
+    <p>
+      CSS শেখার মূল বিষয় হলো শুধু Property মুখস্থ করা নয়, বরং সেগুলো
+      ব্যবহার করে ছোট ছোট Project তৈরি করা।
+    </p>
+
+    <p>
+      আপনি যদি প্রতিদিন একটি করে ছোট Design তৈরি করেন, তাহলে ধীরে ধীরে
+      Professional Website Design করার দক্ষতা তৈরি হবে।
+    </p>
+
+
+    <h2>আরও পড়ুন</h2>
+
+    <div class="related-links">
+
+      <a href="css-ki-beginner-guide.html">
+        CSS কী? Beginnerদের জন্য CSS সম্পূর্ণ গাইড
+      </a>
+
+      <a href="html-ki-beginner-guide.html">
+        HTML কী? Beginnerদের জন্য সম্পূর্ণ গাইড
+      </a>
+
+      <a href="html-diye-website-bananor-guide.html">
+        HTML দিয়ে প্রথম Website কীভাবে বানাবেন?
+      </a>
+
+      <a href="html-tags-beginners-guide.html">
+        HTML-এর 20টি গুরুত্বপূর্ণ Tag
+      </a>
+
+      <a href="html-heading-paragraph-link-guide.html">
+        HTML Heading, Paragraph ও Link Guide
+      </a>
+
+      <a href="html-image-beginners-guide.html">
+        HTML-এ Image যোগ করার নিয়ম
+      </a>
+
+      <a href="html-form-beginners-guide.html">
+        HTML Form কী? Form তৈরির Guide
+      </a>
+
+      <a href="html-tutorial.html">
+        সম্পূর্ণ HTML Tutorial
+      </a>
+
+      <a href="css-tutorial.html">
+        সম্পূর্ণ CSS Tutorial
+      </a>
+
+      <a href="javascript-tutorial.html">
+        JavaScript Tutorial
+      </a>
+
+    </div>
+
+
+    <div class="tip-box" style="margin-top:35px;">
+      <strong>Munna Tech:</strong>
+      সহজ বাংলায় Web Development এবং PC Tips শিখুন।
+    </div>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Munna Tech — Web Development & PC Tips</p>
+  </footer>
+
+
+  <!-- Dark Mode -->
+  <script>
+    const darkModeBtn = document.getElementById("darkModeBtn");
+
+    if (localStorage.getItem("darkMode") === "enabled") {
+      document.body.classList.add("dark-mode");
+      darkModeBtn.textContent = "☀️ Light Mode";
+    }
+
+    darkModeBtn.addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("darkMode", "enabled");
+        darkModeBtn.textContent = "☀️ Light Mode";
+      } else {
+        localStorage.setItem("darkMode", "disabled");
+        darkModeBtn.textContent = "🌙 Dark Mode";
+      }
+    });
+  </script>
+
+</body>
+</html>
+```
