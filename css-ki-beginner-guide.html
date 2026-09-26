@@ -1,0 +1,824 @@
+```html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSS কী? Beginnerদের জন্য CSS সম্পূর্ণ গাইড | Munna Tech</title>
+
+  <meta name="description" content="CSS কী এবং কীভাবে CSS দিয়ে Website Design করতে হয় তা সহজ বাংলায় শিখুন। CSS Syntax, Color, Background, Font, Margin, Padding, Border, Class, ID এবং Responsive Design সহ Beginner Guide।">
+
+  <meta name="keywords" content="CSS কী, CSS বাংলা, CSS tutorial বাংলা, CSS beginners guide, CSS দিয়ে website design, CSS syntax, CSS margin padding, CSS class id">
+
+  <meta name="author" content="Munna Tech">
+
+  <meta property="og:title" content="CSS কী? Beginnerদের জন্য CSS সম্পূর্ণ গাইড">
+  <meta property="og:description" content="Beginnerদের জন্য CSS শেখার সহজ বাংলা গাইড।">
+  <meta property="og:type" content="article">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .article-container h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .article-container h2 {
+      margin-top: 35px;
+      color: #2563eb;
+    }
+
+    .article-container h3 {
+      margin-top: 25px;
+    }
+
+    .article-container p,
+    .article-container li {
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .article-container ul,
+    .article-container ol {
+      padding-left: 25px;
+    }
+
+    .code-box {
+      background: #111827;
+      color: #f9fafb;
+      padding: 18px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 15px 0;
+    }
+
+    .code-box code {
+      font-family: Consolas, monospace;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .tip-box {
+      background: #eff6ff;
+      border-left: 5px solid #2563eb;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 6px;
+    }
+
+    .warning-box {
+      background: #fff7ed;
+      border-left: 5px solid #f97316;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 6px;
+    }
+
+    .demo-box {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 20px 0;
+      background: #f8fafc;
+    }
+
+    .demo-title {
+      color: #2563eb;
+      font-size: 28px;
+    }
+
+    .demo-button {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+    }
+
+    .faq {
+      margin-top: 15px;
+    }
+
+    .related-links a {
+      display: block;
+      margin: 8px 0;
+    }
+
+    @media (max-width: 600px) {
+      .article-container h1 {
+        font-size: 28px;
+      }
+
+      .article-container p,
+      .article-container li {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div class="logo">Munna Tech</div>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="html-tutorial.html">HTML</a></li>
+        <li><a href="css-tutorial.html">CSS</a></li>
+        <li><a href="javascript-tutorial.html">JavaScript</a></li>
+        <li><a href="pc-tips.html">PC Tips</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+
+      <button id="darkModeBtn">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+
+  <!-- Article -->
+  <main class="article-container">
+
+    <h1>CSS কী? Beginnerদের জন্য CSS সম্পূর্ণ গাইড</h1>
+
+    <p>
+      একটি Website-এর HTML structure তৈরি করার পর সেটিকে সুন্দর,
+      Professional এবং User-friendly করার জন্য <strong>CSS</strong>
+      ব্যবহার করা হয়।
+    </p>
+
+    <p>
+      এই Beginner Guide-এ আমরা একদম শুরু থেকে CSS কী, কেন ব্যবহার করা হয়
+      এবং কীভাবে HTML-এর সাথে CSS ব্যবহার করতে হয় তা শিখব।
+    </p>
+
+
+    <h2>1. CSS কী?</h2>
+
+    <p>
+      <strong>CSS</strong> এর পূর্ণরূপ হলো
+      <strong>Cascading Style Sheets</strong>।
+    </p>
+
+    <p>
+      CSS ব্যবহার করে Website-এর Color, Font, Size, Spacing, Layout,
+      Button, Background এবং অন্যান্য Design পরিবর্তন করা যায়।
+    </p>
+
+    <div class="tip-box">
+      <strong>সহজভাবে মনে রাখুন:</strong><br>
+      HTML = Website-এর Structure<br>
+      CSS = Website-এর Design<br>
+      JavaScript = Website-এর Interaction
+    </div>
+
+
+    <h2>2. CSS কেন ব্যবহার করা হয়?</h2>
+
+    <p>
+      শুধু HTML ব্যবহার করলে Website সাধারণ ও কম আকর্ষণীয় দেখাতে পারে।
+      CSS ব্যবহার করলে Website-এর Design অনেক সুন্দর করা যায়।
+    </p>
+
+    <ul>
+      <li>Text-এর Color পরিবর্তন</li>
+      <li>Font পরিবর্তন</li>
+      <li>Background তৈরি</li>
+      <li>Button Design</li>
+      <li>Margin ও Padding</li>
+      <li>Border তৈরি</li>
+      <li>Website Layout তৈরি</li>
+      <li>Mobile Responsive Design</li>
+      <li>Animation এবং Transition</li>
+    </ul>
+
+
+    <h2>3. CSS Syntax কী?</h2>
+
+    <p>
+      CSS-এর সাধারণ Syntax হলো:
+    </p>
+
+    <div class="code-box">
+      <code>
+        selector {<br>
+        &nbsp;&nbsp;property: value;<br>
+        }
+      </code>
+    </div>
+
+    <p>উদাহরণ:</p>
+
+    <div class="code-box">
+      <code>
+        p {<br>
+        &nbsp;&nbsp;color: blue;<br>
+        }
+      </code>
+    </div>
+
+    <p>
+      এখানে <strong>p</strong> হলো selector,
+      <strong>color</strong> হলো property এবং
+      <strong>blue</strong> হলো value।
+    </p>
+
+
+    <h2>4. CSS যোগ করার ৩টি পদ্ধতি</h2>
+
+    <p>HTML-এর সাথে CSS তিনভাবে ব্যবহার করা যায়:</p>
+
+    <ol>
+      <li>Inline CSS</li>
+      <li>Internal CSS</li>
+      <li>External CSS</li>
+    </ol>
+
+
+    <h2>5. Inline CSS</h2>
+
+    <p>
+      HTML Tag-এর ভিতরে সরাসরি CSS লিখলে তাকে Inline CSS বলা হয়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;h1 style="color: blue;"&gt;Hello World&lt;/h1&gt;
+      </code>
+    </div>
+
+    <p>
+      ছোট কোনো পরিবর্তনের জন্য Inline CSS ব্যবহার করা যায়।
+    </p>
+
+
+    <h2>6. Internal CSS</h2>
+
+    <p>
+      HTML-এর <strong>&lt;head&gt;</strong> অংশের মধ্যে
+      <strong>&lt;style&gt;</strong> Tag ব্যবহার করে CSS লিখলে
+      সেটিকে Internal CSS বলা হয়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;style&gt;<br>
+        h1 {<br>
+        &nbsp;&nbsp;color: red;<br>
+        }<br>
+        &lt;/style&gt;
+      </code>
+    </div>
+
+
+    <h2>7. External CSS</h2>
+
+    <p>
+      আলাদা একটি CSS File তৈরি করে HTML-এর সাথে যুক্ত করলে তাকে
+      External CSS বলা হয়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;link rel="stylesheet" href="style.css"&gt;
+      </code>
+    </div>
+
+    <p>
+      বড় Website-এর জন্য External CSS খুবই জনপ্রিয়, কারণ এতে
+      HTML এবং CSS আলাদা রাখা যায়।
+    </p>
+
+
+    <h2>8. CSS দিয়ে Text Color পরিবর্তন</h2>
+
+    <div class="code-box">
+      <code>
+        h1 {<br>
+        &nbsp;&nbsp;color: blue;<br>
+        }
+      </code>
+    </div>
+
+    <p>
+      এখানে h1-এর Text-এর Color Blue হবে।
+    </p>
+
+
+    <h2>9. Background Color</h2>
+
+    <div class="code-box">
+      <code>
+        body {<br>
+        &nbsp;&nbsp;background-color: lightgray;<br>
+        }
+      </code>
+    </div>
+
+    <p>
+      এতে পুরো Website-এর Background Color পরিবর্তন হবে।
+    </p>
+
+
+    <h2>10. Font Size</h2>
+
+    <div class="code-box">
+      <code>
+        p {<br>
+        &nbsp;&nbsp;font-size: 18px;<br>
+        }
+      </code>
+    </div>
+
+    <p>
+      এখানে Paragraph-এর Font Size 18px হবে।
+    </p>
+
+
+    <h2>11. Font Family</h2>
+
+    <div class="code-box">
+      <code>
+        body {<br>
+        &nbsp;&nbsp;font-family: Arial, sans-serif;<br>
+        }
+      </code>
+    </div>
+
+    <p>
+      Font Family ব্যবহার করে Website-এর Text-এর Font পরিবর্তন করা যায়।
+    </p>
+
+
+    <h2>12. Text Align</h2>
+
+    <div class="code-box">
+      <code>
+        h1 {<br>
+        &nbsp;&nbsp;text-align: center;<br>
+        }
+      </code>
+    </div>
+
+    <p>
+      এতে Heading মাঝখানে চলে আসবে।
+    </p>
+
+
+    <h2>13. Margin কী?</h2>
+
+    <p>
+      কোনো Element-এর বাইরের Space-কে Margin বলা হয়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        .box {<br>
+        &nbsp;&nbsp;margin: 20px;<br>
+        }
+      </code>
+    </div>
+
+
+    <h2>14. Padding কী?</h2>
+
+    <p>
+      কোনো Element-এর Content এবং Border-এর মধ্যকার Space-কে Padding বলা হয়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        .box {<br>
+        &nbsp;&nbsp;padding: 20px;<br>
+        }
+      </code>
+    </div>
+
+    <div class="tip-box">
+      <strong>সহজভাবে:</strong><br>
+      Margin = Element-এর বাইরের Space<br>
+      Padding = Element-এর ভিতরের Space
+    </div>
+
+
+    <h2>15. Border</h2>
+
+    <div class="code-box">
+      <code>
+        .box {<br>
+        &nbsp;&nbsp;border: 2px solid black;<br>
+        }
+      </code>
+    </div>
+
+    <p>
+      Border ব্যবহার করে কোনো Element-এর চারপাশে রেখা তৈরি করা যায়।
+    </p>
+
+
+    <h2>16. Border Radius</h2>
+
+    <div class="code-box">
+      <code>
+        .box {<br>
+        &nbsp;&nbsp;border-radius: 10px;<br>
+        }
+      </code>
+    </div>
+
+    <p>
+      Border Radius ব্যবহার করলে Box বা Button-এর Corner গোল করা যায়।
+    </p>
+
+
+    <h2>17. Width ও Height</h2>
+
+    <div class="code-box">
+      <code>
+        .box {<br>
+        &nbsp;&nbsp;width: 300px;<br>
+        &nbsp;&nbsp;height: 200px;<br>
+        }
+      </code>
+    </div>
+
+
+    <h2>18. Class কী?</h2>
+
+    <p>
+      একই ধরনের একাধিক Element-এ একই CSS ব্যবহার করার জন্য
+      Class ব্যবহার করা হয়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;p class="text"&gt;Hello&lt;/p&gt;<br>
+        &lt;p class="text"&gt;Welcome&lt;/p&gt;
+      </code>
+    </div>
+
+    <p>CSS:</p>
+
+    <div class="code-box">
+      <code>
+        .text {<br>
+        &nbsp;&nbsp;color: blue;<br>
+        }
+      </code>
+    </div>
+
+
+    <h2>19. ID কী?</h2>
+
+    <p>
+      নির্দিষ্ট একটি Element-এর জন্য ID ব্যবহার করা যায়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;h1 id="title"&gt;Munna Tech&lt;/h1&gt;
+      </code>
+    </div>
+
+    <p>CSS:</p>
+
+    <div class="code-box">
+      <code>
+        #title {<br>
+        &nbsp;&nbsp;color: green;<br>
+        }
+      </code>
+    </div>
+
+
+    <h2>20. CSS Selector</h2>
+
+    <p>
+      HTML-এর কোন Element-এ CSS প্রয়োগ হবে তা নির্ধারণ করতে
+      Selector ব্যবহার করা হয়।
+    </p>
+
+    <ul>
+      <li>Element Selector</li>
+      <li>Class Selector</li>
+      <li>ID Selector</li>
+      <li>Universal Selector</li>
+      <li>Attribute Selector</li>
+    </ul>
+
+    <div class="code-box">
+      <code>
+        p { color: red; }<br>
+        .box { padding: 20px; }<br>
+        #title { font-size: 30px; }
+      </code>
+    </div>
+
+
+    <h2>21. CSS দিয়ে Button Design</h2>
+
+    <div class="code-box">
+      <code>
+        .btn {<br>
+        &nbsp;&nbsp;background: blue;<br>
+        &nbsp;&nbsp;color: white;<br>
+        &nbsp;&nbsp;padding: 12px 20px;<br>
+        &nbsp;&nbsp;border: none;<br>
+        &nbsp;&nbsp;border-radius: 8px;<br>
+        &nbsp;&nbsp;cursor: pointer;<br>
+        }
+      </code>
+    </div>
+
+    <div class="demo-box">
+      <h3 class="demo-title">CSS Button Demo</h3>
+      <a href="#" class="demo-button" onclick="return false;">Click Me</a>
+    </div>
+
+
+    <h2>22. Hover Effect</h2>
+
+    <p>
+      Mouse কোনো Button বা Element-এর উপর নিলে Style পরিবর্তন করতে
+      <strong>:hover</strong> ব্যবহার করা যায়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        .btn:hover {<br>
+        &nbsp;&nbsp;background: black;<br>
+        }
+      </code>
+    </div>
+
+
+    <h2>23. CSS Flexbox কী?</h2>
+
+    <p>
+      Flexbox ব্যবহার করে Element-গুলোকে Row বা Column আকারে সাজানো
+      এবং Layout তৈরি করা সহজ হয়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        .container {<br>
+        &nbsp;&nbsp;display: flex;<br>
+        &nbsp;&nbsp;justify-content: center;<br>
+        &nbsp;&nbsp;align-items: center;<br>
+        }
+      </code>
+    </div>
+
+
+    <h2>24. Responsive Design কী?</h2>
+
+    <p>
+      Website যেন Mobile, Tablet এবং Desktop—সব ধরনের Screen-এ
+      সুন্দরভাবে দেখা যায়, সেটিকে Responsive Design বলা হয়।
+    </p>
+
+    <div class="code-box">
+      <code>
+        @media (max-width: 600px) {<br>
+        &nbsp;&nbsp;h1 {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;font-size: 25px;<br>
+        &nbsp;&nbsp;}<br>
+        }
+      </code>
+    </div>
+
+
+    <!-- Adsterra -->
+    <div style="margin:30px 0; text-align:center;">
+      <script async="async" data-cfasync="false"
+        src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js">
+      </script>
+
+      <div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+    </div>
+
+
+    <h2>25. Beginnerদের জন্য ছোট CSS Project</h2>
+
+    <p>
+      নিচের HTML এবং CSS ব্যবহার করে একটি Simple Profile Card তৈরি
+      করার চেষ্টা করুন।
+    </p>
+
+    <div class="code-box">
+      <code>
+        &lt;div class="card"&gt;<br>
+        &nbsp;&nbsp;&lt;h2&gt;Munna&lt;/h2&gt;<br>
+        &nbsp;&nbsp;&lt;p&gt;Web Developer&lt;/p&gt;<br>
+        &nbsp;&nbsp;&lt;button&gt;Contact Me&lt;/button&gt;<br>
+        &lt;/div&gt;
+      </code>
+    </div>
+
+    <p>CSS:</p>
+
+    <div class="code-box">
+      <code>
+        .card {<br>
+        &nbsp;&nbsp;width: 300px;<br>
+        &nbsp;&nbsp;padding: 20px;<br>
+        &nbsp;&nbsp;text-align: center;<br>
+        &nbsp;&nbsp;border: 1px solid #ddd;<br>
+        &nbsp;&nbsp;border-radius: 12px;<br>
+        }<br><br>
+
+        .card button {<br>
+        &nbsp;&nbsp;padding: 10px 18px;<br>
+        &nbsp;&nbsp;border: none;<br>
+        &nbsp;&nbsp;border-radius: 6px;<br>
+        &nbsp;&nbsp;cursor: pointer;<br>
+        }
+      </code>
+    </div>
+
+
+    <h2>26. CSS শেখার সময় যে ভুলগুলো করবেন না</h2>
+
+    <ul>
+      <li>Property-এর পরে semicolon দিতে ভুল করবেন না</li>
+      <li>Class-এর আগে <strong>.</strong> ব্যবহার করুন</li>
+      <li>ID-এর আগে <strong>#</strong> ব্যবহার করুন</li>
+      <li>CSS File-এর সঠিক নাম দিন</li>
+      <li>HTML-এ CSS File-এর সঠিক path দিন</li>
+      <li>Browser Developer Tools ব্যবহার করে সমস্যা খুঁজুন</li>
+      <li>Mobile Screen-এ Website পরীক্ষা করুন</li>
+    </ul>
+
+
+    <h2>27. Beginner Practice Task</h2>
+
+    <p>
+      এবার নিজে একটি Professional-looking Profile Card তৈরি করুন।
+    </p>
+
+    <ol>
+      <li>একটি Card তৈরি করুন</li>
+      <li>Background Color দিন</li>
+      <li>Padding দিন</li>
+      <li>Border Radius দিন</li>
+      <li>Name-এর Font Size পরিবর্তন করুন</li>
+      <li>Button Design করুন</li>
+      <li>Button-এ Hover Effect দিন</li>
+      <li>Mobile-এর জন্য Responsive করুন</li>
+    </ol>
+
+
+    <h2>28. CSS শেখার পর কী শিখবেন?</h2>
+
+    <p>
+      CSS-এর Basic শেখার পর Flexbox, Grid, Responsive Design,
+      Animation এবং Advanced Layout শেখা উচিত।
+    </p>
+
+    <p>
+      এরপর JavaScript শিখলে Website-এ Interactive Feature যোগ করতে পারবেন।
+    </p>
+
+
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="faq">
+
+      <h3>CSS-এর পূর্ণরূপ কী?</h3>
+      <p>
+        CSS-এর পূর্ণরূপ হলো Cascading Style Sheets।
+      </p>
+
+      <h3>CSS কেন ব্যবহার করা হয়?</h3>
+      <p>
+        Website-এর Design, Layout, Color, Font, Spacing এবং Responsive
+        behaviour নিয়ন্ত্রণ করার জন্য CSS ব্যবহার করা হয়।
+      </p>
+
+      <h3>CSS কতভাবে HTML-এ ব্যবহার করা যায়?</h3>
+      <p>
+        Inline CSS, Internal CSS এবং External CSS—এই তিনভাবে CSS
+        ব্যবহার করা যায়।
+      </p>
+
+      <h3>Class এবং ID-এর মধ্যে পার্থক্য কী?</h3>
+      <p>
+        Class সাধারণত একাধিক Element-এ ব্যবহার করা যায়। ID সাধারণত
+        একটি নির্দিষ্ট Element চিহ্নিত করার জন্য ব্যবহার করা হয়।
+      </p>
+
+      <h3>CSS শেখা কি কঠিন?</h3>
+      <p>
+        নিয়মিত Practice করলে CSS-এর Basic শেখা সহজ। তবে Professional
+        Design করতে হলে নিয়মিত Project Practice করা গুরুত্বপূর্ণ।
+      </p>
+
+    </div>
+
+
+    <h2>Conclusion</h2>
+
+    <p>
+      CSS হলো Web Development-এর অত্যন্ত গুরুত্বপূর্ণ একটি অংশ।
+      HTML দিয়ে Website-এর Structure তৈরি করার পর CSS ব্যবহার করে
+      সেটিকে সুন্দর এবং Professional করা যায়।
+    </p>
+
+    <p>
+      আপনি যদি Web Developer হতে চান, তাহলে HTML-এর পাশাপাশি CSS
+      ভালোভাবে শেখা এবং ছোট ছোট Project তৈরি করা শুরু করুন।
+    </p>
+
+
+    <h2>আরও পড়ুন</h2>
+
+    <div class="related-links">
+
+      <a href="html-ki-beginner-guide.html">
+        HTML কী? Beginnerদের জন্য সম্পূর্ণ গাইড
+      </a>
+
+      <a href="html-diye-website-bananor-guide.html">
+        HTML দিয়ে প্রথম Website কীভাবে বানাবেন?
+      </a>
+
+      <a href="html-tags-beginners-guide.html">
+        HTML-এর 20টি গুরুত্বপূর্ণ Tag
+      </a>
+
+      <a href="html-heading-paragraph-link-guide.html">
+        HTML Heading, Paragraph ও Link Guide
+      </a>
+
+      <a href="html-image-beginners-guide.html">
+        HTML-এ Image যোগ করার নিয়ম
+      </a>
+
+      <a href="html-form-beginners-guide.html">
+        HTML Form কী? Form তৈরির Guide
+      </a>
+
+      <a href="html-tutorial.html">
+        সম্পূর্ণ HTML Tutorial
+      </a>
+
+      <a href="css-tutorial.html">
+        সম্পূর্ণ CSS Tutorial
+      </a>
+
+      <a href="javascript-tutorial.html">
+        JavaScript Tutorial
+      </a>
+
+    </div>
+
+
+    <div class="tip-box" style="margin-top:35px;">
+      <strong>Munna Tech:</strong>
+      সহজ বাংলায় Web Development এবং PC Tips শিখুন।
+    </div>
+
+  </main>
+
+
+  <footer>
+    <p>© 2026 Munna Tech — Web Development & PC Tips</p>
+  </footer>
+
+
+  <!-- Dark Mode -->
+  <script>
+    const darkModeBtn = document.getElementById("darkModeBtn");
+
+    if (localStorage.getItem("darkMode") === "enabled") {
+      document.body.classList.add("dark-mode");
+      darkModeBtn.textContent = "☀️ Light Mode";
+    }
+
+    darkModeBtn.addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("darkMode", "enabled");
+        darkModeBtn.textContent = "☀️ Light Mode";
+      } else {
+        localStorage.setItem("darkMode", "disabled");
+        darkModeBtn.textContent = "🌙 Dark Mode";
+      }
+    });
+  </script>
+
+</body>
+</html>
+```
