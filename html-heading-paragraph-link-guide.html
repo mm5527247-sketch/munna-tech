@@ -1,0 +1,1272 @@
+```html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Heading, Paragraph ও Link কীভাবে ব্যবহার করবেন? | Munna Tech</title>
+
+    <meta name="description" content="HTML Heading, Paragraph ও Link কীভাবে ব্যবহার করতে হয় তা সহজ বাংলায় শিখুন। Beginners-এর জন্য HTML H1-H6, Paragraph এবং Anchor Link-এর সম্পূর্ণ গাইড।">
+
+    <meta name="keywords" content="HTML heading, HTML paragraph, HTML link, HTML h1 h2 h3, HTML anchor tag, HTML tutorial বাংলা, HTML শেখার নিয়ম">
+
+    <meta name="author" content="Munna Tech">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="HTML Heading, Paragraph ও Link কীভাবে ব্যবহার করবেন?">
+    <meta property="og:description" content="Beginners-এর জন্য HTML Heading, Paragraph এবং Link-এর সহজ বাংলা Tutorial।">
+    <meta property="og:type" content="article">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ================================
+           ARTICLE PAGE
+        ================================= */
+
+        .article-page {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .breadcrumb {
+            margin-bottom: 25px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .article-header {
+            background: linear-gradient(135deg, #007bff, #6f42c1);
+            color: white;
+            padding: 45px 30px;
+            border-radius: 18px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .article-header h1 {
+            font-size: 38px;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+
+        .article-header p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .article-content {
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            margin-top: 38px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .article-content h3 {
+            font-size: 22px;
+            margin-top: 28px;
+            color: #333;
+        }
+
+        .article-content p {
+            font-size: 17px;
+            line-height: 1.9;
+            color: #444;
+        }
+
+        .article-content li {
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+
+        /* Info Box */
+
+        .info-box {
+            background: #eef7ff;
+            border-left: 5px solid #007bff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        /* Tip Box */
+
+        .tip-box {
+            background: #fff8e6;
+            border-left: 5px solid #ffb300;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        /* Practice */
+
+        .practice-box {
+            background: #eefaf1;
+            border-left: 5px solid #28a745;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        /* Code */
+
+        .code-box {
+            background: #1e1e1e;
+            color: #f5f5f5;
+            padding: 18px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .code-box code {
+            font-family: Consolas, monospace;
+            line-height: 1.7;
+        }
+
+        /* Example */
+
+        .example-box {
+            border: 1px solid #ddd;
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        /* Tag */
+
+        .tag-name {
+            display: inline-block;
+            background: #222;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 7px;
+            font-family: monospace;
+        }
+
+        /* Ad */
+
+        .ad-box {
+            margin: 35px 0;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Related */
+
+        .related {
+            margin-top: 40px;
+            padding: 25px;
+            background: #f5f5f5;
+            border-radius: 14px;
+        }
+
+        .related a {
+            display: block;
+            margin: 12px 0;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* CTA */
+
+        .cta {
+            margin-top: 40px;
+            padding: 30px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #007bff, #6f42c1);
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .cta a {
+            display: inline-block;
+            margin-top: 15px;
+            background: white;
+            color: #007bff;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Dark Mode */
+
+        body.dark-mode .article-content {
+            background: #1e1e1e;
+        }
+
+        body.dark-mode .article-content h2,
+        body.dark-mode .article-content h3 {
+            color: white;
+        }
+
+        body.dark-mode .article-content p,
+        body.dark-mode .article-content li {
+            color: #ddd;
+        }
+
+        body.dark-mode .example-box {
+            background: #252525;
+            border-color: #444;
+        }
+
+        body.dark-mode .related {
+            background: #252525;
+        }
+
+        body.dark-mode .info-box {
+            background: #172b3a;
+        }
+
+        body.dark-mode .tip-box {
+            background: #332b18;
+        }
+
+        body.dark-mode .practice-box {
+            background: #18301f;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 768px) {
+
+            .article-page {
+                margin: 25px auto;
+                padding: 0 12px;
+            }
+
+            .article-header {
+                padding: 30px 18px;
+            }
+
+            .article-header h1 {
+                font-size: 28px;
+            }
+
+            .article-header p {
+                font-size: 16px;
+            }
+
+            .article-content {
+                padding: 22px 18px;
+            }
+
+            .article-content h2 {
+                font-size: 24px;
+            }
+
+            .article-content p {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================================
+         NAVBAR
+    ================================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <a href="index.html">Munna Tech</a>
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="html-tutorial.html">HTML</a>
+                </li>
+
+                <li>
+                    <a href="css-tutorial.html">CSS</a>
+                </li>
+
+                <li>
+                    <a href="javascript-tutorial.html">JavaScript</a>
+                </li>
+
+                <li>
+                    <a href="pc-tips.html">PC Tips</a>
+                </li>
+
+                <li>
+                    <a href="index.html#contact">Contact</a>
+                </li>
+
+            </ul>
+
+            <button id="darkModeBtn">
+                🌙 Dark Mode
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================================
+         ARTICLE
+    ================================= -->
+
+    <main class="article-page">
+
+
+        <!-- Breadcrumb -->
+
+        <div class="breadcrumb">
+
+            <a href="index.html">Home</a>
+            →
+            <a href="html-tutorial.html">HTML</a>
+            →
+            Heading, Paragraph & Link
+
+        </div>
+
+
+
+        <!-- Article Header -->
+
+        <section class="article-header">
+
+            <h1>
+                HTML Heading, Paragraph ও Link কীভাবে ব্যবহার করবেন?
+            </h1>
+
+            <p>
+                Beginners-এর জন্য HTML Heading, Paragraph এবং Link-এর সহজ বাংলা গাইড
+            </p>
+
+        </section>
+
+
+
+        <!-- Article Content -->
+
+        <article class="article-content">
+
+
+            <p>
+                HTML শেখার সময় সবচেয়ে বেশি ব্যবহার করা হয়
+                Heading, Paragraph এবং Link।
+                একটি সাধারণ Website তৈরি করতে এই তিনটি বিষয় জানা খুবই গুরুত্বপূর্ণ।
+            </p>
+
+            <p>
+                এই Article-এ আমরা একদম Beginner level থেকে শিখব
+                কীভাবে HTML-এ Heading, Paragraph এবং Link ব্যবহার করতে হয়।
+            </p>
+
+
+
+            <!-- Info -->
+
+            <div class="info-box">
+
+                <strong>📌 এই Article-এ যা শিখবেন:</strong>
+
+                <ul>
+
+                    <li>HTML Heading কী?</li>
+
+                    <li>H1 থেকে H6 কী?</li>
+
+                    <li>Paragraph কীভাবে লিখবেন?</li>
+
+                    <li>HTML Link কী?</li>
+
+                    <li>External এবং Internal Link</li>
+
+                    <li>Link নতুন Tab-এ খোলা</li>
+
+                    <li>Practical Website Example</li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- SECTION 1 -->
+
+            <h2>
+                1. HTML Heading কী?
+            </h2>
+
+            <p>
+                Website-এর বিভিন্ন শিরোনাম বা Title দেখানোর জন্য
+                HTML Heading ব্যবহার করা হয়।
+            </p>
+
+            <p>
+                HTML-এ মোট ছয় ধরনের Heading আছে:
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- H1 -->
+
+            <h3>
+                <span class="tag-name">&lt;h1&gt;</span>
+                H1 Heading
+            </h3>
+
+            <p>
+                <code>&lt;h1&gt;</code> হলো সবচেয়ে গুরুত্বপূর্ণ Heading।
+                সাধারণত একটি Page-এর প্রধান Title-এর জন্য এটি ব্যবহার করা হয়।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;h1&gt;Munna Tech&lt;/h1&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- H2 -->
+
+            <h3>
+                <span class="tag-name">&lt;h2&gt;</span>
+                H2 Heading
+            </h3>
+
+            <p>
+                Page-এর গুরুত্বপূর্ণ Section-এর Heading হিসেবে
+                <code>&lt;h2&gt;</code> ব্যবহার করা যায়।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;h2&gt;HTML Tutorial&lt;/h2&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- H3 -->
+
+            <h3>
+                <span class="tag-name">&lt;h3&gt;</span>
+                H3 Heading
+            </h3>
+
+            <p>
+                কোনো Section-এর ভিতরের Sub-section-এর জন্য
+                <code>&lt;h3&gt;</code> ব্যবহার করা যায়।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;h3&gt;HTML Tags&lt;/h3&gt;
+</code>
+
+            </div>
+
+
+
+            <h3>
+                H4, H5 এবং H6
+            </h3>
+
+            <p>
+                আরও ছোট বা nested heading প্রয়োজন হলে
+                <code>&lt;h4&gt;</code>,
+                <code>&lt;h5&gt;</code> এবং
+                <code>&lt;h6&gt;</code> ব্যবহার করা হয়।
+            </p>
+
+
+
+            <!-- Heading Example -->
+
+            <h2>
+                Heading-এর সম্পূর্ণ Example
+            </h2>
+
+            <div class="code-box">
+
+<code>
+&lt;h1&gt;My Website&lt;/h1&gt;
+
+&lt;h2&gt;About Me&lt;/h2&gt;
+
+&lt;h3&gt;My Skills&lt;/h3&gt;
+
+&lt;h4&gt;HTML&lt;/h4&gt;
+
+&lt;h5&gt;CSS&lt;/h5&gt;
+
+&lt;h6&gt;JavaScript&lt;/h6&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- SEO -->
+
+            <div class="tip-box">
+
+                <strong>💡 SEO Tip:</strong>
+
+                <p>
+                    Heading শুধু বড় লেখা দেখানোর জন্য নয়।
+                    Website-এর content structure বোঝাতেও Heading গুরুত্বপূর্ণ।
+                    তাই Heading-এর ব্যবহার logical রাখা ভালো।
+                </p>
+
+            </div>
+
+
+
+            <!-- SECTION 2 -->
+
+            <h2>
+                2. HTML Paragraph কী?
+            </h2>
+
+            <p>
+                Website-এ সাধারণ লেখা বা paragraph দেখানোর জন্য
+                <code>&lt;p&gt;</code> Tag ব্যবহার করা হয়।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;p&gt;
+আমি Web Development শিখছি।
+&lt;/p&gt;
+</code>
+
+            </div>
+
+
+
+            <h3>
+                একাধিক Paragraph
+            </h3>
+
+            <p>
+                একটি Website-এ যতগুলো আলাদা paragraph প্রয়োজন,
+                ততগুলো <code>&lt;p&gt;</code> Tag ব্যবহার করা যায়।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;p&gt;
+আমি HTML শিখছি।
+&lt;/p&gt;
+
+&lt;p&gt;
+এরপর আমি CSS শিখব।
+&lt;/p&gt;
+
+&lt;p&gt;
+তারপর JavaScript শিখব।
+&lt;/p&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- Paragraph Example -->
+
+            <div class="example-box">
+
+                <h3>Browser-এ ফলাফল</h3>
+
+                <p>
+                    আমি HTML শিখছি।
+                </p>
+
+                <p>
+                    এরপর আমি CSS শিখব।
+                </p>
+
+                <p>
+                    তারপর JavaScript শিখব।
+                </p>
+
+            </div>
+
+
+
+            <!-- BR -->
+
+            <h3>
+                Paragraph-এর মধ্যে নতুন Line
+            </h3>
+
+            <p>
+                নতুন লাইনে যাওয়ার জন্য
+                <code>&lt;br&gt;</code> ব্যবহার করা যায়।
+            </p>
+
+            <div class="code-box">
+
+<code>
+Hello&lt;br&gt;
+World
+</code>
+
+            </div>
+
+
+
+            <!-- ADSTERRA -->
+
+            <div class="ad-box">
+
+                <script async="async"
+                    data-cfasync="false"
+                    src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js">
+                </script>
+
+                <div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+
+            </div>
+
+
+
+            <!-- SECTION 3 -->
+
+            <h2>
+                3. HTML Link কী?
+            </h2>
+
+            <p>
+                একটি Website থেকে অন্য Website অথবা অন্য Page-এ
+                যাওয়ার জন্য HTML Link ব্যবহার করা হয়।
+            </p>
+
+            <p>
+                Link তৈরি করার জন্য
+                <code>&lt;a&gt;</code> বা Anchor Tag ব্যবহার করা হয়।
+            </p>
+
+
+
+            <h3>
+                Basic Link
+            </h3>
+
+            <div class="code-box">
+
+<code>
+&lt;a href="https://example.com"&gt;
+Visit Website
+&lt;/a&gt;
+</code>
+
+            </div>
+
+
+
+            <h3>
+                href কী?
+            </h3>
+
+            <p>
+                <code>href</code> হলো একটি HTML Attribute।
+                এটি Link-এর destination বা গন্তব্য নির্ধারণ করে।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;a href="https://google.com"&gt;
+Google
+&lt;/a&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- External -->
+
+            <h2>
+                4. External Link কী?
+            </h2>
+
+            <p>
+                আপনার Website থেকে অন্য Website-এ যাওয়ার Link-কে
+                External Link বলা হয়।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;a href="https://www.google.com"&gt;
+Google
+&lt;/a&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- New Tab -->
+
+            <h3>
+                Link নতুন Tab-এ Open করা
+            </h3>
+
+            <p>
+                Link-টি নতুন Browser Tab-এ খুলতে
+                <code>target="_blank"</code> ব্যবহার করা যায়।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;a href="https://www.google.com"
+target="_blank"
+rel="noopener noreferrer"&gt;
+
+Google
+
+&lt;/a&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- Internal -->
+
+            <h2>
+                5. Internal Link কী?
+            </h2>
+
+            <p>
+                একই Website-এর একটি Page থেকে অন্য Page-এ যাওয়ার
+                Link-কে Internal Link বলা হয়।
+            </p>
+
+            <p>
+                যেমন Munna Tech-এর HTML Tutorial থেকে
+                CSS Tutorial-এ যেতে:
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;a href="css-tutorial.html"&gt;
+CSS Tutorial
+&lt;/a&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- Article Internal Links -->
+
+            <h2>
+                6. Article-এর মধ্যে Internal Link
+            </h2>
+
+            <p>
+                একটি Article-এর সাথে সম্পর্কিত অন্য Article-এর Link
+                দিলে Visitor সহজে আরও content পড়তে পারে।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;a href="html-ki-beginner-guide.html"&gt;
+
+HTML কী? Beginner Guide
+
+&lt;/a&gt;
+</code>
+
+            </div>
+
+
+
+            <p>
+                একইভাবে Article #2 এবং Article #3-এও Link দেওয়া যায়।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;a href="html-diye-website-bananor-guide.html"&gt;
+
+HTML দিয়ে Website বানানো
+
+&lt;/a&gt;
+
+&lt;a href="html-tags-beginners-guide.html"&gt;
+
+20টি গুরুত্বপূর্ণ HTML Tag
+
+&lt;/a&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- Practical -->
+
+            <h2>
+                7. Heading + Paragraph + Link একসাথে ব্যবহার
+            </h2>
+
+            <p>
+                এখন আমরা তিনটি বিষয় একসাথে ব্যবহার করে
+                একটি ছোট Website section তৈরি করি।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;h1&gt;Munna Tech&lt;/h1&gt;
+
+&lt;h2&gt;Web Development শিখুন&lt;/h2&gt;
+
+&lt;p&gt;
+Munna Tech-এ সহজভাবে Web Development শেখানো হয়।
+&lt;/p&gt;
+
+&lt;a href="html-tutorial.html"&gt;
+HTML Tutorial দেখুন
+&lt;/a&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- Complete -->
+
+            <h2>
+                8. Complete Mini Website Example
+            </h2>
+
+            <p>
+                নিচের code-টি একটি সম্পূর্ণ ছোট HTML Page-এর example।
+            </p>
+
+            <div class="code-box">
+
+<code>
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang="bn"&gt;
+
+&lt;head&gt;
+
+    &lt;meta charset="UTF-8"&gt;
+
+    &lt;title&gt;My Website&lt;/title&gt;
+
+&lt;/head&gt;
+
+
+&lt;body&gt;
+
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+
+    &lt;h2&gt;About Me&lt;/h2&gt;
+
+    &lt;p&gt;
+        আমি Web Development শিখছি।
+    &lt;/p&gt;
+
+    &lt;h2&gt;My Tutorial&lt;/h2&gt;
+
+    &lt;p&gt;
+        HTML শেখার জন্য নিচের Link-এ যান।
+    &lt;/p&gt;
+
+    &lt;a href="html-tutorial.html"&gt;
+        HTML Tutorial
+    &lt;/a&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code>
+
+            </div>
+
+
+
+            <!-- Practice -->
+
+            <div class="practice-box">
+
+                <h3>
+                    🧑‍💻 Beginner Practice Task
+                </h3>
+
+                <p>
+                    এবার নিজে একটি HTML Page তৈরি করুন।
+                </p>
+
+                <ol>
+
+                    <li>
+                        একটি <code>&lt;h1&gt;</code> Heading দিন।
+                    </li>
+
+                    <li>
+                        দুটি <code>&lt;p&gt;</code> Paragraph লিখুন।
+                    </li>
+
+                    <li>
+                        একটি <code>&lt;h2&gt;</code> Heading দিন।
+                    </li>
+
+                    <li>
+                        একটি External Link তৈরি করুন।
+                    </li>
+
+                    <li>
+                        একটি Internal Link তৈরি করুন।
+                    </li>
+
+                </ol>
+
+            </div>
+
+
+
+            <!-- Common Mistakes -->
+
+            <h2>
+                9. Beginners-এর সাধারণ ভুল
+            </h2>
+
+            <ul>
+
+                <li>
+                    Heading-এর closing Tag ভুলে যাওয়া
+                </li>
+
+                <li>
+                    <code>href</code>-এ ভুল URL দেওয়া
+                </li>
+
+                <li>
+                    File name ভুল লেখা
+                </li>
+
+                <li>
+                    Internal Link-এর file path ভুল দেওয়া
+                </li>
+
+                <li>
+                    Tag ঠিকমতো close না করা
+                </li>
+
+            </ul>
+
+
+
+            <!-- Tip -->
+
+            <div class="tip-box">
+
+                <strong>💡 মনে রাখবেন:</strong>
+
+                <p>
+                    HTML শেখার সবচেয়ে ভালো উপায় হলো নিজে code লেখা।
+                    শুধু tutorial দেখে না থেকে প্রতিটি example
+                    VS Code-এ লিখে Browser-এ result দেখুন।
+                </p>
+
+            </div>
+
+
+
+            <!-- FAQ -->
+
+            <h2>
+                ❓ Frequently Asked Questions
+            </h2>
+
+
+            <h3>
+                HTML-এ কয়টি Heading আছে?
+            </h3>
+
+            <p>
+                HTML-এ H1 থেকে H6 পর্যন্ত মোট ছয় ধরনের Heading আছে।
+            </p>
+
+
+            <h3>
+                Paragraph-এর জন্য কোন Tag ব্যবহার হয়?
+            </h3>
+
+            <p>
+                Paragraph-এর জন্য <code>&lt;p&gt;</code> Tag ব্যবহার করা হয়।
+            </p>
+
+
+            <h3>
+                HTML Link-এর জন্য কোন Tag ব্যবহার হয়?
+            </h3>
+
+            <p>
+                Link তৈরি করার জন্য <code>&lt;a&gt;</code> বা Anchor Tag ব্যবহার করা হয়।
+            </p>
+
+
+            <h3>
+                Link নতুন Tab-এ কীভাবে খুলব?
+            </h3>
+
+            <p>
+                <code>target="_blank"</code> ব্যবহার করলে Link নতুন Tab-এ খোলা যায়।
+            </p>
+
+
+
+            <!-- Conclusion -->
+
+            <h2>
+                শেষ কথা
+            </h2>
+
+            <p>
+                HTML Heading, Paragraph এবং Link হলো Web Development-এর
+                খুব গুরুত্বপূর্ণ basic বিষয়।
+            </p>
+
+            <p>
+                এই তিনটি বিষয় ভালোভাবে বুঝে practice করলে
+                আপনি আরও সুন্দর এবং structured Website তৈরি করতে পারবেন।
+            </p>
+
+            <p>
+                এখন HTML-এর পাশাপাশি CSS শেখা শুরু করুন।
+                CSS দিয়ে আপনার Website-কে professional design দেওয়া সম্ভব।
+            </p>
+
+
+
+            <!-- Related Articles -->
+
+            <section class="related">
+
+                <h2>
+                    📚 আরও পড়ুন
+                </h2>
+
+                <a href="html-ki-beginner-guide.html">
+                    → HTML কী? Beginners-এর জন্য সম্পূর্ণ গাইড
+                </a>
+
+                <a href="html-diye-website-bananor-guide.html">
+                    → HTML দিয়ে প্রথম Website কীভাবে বানাবেন?
+                </a>
+
+                <a href="html-tags-beginners-guide.html">
+                    → HTML-এর 20টি গুরুত্বপূর্ণ Tag
+                </a>
+
+                <a href="html-tutorial.html">
+                    → HTML Tutorial — Munna Tech
+                </a>
+
+                <a href="css-tutorial.html">
+                    → CSS Tutorial — Munna Tech
+                </a>
+
+                <a href="javascript-tutorial.html">
+                    → JavaScript Tutorial — Munna Tech
+                </a>
+
+            </section>
+
+
+
+            <!-- CTA -->
+
+            <section class="cta">
+
+                <h2>
+                    🚀 Web Development শিখতে থাকুন
+                </h2>
+
+                <p>
+                    Munna Tech-এর Tutorial অনুসরণ করে
+                    ধাপে ধাপে HTML, CSS, JavaScript এবং PC Tips শিখুন।
+                </p>
+
+                <a href="index.html">
+                    Munna Tech Home →
+                </a>
+
+            </section>
+
+
+        </article>
+
+    </main>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Munna Tech — Web Development & PC Tips
+        </p>
+
+    </footer>
+
+
+
+    <!-- Dark Mode -->
+
+    <script>
+
+        const darkModeBtn =
+            document.getElementById("darkModeBtn");
+
+
+        function updateDarkModeButton() {
+
+            if (
+                document.body.classList.contains("dark-mode")
+            ) {
+
+                darkModeBtn.textContent =
+                    "☀️ Light Mode";
+
+            } else {
+
+                darkModeBtn.textContent =
+                    "🌙 Dark Mode";
+
+            }
+
+        }
+
+
+        darkModeBtn.addEventListener(
+            "click",
+            function () {
+
+                document.body.classList.toggle(
+                    "dark-mode"
+                );
+
+
+                if (
+                    document.body.classList.contains(
+                        "dark-mode"
+                    )
+                ) {
+
+                    localStorage.setItem(
+                        "theme",
+                        "dark"
+                    );
+
+                } else {
+
+                    localStorage.setItem(
+                        "theme",
+                        "light"
+                    );
+
+                }
+
+
+                updateDarkModeButton();
+
+            }
+        );
+
+
+        if (
+            localStorage.getItem("theme") === "dark"
+        ) {
+
+            document.body.classList.add(
+                "dark-mode"
+            );
+
+        }
+
+
+        updateDarkModeButton();
+
+    </script>
+
+
+</body>
+</html>
+```
