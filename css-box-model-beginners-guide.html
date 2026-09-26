@@ -1,0 +1,689 @@
+```html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Box Model কী? Content, Padding, Border ও Margin | Munna Tech</title>
+
+    <meta name="description" content="CSS Box Model সহজ বাংলায় শিখুন। Content, Padding, Border, Margin, Width, Height এবং box-sizing সহ সম্পূর্ণ Beginner Guide।">
+
+    <meta name="keywords" content="CSS Box Model, CSS Box Model বাংলা, CSS padding margin, CSS border, CSS content, box sizing, CSS beginners guide">
+
+    <meta name="author" content="Munna Tech">
+
+    <meta property="og:title" content="CSS Box Model কী? | Munna Tech">
+    <meta property="og:description" content="CSS Box Model-এর Content, Padding, Border ও Margin সহজ বাংলায় শিখুন।">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mm5527247-sketch.github.io/munna-tech/css-box-model-beginners-guide.html">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .article-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 25px;
+        }
+
+        .article-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        body.dark .article-card {
+            background: #1e1e1e;
+            color: #f1f1f1;
+        }
+
+        .article-card h1 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .article-card h2 {
+            margin-top: 35px;
+            color: #2563eb;
+        }
+
+        .article-card h3 {
+            margin-top: 25px;
+        }
+
+        .article-card p,
+        .article-card li {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .article-card pre {
+            background: #111827;
+            color: #fff;
+            padding: 18px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        .article-card code {
+            font-family: Consolas, monospace;
+        }
+
+        .tip-box {
+            background: #eff6ff;
+            border-left: 5px solid #2563eb;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        body.dark .tip-box {
+            background: #172554;
+        }
+
+        .box-demo {
+            width: 260px;
+            padding: 25px;
+            border: 5px solid #2563eb;
+            margin: 30px auto;
+            background: #dbeafe;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        body.dark .box-demo {
+            background: #172554;
+        }
+
+        .related-links a {
+            display: block;
+            margin: 10px 0;
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .related-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo">Munna Tech</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="html-tutorial.html">HTML</a>
+            <a href="css-tutorial.html">CSS</a>
+            <a href="javascript-tutorial.html">JavaScript</a>
+            <a href="pc-tips.html">PC Tips</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+
+        <button id="darkModeBtn">🌙 Dark Mode</button>
+
+    </nav>
+</header>
+
+<main class="article-container">
+
+<article class="article-card">
+
+<h1>CSS Box Model কী? Content, Padding, Border ও Margin</h1>
+
+<p>
+CSS শেখার সময় <strong>Box Model</strong> একটি খুবই গুরুত্বপূর্ণ বিষয়।
+একটি HTML element-এর চারপাশে কতটুকু জায়গা থাকবে,
+ভিতরের space কত হবে এবং border কোথায় থাকবে—এসব বুঝতে Box Model জানতে হয়।
+</p>
+
+<p>
+এই beginner guide-এ আমরা Content, Padding, Border, Margin,
+Width, Height এবং <strong>box-sizing</strong> সহজভাবে শিখব।
+</p>
+
+<div class="tip-box">
+💡 <strong>Beginner Tip:</strong>
+Box Model বুঝতে হলে code লেখার পাশাপাশি browser-এ element-এর জায়গা পরিবর্তন করে দেখুন।
+</div>
+
+
+<h2>1. CSS Box Model কী?</h2>
+
+<p>
+CSS Box Model হলো একটি HTML element-এর চারপাশের structure।
+প্রতিটি সাধারণ HTML element-কে একটি box হিসেবে ভাবা যায়।
+</p>
+
+<p>
+একটি Box Model-এর প্রধান ৪টি অংশ হলো:
+</p>
+
+<ul>
+    <li><strong>Content</strong></li>
+    <li><strong>Padding</strong></li>
+    <li><strong>Border</strong></li>
+    <li><strong>Margin</strong></li>
+</ul>
+
+<p>
+সহজভাবে মনে রাখুন:
+</p>
+
+<pre><code>Margin
+  ↓
+Border
+  ↓
+Padding
+  ↓
+Content</code></pre>
+
+
+<h2>2. Content কী?</h2>
+
+<p>
+Content হলো element-এর মূল অংশ।
+যেমন একটি paragraph-এর লেখা বা একটি image-এর জায়গা হলো content।
+</p>
+
+<pre><code>.box {
+    width: 300px;
+    height: 150px;
+}</code></pre>
+
+<p>
+এখানে width এবং height মূল content area-এর আকার নির্ধারণ করে।
+</p>
+
+
+<h2>3. Padding কী?</h2>
+
+<p>
+Content এবং Border-এর মধ্যকার জায়গাকে <strong>Padding</strong> বলা হয়।
+</p>
+
+<pre><code>.box {
+    padding: 20px;
+}</code></pre>
+
+<p>
+এর ফলে box-এর content-এর চারপাশে 20px ভিতরের space তৈরি হবে।
+</p>
+
+<h3>চারদিকে আলাদা Padding</h3>
+
+<pre><code>.box {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+}</code></pre>
+
+<p>
+Shortcut হিসেবেও লেখা যায়:
+</p>
+
+<pre><code>.box {
+    padding: 10px 20px 30px 40px;
+}</code></pre>
+
+<p>
+ক্রমটি হলো:
+<strong>Top → Right → Bottom → Left</strong>
+</p>
+
+
+<h2>4. Border কী?</h2>
+
+<p>
+Content ও Padding-এর বাইরে যে line বা boundary থাকে সেটি হলো Border।
+</p>
+
+<pre><code>.box {
+    border: 2px solid black;
+}</code></pre>
+
+<p>
+Border-এর প্রধান অংশ:
+</p>
+
+<ul>
+    <li>Border width</li>
+    <li>Border style</li>
+    <li>Border color</li>
+</ul>
+
+<h3>উদাহরণ</h3>
+
+<pre><code>.box {
+    border-width: 3px;
+    border-style: solid;
+    border-color: blue;
+}</code></pre>
+
+
+<h2>5. Border Radius</h2>
+
+<p>
+Box-এর corner গোল করার জন্য <strong>border-radius</strong> ব্যবহার করা হয়।
+</p>
+
+<pre><code>.box {
+    border-radius: 10px;
+}</code></pre>
+
+<p>
+Card এবং button design-এ এটি অনেক বেশি ব্যবহার করা হয়।
+</p>
+
+
+<h2>6. Margin কী?</h2>
+
+<p>
+একটি element-এর বাইরে অন্য element থেকে যে space থাকে তাকে
+<strong>Margin</strong> বলা হয়।
+</p>
+
+<pre><code>.box {
+    margin: 20px;
+}</code></pre>
+
+<p>
+সহজভাবে:
+</p>
+
+<ul>
+    <li>Padding = ভিতরের space</li>
+    <li>Margin = বাইরের space</li>
+</ul>
+
+
+<h2>7. চারদিকে আলাদা Margin</h2>
+
+<pre><code>.box {
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+}</code></pre>
+
+<p>
+Shortcut:
+</p>
+
+<pre><code>.box {
+    margin: 10px 20px 30px 40px;
+}</code></pre>
+
+<p>
+এখানেও ক্রম:
+<strong>Top → Right → Bottom → Left</strong>
+</p>
+
+
+<h2>8. Margin Auto</h2>
+
+<p>
+কোনো নির্দিষ্ট width-এর box মাঝখানে রাখার জন্য
+অনেক সময় <strong>margin: auto</strong> ব্যবহার করা হয়।
+</p>
+
+<pre><code>.box {
+    width: 500px;
+    margin: 0 auto;
+}</code></pre>
+
+<p>
+এতে box-টি horizontalভাবে center হতে পারে।
+</p>
+
+
+<h2>9. Width ও Height</h2>
+
+<p>
+Element-এর content area-এর width এবং height নির্ধারণ করা যায়।
+</p>
+
+<pre><code>.box {
+    width: 300px;
+    height: 200px;
+}</code></pre>
+
+<p>
+Responsive website তৈরি করার সময় fixed width-এর পাশাপাশি
+percentage, max-width ইত্যাদিও ব্যবহার করা হয়।
+</p>
+
+
+<h2>10. Box Model-এর বাস্তব উদাহরণ</h2>
+
+<div class="box-demo">
+    Content Area
+</div>
+
+<p>
+উপরের box-এ আমরা width, padding, border, margin এবং background ব্যবহার করেছি।
+</p>
+
+<pre><code>.box-demo {
+    width: 260px;
+    padding: 25px;
+    border: 5px solid #2563eb;
+    margin: 30px auto;
+    background: #dbeafe;
+}</code></pre>
+
+
+<h2>11. Box-এর মোট Width কীভাবে হিসাব করবেন?</h2>
+
+<p>
+Default CSS Box Model-এ শুধু width দিলেই পুরো box-এর final width সবসময়
+শুধু সেই width-এর সমান হয় না।
+</p>
+
+<p>
+ধরুন:
+</p>
+
+<pre><code>width: 300px;
+padding: 20px;
+border: 5px solid black;</code></pre>
+
+<p>
+তাহলে horizontal হিসাব হবে:
+</p>
+
+<pre><code>Content = 300px
+
+Left + Right Padding
+= 20px + 20px
+
+Left + Right Border
+= 5px + 5px
+
+Total Width
+= 300 + 40 + 10
+= 350px</code></pre>
+
+<div class="tip-box">
+💡 তাই default <strong>content-box</strong> ব্যবহার করলে
+padding এবং border মোট size বাড়িয়ে দিতে পারে।
+</div>
+
+
+<h2>12. box-sizing: border-box</h2>
+
+<p>
+CSS-এর একটি খুব দরকারি property হলো <strong>box-sizing</strong>।
+</p>
+
+<pre><code>.box {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 20px;
+    border: 5px solid black;
+}</code></pre>
+
+<p>
+এখানে width-এর মধ্যে padding এবং border হিসাব করা হবে।
+এটি responsive design-এ অনেক কাজে লাগে।
+</p>
+
+
+<h2>13. সব Element-এর জন্য Border Box</h2>
+
+<p>
+অনেক developer project-এর শুরুতেই নিচের CSS ব্যবহার করেন:
+</p>
+
+<pre><code>* {
+    box-sizing: border-box;
+}</code></pre>
+
+<p>
+এতে element-এর width এবং height হিসাব করা সহজ হয়।
+</p>
+
+
+<h2>14. Padding ও Margin-এর পার্থক্য</h2>
+
+<table style="width:100%; border-collapse:collapse; margin:20px 0;">
+    <tr>
+        <th style="border:1px solid #999; padding:10px;">Padding</th>
+        <th style="border:1px solid #999; padding:10px;">Margin</th>
+    </tr>
+
+    <tr>
+        <td style="border:1px solid #999; padding:10px;">
+            Element-এর ভিতরের space
+        </td>
+
+        <td style="border:1px solid #999; padding:10px;">
+            Element-এর বাইরের space
+        </td>
+    </tr>
+
+    <tr>
+        <td style="border:1px solid #999; padding:10px;">
+            Content ও Border-এর মাঝে
+        </td>
+
+        <td style="border:1px solid #999; padding:10px;">
+            Element ও অন্য element-এর মাঝে
+        </td>
+    </tr>
+</table>
+
+
+<h2>15. Box Model দিয়ে Card তৈরি</h2>
+
+<p>
+এখন একটি simple profile card তৈরি করি।
+</p>
+
+<pre><code>&lt;div class="card"&gt;
+    &lt;h2&gt;Munna Tech&lt;/h2&gt;
+    &lt;p&gt;Learn Web Development&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+<p>CSS:</p>
+
+<pre><code>.card {
+    width: 300px;
+    padding: 25px;
+    margin: 30px auto;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background: white;
+}</code></pre>
+
+
+<h2>16. Common Box Model Mistakes</h2>
+
+<ul>
+    <li>Padding এবং Margin-এর কাজ গুলিয়ে ফেলা</li>
+    <li>Width-এর সাথে padding যোগ হয়ে size বেড়ে যাওয়া</li>
+    <li>box-sizing ব্যবহার না করে layout সমস্যা তৈরি করা</li>
+    <li>অতিরিক্ত fixed width ব্যবহার করা</li>
+    <li>Margin collapse-এর বিষয়টি না জানা</li>
+    <li>Mobile screen-এর জন্য responsive size না রাখা</li>
+</ul>
+
+
+<h2>17. Beginner Practice</h2>
+
+<p>
+নিজে একটি card তৈরি করুন যার:
+</p>
+
+<ul>
+    <li>Width = 300px</li>
+    <li>Padding = 20px</li>
+    <li>Border = 2px</li>
+    <li>Border radius = 12px</li>
+    <li>Margin = 30px auto</li>
+</ul>
+
+<p>
+তারপর card-এর background এবং text color পরিবর্তন করে দেখুন।
+</p>
+
+
+<h2>18. Quick Revision</h2>
+
+<pre><code>Content  → মূল লেখা/ছবি
+Padding  → Content-এর ভিতরের space
+Border   → Box-এর boundary
+Margin   → Box-এর বাইরের space
+
+width    → Content width
+height   → Content height
+
+box-sizing: border-box;
+→ Padding ও Border-কে declared size-এর মধ্যে রাখে</code></pre>
+
+
+<h2>19. FAQ</h2>
+
+<h3>CSS Box Model কী?</h3>
+
+<p>
+HTML element-এর Content, Padding, Border এবং Margin-এর structure-কে
+CSS Box Model বলা হয়।
+</p>
+
+<h3>Padding কী?</h3>
+
+<p>
+Content এবং Border-এর মধ্যকার ভিতরের space হলো Padding।
+</p>
+
+<h3>Margin কী?</h3>
+
+<p>
+একটি element-এর বাইরে থাকা space হলো Margin।
+</p>
+
+<h3>box-sizing: border-box কেন ব্যবহার করা হয়?</h3>
+
+<p>
+Element-এর declared width বা height-এর মধ্যে padding এবং border
+হিসাব করার জন্য এটি ব্যবহার করা হয়।
+</p>
+
+<h3>Padding এবং Margin-এর মধ্যে পার্থক্য কী?</h3>
+
+<p>
+Padding element-এর ভিতরের space তৈরি করে, আর Margin element-এর বাইরের space তৈরি করে।
+</p>
+
+
+<h2>20. Conclusion</h2>
+
+<p>
+CSS Box Model বুঝতে পারলে website layout তৈরি করা অনেক সহজ হয়ে যায়।
+Content, Padding, Border এবং Margin-এর পার্থক্য পরিষ্কারভাবে জানা
+প্রতিটি beginner web developer-এর জন্য গুরুত্বপূর্ণ।
+</p>
+
+<p>
+এখন আপনি Box Model practice করে পরবর্তী ধাপে
+<strong>CSS Flexbox</strong> শেখার জন্য প্রস্তুত হতে পারেন।
+</p>
+
+
+<h2>Related Articles</h2>
+
+<div class="related-links">
+
+    <a href="css-ki-beginner-guide.html">
+        → CSS কী? Beginnerদের জন্য CSS সম্পূর্ণ গাইড
+    </a>
+
+    <a href="css-color-font-text-style-guide.html">
+        → CSS Color, Font ও Text Style
+    </a>
+
+    <a href="css-diye-website-design-guide.html">
+        → CSS দিয়ে Website Design করার সহজ নিয়ম
+    </a>
+
+    <a href="html-ki-beginner-guide.html">
+        → HTML কী? Beginnerদের জন্য HTML শেখার সম্পূর্ণ গাইড
+    </a>
+
+    <a href="html-tags-beginners-guide.html">
+        → HTML-এর 20টি গুরুত্বপূর্ণ Tag
+    </a>
+
+    <a href="css-tutorial.html">
+        → CSS Tutorial — Munna Tech
+    </a>
+
+</div>
+
+
+<h2>Adsterra</h2>
+
+<!-- Adsterra Native Banner -->
+
+<script async="async"
+data-cfasync="false"
+src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js"></script>
+
+<div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+
+
+</article>
+
+</main>
+
+
+<footer>
+    <p>© 2026 Munna Tech. All Rights Reserved.</p>
+</footer>
+
+
+<script>
+
+const darkModeBtn = document.getElementById("darkModeBtn");
+
+if (localStorage.getItem("darkMode") === "enabled") {
+
+    document.body.classList.add("dark");
+
+    darkModeBtn.textContent = "☀️ Light Mode";
+
+}
+
+darkModeBtn.addEventListener("click", function () {
+
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+
+        darkModeBtn.textContent = "☀️ Light Mode";
+
+        localStorage.setItem("darkMode", "enabled");
+
+    } else {
+
+        darkModeBtn.textContent = "🌙 Dark Mode";
+
+        localStorage.setItem("darkMode", "disabled");
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
+```
