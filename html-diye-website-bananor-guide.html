@@ -1,50 +1,567 @@
-<section class="related-section">
-    <h2>📚 আরও HTML ও Web Development Articles</h2>
+<!DOCTYPE html>
+
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 ```
-<div class="related-grid">
+<title>HTML দিয়ে Website কীভাবে বানাবেন? | Munna Tech</title>
 
-    <a href="html-ki-beginner-guide.html" class="related-card">
-        <h3>📖 HTML কী?</h3>
-        <p>Beginnerদের জন্য HTML কী এবং কীভাবে কাজ করে তা সহজভাবে শিখুন।</p>
-    </a>
+<meta name="description" content="HTML ব্যবহার করে নিজের প্রথম Website কীভাবে বানাবেন তা সহজভাবে শিখুন। Beginnerদের জন্য step-by-step HTML Website তৈরির সম্পূর্ণ গাইড।">
+<meta name="keywords" content="HTML দিয়ে website বানানো, HTML website tutorial Bangla, HTML beginner guide, website বানানো">
+<meta name="author" content="Munna Tech">
 
-    <a href="html-tags-beginners-guide.html" class="related-card">
-        <h3>🏷️ HTML-এর গুরুত্বপূর্ণ Tags</h3>
-        <p>Website তৈরির জন্য প্রয়োজনীয় গুরুত্বপূর্ণ HTML Tags শিখুন।</p>
-    </a>
+<meta property="og:title" content="HTML দিয়ে Website কীভাবে বানাবেন? | Munna Tech">
+<meta property="og:description" content="Beginnerদের জন্য HTML দিয়ে Website তৈরির সহজ step-by-step গাইড।">
+<meta property="og:type" content="article">
 
-    <a href="html-heading-paragraph-link-guide.html" class="related-card">
-        <h3>🔗 HTML Heading, Paragraph ও Link</h3>
-        <p>Heading, Paragraph এবং Link ব্যবহার করার সহজ নিয়ম জানুন।</p>
-    </a>
+<link rel="canonical" href="https://mm5527247-sketch.github.io/munna-tech/html-diye-website-bananor-guide.html">
 
-    <a href="html-image-beginners-guide.html" class="related-card">
-        <h3>🖼️ HTML-এ Image যোগ করার নিয়ম</h3>
-        <p>HTML Website-এ Image কীভাবে যোগ করবেন তা শিখুন।</p>
-    </a>
+<link rel="stylesheet" href="style.css">
 
-    <a href="html-form-beginners-guide.html" class="related-card">
-        <h3>📝 HTML Form কী?</h3>
-        <p>Contact Form ও অন্যান্য HTML Form তৈরির basic নিয়ম শিখুন।</p>
-    </a>
+<style>
+    .article-container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+    }
 
-    <a href="css-ki-beginner-guide.html" class="related-card">
-        <h3>🎨 CSS কী?</h3>
-        <p>HTML শেখার পর CSS দিয়ে Website সুন্দরভাবে Design করা শিখুন।</p>
-    </a>
+    .breadcrumb {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
 
-    <a href="javascript-ki-beginner-guide.html" class="related-card">
-        <h3>⚡ JavaScript কী?</h3>
-        <p>JavaScript দিয়ে Website-এ Interactive Features যোগ করা শিখুন।</p>
-    </a>
+    .article-header {
+        text-align: center;
+        margin-bottom: 35px;
+    }
 
-    <a href="web-development-beginner-roadmap.html" class="related-card">
-        <h3>🚀 Web Development Beginner Roadmap</h3>
-        <p>HTML, CSS ও JavaScript শেখার সম্পূর্ণ Beginner Roadmap দেখুন।</p>
-    </a>
+    .article-header h1 {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
 
+    .article-content {
+        line-height: 1.9;
+        font-size: 17px;
+    }
+
+    .article-content h2 {
+        margin-top: 35px;
+        margin-bottom: 15px;
+    }
+
+    .article-content h3 {
+        margin-top: 25px;
+    }
+
+    .code-box {
+        background: #111;
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        overflow-x: auto;
+        margin: 20px 0;
+    }
+
+    .tip-box {
+        padding: 18px;
+        border-radius: 10px;
+        background: #f1f5f9;
+        margin: 25px 0;
+    }
+
+    .related-section {
+        margin-top: 50px;
+    }
+
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .related-card {
+        display: block;
+        padding: 20px;
+        border-radius: 12px;
+        text-decoration: none;
+        background: #f5f5f5;
+        color: inherit;
+        transition: 0.3s;
+    }
+
+    .related-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .cta-box {
+        margin-top: 40px;
+        padding: 25px;
+        border-radius: 12px;
+        text-align: center;
+        background: #eef2ff;
+    }
+
+    @media (max-width: 600px) {
+        .article-header h1 {
+            font-size: 28px;
+        }
+
+        .article-content {
+            font-size: 16px;
+        }
+    }
+
+    body.dark-mode .tip-box,
+    body.dark-mode .related-card,
+    body.dark-mode .cta-box {
+        background: #1f2937;
+        color: #fff;
+    }
+
+    body.dark-mode .code-box {
+        background: #000;
+    }
+</style>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LZWH6PLL4X"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LZWH6PLL4X');
+</script>
+```
+
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+
+```
+    <div class="logo">
+        <a href="index.html">Munna Tech</a>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="html-tutorial.html">HTML</a>
+        <a href="css-tutorial.html">CSS</a>
+        <a href="javascript-tutorial.html">JavaScript</a>
+        <a href="pc-tips.html">PC Tips</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+
+</nav>
+```
+
+</header>
+
+<main class="article-container">
+
+```
+<div class="breadcrumb">
+    <a href="index.html">Home</a> →
+    <a href="html-tutorial.html">HTML</a> →
+    HTML দিয়ে Website বানানো
 </div>
+
+<article>
+
+    <div class="article-header">
+        <h1>🌐 HTML দিয়ে Website কীভাবে বানাবেন?</h1>
+
+        <p>
+            Beginnerদের জন্য HTML ব্যবহার করে নিজের প্রথম Website
+            তৈরি করার সহজ Step-by-Step Guide
+        </p>
+    </div>
+
+    <div class="article-content">
+
+        <p>
+            আপনি যদি নতুন করে Web Development শেখা শুরু করতে চান,
+            তাহলে HTML হলো আপনার প্রথম গুরুত্বপূর্ণ ধাপ।
+            HTML ব্যবহার করে একটি Website-এর মূল structure তৈরি করা হয়।
+        </p>
+
+        <p>
+            এই গাইডে আমরা একদম শুরু থেকে শিখব কীভাবে HTML দিয়ে
+            একটি Simple Website তৈরি করা যায়।
+        </p>
+
+        <h2>📌 HTML কী?</h2>
+
+        <p>
+            HTML-এর পূর্ণরূপ হলো
+            <strong>HyperText Markup Language</strong>।
+            এটি Website-এর structure তৈরি করতে ব্যবহার করা হয়।
+        </p>
+
+        <p>
+            সহজভাবে বললে, একটি Website-এর Heading, Paragraph,
+            Image, Link, Button এবং অন্যান্য content সাজানোর জন্য HTML ব্যবহার করা হয়।
+        </p>
+
+        <h2>🛠️ Website বানাতে কী কী লাগবে?</h2>
+
+        <p>HTML Website তৈরি করার জন্য শুরুতে বেশি কিছু প্রয়োজন নেই।</p>
+
+        <ul>
+            <li>💻 একটি Computer বা Laptop</li>
+            <li>🌐 একটি Web Browser</li>
+            <li>📝 VS Code অথবা অন্য কোনো Code Editor</li>
+            <li>📚 HTML-এর basic knowledge</li>
+        </ul>
+
+        <h2>📁 Step 1: একটি Folder তৈরি করুন</h2>
+
+        <p>
+            প্রথমে আপনার Computer-এর Desktop-এ একটি নতুন Folder তৈরি করুন।
+        </p>
+
+        <p>
+            Folderটির নাম দিতে পারেন:
+            <strong>my-website</strong>
+        </p>
+
+        <h2>📄 Step 2: index.html File তৈরি করুন</h2>
+
+        <p>
+            এবার Folder-এর ভিতরে একটি নতুন file তৈরি করুন।
+            Fileটির নাম হবে:
+        </p>
+
+        <div class="code-box">
+            index.html
+        </div>
+
+        <p>
+            Website-এর homepage হিসেবে সাধারণত
+            <strong>index.html</strong> ব্যবহার করা হয়।
+        </p>
+
+        <h2>💻 Step 3: প্রথম HTML Code লিখুন</h2>
+
+        <p>
+            এবার <strong>index.html</strong> fileটি VS Code-এ খুলে
+            নিচের code লিখুন:
+        </p>
+
+        <div class="code-box">
 ```
 
-</section>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+    &lt;title&gt;My First Website&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+
+    &lt;p&gt;This is my first website.&lt;/p&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+
+```
+        </div>
+
+        <h2>🔍 Step 4: Codeটি বুঝে নিন</h2>
+
+        <h3>&lt;!DOCTYPE html&gt;</h3>
+
+        <p>
+            এটি Browser-কে জানায় যে আমরা HTML5 document ব্যবহার করছি।
+        </p>
+
+        <h3>&lt;html&gt;</h3>
+
+        <p>
+            পুরো HTML document এই tag-এর ভিতরে থাকে।
+        </p>
+
+        <h3>&lt;head&gt;</h3>
+
+        <p>
+            Website-এর গুরুত্বপূর্ণ information যেমন title,
+            meta information ইত্যাদি এখানে থাকে।
+        </p>
+
+        <h3>&lt;title&gt;</h3>
+
+        <p>
+            Browser tab-এ Website-এর যে নাম দেখা যায়,
+            সেটি title tag-এর মাধ্যমে দেওয়া হয়।
+        </p>
+
+        <h3>&lt;body&gt;</h3>
+
+        <p>
+            Website-এ visitor যে content দেখতে পাবে,
+            সেগুলো সাধারণত body-এর ভিতরে থাকে।
+        </p>
+
+        <h2>📝 Step 5: Heading যোগ করুন</h2>
+
+        <p>
+            Website-এর প্রধান heading তৈরি করতে
+            <strong>h1</strong> ব্যবহার করা হয়।
+        </p>
+
+        <div class="code-box">
+```
+
+<pre>&lt;h1&gt;My Website&lt;/h1&gt;</pre>
+
+```
+        </div>
+
+        <p>
+            এছাড়াও h2, h3, h4, h5 এবং h6 heading ব্যবহার করা যায়।
+        </p>
+
+        <h2>📃 Step 6: Paragraph যোগ করুন</h2>
+
+        <p>
+            Paragraph লেখার জন্য <strong>p</strong> tag ব্যবহার করা হয়।
+        </p>
+
+        <div class="code-box">
+```
+
+<pre>&lt;p&gt;I am learning Web Development.&lt;/p&gt;</pre>
+
+```
+        </div>
+
+        <h2>🔗 Step 7: Website-এ Link যোগ করুন</h2>
+
+        <p>
+            একটি Website থেকে অন্য Website বা অন্য page-এ যাওয়ার জন্য
+            anchor tag ব্যবহার করা হয়।
+        </p>
+
+        <div class="code-box">
+```
+
+<pre>&lt;a href="https://www.google.com"&gt;
+    Visit Google
+&lt;/a&gt;</pre>
+
+```
+        </div>
+
+        <h2>🖼️ Step 8: Image যোগ করুন</h2>
+
+        <p>
+            Website-এ ছবি যোগ করতে <strong>img</strong> tag ব্যবহার করা হয়।
+        </p>
+
+        <div class="code-box">
+```
+
+<pre>&lt;img src="image.jpg" alt="My Image"&gt;</pre>
+
+```
+        </div>
+
+        <p>
+            এখানে <strong>src</strong> দিয়ে image-এর location দেওয়া হয়
+            এবং <strong>alt</strong> দিয়ে image-এর description দেওয়া হয়।
+        </p>
+
+        <h2>📋 Step 9: List তৈরি করুন</h2>
+
+        <p>
+            Website-এ বিভিন্ন item-এর list তৈরি করতে
+            ul এবং li ব্যবহার করা যায়।
+        </p>
+
+        <div class="code-box">
+```
+
+<pre>&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+```
+        </div>
+
+        <h2>🌐 Step 10: Website Browser-এ দেখুন</h2>
+
+        <p>
+            Code লেখা শেষ হলে <strong>index.html</strong> file-এর উপর
+            Double Click করুন।
+        </p>
+
+        <p>
+            আপনার Default Browser-এ Websiteটি খুলে যাবে।
+        </p>
+
+        <div class="tip-box">
+            💡 <strong>Tip:</strong>
+            Code পরিবর্তন করার পর Browser-এ পরিবর্তন দেখতে
+            Refresh করুন।
+        </div>
+
+        <h2>🎨 HTML-এর পর কী শিখবেন?</h2>
+
+        <p>
+            HTML দিয়ে Website-এর structure তৈরি করার পর
+            আপনার পরবর্তী ধাপ হলো CSS শেখা।
+        </p>
+
+        <ul>
+            <li>HTML → Website Structure</li>
+            <li>CSS → Website Design</li>
+            <li>JavaScript → Website Interaction</li>
+        </ul>
+
+        <h2>🚀 Beginnerদের জন্য Web Development Roadmap</h2>
+
+        <p>
+            আপনি যদি Professional Web Developer হতে চান,
+            তাহলে নিচের sequence অনুসরণ করতে পারেন:
+        </p>
+
+        <ol>
+            <li>HTML শিখুন</li>
+            <li>CSS শিখুন</li>
+            <li>Responsive Design শিখুন</li>
+            <li>JavaScript শিখুন</li>
+            <li>Git ও GitHub শিখুন</li>
+            <li>কিছু বাস্তব Project তৈরি করুন</li>
+            <li>Portfolio Website তৈরি করুন</li>
+        </ol>
+
+        <!-- Adsterra Native Banner -->
+        <div style="margin:30px 0; text-align:center;">
+
+            <script async="async"
+                data-cfasync="false"
+                src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js">
+            </script>
+
+            <div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+
+        </div>
+
+        <section class="related-section">
+
+            <h2>📚 আরও HTML ও Web Development Articles</h2>
+
+            <div class="related-grid">
+
+                <a href="html-ki-beginner-guide.html" class="related-card">
+                    <h3>📖 HTML কী?</h3>
+                    <p>Beginnerদের জন্য HTML কী এবং কীভাবে কাজ করে তা সহজভাবে শিখুন।</p>
+                </a>
+
+                <a href="html-tags-beginners-guide.html" class="related-card">
+                    <h3>🏷️ HTML-এর গুরুত্বপূর্ণ Tags</h3>
+                    <p>Website তৈরির জন্য প্রয়োজনীয় গুরুত্বপূর্ণ HTML Tags শিখুন।</p>
+                </a>
+
+                <a href="html-heading-paragraph-link-guide.html" class="related-card">
+                    <h3>🔗 HTML Heading, Paragraph ও Link</h3>
+                    <p>Heading, Paragraph এবং Link ব্যবহার করার সহজ নিয়ম জানুন।</p>
+                </a>
+
+                <a href="html-image-beginners-guide.html" class="related-card">
+                    <h3>🖼️ HTML-এ Image যোগ করার নিয়ম</h3>
+                    <p>HTML Website-এ Image কীভাবে যোগ করবেন তা শিখুন।</p>
+                </a>
+
+                <a href="html-form-beginners-guide.html" class="related-card">
+                    <h3>📝 HTML Form কী?</h3>
+                    <p>Contact Form ও অন্যান্য HTML Form তৈরির basic নিয়ম শিখুন।</p>
+                </a>
+
+                <a href="css-ki-beginner-guide.html" class="related-card">
+                    <h3>🎨 CSS কী?</h3>
+                    <p>HTML শেখার পর CSS দিয়ে Website সুন্দরভাবে Design করা শিখুন।</p>
+                </a>
+
+                <a href="javascript-ki-beginner-guide.html" class="related-card">
+                    <h3>⚡ JavaScript কী?</h3>
+                    <p>JavaScript দিয়ে Website-এ Interactive Features যোগ করা শিখুন।</p>
+                </a>
+
+                <a href="web-development-beginner-roadmap.html" class="related-card">
+                    <h3>🚀 Web Development Beginner Roadmap</h3>
+                    <p>HTML, CSS ও JavaScript শেখার সম্পূর্ণ Beginner Roadmap দেখুন।</p>
+                </a>
+
+            </div>
+
+        </section>
+
+        <div class="cta-box">
+
+            <h2>🚀 Web Development শেখা শুরু করুন</h2>
+
+            <p>
+                Munna Tech-এর Tutorials অনুসরণ করে
+                ধাপে ধাপে Web Development শিখুন।
+            </p>
+
+            <a href="html-tutorial.html">
+                📚 HTML Tutorial দেখুন
+            </a>
+
+        </div>
+
+    </div>
+
+</article>
+```
+
+</main>
+
+<footer>
+    <p>© 2026 Munna Tech. All Rights Reserved.</p>
+    <p>Web Development & PC Tips</p>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+    const darkModeToggle = document.getElementById("darkModeToggle");
+
+    if (darkModeToggle) {
+
+        darkModeToggle.addEventListener("click", function () {
+
+            document.body.classList.toggle("dark-mode");
+
+            if (document.body.classList.contains("dark-mode")) {
+                darkModeToggle.textContent = "☀️ Light Mode";
+            } else {
+                darkModeToggle.textContent = "🌙 Dark Mode";
+            }
+
+        });
+
+    }
+</script>
+
+</body>
+</html>
