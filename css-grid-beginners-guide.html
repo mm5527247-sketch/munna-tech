@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSS Grid কী? Beginnerদের জন্য সম্পূর্ণ Guide | Munna Tech</title>
+
+  <meta name="description" content="CSS Grid কী এবং কীভাবে ব্যবহার করতে হয় তা সহজ বাংলায় শিখুন। Grid columns, rows, gap, repeat, responsive grid এবং card layout সহ সম্পূর্ণ beginner guide।">
+
+  <meta name="keywords" content="CSS Grid, CSS Grid বাংলা, CSS Grid tutorial, CSS Grid beginners, grid-template-columns, grid-template-rows, CSS responsive grid, CSS layout">
+
+  <meta name="author" content="Munna Tech">
+
+  <meta property="og:title" content="CSS Grid কী? Beginnerদের জন্য সম্পূর্ণ Guide | Munna Tech">
+  <meta property="og:description" content="CSS Grid সহজ বাংলায় শিখুন। Columns, rows, gap, repeat এবং responsive grid সহ সম্পূর্ণ beginner guide।">
+  <meta property="og:type" content="article">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .article-container h1 {
+      font-size: 36px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .article-container h2 {
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
+
+    .article-container p,
+    .article-container li {
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .article-container pre {
+      background: #111827;
+      color: #fff;
+      padding: 18px;
+      border-radius: 10px;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    .article-container code {
+      background: #f1f5f9;
+      padding: 3px 6px;
+      border-radius: 5px;
+    }
+
+    .article-container pre code {
+      background: transparent;
+      padding: 0;
+    }
+
+    .info-box {
+      padding: 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      background: #eef6ff;
+      border-left: 5px solid #2563eb;
+    }
+
+    .warning-box {
+      padding: 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      background: #fff7ed;
+      border-left: 5px solid #f97316;
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .demo-card {
+      padding: 30px 15px;
+      text-align: center;
+      border-radius: 10px;
+      background: #e0f2fe;
+      border: 1px solid #bae6fd;
+      font-weight: bold;
+    }
+
+    .responsive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .faq {
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      background: #f8fafc;
+    }
+
+    .related-links a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 700px) {
+      .article-container h1 {
+        font-size: 28px;
+      }
+
+      .demo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Munna Tech</div>
+
+```
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="html-tutorial.html">HTML</a>
+    <a href="css-tutorial.html">CSS</a>
+    <a href="javascript-tutorial.html">JavaScript</a>
+    <a href="pc-tips.html">PC Tips</a>
+    <a href="index.html#contact">Contact</a>
+    <button id="darkModeBtn">🌙 Dark Mode</button>
+  </div>
+</nav>
+```
+
+  </header>
+
+  <main class="article-container">
+
+```
+<h1>CSS Grid কী? Beginnerদের জন্য সম্পূর্ণ Guide</h1>
+
+<p>
+  CSS Grid হলো modern website layout তৈরি করার একটি powerful CSS system।
+  এর মাধ্যমে খুব সহজে rows এবং columns ব্যবহার করে website-এর বিভিন্ন section,
+  card, gallery এবং responsive layout তৈরি করা যায়।
+</p>
+
+<div class="info-box">
+  <strong>এই article-এ আপনি শিখবেন:</strong>
+  <ul>
+    <li>CSS Grid কী</li>
+    <li>Grid Container ও Grid Item</li>
+    <li>Columns ও Rows</li>
+    <li>grid-template-columns</li>
+    <li>grid-template-rows</li>
+    <li>gap</li>
+    <li>repeat()</li>
+    <li>grid-column ও grid-row</li>
+    <li>Responsive Grid</li>
+    <li>Card Grid Project</li>
+  </ul>
+</div>
+
+
+<h2>1. CSS Grid কী?</h2>
+
+<p>
+  CSS Grid হলো CSS-এর একটি layout system যার সাহায্যে website-এর content
+  কে rows এবং columns-এর মাধ্যমে সাজানো যায়।
+</p>
+
+<p>
+  বিশেষ করে দুই-dimensional layout তৈরি করার জন্য CSS Grid খুবই কার্যকর।
+  অর্থাৎ একই সঙ্গে row এবং column নিয়ন্ত্রণ করা যায়।
+</p>
+
+
+<h2>2. CSS Grid কেন ব্যবহার করবেন?</h2>
+
+<ul>
+  <li>Website layout সহজে তৈরি করা যায়</li>
+  <li>Card layout তৈরি করা যায়</li>
+  <li>Image gallery তৈরি করা যায়</li>
+  <li>Responsive design করা যায়</li>
+  <li>কম CSS code-এ সুন্দর layout তৈরি করা যায়</li>
+  <li>Desktop ও mobile layout সহজে নিয়ন্ত্রণ করা যায়</li>
+</ul>
+
+
+<h2>3. display: grid কী?</h2>
+
+<p>
+  কোনো HTML element-কে Grid Container বানানোর জন্য ব্যবহার করতে হয়:
+</p>
+
+<pre><code>.container {
+```
+
+display: grid;
+}</code></pre>
+
+```
+<p>
+  এরপর container-এর ভিতরের elements-গুলো Grid Items হিসেবে কাজ করবে।
+</p>
+
+
+<h2>4. Grid Container এবং Grid Item</h2>
+
+<p>
+  যে parent element-এর মধ্যে <code>display: grid;</code> দেওয়া হয় সেটি হলো
+  Grid Container।
+</p>
+
+<p>
+  আর সেই container-এর ভিতরের child elements হলো Grid Items।
+</p>
+
+<pre><code>&lt;div class="container"&gt;
+```
+
+<div>Item 1</div>
+<div>Item 2</div>
+<div>Item 3</div>
+</div></code></pre>
+
+```
+<h2>5. Grid Columns তৈরি করা</h2>
+
+<p>
+  Columns তৈরি করতে সবচেয়ে বেশি ব্যবহার করা property হলো
+  <code>grid-template-columns</code>।
+</p>
+
+<pre><code>.container {
+```
+
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+}</code></pre>
+
+```
+<p>
+  এখানে তিনটি সমান column তৈরি হবে।
+</p>
+
+
+<h2>6. 2টি Column তৈরি</h2>
+
+<pre><code>.container {
+```
+
+display: grid;
+grid-template-columns: 1fr 1fr;
+}</code></pre>
+
+```
+<p>
+  এখানে দুইটি সমান column তৈরি হবে।
+</p>
+
+
+<h2>7. 3টি Column তৈরি</h2>
+
+<pre><code>.container {
+```
+
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+}</code></pre>
+
+```
+<h2>8. grid-template-rows</h2>
+
+<p>
+  Grid-এর row-এর size নিয়ন্ত্রণ করতে
+  <code>grid-template-rows</code> ব্যবহার করা হয়।
+</p>
+
+<pre><code>.container {
+```
+
+display: grid;
+grid-template-rows: 100px 200px;
+}</code></pre>
+
+```
+<h2>9. gap কী?</h2>
+
+<p>
+  Grid item-এর মধ্যে ফাঁকা জায়গা তৈরি করতে <code>gap</code> ব্যবহার করা হয়।
+</p>
+
+<pre><code>.container {
+```
+
+display: grid;
+gap: 20px;
+}</code></pre>
+
+```
+<p>
+  এখানে প্রতিটি row এবং column-এর মধ্যে 20px gap থাকবে।
+</p>
+
+
+<h2>10. Column এবং Row আলাদা Gap</h2>
+
+<pre><code>.container {
+```
+
+display: grid;
+column-gap: 30px;
+row-gap: 20px;
+}</code></pre>
+
+```
+<h2>11. repeat() Function</h2>
+
+<p>
+  একই ধরনের column বারবার লেখার পরিবর্তে <code>repeat()</code> ব্যবহার করা যায়।
+</p>
+
+<pre><code>.container {
+```
+
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+}</code></pre>
+
+```
+<p>
+  এটি মূলত এই code-এর মতো:
+</p>
+
+<pre><code>grid-template-columns: 1fr 1fr 1fr;</code></pre>
+
+
+<h2>12. grid-column কী?</h2>
+
+<p>
+  কোনো Grid Item কতগুলো column জুড়ে থাকবে তা নির্ধারণ করতে
+  <code>grid-column</code> ব্যবহার করা যায়।
+</p>
+
+<pre><code>.item1 {
+```
+
+grid-column: 1 / 3;
+}</code></pre>
+
+```
+<p>
+  এর ফলে itemটি প্রথম column থেকে তৃতীয় column-এর আগে পর্যন্ত জায়গা নেবে।
+</p>
+
+
+<h2>13. grid-row কী?</h2>
+
+<p>
+  কোনো item কতগুলো row জুড়ে থাকবে তা নির্ধারণ করতে
+  <code>grid-row</code> ব্যবহার করা যায়।
+</p>
+
+<pre><code>.item1 {
+```
+
+grid-row: 1 / 3;
+}</code></pre>
+
+```
+<h2>14. একটি Item দুইটি Column জুড়ে রাখা</h2>
+
+<pre><code>.featured {
+```
+
+grid-column: 1 / 3;
+}</code></pre>
+
+```
+<p>
+  এটি blog card, featured post বা বড় image section তৈরিতে ব্যবহার করা যায়।
+</p>
+
+
+<h2>15. CSS Grid দিয়ে Simple Layout</h2>
+
+<pre><code>&lt;div class="grid"&gt;
+```
+
+<div class="box">HTML</div>
+<div class="box">CSS</div>
+<div class="box">JavaScript</div>
+<div class="box">PC Tips</div>
+
+</div></code></pre>
+
+```
+<pre><code>.grid {
+```
+
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+}
+
+.box {
+padding: 30px;
+text-align: center;
+border-radius: 10px;
+background: #e5e7eb;
+}</code></pre>
+
+```
+<h2>16. CSS Grid Demo</h2>
+
+<div class="demo-grid">
+  <div class="demo-card">HTML</div>
+  <div class="demo-card">CSS</div>
+  <div class="demo-card">JavaScript</div>
+  <div class="demo-card">PC Tips</div>
+  <div class="demo-card">Web Design</div>
+  <div class="demo-card">Coding</div>
+</div>
+
+
+<h2>17. Responsive CSS Grid</h2>
+
+<p>
+  Mobile, tablet এবং desktop—সব device-এ Grid responsive করার জন্য
+  <code>auto-fit</code> এবং <code>minmax()</code> খুব useful।
+</p>
+
+<pre><code>.grid {
+```
+
+display: grid;
+grid-template-columns:
+repeat(auto-fit, minmax(200px, 1fr));
+gap: 20px;
+}</code></pre>
+
+```
+<p>
+  এই technique ব্যবহার করলে screen ছোট হলে column সংখ্যা কমে যাবে এবং
+  screen বড় হলে বেশি column দেখা যেতে পারে।
+</p>
+
+
+<h2>18. Responsive Grid Demo</h2>
+
+<div class="responsive-grid">
+  <div class="demo-card">HTML</div>
+  <div class="demo-card">CSS</div>
+  <div class="demo-card">JavaScript</div>
+  <div class="demo-card">React</div>
+  <div class="demo-card">GitHub</div>
+  <div class="demo-card">PC Tips</div>
+</div>
+
+
+<h2>19. CSS Grid দিয়ে Card Project</h2>
+
+<p>
+  নিচের example দিয়ে আপনি একটি simple course card layout তৈরি করতে পারেন।
+</p>
+
+<pre><code>&lt;div class="courses"&gt;
+```
+
+<div class="course">
+<h3>HTML Course</h3>
+<p>HTML শিখুন সহজভাবে।</p>
+<button>Learn More</button>
+</div>
+
+<div class="course">
+<h3>CSS Course</h3>
+<p>CSS দিয়ে website design শিখুন।</p>
+<button>Learn More</button>
+</div>
+
+<div class="course">
+<h3>JavaScript Course</h3>
+<p>JavaScript programming শিখুন।</p>
+<button>Learn More</button>
+</div>
+
+</div></code></pre>
+
+```
+<pre><code>.courses {
+```
+
+display: grid;
+grid-template-columns:
+repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+}
+
+.course {
+padding: 25px;
+border-radius: 12px;
+border: 1px solid #ddd;
+}
+
+.course button {
+padding: 10px 18px;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+}</code></pre>
+
+```
+<h2>20. CSS Grid-এর Common Mistakes</h2>
+
+<ul>
+  <li><code>display: grid;</code> দিতে ভুল করা</li>
+  <li><code>grid-template-columns</code> ভুল লেখা</li>
+  <li>Grid container এবং Grid item-এর পার্থক্য না বোঝা</li>
+  <li>Mobile responsive design না করা</li>
+  <li>অতিরিক্ত fixed width ব্যবহার করা</li>
+  <li><code>gap</code> ব্যবহার না করে অনেক margin দেওয়া</li>
+</ul>
+
+
+<div class="warning-box">
+  <strong>Beginner Tip:</strong>
+  প্রথমে <code>display: grid</code>, তারপর
+  <code>grid-template-columns</code> এবং <code>gap</code> ভালোভাবে practice করুন।
+  এরপর <code>grid-column</code>, <code>grid-row</code> এবং responsive Grid শিখুন।
+</div>
+
+
+<h2>21. Beginner Practice</h2>
+
+<p>
+  এখন নিজে একটি ছোট project তৈরি করুন।
+</p>
+
+<ol>
+  <li>একটি HTML file তৈরি করুন</li>
+  <li>একটি Grid container তৈরি করুন</li>
+  <li>৪টি card যোগ করুন</li>
+  <li>২টি column তৈরি করুন</li>
+  <li>20px gap দিন</li>
+  <li>তারপর responsive Grid তৈরি করুন</li>
+</ol>
+
+
+<h2>22. Quick Revision</h2>
+
+<ul>
+  <li><code>display: grid;</code> → Grid চালু করে</li>
+  <li><code>grid-template-columns</code> → Column তৈরি করে</li>
+  <li><code>grid-template-rows</code> → Row তৈরি করে</li>
+  <li><code>gap</code> → Item-এর মধ্যে space দেয়</li>
+  <li><code>repeat()</code> → একই pattern বারবার ব্যবহার করে</li>
+  <li><code>grid-column</code> → Column-এর জায়গা নিয়ন্ত্রণ করে</li>
+  <li><code>grid-row</code> → Row-এর জায়গা নিয়ন্ত্রণ করে</li>
+  <li><code>minmax()</code> → Responsive size নিয়ন্ত্রণে সাহায্য করে</li>
+</ul>
+
+
+<h2>23. Frequently Asked Questions</h2>
+
+<div class="faq">
+  <h3>CSS Grid কি beginners-এর জন্য কঠিন?</h3>
+  <p>
+    না। Basic property যেমন display, columns, rows এবং gap দিয়ে শুরু করলে
+    ধীরে ধীরে সহজ হয়ে যায়।
+  </p>
+</div>
+
+<div class="faq">
+  <h3>CSS Grid এবং Flexbox-এর মধ্যে পার্থক্য কী?</h3>
+  <p>
+    Flexbox সাধারণত এক-dimensional layout-এর জন্য বেশি ব্যবহৃত হয়।
+    CSS Grid rows এবং columns মিলিয়ে two-dimensional layout তৈরি করতে পারে।
+  </p>
+</div>
+
+<div class="faq">
+  <h3>Responsive website-এ CSS Grid ব্যবহার করা যায়?</h3>
+  <p>
+    অবশ্যই। <code>auto-fit</code>, <code>minmax()</code> এবং flexible units
+    ব্যবহার করে responsive Grid তৈরি করা যায়।
+  </p>
+</div>
+
+
+<h2>24. উপসংহার</h2>
+
+<p>
+  CSS Grid modern web development-এর একটি গুরুত্বপূর্ণ skill।
+  Website layout, card section, gallery এবং responsive design তৈরির জন্য
+  এটি নিয়মিত ব্যবহার করা হয়।
+</p>
+
+<p>
+  আপনি যদি Web Development শিখছেন, তাহলে CSS Grid-এর পাশাপাশি
+  HTML, CSS Flexbox এবং JavaScript-ও নিয়মিত practice করুন।
+</p>
+
+
+<h2>আরও পড়ুন</h2>
+
+<div class="related-links">
+
+  <a href="css-ki-beginner-guide.html">
+    CSS কী? Beginnerদের জন্য সম্পূর্ণ Guide
+  </a>
+
+  <a href="css-diye-website-design-guide.html">
+    CSS দিয়ে Website Design করার সহজ নিয়ম
+  </a>
+
+  <a href="css-color-font-text-style-guide.html">
+    CSS Color, Font ও Text Style
+  </a>
+
+  <a href="css-box-model-beginners-guide.html">
+    CSS Box Model কী?
+  </a>
+
+  <a href="css-flexbox-beginners-guide.html">
+    CSS Flexbox কী?
+  </a>
+
+  <a href="css-tutorial.html">
+    Complete CSS Tutorial
+  </a>
+
+  <a href="javascript-tutorial.html">
+    JavaScript Tutorial
+  </a>
+
+</div>
+
+
+<div class="info-box">
+  <strong>Munna Tech:</strong>
+  Web Development এবং PC Tips সহজ বাংলায় শেখার জন্য আমাদের অন্যান্য
+  tutorial এবং article পড়ুন।
+</div>
+
+
+<!-- Adsterra Native Banner -->
+<script async="async" data-cfasync="false"
+  src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js"></script>
+
+<div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+```
+
+  </main>
+
+  <footer>
+    <p>© 2026 Munna Tech — Web Development & PC Tips</p>
+  </footer>
+
+  <script>
+    const darkModeBtn = document.getElementById("darkModeBtn");
+
+    darkModeBtn.addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+        darkModeBtn.textContent = "☀️ Light Mode";
+        localStorage.setItem("darkMode", "enabled");
+      } else {
+        darkModeBtn.textContent = "🌙 Dark Mode";
+        localStorage.setItem("darkMode", "disabled");
+      }
+    });
+
+    if (localStorage.getItem("darkMode") === "enabled") {
+      document.body.classList.add("dark-mode");
+      darkModeBtn.textContent = "☀️ Light Mode";
+    }
+  </script>
+
+</body>
+</html>
