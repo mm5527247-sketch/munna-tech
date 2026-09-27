@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>JavaScript কী? Beginnerদের জন্য সম্পূর্ণ Guide | Munna Tech</title>
+
+  <meta name="description" content="JavaScript কী এবং কেন ব্যবহার করা হয় তা সহজ বাংলায় শিখুন। JavaScript দিয়ে website interactive করা, variable, function, event এবং beginner project সম্পর্কে জানুন।">
+
+  <meta name="keywords" content="JavaScript কী, JavaScript বাংলা, JavaScript tutorial বাংলা, JavaScript beginners, JavaScript শেখার নিয়ম, JavaScript programming">
+
+  <meta name="author" content="Munna Tech">
+
+  <meta property="og:title" content="JavaScript কী? Beginnerদের জন্য সম্পূর্ণ Guide | Munna Tech">
+  <meta property="og:description" content="Beginnerদের জন্য JavaScript-এর সম্পূর্ণ বাংলা guide। JavaScript কী, কেন দরকার এবং কীভাবে শুরু করবেন তা জানুন।">
+  <meta property="og:type" content="article">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .article-container h1 {
+      font-size: 36px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .article-container h2 {
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
+
+    .article-container p,
+    .article-container li {
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .article-container pre {
+      background: #111827;
+      color: white;
+      padding: 18px;
+      border-radius: 10px;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    .article-container code {
+      background: #f1f5f9;
+      padding: 3px 6px;
+      border-radius: 5px;
+    }
+
+    .article-container pre code {
+      background: transparent;
+      padding: 0;
+    }
+
+    .info-box {
+      padding: 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      background: #eef6ff;
+      border-left: 5px solid #2563eb;
+    }
+
+    .warning-box {
+      padding: 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      background: #fff7ed;
+      border-left: 5px solid #f97316;
+    }
+
+    .demo-box {
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .demo-box button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .faq {
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      background: #f8fafc;
+    }
+
+    .related-links a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 700px) {
+      .article-container h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Munna Tech</div>
+
+```
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="html-tutorial.html">HTML</a>
+    <a href="css-tutorial.html">CSS</a>
+    <a href="javascript-tutorial.html">JavaScript</a>
+    <a href="pc-tips.html">PC Tips</a>
+    <a href="index.html#contact">Contact</a>
+    <button id="darkModeBtn">🌙 Dark Mode</button>
+  </div>
+</nav>
+```
+
+  </header>
+
+  <main class="article-container">
+
+```
+<h1>JavaScript কী? Beginnerদের জন্য সম্পূর্ণ Guide</h1>
+
+<p>
+  JavaScript হলো একটি জনপ্রিয় programming language যা website-কে
+  interactive এবং dynamic করার জন্য ব্যবহার করা হয়।
+</p>
+
+<p>
+  HTML দিয়ে website-এর structure তৈরি করা হয়, CSS দিয়ে design করা হয়,
+  আর JavaScript ব্যবহার করে website-এ বিভিন্ন ধরনের interaction এবং
+  functionality যোগ করা যায়।
+</p>
+
+<div class="info-box">
+  <strong>এই article-এ আপনি শিখবেন:</strong>
+  <ul>
+    <li>JavaScript কী</li>
+    <li>JavaScript কেন প্রয়োজন</li>
+    <li>HTML, CSS ও JavaScript-এর সম্পর্ক</li>
+    <li>JavaScript কোথায় লেখা হয়</li>
+    <li>Variable কী</li>
+    <li>Function কী</li>
+    <li>Event কী</li>
+    <li>Button click কাজ করানো</li>
+    <li>DOM-এর basic ধারণা</li>
+    <li>Beginner JavaScript project</li>
+  </ul>
+</div>
+
+
+<h2>1. JavaScript কী?</h2>
+
+<p>
+  JavaScript হলো একটি programming language যার সাহায্যে website-এ
+  বিভিন্ন ধরনের কাজ করানো যায়।
+</p>
+
+<p>
+  যেমন:
+</p>
+
+<ul>
+  <li>Button click করলে message দেখানো</li>
+  <li>Dark mode তৈরি করা</li>
+  <li>Form validation করা</li>
+  <li>Calculator তৈরি করা</li>
+  <li>Image slider তৈরি করা</li>
+  <li>Menu open এবং close করা</li>
+  <li>Dynamic content দেখানো</li>
+</ul>
+
+
+<h2>2. Web Development-এ JavaScript কেন দরকার?</h2>
+```
