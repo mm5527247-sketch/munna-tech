@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>JavaScript Calculator তৈরি করার নিয়ম | Beginner Guide | Munna Tech</title>
+
+  <meta name="description" content="HTML, CSS ও JavaScript দিয়ে Simple Calculator কীভাবে তৈরি করবেন তা সহজ বাংলায় শিখুন। Addition, subtraction, multiplication, division এবং complete calculator project সহ।">
+
+  <meta name="keywords" content="JavaScript calculator, JavaScript calculator বাংলা, JavaScript calculator tutorial, HTML CSS JavaScript calculator, calculator project, JavaScript beginners">
+
+  <meta name="author" content="Munna Tech">
+
+  <meta property="og:title" content="JavaScript Calculator তৈরি করার নিয়ম | Munna Tech">
+  <meta property="og:description" content="HTML CSS ও JavaScript দিয়ে Simple Calculator তৈরির সম্পূর্ণ beginner guide।">
+  <meta property="og:type" content="article">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .article-container h1 {
+      font-size: 36px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .article-container h2 {
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
+
+    .article-container p,
+    .article-container li {
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .article-container pre {
+      background: #111827;
+      color: #ffffff;
+      padding: 18px;
+      border-radius: 10px;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    .article-container code {
+      background: #f1f5f9;
+      padding: 3px 6px;
+      border-radius: 5px;
+    }
+
+    .article-container pre code {
+      background: transparent;
+      padding: 0;
+    }
+
+    .info-box {
+      padding: 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      background: #eef6ff;
+      border-left: 5px solid #2563eb;
+    }
+
+    .warning-box {
+      padding: 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      background: #fff7ed;
+      border-left: 5px solid #f97316;
+    }
+
+    .calculator {
+      max-width: 350px;
+      margin: 25px auto;
+      padding: 20px;
+      border-radius: 15px;
+      background: #f1f5f9;
+      border: 1px solid #ddd;
+    }
+
+    .calculator-display {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 15px;
+      margin-bottom: 12px;
+      font-size: 25px;
+      text-align: right;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+
+    .calculator-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .calculator-buttons button {
+      padding: 15px 8px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .calculator-buttons .clear {
+      grid-column: span 2;
+    }
+
+    .calculator-buttons .equal {
+      grid-column: span 2;
+    }
+
+    .faq {
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      background: #f8fafc;
+    }
+
+    .related-links a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #f1f5f9;
+    }
+
+    @media (max-width: 700px) {
+      .article-container h1 {
+        font-size: 28px;
+      }
+
+      .article-container p,
+      .article-container li {
+        font-size: 16px;
+      }
+
+      .calculator {
+        max-width: 100%;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Munna Tech</div>
+
+```
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="html-tutorial.html">HTML</a>
+    <a href="css-tutorial.html">CSS</a>
+    <a href="javascript-tutorial.html">JavaScript</a>
+    <a href="pc-tips.html">PC Tips</a>
+    <a href="index.html#contact">Contact</a>
+    <button id="darkModeBtn">🌙 Dark Mode</button>
+  </div>
+</nav>
+```
+
+  </header>
+
+  <main class="article-container">
+
+```
+<h1>HTML CSS ও JavaScript দিয়ে Simple Calculator তৈরি করার নিয়ম</h1>
+
+<p>
+  JavaScript শেখার সময় একটি Calculator Project তৈরি করা খুবই
+  ভালো practice। কারণ এতে HTML, CSS এবং JavaScript একসাথে ব্যবহার করা যায়।
+</p>
+
+<p>
+  এই tutorial-এ আমরা একটি simple calculator তৈরি করব যেখানে
+  যোগ, বিয়োগ, গুণ এবং ভাগ করা যাবে।
+</p>
+
+
+<div class="info-box">
+
+  <strong>এই article-এ আপনি শিখবেন:</strong>
+
+  <ul>
+    <li>Calculator কীভাবে কাজ করে</li>
+    <li>HTML দিয়ে calculator structure</li>
+    <li>CSS দিয়ে calculator design</li>
+    <li>JavaScript দিয়ে button click handle করা</li>
+    <li>Number input নেওয়া</li>
+    <li>Addition করা</li>
+    <li>Subtraction করা</li>
+    <li>Multiplication করা</li>
+    <li>Division করা</li>
+    <li>Clear button তৈরি করা</li>
+    <li>Complete calculator project</li>
+  </ul>
+
+</div>
+
+
+<h2>1. Calculator কী?</h2>
+
+<p>
+  Calculator হলো এমন একটি ছোট application যার মাধ্যমে
+  mathematical calculation করা যায়।
+</p>
+
+<p>
+  আমরা JavaScript ব্যবহার করে calculator-এর মূল calculation logic তৈরি করব।
+</p>
+
+
+<h2>2. Calculator বানাতে কী লাগবে?</h2>
+
+<p>আমাদের তিনটি technology লাগবে:</p>
+
+<ul>
+  <li><strong>HTML</strong> — Calculator-এর structure তৈরি করবে</li>
+  <li><strong>CSS</strong> — Calculator-এর design করবে</li>
+  <li><strong>JavaScript</strong> — Calculation করবে</li>
+</ul>
+
+
+<h2>3. HTML দিয়ে Calculator Structure</h2>
+
+<p>
+  প্রথমে একটি display এবং কয়েকটি button তৈরি করি।
+</p>
+
+<pre><code>&lt;input id="display" type="text" readonly&gt;
+```
+
+<button>7</button>
+<button>8</button>
+<button>9</button>
+<button>+</button></code></pre>
+
+```
+<h2>4. Button Click Event</h2>
+
+<p>
+  Calculator-এর button-এ click করলে JavaScript সেই button-এর
+  value নিয়ে display-তে দেখাবে।
+</p>
+
+<pre><code>&lt;button onclick="addNumber('7')"&gt;7&lt;/button&gt;
+```
+
+<script>
+
+function addNumber(number) {
+
+document.getElementById("display").value += number;
+
+}
+
+</script></code></pre>
+
+```
+<h2>5. Addition বা যোগ</h2>
+
+<p>
+  JavaScript-এ <code>+</code> operator ব্যবহার করে যোগ করা যায়।
+</p>
+
+<pre><code>const a = 10;
+```
+
+const b = 20;
+
+const result = a + b;
+
+console.log(result);</code></pre>
+
+```
+<p>
+  Output হবে:
+</p>
+
+<pre><code>30</code></pre>
+
+
+<h2>6. Subtraction বা বিয়োগ</h2>
+
+<pre><code>const a = 20;
+```
+
+const b = 10;
+
+const result = a - b;
+
+console.log(result);</code></pre>
+
+```
+<h2>7. Multiplication বা গুণ</h2>
+
+<pre><code>const a = 10;
+```
+
+const b = 5;
+
+const result = a * b;
+
+console.log(result);</code></pre>
+
+```
+<h2>8. Division বা ভাগ</h2>
+
+<pre><code>const a = 20;
+```
+
+const b = 5;
+
+const result = a / b;
+
+console.log(result);</code></pre>
+
+```
+<h2>9. eval() সম্পর্কে গুরুত্বপূর্ণ কথা</h2>
+
+<p>
+  Beginner calculator project-এ অনেকে <code>eval()</code> ব্যবহার করে
+  দ্রুত calculation করে।
+</p>
+
+<pre><code>eval("10 + 20");</code></pre>
+
+<p>
+  এটি কাজ করলেও real-world application-এ arbitrary user input-এর
+  ওপর <code>eval()</code> ব্যবহার করা নিরাপত্তার দিক থেকে এড়িয়ে চলা ভালো।
+  তাই আমরা এখানে একটি simple controlled calculator logic ব্যবহার করব।
+</p>
+
+
+<h2>10. Simple Calculator Demo</h2>
+
+<div class="calculator">
+
+  <input
+    id="calculatorDisplay"
+    class="calculator-display"
+    type="text"
+    value="0"
+    readonly
+  >
+
+  <div class="calculator-buttons">
+
+    <button onclick="clearCalculator()" class="clear">
+      C
+    </button>
+
+    <button onclick="chooseOperator('/')">
+      ÷
+    </button>
+
+    <button onclick="chooseOperator('*')">
+      ×
+    </button>
+
+    <button onclick="addCalculatorNumber('7')">
+      7
+    </button>
+
+    <button onclick="addCalculatorNumber('8')">
+      8
+    </button>
+
+    <button onclick="addCalculatorNumber('9')">
+      9
+    </button>
+
+    <button onclick="chooseOperator('-')">
+      −
+    </button>
+
+    <button onclick="addCalculatorNumber('4')">
+      4
+    </button>
+
+    <button onclick="addCalculatorNumber('5')">
+      5
+    </button>
+
+    <button onclick="addCalculatorNumber('6')">
+      6
+    </button>
+
+    <button onclick="chooseOperator('+')">
+      +
+    </button>
+
+    <button onclick="addCalculatorNumber('1')">
+      1
+    </button>
+
+    <button onclick="addCalculatorNumber('2')">
+      2
+    </button>
+
+    <button onclick="addCalculatorNumber('3')">
+      3
+    </button>
+
+    <button onclick="calculateResult()" class="equal">
+      =
+    </button>
+
+    <button onclick="addCalculatorNumber('0')">
+      0
+    </button>
+
+    <button onclick="addCalculatorNumber('.')">
+      .
+    </button>
+
+  </div>
+
+</div>
+
+
+<h2>11. Calculator কীভাবে কাজ করছে?</h2>
+
+<p>
+  প্রথমে user একটি number চাপবে। এরপর একটি operator নির্বাচন করবে।
+  তারপর দ্বিতীয় number চাপবে।
+</p>
+
+<p>উদাহরণ:</p>
+
+<pre><code>20 + 10 = 30</code></pre>
+
+<p>
+  JavaScript প্রথম number, operator এবং দ্বিতীয় number সংরক্ষণ করবে।
+  এরপর <code>=</code> button চাপলে result দেখাবে।
+</p>
+
+
+<h2>12. Calculator-এর মূল JavaScript Logic</h2>
+
+<pre><code>let firstNumber = null;
+```
+
+let operator = null;
+
+function addNumber(number) {
+
+console.log(number);
+
+}
+
+function chooseOperator(symbol) {
+
+operator = symbol;
+
+}
+
+function calculateResult() {
+
+console.log("Calculate");
+
+}</code></pre>
+
+```
+<h2>13. Number Display করার Logic</h2>
+
+<pre><code>function addCalculatorNumber(number) {
+```
+
+const display =
+document.getElementById("calculatorDisplay");
+
+if (display.value === "0") {
+
+```
+display.value = number;
+```
+
+} else {
+
+```
+display.value += number;
+```
+
+}
+
+}</code></pre>
+
+```
+<h2>14. Clear Button</h2>
+
+<p>
+  Calculator reset করার জন্য Clear button ব্যবহার করা হবে।
+</p>
+
+<pre><code>function clearCalculator() {
+```
+
+document.getElementById("calculatorDisplay").value = "0";
+
+}</code></pre>
+
+```
+<h2>15. Operator নির্বাচন</h2>
+
+<pre><code>let firstNumber = null;
+```
+
+let operator = null;
+
+function chooseOperator(symbol) {
+
+firstNumber =
+parseFloat(
+document.getElementById("calculatorDisplay").value
+);
+
+operator = symbol;
+
+document.getElementById("calculatorDisplay").value = "0";
+
+}</code></pre>
+
+```
+<h2>16. Calculation Function</h2>
+
+<pre><code>function calculateResult() {
+```
+
+const display =
+document.getElementById("calculatorDisplay");
+
+const secondNumber =
+parseFloat(display.value);
+
+let result;
+
+if (operator === "+") {
+
+```
+result = firstNumber + secondNumber;
+```
+
+} else if (operator === "-") {
+
+```
+result = firstNumber - secondNumber;
+```
+
+} else if (operator === "*") {
+
+```
+result = firstNumber * secondNumber;
+```
+
+} else if (operator === "/") {
+
+```
+result = firstNumber / secondNumber;
+```
+
+}
+
+display.value = result;
+
+}</code></pre>
+
+```
+<h2>17. Complete Calculator JavaScript</h2>
+
+<pre><code>let firstNumber = null;
+```
+
+let operator = null;
+
+function addCalculatorNumber(number) {
+
+const display =
+document.getElementById("calculatorDisplay");
+
+if (display.value === "0") {
+
+```
+display.value = number;
+```
+
+} else {
+
+```
+display.value += number;
+```
+
+}
+
+}
+
+function chooseOperator(symbol) {
+
+const display =
+document.getElementById("calculatorDisplay");
+
+firstNumber = parseFloat(display.value);
+
+operator = symbol;
+
+display.value = "0";
+
+}
+
+function calculateResult() {
+
+const display =
+document.getElementById("calculatorDisplay");
+
+const secondNumber = parseFloat(display.value);
+
+let result;
+
+if (operator === "+") {
+
+```
+result = firstNumber + secondNumber;
+```
+
+} else if (operator === "-") {
+
+```
+result = firstNumber - secondNumber;
+```
+
+} else if (operator === "*") {
+
+```
+result = firstNumber * secondNumber;
+```
+
+} else if (operator === "/") {
+
+```
+if (secondNumber === 0) {
+
+  display.value = "Cannot divide by 0";
+
+  return;
+
+}
+
+result = firstNumber / secondNumber;
+```
+
+} else {
+
+```
+return;
+```
+
+}
+
+display.value = result;
+
+}
+
+function clearCalculator() {
+
+firstNumber = null;
+
+operator = null;
+
+document.getElementById("calculatorDisplay").value = "0";
+
+}</code></pre>
+
+```
+<h2>18. HTML + CSS + JavaScript Complete Project</h2>
+
+<p>
+  নিচের code দিয়ে একটি complete simple calculator project
+  তৈরি করতে পারবেন।
+</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+```
+
+<html lang="bn">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>JavaScript Calculator</title>
+
+<style>
+
+```
+body {
+
+  font-family: Arial, sans-serif;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  min-height: 100vh;
+
+  background: #f1f5f9;
+
+}
+
+
+.calculator {
+
+  width: 300px;
+
+  padding: 20px;
+
+  background: white;
+
+  border-radius: 15px;
+
+}
+
+
+#display {
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 15px;
+
+  margin-bottom: 10px;
+
+  font-size: 24px;
+
+  text-align: right;
+
+}
+
+
+.buttons {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 8px;
+
+}
+
+
+button {
+
+  padding: 15px;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+}
+```
+
+</style>
+
+</head>
+
+<body>
+
+<div class="calculator">
+
+```
+&lt;input id="display" value="0" readonly&gt;
+
+
+&lt;div class="buttons"&gt;
+
+  &lt;button onclick="clearCalculator()"&gt;
+    C
+  &lt;/button&gt;
+
+  &lt;button onclick="chooseOperator('/')"&gt;
+    ÷
+  &lt;/button&gt;
+
+  &lt;button onclick="chooseOperator('*')"&gt;
+    ×
+  &lt;/button&gt;
+
+  &lt;button onclick="chooseOperator('-')"&gt;
+    −
+  &lt;/button&gt;
+
+
+  &lt;button onclick="addNumber('7')"&gt;7&lt;/button&gt;
+  &lt;button onclick="addNumber('8')"&gt;8&lt;/button&gt;
+  &lt;button onclick="addNumber('9')"&gt;9&lt;/button&gt;
+
+  &lt;button onclick="chooseOperator('+')"&gt;
+    +
+  &lt;/button&gt;
+
+
+  &lt;button onclick="addNumber('4')"&gt;4&lt;/button&gt;
+  &lt;button onclick="addNumber('5')"&gt;5&lt;/button&gt;
+  &lt;button onclick="addNumber('6')"&gt;6&lt;/button&gt;
+
+
+  &lt;button onclick="addNumber('1')"&gt;1&lt;/button&gt;
+  &lt;button onclick="addNumber('2')"&gt;2&lt;/button&gt;
+  &lt;button onclick="addNumber('3')"&gt;3&lt;/button&gt;
+
+
+  &lt;button onclick="addNumber('0')"&gt;0&lt;/button&gt;
+  &lt;button onclick="addNumber('.')"&gt;.&lt;/button&gt;
+
+  &lt;button onclick="calculateResult()"&gt;
+    =
+  &lt;/button&gt;
+
+&lt;/div&gt;
+```
+
+</div>
+
+<script>
+
+```
+let firstNumber = null;
+let operator = null;
+
+
+function addNumber(number) {
+
+  const display =
+    document.getElementById("display");
+
+  if (display.value === "0") {
+
+    display.value = number;
+
+  } else {
+
+    display.value += number;
+
+  }
+
+}
+
+
+function chooseOperator(symbol) {
+
+  const display =
+    document.getElementById("display");
+
+  firstNumber = parseFloat(display.value);
+
+  operator = symbol;
+
+  display.value = "0";
+
+}
+
+
+function calculateResult() {
+
+  const display =
+    document.getElementById("display");
+
+  const secondNumber =
+    parseFloat(display.value);
+
+  let result;
+
+
+  if (operator === "+") {
+
+    result = firstNumber + secondNumber;
+
+  } else if (operator === "-") {
+
+    result = firstNumber - secondNumber;
+
+  } else if (operator === "*") {
+
+    result = firstNumber * secondNumber;
+
+  } else if (operator === "/") {
+
+    if (secondNumber === 0) {
+
+      display.value = "Error";
+
+      return;
+
+    }
+
+    result = firstNumber / secondNumber;
+
+  } else {
+
+    return;
+
+  }
+
+
+  display.value = result;
+
+}
+
+
+function clearCalculator() {
+
+  firstNumber = null;
+
+  operator = null;
+
+  document.getElementById("display").value = "0";
+
+}
+```
+
+</script>
+
+</body>
+
+</html></code></pre>
+
+```
+<h2>19. Calculator Project থেকে কী শিখলেন?</h2>
+
+<ul>
+  <li>HTML button ব্যবহার</li>
+  <li>CSS Grid ব্যবহার</li>
+  <li>JavaScript variable</li>
+  <li>Function</li>
+  <li>Button click event</li>
+  <li>DOM manipulation</li>
+  <li>parseFloat()</li>
+  <li>if / else condition</li>
+  <li>Mathematical operators</li>
+  <li>Error handling</li>
+</ul>
+
+
+<h2>20. Common Mistakes</h2>
+
+<ul>
+  <li>JavaScript function-এর নাম ভুল লেখা</li>
+  <li>HTML ID এবং JavaScript ID না মেলা</li>
+  <li>parseFloat() ব্যবহার না করা</li>
+  <li>Operator সংরক্ষণ না করা</li>
+  <li>Division by zero handle না করা</li>
+  <li>JavaScript file HTML-এর সাথে ঠিকভাবে যুক্ত না করা</li>
+</ul>
+
+
+<div class="warning-box">
+
+  <strong>Beginner Tip:</strong>
+
+  Calculator একবারে পুরোপুরি মুখস্থ করার চেষ্টা করবেন না।
+  প্রথমে button click, তারপর variable, function, condition এবং
+  DOM আলাদা আলাদাভাবে practice করুন।
+
+</div>
+
+
+<h2>21. Practice Tasks</h2>
+
+<ol>
+  <li>Calculator-এ percentage button যোগ করুন</li>
+  <li>Backspace button তৈরি করুন</li>
+  <li>Plus এবং minus button আলাদা design করুন</li>
+  <li>Calculator-এ keyboard support যোগ করার চেষ্টা করুন</li>
+  <li>Dark Mode যোগ করুন</li>
+  <li>Calculator history দেখানোর চেষ্টা করুন</li>
+</ol>
+
+
+<h2>22. Quick Revision</h2>
+
+<ul>
+  <li><code>+</code> → যোগ</li>
+  <li><code>-</code> → বিয়োগ</li>
+  <li><code>*</code> → গুণ</li>
+  <li><code>/</code> → ভাগ</li>
+  <li><code>parseFloat()</code> → string থেকে number তৈরি করতে সাহায্য করে</li>
+  <li><code>getElementById()</code> → HTML element খুঁজে নেয়</li>
+  <li><code>.value</code> → input-এর value নেয় বা পরিবর্তন করে</li>
+  <li>Function → একই কাজ বারবার ব্যবহার করতে সাহায্য করে</li>
+</ul>
+
+
+<h2>23. Frequently Asked Questions</h2>
+
+<div class="faq">
+
+  <h3>JavaScript দিয়ে Calculator বানানো যায়?</h3>
+
+  <p>
+    হ্যাঁ। HTML দিয়ে structure, CSS দিয়ে design এবং JavaScript দিয়ে
+    calculation logic তৈরি করে calculator বানানো যায়।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>Calculator project কেন practice করব?</h3>
+
+  <p>
+    Calculator project-এর মাধ্যমে variable, function, condition,
+    event এবং DOM-এর মতো গুরুত্বপূর্ণ JavaScript concept practice করা যায়।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>eval() ব্যবহার করা উচিত?</h3>
+
+  <p>
+    Simple learning demo-তে এটি দেখা যায়, কিন্তু arbitrary user input
+    নিয়ে real-world application তৈরি করার সময় eval() এড়িয়ে চলা ভালো।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>Calculator বানাতে HTML ও CSS কেন দরকার?</h3>
+
+  <p>
+    HTML calculator-এর structure তৈরি করে এবং CSS সেটিকে সুন্দর ও
+    ব্যবহারযোগ্য interface দিতে সাহায্য করে। JavaScript calculation চালায়।
+  </p>
+
+</div>
+
+
+<h2>24. উপসংহার</h2>
+
+<p>
+  JavaScript Calculator একটি beginner-friendly project।
+  এটি তৈরি করার মাধ্যমে JavaScript-এর অনেক গুরুত্বপূর্ণ concept
+  একসাথে practice করা যায়।
+</p>
+
+<p>
+  Calculator শেষ করার পর Counter, To-Do List, Digital Clock,
+  Quiz App এবং Weather App-এর মতো project তৈরি করার দিকে যেতে পারেন।
+</p>
+
+
+<h2>আরও পড়ুন</h2>
+
+<div class="related-links">
+
+  <a href="javascript-ki-beginner-guide.html">
+    JavaScript কী? Beginnerদের জন্য সম্পূর্ণ Guide
+  </a>
+
+  <a href="javascript-html-integration-guide.html">
+    JavaScript কীভাবে HTML-এর সাথে কাজ করে?
+  </a>
+
+  <a href="javascript-variable-var-let-const-guide.html">
+    JavaScript Variable: var, let, const
+  </a>
+
+  <a href="javascript-function-beginners-guide.html">
+    JavaScript Function কী?
+  </a>
+
+  <a href="javascript-button-click-event-guide.html">
+    JavaScript Button Click Event কী?
+  </a>
+
+  <a href="javascript-tutorial.html">
+    Complete JavaScript Tutorial
+  </a>
+
+  <a href="css-flexbox-beginners-guide.html">
+    CSS Flexbox কী?
+  </a>
+
+  <a href="css-grid-beginners-guide.html">
+    CSS Grid কী?
+  </a>
+
+</div>
+
+
+<div class="info-box">
+
+  <strong>Munna Tech</strong>
+
+  <p>
+    Web Development এবং PC Tips সহজ বাংলায় শেখার জন্য
+    Munna Tech-এর আরও tutorial ও article পড়ুন।
+  </p>
+
+</div>
+
+
+<!-- Adsterra Native Banner -->
+
+<script async="async"
+  data-cfasync="false"
+  src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js">
+</script>
+
+<div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+```
+
+  </main>
+
+  <footer>
+
+```
+<p>
+  © 2026 Munna Tech — Web Development & PC Tips
+</p>
+```
+
+  </footer>
+
+  <script>
+
+    const darkModeBtn =
+      document.getElementById("darkModeBtn");
+
+
+    darkModeBtn.addEventListener("click", function () {
+
+      document.body.classList.toggle("dark-mode");
+
+
+      if (
+        document.body.classList.contains("dark-mode")
+      ) {
+
+        darkModeBtn.textContent =
+          "☀️ Light Mode";
+
+        localStorage.setItem(
+          "darkMode",
+          "enabled"
+        );
+
+      } else {
+
+        darkModeBtn.textContent =
+          "🌙 Dark Mode";
+
+        localStorage.setItem(
+          "darkMode",
+          "disabled"
+        );
+
+      }
+
+    });
+
+
+    if (
+      localStorage.getItem("darkMode") === "enabled"
+    ) {
+
+      document.body.classList.add("dark-mode");
+
+      darkModeBtn.textContent =
+        "☀️ Light Mode";
+
+    }
+
+
+    let firstNumber = null;
+    let calculatorOperator = null;
+
+
+    function addCalculatorNumber(number) {
+
+      const display =
+        document.getElementById("calculatorDisplay");
+
+
+      if (display.value === "0") {
+
+        display.value = number;
+
+      } else {
+
+        display.value += number;
+
+      }
+
+    }
+
+
+    function chooseOperator(symbol) {
+
+      const display =
+        document.getElementById("calculatorDisplay");
+
+
+      firstNumber =
+        parseFloat(display.value);
+
+      calculatorOperator = symbol;
+
+      display.value = "0";
+
+    }
+
+
+    function calculateResult() {
+
+      const display =
+        document.getElementById("calculatorDisplay");
+
+
+      const secondNumber =
+        parseFloat(display.value);
+
+
+      if (
+        Number.isNaN(firstNumber) ||
+        Number.isNaN(secondNumber)
+      ) {
+
+        display.value = "Error";
+
+        return;
+
+      }
+
+
+      let result;
+
+
+      if (calculatorOperator === "+") {
+
+        result =
+          firstNumber + secondNumber;
+
+      } else if (
+        calculatorOperator === "-"
+      ) {
+
+        result =
+          firstNumber - secondNumber;
+
+      } else if (
+        calculatorOperator === "*"
+      ) {
+
+        result =
+          firstNumber * secondNumber;
+
+      } else if (
+        calculatorOperator === "/"
+      ) {
+
+        if (secondNumber === 0) {
+
+          display.value =
+            "Cannot divide by 0";
+
+          return;
+
+        }
+
+        result =
+          firstNumber / secondNumber;
+
+      } else {
+
+        return;
+
+      }
+
+
+      display.value = result;
+
+      firstNumber = result;
+
+      calculatorOperator = null;
+
+    }
+
+
+    function clearCalculator() {
+
+      firstNumber = null;
+
+      calculatorOperator = null;
+
+      document.getElementById(
+        "calculatorDisplay"
+      ).value = "0";
+
+    }
+
+  </script>
+
+</body>
+</html>
