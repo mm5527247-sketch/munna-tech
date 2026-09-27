@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Windows 11-এ Hidden Files Show করার নিয়ম | Munna Tech</title>
+
+  <meta name="description" content="Windows 11-এ Hidden Files কীভাবে Show করবেন তা সহজ বাংলায় জানুন। File Explorer, View, Show, Hidden Items এবং আবার files hide করার নিয়মসহ সম্পূর্ণ beginner guide।">
+
+  <meta name="keywords" content="Windows 11 hidden files, hidden files show বাংলা, hidden files show করার নিয়ম, Windows hidden files, File Explorer hidden items, Windows 11 tips বাংলা, hidden folder বাংলা">
+
+  <meta name="author" content="Munna Tech">
+
+  <meta property="og:title" content="Windows 11-এ Hidden Files Show করার নিয়ম | Munna Tech">
+  <meta property="og:description" content="Windows 11 File Explorer ব্যবহার করে Hidden Files এবং Hidden Folders দেখার সহজ বাংলা Guide।">
+  <meta property="og:type" content="article">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .article-container h1 {
+      font-size: 36px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .article-container h2 {
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
+
+    .article-container h3 {
+      margin-top: 22px;
+    }
+
+    .article-container p,
+    .article-container li {
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .info-box,
+    .tip-box,
+    .warning-box,
+    .success-box {
+      padding: 18px;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+
+    .info-box {
+      background: #eef6ff;
+      border-left: 5px solid #2563eb;
+    }
+
+    .tip-box {
+      background: #f8fafc;
+      border-left: 5px solid #64748b;
+    }
+
+    .warning-box {
+      background: #fff7ed;
+      border-left: 5px solid #f97316;
+    }
+
+    .success-box {
+      background: #f0fdf4;
+      border-left: 5px solid #16a34a;
+    }
+
+    .article-container pre {
+      background: #111827;
+      color: #ffffff;
+      padding: 18px;
+      border-radius: 10px;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    .article-container code {
+      background: #f1f5f9;
+      padding: 3px 6px;
+      border-radius: 5px;
+    }
+
+    .article-container pre code {
+      background: transparent;
+      padding: 0;
+    }
+
+    .step-card {
+      padding: 18px;
+      margin: 15px 0;
+      border-radius: 10px;
+      background: #f8fafc;
+      border: 1px solid #ddd;
+    }
+
+    .faq {
+      padding: 16px;
+      margin: 15px 0;
+      border-radius: 8px;
+      background: #f8fafc;
+    }
+
+    .related-links a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #f1f5f9;
+    }
+
+    @media (max-width: 700px) {
+      .article-container h1 {
+        font-size: 28px;
+      }
+
+      .article-container p,
+      .article-container li {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+<header>
+
+  <nav>
+
+```
+<div class="logo">
+  Munna Tech
+</div>
+
+<div class="nav-links">
+
+  <a href="index.html">Home</a>
+
+  <a href="html-tutorial.html">HTML</a>
+
+  <a href="css-tutorial.html">CSS</a>
+
+  <a href="javascript-tutorial.html">JavaScript</a>
+
+  <a href="pc-tips.html">PC Tips</a>
+
+  <a href="index.html#contact">Contact</a>
+
+  <button id="darkModeBtn">
+    🌙 Dark Mode
+  </button>
+
+</div>
+```
+
+  </nav>
+
+</header>
+
+<main class="article-container">
+
+  <h1>
+    Windows 11-এ Hidden Files Show করার নিয়ম | Beginner Guide
+  </h1>
+
+  <p>
+    Windows computer ব্যবহার করার সময় কিছু files বা folders
+    সাধারণভাবে File Explorer-এ দেখা যায় না। এগুলোকে Hidden Files
+    বা Hidden Folders বলা হয়।
+  </p>
+
+  <p>
+    অনেক সময় troubleshooting, software configuration বা নিজের
+    প্রয়োজনের কারণে এই hidden files দেখতে হতে পারে।
+  </p>
+
+  <p>
+    এই article-এ Windows 11 File Explorer ব্যবহার করে Hidden Files
+    কীভাবে show এবং আবার hide করবেন তা সহজ বাংলায় দেখানো হয়েছে।
+  </p>
+
+  <div class="info-box">
+
+```
+<strong>এই Article-এ আপনি শিখবেন:</strong>
+
+<ul>
+  <li>Hidden Files কী?</li>
+  <li>Hidden Files কেন থাকে?</li>
+  <li>File Explorer দিয়ে Hidden Files show করার নিয়ম</li>
+  <li>Hidden Items option কোথায়?</li>
+  <li>Hidden Files আবার hide করার নিয়ম</li>
+  <li>Hidden এবং System Files-এর পার্থক্য</li>
+  <li>সতর্কতার বিষয়</li>
+  <li>Common problems ও FAQ</li>
+</ul>
+```
+
+  </div>
+
+  <h2>1. Hidden Files কী?</h2>
+
+  <p>
+    Hidden File হলো এমন file যেটি Windows-এর normal File Explorer
+    view-তে সাধারণভাবে display না-ও হতে পারে।
+  </p>
+
+  <p>
+    একইভাবে কোনো folder-ও hidden attribute ব্যবহার করতে পারে।
+  </p>
+
+  <h2>2. Windows-এ Files Hide করা হয় কেন?</h2>
+
+  <p>
+    কিছু files সাধারণ user-এর regular কাজের জন্য প্রয়োজন হয় না।
+    এগুলো accidental modification বা deletion থেকে দূরে রাখার
+    জন্য hidden রাখা হতে পারে।
+  </p>
+
+  <div class="tip-box">
+
+```
+<strong>Important:</strong>
+
+Hidden মানেই file deleted বা damaged নয়।
+Fileটি computer-এ থাকতে পারে, কিন্তু normal view-তে
+display না-ও হতে পারে।
+```
+
+  </div>
+
+  <h2>3. File Explorer খুলুন</h2>
+
+  <p>
+    Windows 11-এ Hidden Files show করার প্রথম ধাপ হলো
+    File Explorer open করা।
+  </p>
+
+  <p>
+    Keyboard shortcut:
+  </p>
+
+  <pre><code>Win + E</code></pre>
+
+  <p>
+    এই shortcut চাপলে File Explorer open হবে।
+  </p>
+
+  <h2>4. View Menu থেকে Hidden Items খুঁজুন</h2>
+
+  <p>
+    File Explorer open করার পরে উপরের View menu-তে যান।
+    Windows 11-এর current interface-এ View menu-এর ভিতরে
+    Show-এর মাধ্যমে Hidden Items option পাওয়া যেতে পারে।
+  </p>
+
+  <div class="step-card">
+
+```
+<h3>Basic Path</h3>
+
+<pre><code>File Explorer
+  ↓
+```
+
+View
+↓
+Show
+↓
+Hidden items</code></pre>
+
+  </div>
+
+  <h2>5. Hidden Items Enable করুন</h2>
+
+  <p>
+    <strong>Hidden items</strong> option enable করলে hidden
+    files এবং folders File Explorer-এ visible হতে পারে।
+  </p>
+
+  <div class="success-box">
+
+```
+<strong>Step-by-step:</strong>
+
+<ol>
+
+  <li>Win + E চাপুন</li>
+
+  <li>File Explorer খুলুন</li>
+
+  <li>View menu নির্বাচন করুন</li>
+
+  <li>Show option খুঁজুন</li>
+
+  <li>Hidden items নির্বাচন করুন</li>
+
+</ol>
+```
+
+  </div>
+
+  <h2>6. Hidden File কীভাবে চিনবেন?</h2>
+
+  <p>
+    Hidden item visible হওয়ার পরে কিছু hidden file বা folder-এর
+    icon/text normal item-এর তুলনায় হালকা বা faded appearance
+    দেখাতে পারে।
+  </p>
+
+  <p>
+    তবে appearance-এর ওপর নির্ভর না করে file properties check
+    করাই বেশি নির্ভরযোগ্য।
+  </p>
+
+  <h2>7. File Properties দিয়ে Hidden Attribute Check করুন</h2>
+
+  <p>
+    কোনো file বা folder hidden কিনা দেখতে সেটির Properties
+    open করতে পারেন।
+  </p>
+
+  <div class="step-card">
+
+```
+<ol>
+
+  <li>File বা Folder-এর ওপর Right Click করুন</li>
+
+  <li>Properties নির্বাচন করুন</li>
+
+  <li>General tab দেখুন</li>
+
+  <li>Attributes section খুঁজুন</li>
+
+</ol>
+```
+
+  </div>
+
+  <p>
+    সেখানে Hidden attribute enabled আছে কিনা দেখা যেতে পারে।
+  </p>
+
+  <h2>8. Hidden File আবার Hide করবেন কীভাবে?</h2>
+
+  <p>
+    কাজ শেষ হলে চাইলে Hidden Items option আবার disable করতে পারেন।
+  </p>
+
+  <pre><code>File Explorer
+      ↓
+View
+      ↓
+Show
+      ↓
+Hidden items
+      ↓
+Disable</code></pre>
+
+  <p>
+    এতে hidden files আবার normal File Explorer view থেকে
+    hidden হয়ে যেতে পারে।
+  </p>
+
+  <h2>9. Hidden File আর System File কি একই?</h2>
+
+  <p>
+    না। Hidden এবং System হলো আলাদা attributes।
+  </p>
+
+  <div class="table-wrap">
+
+```
+<table>
+
+  <thead>
+
+    <tr>
+      <th>Hidden File</th>
+      <th>System File</th>
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+    <tr>
+      <td>Hidden attribute থাকতে পারে</td>
+      <td>System-related attribute থাকতে পারে</td>
+    </tr>
+
+    <tr>
+      <td>Hidden Items option দিয়ে visible হতে পারে</td>
+      <td>System files-এর জন্য আলাদা protection থাকতে পারে</td>
+    </tr>
+
+    <tr>
+      <td>সাধারণ file বা folder-ও hidden হতে পারে</td>
+      <td>Operating system-এর গুরুত্বপূর্ণ file হতে পারে</td>
+    </tr>
+
+  </tbody>
+
+</table>
+```
+
+  </div>
+
+  <h2>10. Hidden Files দেখার সময় সতর্ক থাকুন</h2>
+
+  <div class="warning-box">
+
+```
+<strong>খুব গুরুত্বপূর্ণ:</strong>
+
+Hidden Files visible করার পর শুধু দেখা এবং প্রয়োজনীয় কাজ করা
+নিরাপদ। না বুঝে কোনো system-related hidden file delete,
+rename বা modify করবেন না।
+```
+
+  </div>
+
+  <p>
+    বিশেষ করে Windows-এর গুরুত্বপূর্ণ system files নিয়ে
+    experiment করা উচিত নয়।
+  </p>
+
+  <h2>11. Hidden Files Delete করা উচিত?</h2>
+
+  <p>
+    শুধু hidden হওয়ার কারণে কোনো file delete করা উচিত নয়।
+  </p>
+
+  <p>
+    আগে বুঝতে হবে fileটি কী এবং কেন আছে।
+    প্রয়োজন না বুঝে delete করলে software বা Windows-এর
+    কোনো feature সমস্যায় পড়তে পারে।
+  </p>
+
+  <h2>12. Hidden Files Show করার দরকার কখন হতে পারে?</h2>
+
+  <ul>
+
+```
+<li>কোনো software configuration file খুঁজতে</li>
+
+<li>নিজের তৈরি hidden folder দেখতে</li>
+
+<li>কোনো troubleshooting করতে</li>
+
+<li>কোনো tutorial follow করার সময়</li>
+
+<li>File management-এর প্রয়োজন হলে</li>
+```
+
+  </ul>
+
+  <h2>13. Hidden Items Option কাজ না করলে</h2>
+
+  <p>
+    যদি Hidden Items enable করার পরও কোনো নির্দিষ্ট file
+    দেখা না যায়, তাহলে fileটি অন্য কারণে hidden হতে পারে।
+  </p>
+
+  <p>
+    উদাহরণ হিসেবে system-protected files-এর ক্ষেত্রে Windows
+    অতিরিক্ত protection ব্যবহার করতে পারে।
+  </p>
+
+  <div class="warning-box">
+
+```
+<strong>সতর্কতা:</strong>
+
+শুধু কোনো tutorial দেখে protected system files visible
+বা editable করার চেষ্টা করবেন না। আপনি fileটির কাজ
+না জানলে সেটি modify না করাই ভালো।
+```
+
+  </div>
+
+  <h2>14. File Explorer Search ব্যবহার করুন</h2>
+
+  <p>
+    Hidden item visible করার পরে প্রয়োজনীয় file খুঁজতে
+    File Explorer-এর search ব্যবহার করতে পারেন।
+  </p>
+
+  <p>
+    File name বা extension জানা থাকলে search আরও সহজ হতে পারে।
+  </p>
+
+  <pre><code>File Explorer
+      ↓
+Search
+      ↓
+File name / keyword</code></pre>
+
+  <h2>15. Hidden Folder তৈরি করার Basic ধারণা</h2>
+
+  <p>
+    আপনি নিজের কোনো personal folder-কে Hidden attribute দিতে পারেন।
+    তবে এটি strong security method নয়।
+  </p>
+
+  <p>
+    কোনো file শুধু hidden করে রাখলে অন্য user চাইলে Hidden Items
+    enable করে সেটি দেখতে পারে।
+  </p>
+
+  <div class="info-box">
+
+```
+<strong>Security Note:</strong>
+
+Hidden attribute privacy-এর basic convenience দিতে পারে,
+কিন্তু এটি password protection বা encryption-এর বিকল্প নয়।
+```
+
+  </div>
+
+  <h2>16. Beginner Practice</h2>
+
+  <div class="success-box">
+
+```
+<strong>Practice Task:</strong>
+
+<ol>
+
+  <li>Win + E চাপুন</li>
+
+  <li>File Explorer খুলুন</li>
+
+  <li>View → Show → Hidden items খুঁজুন</li>
+
+  <li>Hidden items enable করুন</li>
+
+  <li>File Explorer-এর appearance লক্ষ্য করুন</li>
+
+  <li>কাজ শেষে Hidden items আবার disable করুন</li>
+
+</ol>
+```
+
+  </div>
+
+  <h2>17. Common Mistakes</h2>
+
+  <ul>
+
+```
+<li>Hidden file দেখে সঙ্গে সঙ্গে delete করা</li>
+
+<li>System file চিনতে না পেরে modify করা</li>
+
+<li>Hidden attribute-কে security feature মনে করা</li>
+
+<li>Unknown folder rename করা</li>
+
+<li>Online tutorial দেখে না বুঝে system files পরিবর্তন করা</li>
+```
+
+  </ul>
+
+  <h2>18. Quick Revision</h2>
+
+  <ul>
+
+```
+<li>
+  Win + E → File Explorer
+</li>
+
+<li>
+  View → Show → Hidden items → Hidden files visible করার option
+</li>
+
+<li>
+  Hidden file মানেই damaged বা deleted file নয়
+</li>
+
+<li>
+  Hidden attribute strong security method নয়
+</li>
+
+<li>
+  Unknown system files modify বা delete করবেন না
+</li>
+```
+
+  </ul>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq">
+
+```
+<h3>Windows 11-এ Hidden Files কীভাবে দেখব?</h3>
+
+<p>
+  File Explorer খুলে View → Show → Hidden items option
+  enable করতে পারেন।
+</p>
+```
+
+  </div>
+
+  <div class="faq">
+
+```
+<h3>File Explorer কীভাবে খুলব?</h3>
+
+<p>
+  Keyboard থেকে <strong>Win + E</strong> চাপলে File Explorer
+  open করা যায়।
+</p>
+```
+
+  </div>
+
+  <div class="faq">
+
+```
+<h3>Hidden Files show করা কি safe?</h3>
+
+<p>
+  শুধু files দেখা সাধারণত সমস্যা নয়। তবে system-related
+  hidden files না বুঝে modify বা delete করা উচিত নয়।
+</p>
+```
+
+  </div>
+
+  <div class="faq">
+
+```
+<h3>Hidden File কি password protected?</h3>
+
+<p>
+  না। Hidden attribute এবং password protection এক জিনিস নয়।
+</p>
+```
+
+  </div>
+
+  <div class="faq">
+
+```
+<h3>Hidden Files আবার hide করা যাবে?</h3>
+
+<p>
+  হ্যাঁ। File Explorer-এর View → Show → Hidden items option
+  disable করলে hidden items আবার normal view থেকে hidden
+  হতে পারে।
+</p>
+```
+
+  </div>
+
+  <h2>উপসংহার</h2>
+
+  <p>
+    Windows 11-এ Hidden Files show করা খুব সহজ। File Explorer-এর
+    View → Show → Hidden items option ব্যবহার করে আপনি প্রয়োজন অনুযায়ী
+    hidden files দেখতে পারেন।
+  </p>
+
+  <p>
+    তবে hidden files visible করার পর সবচেয়ে গুরুত্বপূর্ণ বিষয় হলো
+    অজানা system files নিয়ে unnecessary পরিবর্তন না করা।
+  </p>
+
+  <p>
+    Windows-এর file management সম্পর্কে আরও শিখতে Munna Tech-এর
+    অন্যান্য PC Tips article-গুলোও পড়তে পারেন।
+  </p>
+
+  <h2>আরও পড়ুন</h2>
+
+  <div class="related-links">
+
+```
+<a href="pc-tips.html">
+  PC Tips — Munna Tech
+</a>
+
+<a href="windows-11-screenshot-7-ways.html">
+  PC-তে Screenshot নেওয়ার 7টি সহজ উপায়
+</a>
+
+<a href="windows-11-startup-apps-guide.html">
+  Windows 11 Startup Apps বন্ধ করার নিয়ম
+</a>
+
+<a href="windows-11-keyboard-shortcuts-guide.html">
+  Windows 11-এর 20টি দরকারি Keyboard Shortcut
+</a>
+
+<a href="pc-slow-windows-fast-guide.html">
+  PC Slow হলে কী করবেন? Windows PC Fast করার Guide
+</a>
+
+<a href="vs-code-install-use-beginners-guide.html">
+  VS Code কী? Install ও ব্যবহার করার নিয়ম
+</a>
+
+<a href="web-development-ki-beginner-guide.html">
+  Web Development কী? Beginner Guide
+</a>
+
+<a href="frontend-developer-ki-koren.html">
+  Frontend Developer কী করেন?
+</a>
+
+<a href="html-ki-beginner-guide.html">
+  HTML কী? Beginnerদের জন্য সম্পূর্ণ Guide
+</a>
+```
+
+  </div>
+
+  <div class="info-box">
+
+```
+<strong>Munna Tech</strong>
+
+<p>
+  Web Development এবং PC Tips সহজ বাংলায় শেখার জন্য
+  Munna Tech-এর আরও tutorials এবং articles পড়ুন।
+</p>
+```
+
+  </div>
+
+  <!-- Adsterra Native Banner -->
+
+  <script async="async"
+    data-cfasync="false"
+    src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js">
+  </script>
+
+  <div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+
+</main>
+
+<footer>
+
+  <p>
+    © 2026 Munna Tech — Web Development & PC Tips
+  </p>
+
+</footer>
+
+<script>
+
+  const darkModeBtn =
+    document.getElementById("darkModeBtn");
+
+
+  darkModeBtn.addEventListener("click", function () {
+
+    document.body.classList.toggle("dark-mode");
+
+
+    if (
+      document.body.classList.contains("dark-mode")
+    ) {
+
+      darkModeBtn.textContent =
+        "☀️ Light Mode";
+
+      localStorage.setItem(
+        "darkMode",
+        "enabled"
+      );
+
+    } else {
+
+      darkModeBtn.textContent =
+        "🌙 Dark Mode";
+
+      localStorage.setItem(
+        "darkMode",
+        "disabled"
+      );
+
+    }
+
+  });
+
+
+  if (
+    localStorage.getItem("darkMode") === "enabled"
+  ) {
+
+    document.body.classList.add("dark-mode");
+
+    darkModeBtn.textContent =
+      "☀️ Light Mode";
+
+  }
+
+</script>
+
+</body>
+</html>
