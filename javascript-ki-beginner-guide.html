@@ -195,4 +195,566 @@
 
 
 <h2>2. Web Development-এ JavaScript কেন দরকার?</h2>
+
+<p>
+  শুধু HTML এবং CSS দিয়ে একটি সুন্দর static website তৈরি করা যায়।
+  কিন্তু website-এ interaction যোগ করতে JavaScript গুরুত্বপূর্ণ।
+</p>
+
+<p>
+  উদাহরণ হিসেবে একটি button ধরুন। CSS দিয়ে button সুন্দর করা যায়,
+  কিন্তু button চাপলে কোনো action করানোর জন্য JavaScript ব্যবহার করা যায়।
+</p>
+
+
+<h2>3. HTML, CSS এবং JavaScript-এর সম্পর্ক</h2>
+
+<div class="info-box">
+
+  <p>
+    <strong>HTML</strong> → Website-এর structure
+  </p>
+
+  <p>
+    <strong>CSS</strong> → Website-এর design
+  </p>
+
+  <p>
+    <strong>JavaScript</strong> → Website-এর behavior এবং interaction
+  </p>
+
+</div>
+
+<p>
+  এই তিনটি technology একসাথে ব্যবহার করেই modern frontend website
+  তৈরি করা হয়।
+</p>
+
+
+<h2>4. JavaScript কোথায় লেখা যায়?</h2>
+
+<p>
+  JavaScript HTML file-এর ভিতরে তিনভাবে ব্যবহার করা যায়:
+</p>
+
+<ol>
+  <li>Inline JavaScript</li>
+  <li>Internal JavaScript</li>
+  <li>External JavaScript</li>
+</ol>
+
+
+<h2>5. Inline JavaScript</h2>
+
+<p>
+  HTML element-এর ভিতরে সরাসরি JavaScript লেখা হলে সেটিকে Inline
+  JavaScript বলা হয়।
+</p>
+
+<pre><code>&lt;button onclick="alert('Hello Munna Tech!')"&gt;
 ```
+
+Click Me
+</button></code></pre>
+
+```
+<h2>6. Internal JavaScript</h2>
+
+<p>
+  HTML file-এর মধ্যে <code>&lt;script&gt;</code> tag ব্যবহার করে
+  JavaScript লেখা যায়।
+</p>
+
+<pre><code>&lt;script&gt;
+```
+
+alert("Hello World!");
+
+</script></code></pre>
+
+```
+<h2>7. External JavaScript</h2>
+
+<p>
+  বড় project-এর ক্ষেত্রে আলাদা JavaScript file তৈরি করা ভালো।
+</p>
+
+<p>
+  যেমন:
+</p>
+
+<pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+
+<p>
+  এখানে <code>script.js</code> হলো external JavaScript file।
+</p>
+
+
+<h2>8. প্রথম JavaScript Code</h2>
+
+<p>
+  JavaScript-এর সবচেয়ে সহজ example:
+</p>
+
+<pre><code>console.log("Hello Munna Tech!");</code></pre>
+
+<p>
+  Browser-এর Developer Console-এ এই message দেখা যাবে।
+</p>
+
+
+<h2>9. alert() কী?</h2>
+
+<p>
+  Browser-এ একটি popup message দেখাতে <code>alert()</code> ব্যবহার করা যায়।
+</p>
+
+<pre><code>alert("Welcome to Munna Tech!");</code></pre>
+
+
+<h2>10. JavaScript Variable কী?</h2>
+
+<p>
+  Variable হলো data রাখার জন্য একটি নামযুক্ত জায়গা।
+</p>
+
+<pre><code>let name = "Munna";
+```
+
+console.log(name);</code></pre>
+
+```
+<p>
+  এখানে <code>name</code> variable-এর মধ্যে <strong>Munna</strong>
+  value রাখা হয়েছে।
+</p>
+
+
+<h2>11. let এবং const</h2>
+
+<p>
+  JavaScript-এ variable তৈরি করার জন্য <code>let</code> এবং
+  <code>const</code> অনেক বেশি ব্যবহৃত হয়।
+</p>
+
+<pre><code>let age = 20;
+```
+
+const country = "Bangladesh";</code></pre>
+
+```
+<p>
+  <code>let</code> variable-এর value পরে পরিবর্তন করা যায়।
+</p>
+
+<pre><code>let score = 10;
+```
+
+score = 20;</code></pre>
+
+```
+<p>
+  <code>const</code> সাধারণভাবে এমন value-এর জন্য ব্যবহার করা হয়
+  যেটি পরে reassign করা হবে না।
+</p>
+
+
+<h2>12. JavaScript Data Types</h2>
+
+<p>
+  JavaScript-এ বিভিন্ন ধরনের data ব্যবহার করা হয়।
+</p>
+
+<ul>
+  <li>String</li>
+  <li>Number</li>
+  <li>Boolean</li>
+  <li>Array</li>
+  <li>Object</li>
+  <li>Null</li>
+  <li>Undefined</li>
+</ul>
+
+<pre><code>let name = "Munna";
+```
+
+let age = 20;
+let isStudent = true;</code></pre>
+
+```
+<h2>13. JavaScript Function কী?</h2>
+
+<p>
+  Function হলো এমন একটি reusable block of code যা নির্দিষ্ট কাজ করতে পারে।
+</p>
+
+<pre><code>function greet() {
+```
+
+alert("Hello Munna!");
+}
+
+greet();</code></pre>
+
+```
+<p>
+  এখানে <code>greet()</code> function call করলে message দেখাবে।
+</p>
+
+
+<h2>14. JavaScript Button Click</h2>
+
+<p>
+  JavaScript দিয়ে button click event তৈরি করা যায়।
+</p>
+
+<pre><code>&lt;button onclick="showMessage()"&gt;
+```
+
+Click Me
+</button>
+
+<script>
+
+function showMessage() {
+alert("Button clicked!");
+}
+
+</script></code></pre>
+
+```
+<h2>15. DOM কী?</h2>
+
+<p>
+  DOM-এর পূর্ণরূপ হলো <strong>Document Object Model</strong>।
+</p>
+
+<p>
+  JavaScript DOM ব্যবহার করে HTML-এর element খুঁজে বের করতে,
+  পরিবর্তন করতে এবং control করতে পারে।
+</p>
+
+<pre><code>document.getElementById("title");</code></pre>
+
+
+<h2>16. HTML Text JavaScript দিয়ে পরিবর্তন</h2>
+
+<pre><code>&lt;h2 id="title"&gt;Hello&lt;/h2&gt;
+```
+
+<script>
+
+document.getElementById("title").innerText =
+"Welcome to Munna Tech";
+
+</script></code></pre>
+
+```
+<h2>17. একটি Simple JavaScript Demo</h2>
+
+<div class="demo-box">
+
+  <h3 id="demoTitle">Hello Munna Tech!</h3>
+
+  <button onclick="changeText()">
+    Click Here
+  </button>
+
+</div>
+
+<p>
+  উপরের button-এ click করলে JavaScript heading-এর text পরিবর্তন করবে।
+</p>
+
+
+<h2>18. Beginner Mini Project</h2>
+
+<p>
+  নিচে একটি ছোট JavaScript project দেওয়া হলো।
+  Button click করলে একটি message পরিবর্তন হবে।
+</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+```
+
+<html>
+
+<body>
+
+<h2 id="message">Welcome!</h2>
+
+<button onclick="changeMessage()">
+Click Me
+</button>
+
+<script>
+
+function changeMessage() {
+
+document.getElementById("message").innerText =
+"JavaScript is Working!";
+
+}
+
+</script>
+
+</body>
+
+</html></code></pre>
+
+```
+<h2>19. JavaScript শেখার সময় Common Mistakes</h2>
+
+<ul>
+  <li>JavaScript file-এর নাম ভুল দেওয়া</li>
+  <li>script file-এর path ভুল দেওয়া</li>
+  <li>Variable-এর spelling ভুল করা</li>
+  <li>Bracket বন্ধ করতে ভুলে যাওয়া</li>
+  <li>HTML id এবং JavaScript id মিল না রাখা</li>
+  <li>Code কোথায় লিখতে হবে তা না বোঝা</li>
+</ul>
+
+
+<div class="warning-box">
+
+  <strong>Beginner Tip:</strong>
+
+  JavaScript শেখার সময় শুধু tutorial পড়বেন না।
+  প্রতিটি example নিজে টাইপ করে browser-এ run করুন।
+  ছোট ছোট project বানালে শেখা অনেক সহজ হবে।
+
+</div>
+
+
+<h2>20. JavaScript শেখার Beginner Roadmap</h2>
+
+<ol>
+  <li>JavaScript Basic Syntax</li>
+  <li>Variable</li>
+  <li>Data Types</li>
+  <li>Operators</li>
+  <li>Condition</li>
+  <li>Loop</li>
+  <li>Function</li>
+  <li>Array</li>
+  <li>Object</li>
+  <li>DOM</li>
+  <li>Events</li>
+  <li>Form Validation</li>
+  <li>Projects</li>
+</ol>
+
+
+<h2>21. Beginner Practice</h2>
+
+<p>
+  এখন নিজের জন্য এই কাজগুলো practice করুন:
+</p>
+
+<ol>
+  <li>একটি button তৈরি করুন</li>
+  <li>Button click করলে alert দেখান</li>
+  <li>একটি heading-এর text পরিবর্তন করুন</li>
+  <li>একটি variable তৈরি করুন</li>
+  <li>একটি function তৈরি করুন</li>
+  <li>একটি ছোট counter project তৈরি করার চেষ্টা করুন</li>
+</ol>
+
+
+<h2>22. Quick Revision</h2>
+
+<ul>
+  <li>JavaScript → Website interactive করে</li>
+  <li>Variable → Data store করে</li>
+  <li>Function → Reusable code block</li>
+  <li>Event → User interaction ধরতে সাহায্য করে</li>
+  <li>DOM → HTML elements control করতে সাহায্য করে</li>
+  <li>JavaScript → HTML ও CSS-এর সাথে কাজ করতে পারে</li>
+</ul>
+
+
+<h2>23. Frequently Asked Questions</h2>
+
+<div class="faq">
+
+  <h3>JavaScript কি programming language?</h3>
+
+  <p>
+    হ্যাঁ। JavaScript একটি programming language এবং web development-এ
+    ব্যাপকভাবে ব্যবহৃত হয়।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>JavaScript শেখার আগে HTML ও CSS জানা দরকার?</h3>
+
+  <p>
+    Basic HTML এবং CSS জানা থাকলে JavaScript শেখা অনেক সহজ হয়।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>JavaScript দিয়ে কি website বানানো যায়?</h3>
+
+  <p>
+    হ্যাঁ। JavaScript frontend website-এর interaction তৈরি করতে ব্যবহৃত হয়।
+    এছাড়াও বিভিন্ন framework এবং runtime-এর মাধ্যমে আরও অনেক ধরনের
+    application তৈরি করা যায়।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>JavaScript শেখার জন্য কী software দরকার?</h3>
+
+  <p>
+    Beginner হিসেবে VS Code এবং একটি modern web browser দিয়েই
+    JavaScript শেখা শুরু করা যায়।
+  </p>
+
+</div>
+
+
+<h2>24. উপসংহার</h2>
+
+<p>
+  JavaScript হলো Web Development শেখার একটি গুরুত্বপূর্ণ অংশ।
+  HTML এবং CSS-এর basic শেখার পর JavaScript শেখা শুরু করলে
+  website-এ বিভিন্ন ধরনের interactive feature তৈরি করা সম্ভব।
+</p>
+
+<p>
+  নিয়মিত practice করুন এবং ছোট ছোট project তৈরি করুন।
+  এভাবেই ধীরে ধীরে JavaScript-এর basic থেকে advanced level-এর দিকে
+  এগিয়ে যেতে পারবেন।
+</p>
+
+
+<h2>আরও পড়ুন</h2>
+
+<div class="related-links">
+
+  <a href="javascript-tutorial.html">
+    Complete JavaScript Tutorial
+  </a>
+
+  <a href="css-grid-beginners-guide.html">
+    CSS Grid কী?
+  </a>
+
+  <a href="css-flexbox-beginners-guide.html">
+    CSS Flexbox কী?
+  </a>
+
+  <a href="css-ki-beginner-guide.html">
+    CSS কী? Beginner Guide
+  </a>
+
+  <a href="html-ki-beginner-guide.html">
+    HTML কী? Beginner Guide
+  </a>
+
+  <a href="html-diye-website-bananor-guide.html">
+    HTML দিয়ে প্রথম Website কীভাবে বানাবেন?
+  </a>
+
+</div>
+
+
+<div class="info-box">
+
+  <strong>Munna Tech</strong>
+
+  <p>
+    Web Development এবং PC Tips সহজ বাংলায় শেখার জন্য
+    Munna Tech-এর অন্যান্য tutorial ও article পড়ুন।
+  </p>
+
+</div>
+
+
+<!-- Adsterra Native Banner -->
+
+<script async="async"
+  data-cfasync="false"
+  src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js">
+</script>
+
+<div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+```
+
+  </main>
+
+  <footer>
+
+```
+<p>
+  © 2026 Munna Tech — Web Development & PC Tips
+</p>
+```
+
+  </footer>
+
+  <script>
+
+    const darkModeBtn =
+      document.getElementById("darkModeBtn");
+
+    darkModeBtn.addEventListener("click", function () {
+
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+
+        darkModeBtn.textContent = "☀️ Light Mode";
+
+        localStorage.setItem(
+          "darkMode",
+          "enabled"
+        );
+
+      } else {
+
+        darkModeBtn.textContent = "🌙 Dark Mode";
+
+        localStorage.setItem(
+          "darkMode",
+          "disabled"
+        );
+
+      }
+
+    });
+
+
+    if (
+      localStorage.getItem("darkMode") === "enabled"
+    ) {
+
+      document.body.classList.add("dark-mode");
+
+      darkModeBtn.textContent =
+        "☀️ Light Mode";
+
+    }
+
+
+    function changeText() {
+
+      document.getElementById("demoTitle").innerText =
+        "JavaScript is Working! 🚀";
+
+    }
+
+  </script>
+
+</body>
+</html>
