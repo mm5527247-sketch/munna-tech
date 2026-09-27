@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>JavaScript Button Click Event কী? | Beginner Guide | Munna Tech</title>
+
+  <meta name="description" content="JavaScript দিয়ে Button Click Event কীভাবে তৈরি করতে হয় তা সহজ বাংলায় শিখুন। onclick, addEventListener, click event, DOM এবং practical project সহ সম্পূর্ণ beginner guide।">
+
+  <meta name="keywords" content="JavaScript button click, JavaScript click event, onclick বাংলা, addEventListener বাংলা, JavaScript button tutorial, JavaScript event বাংলা, JavaScript beginners">
+
+  <meta name="author" content="Munna Tech">
+
+  <meta property="og:title" content="JavaScript Button Click Event কী? | Munna Tech">
+  <meta property="og:description" content="JavaScript দিয়ে Button Click Event শেখার সম্পূর্ণ beginner guide। onclick, addEventListener, DOM এবং practical examples।">
+  <meta property="og:type" content="article">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .article-container h1 {
+      font-size: 36px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .article-container h2 {
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
+
+    .article-container p,
+    .article-container li {
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .article-container pre {
+      background: #111827;
+      color: #ffffff;
+      padding: 18px;
+      border-radius: 10px;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    .article-container code {
+      background: #f1f5f9;
+      padding: 3px 6px;
+      border-radius: 5px;
+    }
+
+    .article-container pre code {
+      background: transparent;
+      padding: 0;
+    }
+
+    .info-box {
+      padding: 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      background: #eef6ff;
+      border-left: 5px solid #2563eb;
+    }
+
+    .warning-box {
+      padding: 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      background: #fff7ed;
+      border-left: 5px solid #f97316;
+    }
+
+    .demo-box {
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .demo-box button {
+      padding: 11px 20px;
+      margin: 6px;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .faq {
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      background: #f8fafc;
+    }
+
+    .related-links a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #f1f5f9;
+    }
+
+    @media (max-width: 700px) {
+      .article-container h1 {
+        font-size: 28px;
+      }
+
+      .article-container p,
+      .article-container li {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Munna Tech</div>
+
+```
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="html-tutorial.html">HTML</a>
+    <a href="css-tutorial.html">CSS</a>
+    <a href="javascript-tutorial.html">JavaScript</a>
+    <a href="pc-tips.html">PC Tips</a>
+    <a href="index.html#contact">Contact</a>
+    <button id="darkModeBtn">🌙 Dark Mode</button>
+  </div>
+</nav>
+```
+
+  </header>
+
+  <main class="article-container">
+
+```
+<h1>JavaScript Button Click Event কী? Beginnerদের জন্য সম্পূর্ণ Guide</h1>
+
+<p>
+  Website-এ user যখন কোনো button-এ click করে তখন তার মাধ্যমে
+  কোনো action করানোকে JavaScript-এর <strong>Click Event</strong> বলা হয়।
+</p>
+
+<p>
+  যেমন—button click করলে text পরিবর্তন করা, message দেখানো,
+  image পরিবর্তন করা, menu খুলে দেওয়া বা calculation করা।
+</p>
+
+
+<div class="info-box">
+
+  <strong>এই article-এ আপনি শিখবেন:</strong>
+
+  <ul>
+    <li>Click Event কী</li>
+    <li>JavaScript দিয়ে button তৈরি করা</li>
+    <li>onclick ব্যবহার</li>
+    <li>Function-এর সাথে button ব্যবহার</li>
+    <li>DOM দিয়ে HTML পরিবর্তন</li>
+    <li>addEventListener ব্যবহার</li>
+    <li>Button click করলে text পরিবর্তন</li>
+    <li>Button click করলে image পরিবর্তন</li>
+    <li>Input value নিয়ে কাজ করা</li>
+    <li>Practical mini project</li>
+    <li>Common mistakes</li>
+  </ul>
+
+</div>
+
+
+<h2>1. Click Event কী?</h2>
+
+<p>
+  User যখন mouse দিয়ে কোনো button বা clickable element-এ click করে,
+  তখন একটি <strong>click event</strong> ঘটে।
+</p>
+
+<p>
+  JavaScript এই event detect করে নির্দিষ্ট কাজ করতে পারে।
+</p>
+
+
+<h2>2. একটি Simple HTML Button</h2>
+
+<pre><code>&lt;button&gt;Click Me&lt;/button&gt;</code></pre>
+
+<p>
+  এটি শুধু একটি button তৈরি করবে। Button-এ click করলে কোনো JavaScript
+  action হবে না যতক্ষণ না event-এর সাথে JavaScript যুক্ত করা হয়।
+</p>
+
+
+<h2>3. onclick কী?</h2>
+
+<p>
+  HTML-এর <code>onclick</code> attribute ব্যবহার করে button click করলে
+  একটি JavaScript function চালানো যায়।
+</p>
+
+<pre><code>&lt;button onclick="showMessage()"&gt;
+```
+
+Click Me
+</button>
+
+<script>
+
+function showMessage() {
+
+alert("Hello Munna!");
+
+}
+
+</script></code></pre>
+
+```
+<h2>4. onclick দিয়ে Text পরিবর্তন</h2>
+
+<pre><code>&lt;h2 id="message"&gt;Old Text&lt;/h2&gt;
+```
+
+<button onclick="changeText()">
+Change Text
+</button>
+
+<script>
+
+function changeText() {
+
+document.getElementById("message").innerText =
+"Text Changed!";
+
+}
+
+</script></code></pre>
+
+```
+<h2>5. Live Demo — Text Change</h2>
+
+<div class="demo-box">
+
+  <h2 id="textDemo">
+    Button চাপুন
+  </h2>
+
+  <button onclick="changeDemoText()">
+    Change Text
+  </button>
+
+</div>
+
+
+<h2>6. Button Click করে Alert দেখানো</h2>
+
+<pre><code>&lt;button onclick="showAlert()"&gt;
+```
+
+Show Alert
+</button>
+
+<script>
+
+function showAlert() {
+
+alert("Welcome to Munna Tech!");
+
+}
+
+</script></code></pre>
+
+```
+<h2>7. Button Click করে Background পরিবর্তন</h2>
+
+<pre><code>&lt;button onclick="changeBackground()"&gt;
+```
+
+Change Background
+</button>
+
+<script>
+
+function changeBackground() {
+
+document.body.style.backgroundColor = "lightblue";
+
+}
+
+</script></code></pre>
+
+```
+<h2>8. Button Click করে Font Size পরিবর্তন</h2>
+
+<pre><code>&lt;h2 id="title"&gt;
+```
+
+Munna Tech
+</h2>
+
+<button onclick="increaseSize()">
+Increase Size
+</button>
+
+<script>
+
+function increaseSize() {
+
+document.getElementById("title").style.fontSize =
+"40px";
+
+}
+
+</script></code></pre>
+
+```
+<h2>9. DOM কী?</h2>
+
+<p>
+  DOM-এর মাধ্যমে JavaScript HTML document-এর elements-এর সাথে
+  কাজ করতে পারে।
+</p>
+
+<p>
+  যেমন:
+</p>
+
+<pre><code>document.getElementById("title")</code></pre>
+
+<p>
+  এটি HTML-এর নির্দিষ্ট ID-এর element খুঁজে বের করতে পারে।
+</p>
+
+
+<h2>10. getElementById ব্যবহার</h2>
+
+<pre><code>&lt;p id="message"&gt;Hello&lt;/p&gt;
+```
+
+<script>
+
+const element =
+document.getElementById("message");
+
+element.innerText = "Hello Munna!";
+
+</script></code></pre>
+
+```
+<h2>11. addEventListener কী?</h2>
+
+<p>
+  JavaScript-এ event handle করার আরও একটি গুরুত্বপূর্ণ উপায় হলো
+  <code>addEventListener()</code>।
+</p>
+
+<pre><code>&lt;button id="myButton"&gt;
+```
+
+Click Me
+</button>
+
+<script>
+
+const button =
+document.getElementById("myButton");
+
+button.addEventListener("click", function() {
+
+alert("Button clicked!");
+
+});
+
+</script></code></pre>
+
+```
+<h2>12. onclick বনাম addEventListener</h2>
+
+<div class="table-wrap">
+
+  <table>
+
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>onclick</th>
+        <th>addEventListener</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td>ব্যবহার করা সহজ</td>
+        <td>হ্যাঁ</td>
+        <td>হ্যাঁ</td>
+      </tr>
+
+      <tr>
+        <td>HTML-এর ভিতরে লেখা যায়</td>
+        <td>হ্যাঁ</td>
+        <td>সাধারণত JavaScript-এ</td>
+      </tr>
+
+      <tr>
+        <td>একাধিক listener</td>
+        <td>সীমিত/সহজ নয়</td>
+        <td>হ্যাঁ</td>
+      </tr>
+
+      <tr>
+        <td>বড় project-এর জন্য</td>
+        <td>সহজ demo-তে সুবিধাজনক</td>
+        <td>বেশি flexible</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
+
+
+<h2>13. addEventListener দিয়ে Text Change</h2>
+
+<pre><code>&lt;h2 id="heading"&gt;
+```
+
+Hello
+</h2>
+
+<button id="changeButton">
+Change
+</button>
+
+<script>
+
+const button =
+document.getElementById("changeButton");
+
+button.addEventListener("click", function() {
+
+document.getElementById("heading").innerText =
+"Welcome to Munna Tech!";
+
+});
+
+</script></code></pre>
+
+```
+<h2>14. Button Click করে Image পরিবর্তন</h2>
+
+<pre><code>&lt;img
+```
+
+id="myImage"
+src="image1.jpg"
+width="300"
+>
+
+<button onclick="changeImage()">
+Change Image
+</button>
+
+<script>
+
+function changeImage() {
+
+document.getElementById("myImage").src =
+"image2.jpg";
+
+}
+
+</script></code></pre>
+
+```
+<h2>15. Button Click করে Input Value নেওয়া</h2>
+
+<pre><code>&lt;input
+```
+
+id="userName"
+type="text"
+placeholder="Your name"
+>
+
+<button onclick="showName()">
+Submit
+</button>
+
+<h2 id="result"></h2>
+
+<script>
+
+function showName() {
+
+const name =
+document.getElementById("userName").value;
+
+document.getElementById("result").innerText =
+"Hello " + name;
+
+}
+
+</script></code></pre>
+
+```
+<h2>16. Live Demo — Name Input</h2>
+
+<div class="demo-box">
+
+  <input
+    id="nameInput"
+    type="text"
+    placeholder="আপনার নাম লিখুন"
+    style="padding:10px; font-size:16px;"
+  >
+
+  <br><br>
+
+  <button onclick="showUserName()">
+    Show Name
+  </button>
+
+  <h2 id="nameResult">
+    এখানে আপনার নাম দেখাবে
+  </h2>
+
+</div>
+
+
+<h2>17. Button Click দিয়ে Number Calculation</h2>
+
+<pre><code>&lt;button onclick="calculate()"&gt;
+```
+
+Calculate
+</button>
+
+<script>
+
+function calculate() {
+
+const a = 20;
+const b = 30;
+
+const total = a + b;
+
+console.log(total);
+
+}
+
+</script></code></pre>
+
+```
+<h2>18. Live Demo — Calculation</h2>
+
+<div class="demo-box">
+
+  <h2 id="calculationResult">
+    20 + 30 = ?
+  </h2>
+
+  <button onclick="calculateDemo()">
+    Calculate
+  </button>
+
+</div>
+
+
+<h2>19. Button Click করে Dark Mode</h2>
+
+<p>
+  Button click event ব্যবহার করে website-এর theme পরিবর্তন করা যায়।
+</p>
+
+<pre><code>&lt;button id="darkButton"&gt;
+```
+
+Dark Mode
+</button>
+
+<script>
+
+const darkButton =
+document.getElementById("darkButton");
+
+darkButton.addEventListener("click", function() {
+
+document.body.classList.toggle("dark-mode");
+
+});
+
+</script></code></pre>
+
+```
+<h2>20. Event Function-এ Parameter</h2>
+
+<pre><code>function showMessage(message) {
+```
+
+document.getElementById("text").innerText =
+message;
+
+}
+
+showMessage("Hello Munna!");</code></pre>
+
+```
+<h2>21. Arrow Function দিয়ে Click Event</h2>
+
+<pre><code>const button =
+```
+
+document.getElementById("myButton");
+
+button.addEventListener("click", () => {
+
+alert("Button clicked!");
+
+});</code></pre>
+
+```
+<h2>22. Event Object-এর Basic ধারণা</h2>
+
+<p>
+  Event ঘটলে JavaScript একটি event object দিতে পারে।
+  এর মাধ্যমে event সম্পর্কে তথ্য পাওয়া যায়।
+</p>
+
+<pre><code>button.addEventListener("click", (event) => {
+```
+
+console.log(event);
+
+});</code></pre>
+
+```
+<p>
+  Beginner হিসেবে প্রথমে click event, function এবং DOM ভালোভাবে practice করুন।
+</p>
+
+
+<h2>23. Beginner Mini Project — Greeting Button</h2>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+```
+
+<html lang="bn">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Greeting App</title>
+
+</head>
+
+<body>
+
+<h1 id="message">
+Welcome
+</h1>
+
+<button id="welcomeButton">
+Click Me
+</button>
+
+<script>
+
+```
+const button =
+  document.getElementById("welcomeButton");
+
+button.addEventListener("click", () => {
+
+  document.getElementById("message").innerText =
+    "Hello! Welcome to Munna Tech.";
+
+});
+```
+
+</script>
+
+</body>
+
+</html></code></pre>
+
+```
+<h2>24. Beginner Mini Project — Counter</h2>
+
+<p>
+  Button click event দিয়ে একটি simple counter তৈরি করা যায়।
+</p>
+
+<pre><code>&lt;h2 id="count"&gt;0&lt;/h2&gt;
+```
+
+<button id="increase">
++1
+</button>
+
+<script>
+
+let number = 0;
+
+const button =
+document.getElementById("increase");
+
+button.addEventListener("click", () => {
+
+number++;
+
+document.getElementById("count").innerText =
+number;
+
+});
+
+</script></code></pre>
+
+```
+<h2>25. Common Mistakes</h2>
+
+<ul>
+  <li>HTML element-এর ID ভুল লেখা</li>
+  <li>Function-এর নাম ভুল লেখা</li>
+  <li>onclick-এর ভিতরে function call ভুল করা</li>
+  <li>JavaScript file HTML-এর সাথে ঠিকভাবে যুক্ত না করা</li>
+  <li>addEventListener-এর event name ভুল লেখা</li>
+  <li>Element তৈরি হওয়ার আগে JavaScript দিয়ে সেটি খোঁজা</li>
+  <li>Input-এর <code>.value</code> ব্যবহার করতে ভুলে যাওয়া</li>
+</ul>
+
+
+<div class="warning-box">
+
+  <strong>Beginner Tip:</strong>
+
+  Button click শেখার সময় প্রথমে
+  <code>onclick</code> দিয়ে simple example করুন।
+  এরপর <code>addEventListener("click", ...)</code>
+  ভালোভাবে practice করুন।
+
+</div>
+
+
+<h2>26. Practice Task</h2>
+
+<ol>
+  <li>একটি button তৈরি করুন</li>
+  <li>Button click করলে alert দেখান</li>
+  <li>Button click করলে একটি heading-এর text পরিবর্তন করুন</li>
+  <li>Button click করলে background পরিবর্তন করুন</li>
+  <li>একটি input থেকে নাম নিয়ে page-এ দেখান</li>
+  <li>একটি counter তৈরি করুন</li>
+  <li>addEventListener দিয়ে একটি click event তৈরি করুন</li>
+</ol>
+
+
+<h2>27. Quick Revision</h2>
+
+<ul>
+  <li>Click Event → user button-এ click করলে ঘটে</li>
+  <li><code>onclick</code> → click handle করার সহজ উপায়</li>
+  <li><code>addEventListener()</code> → event handle করার flexible উপায়</li>
+  <li><code>getElementById()</code> → ID দিয়ে HTML element খুঁজে নেয়</li>
+  <li><code>innerText</code> → element-এর text পরিবর্তন করতে পারে</li>
+  <li><code>.value</code> → input-এর value নেওয়ার জন্য ব্যবহৃত হয়</li>
+</ul>
+
+
+<h2>28. Frequently Asked Questions</h2>
+
+<div class="faq">
+
+  <h3>JavaScript Click Event কী?</h3>
+
+  <p>
+    User কোনো clickable element-এ click করলে যে event তৈরি হয় সেটিই
+    click event।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>onclick কী?</h3>
+
+  <p>
+    HTML element click হলে JavaScript function চালানোর একটি সহজ উপায় হলো
+    <code>onclick</code>।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>addEventListener কেন ব্যবহার করা হয়?</h3>
+
+  <p>
+    JavaScript থেকে event listener যুক্ত করার জন্য
+    <code>addEventListener()</code> ব্যবহার করা হয়।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>Button click করে HTML পরিবর্তন করা যায়?</h3>
+
+  <p>
+    হ্যাঁ। DOM method যেমন <code>getElementById()</code> এবং
+    <code>innerText</code> ব্যবহার করে HTML content পরিবর্তন করা যায়।
+  </p>
+
+</div>
+
+
+<h2>29. উপসংহার</h2>
+
+<p>
+  JavaScript Button Click Event শেখা web development-এর জন্য খুব গুরুত্বপূর্ণ।
+  এর মাধ্যমে website-কে interactive করা যায়।
+</p>
+
+<p>
+  প্রথমে <code>onclick</code>, তারপর <code>addEventListener()</code>,
+  DOM এবং input handling practice করুন। এরপর counter, calculator,
+  form validation এবং interactive website project তৈরি করতে পারবেন।
+</p>
+
+
+<h2>আরও পড়ুন</h2>
+
+<div class="related-links">
+
+  <a href="javascript-ki-beginner-guide.html">
+    JavaScript কী? Beginnerদের জন্য সম্পূর্ণ Guide
+  </a>
+
+  <a href="javascript-html-integration-guide.html">
+    JavaScript কীভাবে HTML-এর সাথে কাজ করে?
+  </a>
+
+  <a href="javascript-variable-var-let-const-guide.html">
+    JavaScript Variable: var, let, const
+  </a>
+
+  <a href="javascript-function-beginners-guide.html">
+    JavaScript Function কী?
+  </a>
+
+  <a href="javascript-tutorial.html">
+    Complete JavaScript Tutorial
+  </a>
+
+  <a href="css-grid-beginners-guide.html">
+    CSS Grid কী?
+  </a>
+
+  <a href="css-flexbox-beginners-guide.html">
+    CSS Flexbox কী?
+  </a>
+
+</div>
+
+
+<div class="info-box">
+
+  <strong>Munna Tech</strong>
+
+  <p>
+    Web Development এবং PC Tips সহজ বাংলায় শেখার জন্য
+    Munna Tech-এর আরও tutorial ও article পড়ুন।
+  </p>
+
+</div>
+
+
+<!-- Adsterra Native Banner -->
+
+<script async="async"
+  data-cfasync="false"
+  src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js">
+</script>
+
+<div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+```
+
+  </main>
+
+  <footer>
+
+```
+<p>
+  © 2026 Munna Tech — Web Development & PC Tips
+</p>
+```
+
+  </footer>
+
+  <script>
+
+    const darkModeBtn =
+      document.getElementById("darkModeBtn");
+
+    darkModeBtn.addEventListener("click", function () {
+
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+
+        darkModeBtn.textContent = "☀️ Light Mode";
+
+        localStorage.setItem(
+          "darkMode",
+          "enabled"
+        );
+
+      } else {
+
+        darkModeBtn.textContent = "🌙 Dark Mode";
+
+        localStorage.setItem(
+          "darkMode",
+          "disabled"
+        );
+
+      }
+
+    });
+
+
+    if (
+      localStorage.getItem("darkMode") === "enabled"
+    ) {
+
+      document.body.classList.add("dark-mode");
+
+      darkModeBtn.textContent =
+        "☀️ Light Mode";
+
+    }
+
+
+    function changeDemoText() {
+
+      document.getElementById("textDemo").innerText =
+        "Button Click কাজ করছে! 🎉";
+
+    }
+
+
+    function showUserName() {
+
+      const name =
+        document.getElementById("nameInput").value;
+
+      if (name.trim() === "") {
+
+        document.getElementById("nameResult").innerText =
+          "আগে আপনার নাম লিখুন।";
+
+        return;
+
+      }
+
+      document.getElementById("nameResult").innerText =
+        "Hello, " + name + "! 👋";
+
+    }
+
+
+    function calculateDemo() {
+
+      const a = 20;
+      const b = 30;
+      const total = a + b;
+
+      document.getElementById("calculationResult").innerText =
+        "20 + 30 = " + total;
+
+    }
+
+  </script>
+
+</body>
+</html>
