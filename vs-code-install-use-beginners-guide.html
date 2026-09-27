@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VS Code কী? Install ও ব্যবহার করার নিয়ম | Beginner Guide | Munna Tech</title>
+
+  <meta name="description" content="VS Code কী, Windows PC-তে Visual Studio Code কীভাবে install করবেন এবং HTML CSS JavaScript coding কীভাবে শুরু করবেন তা সহজ বাংলায় জানুন। Extensions, Live Server ও beginner tips সহ সম্পূর্ণ guide।">
+
+  <meta name="keywords" content="VS Code কী, VS Code বাংলা, VS Code install, VS Code install Windows, Visual Studio Code বাংলা, VS Code tutorial বাংলা, VS Code beginners guide, HTML CSS JavaScript VS Code">
+
+  <meta name="author" content="Munna Tech">
+
+  <meta property="og:title" content="VS Code কী? Install ও ব্যবহার করার নিয়ম | Munna Tech">
+  <meta property="og:description" content="Windows PC-তে VS Code install করে HTML CSS JavaScript coding শুরু করার সম্পূর্ণ beginner guide।">
+  <meta property="og:type" content="article">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .article-container h1 {
+      font-size: 36px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .article-container h2 {
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
+
+    .article-container h3 {
+      margin-top: 25px;
+    }
+
+    .article-container p,
+    .article-container li {
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .article-container pre {
+      background: #111827;
+      color: #ffffff;
+      padding: 18px;
+      border-radius: 10px;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    .article-container code {
+      background: #f1f5f9;
+      padding: 3px 6px;
+      border-radius: 5px;
+    }
+
+    .article-container pre code {
+      background: transparent;
+      padding: 0;
+    }
+
+    .info-box {
+      padding: 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      background: #eef6ff;
+      border-left: 5px solid #2563eb;
+    }
+
+    .warning-box {
+      padding: 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      background: #fff7ed;
+      border-left: 5px solid #f97316;
+    }
+
+    .step-card {
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 12px;
+      background: #f8fafc;
+      border: 1px solid #ddd;
+    }
+
+    .shortcut {
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      background: #f8fafc;
+      border-left: 4px solid #2563eb;
+    }
+
+    .faq {
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      background: #f8fafc;
+    }
+
+    .related-links a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #f1f5f9;
+    }
+
+    @media (max-width: 700px) {
+      .article-container h1 {
+        font-size: 28px;
+      }
+
+      .article-container p,
+      .article-container li {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+
+```
+  <div class="logo">Munna Tech</div>
+
+  <div class="nav-links">
+
+    <a href="index.html">Home</a>
+
+    <a href="html-tutorial.html">HTML</a>
+
+    <a href="css-tutorial.html">CSS</a>
+
+    <a href="javascript-tutorial.html">JavaScript</a>
+
+    <a href="pc-tips.html">PC Tips</a>
+
+    <a href="index.html#contact">Contact</a>
+
+    <button id="darkModeBtn">
+      🌙 Dark Mode
+    </button>
+
+  </div>
+
+</nav>
+```
+
+  </header>
+
+  <main class="article-container">
+
+```
+<h1>VS Code কী? Install ও ব্যবহার করার নিয়ম | Beginner Guide</h1>
+
+<p>
+  আপনি যদি Web Development শিখতে চান, তাহলে একটি ভালো code editor
+  ব্যবহার করা খুবই গুরুত্বপূর্ণ। <strong>Visual Studio Code</strong>,
+  সংক্ষেপে VS Code, HTML, CSS এবং JavaScript শেখার জন্য বহুল ব্যবহৃত
+  একটি source-code editor।
+</p>
+
+<p>
+  এই guide-এ Windows PC-তে VS Code install করা থেকে শুরু করে
+  project folder খোলা, HTML file তৈরি, extensions ব্যবহার,
+  Live Server এবং beginner coding workflow সম্পর্কে সহজভাবে জানবেন।
+</p>
+
+
+<div class="info-box">
+
+  <strong>এই article-এ আপনি শিখবেন:</strong>
+
+  <ul>
+    <li>VS Code কী</li>
+    <li>VS Code কেন ব্যবহার করবেন</li>
+    <li>Windows PC-তে VS Code install করার basic steps</li>
+    <li>Project folder খোলা</li>
+    <li>HTML file তৈরি করা</li>
+    <li>CSS ও JavaScript file তৈরি করা</li>
+    <li>Extensions কী</li>
+    <li>Live Server কী</li>
+    <li>Useful keyboard shortcuts</li>
+    <li>Beginnerদের common problems</li>
+  </ul>
+
+</div>
+
+
+<h2>1. VS Code কী?</h2>
+
+<p>
+  VS Code হলো Microsoft-এর তৈরি একটি source-code editor।
+  এতে বিভিন্ন programming এবং web development project-এর code
+  লেখা ও manage করা যায়।
+</p>
+
+<p>
+  HTML, CSS, JavaScript ছাড়াও অনেক programming language এবং
+  development workflow-এর জন্য VS Code ব্যবহার করা যায়।
+</p>
+
+
+<h2>2. Web Development-এর জন্য VS Code কেন ব্যবহার করবেন?</h2>
+
+<p>
+  Web Development শেখার সময় একই project-এর মধ্যে HTML, CSS,
+  JavaScript এবং অন্যান্য file নিয়ে কাজ করতে হয়। VS Code এই
+  কাজগুলোকে একটি জায়গায় organize করতে সাহায্য করে।
+</p>
+
+<ul>
+  <li>Code লেখা সহজ</li>
+  <li>Syntax highlighting আছে</li>
+  <li>Auto completion পাওয়া যায়</li>
+  <li>Multiple file manage করা যায়</li>
+  <li>Extensions ব্যবহার করা যায়</li>
+  <li>Integrated terminal রয়েছে</li>
+  <li>Git ও GitHub workflow-এর সাথে ব্যবহার করা যায়</li>
+</ul>
+
+
+<h2>3. VS Code Install করার আগে কী লাগবে?</h2>
+
+<p>
+  Windows PC-তে VS Code ব্যবহার করার জন্য সাধারণত একটি compatible
+  Windows computer এবং internet connection প্রয়োজন।
+</p>
+
+<p>
+  Installation-এর জন্য Microsoft-এর official website থেকে
+  installer নেওয়া ভালো।
+</p>
+
+
+<h2>4. Windows PC-তে VS Code Install করার নিয়ম</h2>
+
+<div class="step-card">
+
+  <h3>Step 1 — Official Download Page খুলুন</h3>
+
+  <p>
+    Browser খুলে Visual Studio Code-এর official download page-এ যান।
+  </p>
+
+</div>
+
+
+<div class="step-card">
+
+  <h3>Step 2 — Windows Version নির্বাচন করুন</h3>
+
+  <p>
+    আপনার Windows PC-এর জন্য উপযুক্ত installer download করুন।
+  </p>
+
+</div>
+
+
+<div class="step-card">
+
+  <h3>Step 3 — Installer চালু করুন</h3>
+
+  <p>
+    Download করা installer file খুলে installation process শুরু করুন।
+  </p>
+
+</div>
+
+
+<div class="step-card">
+
+  <h3>Step 4 — Setup Complete করুন</h3>
+
+  <p>
+    Installer-এর নির্দেশনা অনুসরণ করে installation শেষ করুন।
+  </p>
+
+</div>
+
+
+<div class="info-box">
+
+  <strong>Tip:</strong>
+
+  Software download করার সময় official source ব্যবহার করার অভ্যাস করুন।
+  এতে ভুল বা modified installer ব্যবহারের ঝুঁকি কমে।
+
+</div>
+
+
+<h2>5. VS Code Open করার পর কী দেখবেন?</h2>
+
+<p>
+  VS Code খুললে সাধারণত একটি welcome/start screen দেখা যেতে পারে।
+  এখান থেকে নতুন file তৈরি বা existing project folder open করা যায়।
+</p>
+
+
+<h2>6. Project Folder কী?</h2>
+
+<p>
+  আপনার website-এর HTML, CSS, JavaScript এবং image files একসাথে
+  রাখার জন্য একটি project folder তৈরি করা ভালো।
+</p>
+
+<p>উদাহরণ:</p>
+
+<pre><code>my-website/
+```
+
+│
+├── index.html
+├── style.css
+├── script.js
+└── images/</code></pre>
+
+```
+<h2>7. VS Code-এ Project Folder Open করার নিয়ম</h2>
+
+<div class="step-card">
+
+  <h3>Step 1</h3>
+
+  <p>
+    VS Code খুলুন।
+  </p>
+
+</div>
+
+
+<div class="step-card">
+
+  <h3>Step 2</h3>
+
+  <p>
+    <strong>File → Open Folder</strong> নির্বাচন করুন।
+  </p>
+
+</div>
+
+
+<div class="step-card">
+
+  <h3>Step 3</h3>
+
+  <p>
+    আপনার website-এর project folder নির্বাচন করুন।
+  </p>
+
+</div>
+
+
+<div class="step-card">
+
+  <h3>Step 4</h3>
+
+  <p>
+    Folder open হলে Explorer panel-এ আপনার files দেখা যাবে।
+  </p>
+
+</div>
+
+
+<h2>8. প্রথম HTML File তৈরি করুন</h2>
+
+<p>
+  Project folder-এর ভিতরে একটি নতুন file তৈরি করে নাম দিন:
+</p>
+
+<pre><code>index.html</code></pre>
+
+<p>
+  এরপর নিচের basic HTML code লিখতে পারেন:
+</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+```
+
+<html lang="bn">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>My Website</title>
+
+</head>
+
+<body>
+
+<h1>Hello World</h1>
+
+<p>
+I am learning Web Development.
+</p>
+
+</body>
+
+</html></code></pre>
+
+```
+<h2>9. CSS File তৈরি করুন</h2>
+
+<p>
+  Project folder-এর ভিতরে:
+</p>
+
+<pre><code>style.css</code></pre>
+
+<p>
+  HTML file-এর সঙ্গে CSS যুক্ত করতে:
+</p>
+
+<pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+
+
+<h2>10. JavaScript File তৈরি করুন</h2>
+
+<p>
+  Project folder-এর ভিতরে:
+</p>
+
+<pre><code>script.js</code></pre>
+
+<p>
+  HTML-এর সঙ্গে JavaScript যুক্ত করতে:
+</p>
+
+<pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+
+
+<h2>11. VS Code-এর Explorer কী?</h2>
+
+<p>
+  VS Code-এর Explorer panel থেকে project-এর files এবং folders
+  দেখা, তৈরি, rename এবং manage করা যায়।
+</p>
+
+<p>
+  আপনার project বড় হলে এই Explorer panel code organization-এর
+  জন্য খুব গুরুত্বপূর্ণ হয়ে ওঠে।
+</p>
+
+
+<h2>12. VS Code Extensions কী?</h2>
+
+<p>
+  Extensions হলো VS Code-এর অতিরিক্ত features যোগ করার tools।
+  প্রয়োজন অনুযায়ী extension install করে editor-এর functionality
+  বাড়ানো যায়।
+</p>
+
+<p>
+  তবে Beginner হিসেবে প্রয়োজনের বেশি extension install করার দরকার নেই।
+</p>
+
+
+<h2>13. Live Server কী?</h2>
+
+<p>
+  Live Server ধরনের extension ব্যবহার করে local website browser-এ
+  চালানো এবং file পরিবর্তনের পর দ্রুত preview দেখা সহজ হতে পারে।
+</p>
+
+<p>
+  Beginner HTML/CSS practice-এর সময় এটি বেশ সুবিধাজনক।
+</p>
+
+
+<h2>14. Browser-এ HTML File চালানোর সহজ উপায়</h2>
+
+<p>
+  Live Server ব্যবহার না করলেও HTML file save করে সেটি browser-এ
+  open করা যায়।
+</p>
+
+<p>
+  উদাহরণ:
+</p>
+
+<pre><code>index.html</code></pre>
+
+<p>
+  File-টির ওপর double-click করলে default browser-এ page open হতে পারে।
+</p>
+
+
+<h2>15. VS Code-এর দরকারি Keyboard Shortcuts</h2>
+
+<div class="shortcut">
+
+  <strong>Ctrl + S</strong>
+
+  <p>
+    File Save
+  </p>
+
+</div>
+
+
+<div class="shortcut">
+
+  <strong>Ctrl + C</strong>
+
+  <p>
+    Copy
+  </p>
+
+</div>
+
+
+<div class="shortcut">
+
+  <strong>Ctrl + V</strong>
+
+  <p>
+    Paste
+  </p>
+
+</div>
+
+
+<div class="shortcut">
+
+  <strong>Ctrl + Z</strong>
+
+  <p>
+    Undo
+  </p>
+
+</div>
+
+
+<div class="shortcut">
+
+  <strong>Ctrl + F</strong>
+
+  <p>
+    Search
+  </p>
+
+</div>
+
+
+<div class="shortcut">
+
+  <strong>Ctrl + Shift + P</strong>
+
+  <p>
+    Command Palette
+  </p>
+
+</div>
+
+
+<h2>16. Emmet কী?</h2>
+
+<p>
+  Emmet হলো এমন একটি coding feature যা HTML এবং CSS দ্রুত লিখতে
+  সাহায্য করতে পারে।
+</p>
+
+<p>
+  উদাহরণ হিসেবে:
+</p>
+
+<pre><code>!</code></pre>
+
+<p>
+  VS Code-এ Emmet suggestion ব্যবহার করে দ্রুত HTML boilerplate
+  তৈরি করা যায়।
+</p>
+
+
+<h2>17. Auto Save ব্যবহার করবেন?</h2>
+
+<p>
+  VS Code-এ Auto Save option ব্যবহার করা যায়। এতে file পরিবর্তন
+  করার পর automatically save হতে পারে।
+</p>
+
+<p>
+  Beginner হিসেবে manual save-এর জন্য <strong>Ctrl + S</strong>
+  ব্যবহার করার অভ্যাস করাও ভালো।
+</p>
+
+
+<h2>18. VS Code দিয়ে CSS Practice</h2>
+
+<p>
+  HTML file-এ একটি heading তৈরি করুন:
+</p>
+
+<pre><code>&lt;h1&gt;Munna Tech&lt;/h1&gt;</code></pre>
+
+<p>
+  তারপর CSS file-এ:
+</p>
+
+<pre><code>h1 {
+```
+
+color: blue;
+
+text-align: center;
+
+}</code></pre>
+
+```
+<p>
+  Browser refresh করলে CSS-এর পরিবর্তন দেখতে পারবেন।
+</p>
+
+
+<h2>19. VS Code দিয়ে JavaScript Practice</h2>
+
+<p>
+  HTML:
+</p>
+
+<pre><code>&lt;button id="myButton"&gt;
+```
+
+Click Me
+</button></code></pre>
+
+```
+<p>
+  JavaScript:
+</p>
+
+<pre><code>document
+```
+
+.getElementById("myButton")
+.addEventListener("click", function () {
+
+```
+alert("Hello from JavaScript!");
+```
+
+});</code></pre>
+
+```
+<h2>20. Integrated Terminal কী?</h2>
+
+<p>
+  VS Code-এর ভিতরেই terminal ব্যবহার করা যায়। এখান থেকে project
+  folder-এর command চালানো, Git ব্যবহার করা এবং বিভিন্ন development
+  tool পরিচালনা করা যায়।
+</p>
+
+<p>
+  Beginner হিসেবে প্রথমে terminal-এর basic command ধীরে ধীরে শেখা যথেষ্ট।
+</p>
+
+
+<h2>21. Git এবং GitHub-এর সঙ্গে VS Code</h2>
+
+<p>
+  Git install করা থাকলে VS Code-এর Source Control section থেকে
+  project-এর Git changes দেখা এবং manage করা যায়।
+</p>
+
+<p>
+  GitHub-এর সঙ্গে project connect করলে code repository online-এ
+  রাখা এবং update করা সহজ হয়।
+</p>
+
+
+<h2>22. Beginnerদের জন্য Recommended Workflow</h2>
+
+<ol>
+  <li>একটি project folder তৈরি করুন</li>
+  <li>VS Code দিয়ে folder open করুন</li>
+  <li>index.html তৈরি করুন</li>
+  <li>style.css তৈরি করুন</li>
+  <li>script.js তৈরি করুন</li>
+  <li>HTML structure লিখুন</li>
+  <li>CSS দিয়ে design করুন</li>
+  <li>JavaScript দিয়ে interaction যোগ করুন</li>
+  <li>Browser-এ test করুন</li>
+  <li>ভুল হলে DevTools দিয়ে debug করুন</li>
+  <li>Project শেষ হলে GitHub-এ upload করুন</li>
+</ol>
+
+
+<h2>23. Common Problems ও Solutions</h2>
+
+<div class="step-card">
+
+  <h3>Problem: File Not Found</h3>
+
+  <p>
+    File-এর নাম এবং extension ঠিক আছে কিনা দেখুন।
+    যেমন <code>index.html</code> এবং <code>index.html.txt</code>
+    এক নয়।
+  </p>
+
+</div>
+
+
+<div class="step-card">
+
+  <h3>Problem: CSS কাজ করছে না</h3>
+
+  <p>
+    HTML-এর stylesheet path পরীক্ষা করুন:
+  </p>
+
+  <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+
+</div>
+
+
+<div class="step-card">
+
+  <h3>Problem: JavaScript কাজ করছে না</h3>
+
+  <p>
+    JavaScript file-এর path এবং browser console-এর error check করুন।
+  </p>
+
+</div>
+
+
+<div class="step-card">
+
+  <h3>Problem: Changes দেখা যাচ্ছে না</h3>
+
+  <p>
+    File save করুন এবং browser refresh করুন।
+    প্রয়োজনে browser cache-এর বিষয়টিও পরীক্ষা করতে পারেন।
+  </p>
+
+</div>
+
+
+<h2>24. Beginnerদের Common Mistakes</h2>
+
+<ul>
+  <li>File extension ভুল দেওয়া</li>
+  <li>Project folder-এর বাইরে file রাখা</li>
+  <li>CSS path ভুল লেখা</li>
+  <li>JavaScript path ভুল লেখা</li>
+  <li>File save না করা</li>
+  <li>অপ্রয়োজনীয় অনেক extension install করা</li>
+  <li>Code error দেখেও browser console না দেখা</li>
+</ul>
+
+
+<div class="warning-box">
+
+  <strong>Beginner Tip:</strong>
+
+  প্রথমে শুধু HTML, CSS এবং JavaScript নিয়ে practice করুন।
+  অনেক extension একসাথে install না করে প্রয়োজন অনুযায়ী ধীরে ধীরে
+  নতুন tool ব্যবহার করুন।
+
+</div>
+
+
+<h2>25. VS Code দিয়ে প্রথম Project</h2>
+
+<p>
+  Beginner হিসেবে এই structure দিয়ে শুরু করতে পারেন:
+</p>
+
+<pre><code>my-first-website/
+```
+
+│
+├── index.html
+├── style.css
+└── script.js</code></pre>
+
+```
+<p>
+  তারপর একটি heading, paragraph, button এবং একটি simple JavaScript
+  interaction যোগ করুন।
+</p>
+
+
+<h2>26. Quick Revision</h2>
+
+<ul>
+  <li>VS Code → Source-code editor</li>
+  <li>Explorer → Files ও folders manage করার জায়গা</li>
+  <li>Extensions → অতিরিক্ত functionality</li>
+  <li>Live Server → Local website preview-এর জন্য ব্যবহার করা যায়</li>
+  <li>Terminal → Command চালানোর জায়গা</li>
+  <li>Emmet → HTML/CSS দ্রুত লেখার সাহায্যকারী feature</li>
+  <li>Ctrl + S → Save</li>
+  <li>Ctrl + Z → Undo</li>
+  <li>Ctrl + F → Search</li>
+</ul>
+
+
+<h2>27. Frequently Asked Questions</h2>
+
+<div class="faq">
+
+  <h3>VS Code কি free?</h3>
+
+  <p>
+    VS Code বিনামূল্যে ব্যবহার করা যায়।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>VS Code দিয়ে HTML শেখা যাবে?</h3>
+
+  <p>
+    হ্যাঁ। HTML, CSS এবং JavaScript practice করার জন্য VS Code
+    ব্যবহার করা যায়।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>VS Code কি শুধু Web Development-এর জন্য?</h3>
+
+  <p>
+    না। বিভিন্ন programming language এবং development project-এর
+    জন্য VS Code ব্যবহার করা যায়।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>Live Server কি অবশ্যই দরকার?</h3>
+
+  <p>
+    না। HTML file সরাসরি browser-এও open করা যায়। তবে Live Server
+    local development workflow সহজ করতে পারে।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>Beginner হিসেবে কোন file আগে তৈরি করব?</h3>
+
+  <p>
+    সাধারণ website project-এর জন্য প্রথমে <code>index.html</code>
+    তৈরি করে HTML structure লেখা শুরু করতে পারেন।
+  </p>
+
+</div>
+
+
+<h2>28. উপসংহার</h2>
+
+<p>
+  VS Code Web Development শেখার জন্য একটি গুরুত্বপূর্ণ coding tool।
+  এটি ব্যবহার করে HTML, CSS এবং JavaScript-এর project সহজে
+  organize এবং edit করা যায়।
+</p>
+
+<p>
+  Beginner হিসেবে প্রথমে একটি project folder তৈরি করুন,
+  <code>index.html</code>, <code>style.css</code> এবং
+  <code>script.js</code> দিয়ে practice শুরু করুন।
+</p>
+
+<p>
+  এরপর ধীরে ধীরে Extensions, Live Server, Git এবং GitHub-এর মতো
+  tools শেখার দিকে এগিয়ে যেতে পারেন।
+</p>
+
+
+<h2>আরও পড়ুন</h2>
+
+<div class="related-links">
+
+  <a href="web-development-ki-beginner-guide.html">
+    Web Development কী? 2026 সালে কীভাবে শুরু করবেন?
+  </a>
+
+  <a href="frontend-developer-ki-koren.html">
+    Frontend Developer কী করেন?
+  </a>
+
+  <a href="html-ki-beginner-guide.html">
+    HTML কী? Beginnerদের জন্য সম্পূর্ণ Guide
+  </a>
+
+  <a href="html-diye-website-bananor-guide.html">
+    HTML দিয়ে প্রথম Website কীভাবে বানাবেন?
+  </a>
+
+  <a href="css-ki-beginner-guide.html">
+    CSS কী? Beginnerদের জন্য সম্পূর্ণ Guide
+  </a>
+
+  <a href="javascript-ki-beginner-guide.html">
+    JavaScript কী? Beginnerদের জন্য সম্পূর্ণ Guide
+  </a>
+
+  <a href="javascript-html-integration-guide.html">
+    JavaScript কীভাবে HTML-এর সাথে কাজ করে?
+  </a>
+
+  <a href="javascript-calculator-beginners-guide.html">
+    JavaScript Calculator তৈরি করার নিয়ম
+  </a>
+
+  <a href="javascript-tutorial.html">
+    Complete JavaScript Tutorial
+  </a>
+
+</div>
+
+
+<div class="info-box">
+
+  <strong>Munna Tech</strong>
+
+  <p>
+    Web Development এবং PC Tips সহজ বাংলায় শেখার জন্য
+    Munna Tech-এর আরও tutorial ও article পড়ুন।
+  </p>
+
+</div>
+
+
+<!-- Adsterra Native Banner -->
+
+<script async="async"
+  data-cfasync="false"
+  src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js">
+</script>
+
+<div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+```
+
+  </main>
+
+  <footer>
+
+```
+<p>
+  © 2026 Munna Tech — Web Development & PC Tips
+</p>
+```
+
+  </footer>
+
+  <script>
+
+    const darkModeBtn =
+      document.getElementById("darkModeBtn");
+
+
+    darkModeBtn.addEventListener("click", function () {
+
+      document.body.classList.toggle("dark-mode");
+
+
+      if (
+        document.body.classList.contains("dark-mode")
+      ) {
+
+        darkModeBtn.textContent =
+          "☀️ Light Mode";
+
+        localStorage.setItem(
+          "darkMode",
+          "enabled"
+        );
+
+      } else {
+
+        darkModeBtn.textContent =
+          "🌙 Dark Mode";
+
+        localStorage.setItem(
+          "darkMode",
+          "disabled"
+        );
+
+      }
+
+    });
+
+
+    if (
+      localStorage.getItem("darkMode") === "enabled"
+    ) {
+
+      document.body.classList.add("dark-mode");
+
+      darkModeBtn.textContent =
+        "☀️ Light Mode";
+
+    }
+
+  </script>
+
+</body>
+</html>
