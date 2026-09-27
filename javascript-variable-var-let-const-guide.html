@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>JavaScript Variable: var, let, const কী? | Munna Tech</title>
+
+  <meta name="description" content="JavaScript variable কী এবং var, let, const-এর মধ্যে পার্থক্য কী তা সহজ বাংলায় শিখুন। Beginnerদের জন্য JavaScript variable সম্পূর্ণ guide।">
+
+  <meta name="keywords" content="JavaScript variable, var let const, JavaScript var let const বাংলা, JavaScript variable বাংলা, JavaScript beginners, JavaScript tutorial বাংলা">
+
+  <meta name="author" content="Munna Tech">
+
+  <meta property="og:title" content="JavaScript Variable: var, let, const কী? | Munna Tech">
+  <meta property="og:description" content="JavaScript-এর var, let এবং const সহজ বাংলায় শিখুন। Variable declaration, value পরিবর্তন, scope এবং common mistakes সহ সম্পূর্ণ guide।">
+  <meta property="og:type" content="article">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .article-container h1 {
+      font-size: 36px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .article-container h2 {
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
+
+    .article-container p,
+    .article-container li {
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .article-container pre {
+      background: #111827;
+      color: #ffffff;
+      padding: 18px;
+      border-radius: 10px;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    .article-container code {
+      background: #f1f5f9;
+      padding: 3px 6px;
+      border-radius: 5px;
+    }
+
+    .article-container pre code {
+      background: transparent;
+      padding: 0;
+    }
+
+    .info-box {
+      padding: 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      background: #eef6ff;
+      border-left: 5px solid #2563eb;
+    }
+
+    .warning-box {
+      padding: 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      background: #fff7ed;
+      border-left: 5px solid #f97316;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #f1f5f9;
+    }
+
+    .demo-box {
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .demo-box button {
+      padding: 10px 18px;
+      margin: 5px;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .faq {
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      background: #f8fafc;
+    }
+
+    .related-links a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 700px) {
+      .article-container h1 {
+        font-size: 28px;
+      }
+
+      .article-container p,
+      .article-container li {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Munna Tech</div>
+
+```
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="html-tutorial.html">HTML</a>
+    <a href="css-tutorial.html">CSS</a>
+    <a href="javascript-tutorial.html">JavaScript</a>
+    <a href="pc-tips.html">PC Tips</a>
+    <a href="index.html#contact">Contact</a>
+    <button id="darkModeBtn">🌙 Dark Mode</button>
+  </div>
+</nav>
+```
+
+  </header>
+
+  <main class="article-container">
+
+```
+<h1>JavaScript Variable: var, let, const কী?</h1>
+
+<p>
+  JavaScript শেখার সময় Variable একটি খুব গুরুত্বপূর্ণ বিষয়।
+  Variable ব্যবহার করে আমরা বিভিন্ন ধরনের data বা value সংরক্ষণ করতে পারি।
+</p>
+
+<p>
+  JavaScript-এ variable তৈরি করার জন্য বর্তমানে সবচেয়ে বেশি
+  <code>let</code> এবং <code>const</code> ব্যবহার করা হয়।
+  পুরোনো JavaScript code-এ <code>var</code>-ও অনেক দেখা যায়।
+</p>
+
+
+<div class="info-box">
+
+  <strong>এই article-এ আপনি শিখবেন:</strong>
+
+  <ul>
+    <li>Variable কী</li>
+    <li>var কী</li>
+    <li>let কী</li>
+    <li>const কী</li>
+    <li>var, let, const-এর পার্থক্য</li>
+    <li>Variable-এর value পরিবর্তন</li>
+    <li>Variable naming rules</li>
+    <li>Scope-এর basic ধারণা</li>
+    <li>Common mistakes</li>
+    <li>Practice project</li>
+  </ul>
+
+</div>
+
+
+<h2>1. JavaScript Variable কী?</h2>
+
+<p>
+  Variable হলো data রাখার জন্য একটি নাম দেওয়া storage বা reference।
+  সহজভাবে বললে, একটি value-কে একটি নাম দিয়ে পরে সেই নাম ব্যবহার করা যায়।
+</p>
+
+<pre><code>let name = "Munna";</code></pre>
+
+<p>
+  এখানে <code>name</code> হলো variable এবং
+  <code>"Munna"</code> হলো তার value।
+</p>
+
+
+<h2>2. Variable কেন ব্যবহার করা হয়?</h2>
+
+<p>
+  Website বা application-এ বিভিন্ন data নিয়ে কাজ করার জন্য variable দরকার।
+</p>
+
+<ul>
+  <li>User-এর নাম রাখা</li>
+  <li>বয়স রাখা</li>
+  <li>Score রাখা</li>
+  <li>Price রাখা</li>
+  <li>Website settings রাখা</li>
+  <li>Calculation-এর result রাখা</li>
+</ul>
+
+<pre><code>let name = "Munna";
+```
+
+let age = 20;
+let score = 95;</code></pre>
+
+```
+<h2>3. let কী?</h2>
+
+<p>
+  <code>let</code> ব্যবহার করে এমন variable তৈরি করা যায় যার value
+  পরে পরিবর্তন করা প্রয়োজন হতে পারে।
+</p>
+
+<pre><code>let age = 20;
+```
+
+age = 21;
+
+console.log(age);</code></pre>
+
+```
+<p>
+  এখানে প্রথমে age-এর value 20 ছিল। পরে সেটি 21 করা হয়েছে।
+</p>
+
+
+<h2>4. const কী?</h2>
+
+<p>
+  <code>const</code> ব্যবহার করে এমন variable তৈরি করা হয় যেটিকে
+  পরে নতুন value দিয়ে reassign করার প্রয়োজন নেই।
+</p>
+
+<pre><code>const country = "Bangladesh";
+```
+
+console.log(country);</code></pre>
+
+```
+<p>
+  নিচের code-টি ভুল হবে:
+</p>
+
+<pre><code>const country = "Bangladesh";
+```
+
+country = "India";</code></pre>
+
+```
+<p>
+  কারণ <code>const</code> variable-কে নতুন value দিয়ে reassign করা যায় না।
+</p>
+
+
+<h2>5. var কী?</h2>
+
+<p>
+  <code>var</code> হলো JavaScript-এর পুরোনো variable declaration keyword।
+  পুরোনো code এবং project-এ এটি দেখা যায়।
+</p>
+
+<pre><code>var name = "Munna";
+```
+
+console.log(name);</code></pre>
+
+```
+<p>
+  Modern JavaScript code-এ সাধারণত variable declaration-এর ক্ষেত্রে
+  <code>let</code> এবং <code>const</code> বেশি ব্যবহার করা হয়।
+</p>
+
+
+<h2>6. var দিয়ে Value পরিবর্তন</h2>
+
+<pre><code>var score = 50;
+```
+
+score = 80;
+
+console.log(score);</code></pre>
+
+```
+<h2>7. let দিয়ে Value পরিবর্তন</h2>
+
+<pre><code>let score = 50;
+```
+
+score = 80;
+
+console.log(score);</code></pre>
+
+```
+<h2>8. const দিয়ে Value পরিবর্তন করা যায় না</h2>
+
+<pre><code>const score = 50;
+```
+
+score = 80;</code></pre>
+
+```
+<p>
+  এই code-এ error হবে, কারণ <code>const</code> variable reassign করা যায় না।
+</p>
+
+
+<h2>9. var, let এবং const-এর Basic Difference</h2>
+
+<div class="table-wrap">
+
+  <table>
+
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>var</th>
+        <th>let</th>
+        <th>const</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td>Value পরিবর্তন</td>
+        <td>হ্যাঁ</td>
+        <td>হ্যাঁ</td>
+        <td>Reassign করা যায় না</td>
+      </tr>
+
+      <tr>
+        <td>Same scope-এ redeclare</td>
+        <td>সম্ভব</td>
+        <td>সম্ভব নয়</td>
+        <td>সম্ভব নয়</td>
+      </tr>
+
+      <tr>
+        <td>Block scope</td>
+        <td>না</td>
+        <td>হ্যাঁ</td>
+        <td>হ্যাঁ</td>
+      </tr>
+
+      <tr>
+        <td>Modern code-এ ব্যবহার</td>
+        <td>পুরোনো code-এ বেশি</td>
+        <td>হ্যাঁ</td>
+        <td>হ্যাঁ</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
+
+
+<h2>10. Variable Naming Rules</h2>
+
+<p>
+  JavaScript variable-এর নাম দেওয়ার সময় কিছু নিয়ম মেনে চলতে হয়।
+</p>
+
+<ul>
+  <li>নামের মধ্যে space দেওয়া যাবে না</li>
+  <li>নাম number দিয়ে শুরু করা যাবে না</li>
+  <li>Letters, numbers, underscore এবং dollar sign ব্যবহার করা যায়</li>
+  <li>JavaScript-এর reserved keyword ব্যবহার করা যাবে না</li>
+  <li>Variable name case-sensitive</li>
+</ul>
+
+
+<h2>11. সঠিক Variable Name</h2>
+
+<pre><code>let userName = "Munna";
+```
+
+let userAge = 20;
+
+let totalPrice = 500;</code></pre>
+
+```
+<h2>12. ভুল Variable Name</h2>
+
+<pre><code>let user name = "Munna";
+```
+
+let 123name = "Munna";</code></pre>
+
+```
+<p>
+  উপরের variable name-গুলো valid নয়।
+</p>
+
+
+<h2>13. Camel Case কী?</h2>
+
+<p>
+  JavaScript code-এ একাধিক শব্দের variable name লেখার সময়
+  camelCase convention খুব বেশি ব্যবহার করা হয়।
+</p>
+
+<pre><code>let firstName = "Munna";
+```
+
+let lastName = "Ahmed";
+
+let phoneNumber = "01700000000";</code></pre>
+
+```
+<h2>14. Variable-এ String রাখা</h2>
+
+<pre><code>let name = "Munna";
+```
+
+console.log(name);</code></pre>
+
+```
+<h2>15. Variable-এ Number রাখা</h2>
+
+<pre><code>let age = 20;
+```
+
+let price = 499;</code></pre>
+
+```
+<h2>16. Variable-এ Boolean রাখা</h2>
+
+<pre><code>let isStudent = true;
+```
+
+let isLoggedIn = false;</code></pre>
+
+```
+<h2>17. একসাথে একাধিক Variable</h2>
+
+<pre><code>let name = "Munna";
+```
+
+let age = 20;
+let country = "Bangladesh";
+
+console.log(name);
+console.log(age);
+console.log(country);</code></pre>
+
+```
+<h2>18. Variable দিয়ে Calculation</h2>
+
+<pre><code>let price = 500;
+```
+
+let quantity = 3;
+
+let total = price * quantity;
+
+console.log(total);</code></pre>
+
+```
+<p>
+  এখানে <code>total</code>-এর value হবে 1500।
+</p>
+
+
+<h2>19. let-এর Value Update</h2>
+
+<pre><code>let score = 50;
+```
+
+console.log(score);
+
+score = 75;
+
+console.log(score);</code></pre>
+
+```
+<h2>20. const কখন ব্যবহার করবেন?</h2>
+
+<p>
+  কোনো variable-এর reference বা value reassign করার প্রয়োজন না থাকলে
+  <code>const</code> ব্যবহার করা ভালো।
+</p>
+
+<pre><code>const websiteName = "Munna Tech";
+```
+
+const country = "Bangladesh";
+
+const siteUrl =
+"https://mm5527247-sketch.github.io/munna-tech/";</code></pre>
+
+```
+<h2>21. Scope-এর Basic ধারণা</h2>
+
+<p>
+  Scope বলতে বোঝায় কোনো variable কোথায় access করা যাবে।
+</p>
+
+<p>
+  <code>let</code> এবং <code>const</code> block-scoped।
+</p>
+
+<pre><code>{
+```
+
+let name = "Munna";
+const age = 20;
+
+console.log(name);
+console.log(age);
+}</code></pre>
+
+```
+<p>
+  এই block-এর বাইরে একই variable সরাসরি access করা যাবে না।
+</p>
+
+
+<h2>22. var-এর Scope</h2>
+
+<p>
+  <code>var</code> block scope-এর পরিবর্তে function scope অনুসরণ করে।
+  এই আচরণের কারণে modern JavaScript-এ নতুন code লেখার সময়
+  <code>let</code> বা <code>const</code> ব্যবহার করা সাধারণত বেশি সুবিধাজনক।
+</p>
+
+
+<h2>23. Variable এবং HTML</h2>
+
+<p>
+  JavaScript variable ব্যবহার করে HTML-এর content তৈরি করা যায়।
+</p>
+
+<pre><code>&lt;h2 id="name"&gt;&lt;/h2&gt;
+```
+
+<script>
+
+const userName = "Munna";
+
+document.getElementById("name").innerText =
+userName;
+
+</script></code></pre>
+
+```
+<h2>24. Live Demo</h2>
+
+<div class="demo-box">
+
+  <h2 id="demoTitle">
+    JavaScript Variable Demo
+  </h2>
+
+  <button onclick="showLetDemo()">
+    Show let
+  </button>
+
+  <button onclick="showConstDemo()">
+    Show const
+  </button>
+
+</div>
+
+
+<h2>25. Beginner Mini Project</h2>
+
+<p>
+  নিচের project-এ variable ব্যবহার করে user-এর নাম ও বয়স HTML-এ
+  দেখানো হয়েছে।
+</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+```
+
+<html>
+
+<body>
+
+<h1 id="result"></h1>
+
+<script>
+
+```
+const name = "Munna";
+const age = 20;
+
+document.getElementById("result").innerText =
+  "My name is " + name +
+  " and I am " + age + " years old.";
+```
+
+</script>
+
+</body>
+
+</html></code></pre>
+
+```
+<h2>26. Common Mistakes</h2>
+
+<ul>
+  <li><code>const</code> variable-কে reassign করার চেষ্টা করা</li>
+  <li>Variable name-এর মধ্যে space ব্যবহার করা</li>
+  <li>Number দিয়ে variable name শুরু করা</li>
+  <li>Variable spelling ভুল করা</li>
+  <li>Uppercase এবং lowercase-এর পার্থক্য ভুলে যাওয়া</li>
+  <li>একই scope-এ <code>let</code> বা <code>const</code> redeclare করার চেষ্টা করা</li>
+  <li>পুরোনো <code>var</code> code দেখে তার scope behaviour না বোঝা</li>
+</ul>
+
+
+<div class="warning-box">
+
+  <strong>Beginner Tip:</strong>
+
+  নতুন JavaScript code লেখার সময় সাধারণভাবে
+  <code>const</code> দিয়ে শুরু করুন। Value পরে পরিবর্তন করতে হলে
+  <code>let</code> ব্যবহার করুন। পুরোনো code বুঝতে
+  <code>var</code>-এর behaviour-ও শিখে রাখুন।
+
+</div>
+
+
+<h2>27. Practice Task</h2>
+
+<p>
+  এখন নিজে নিচের কাজগুলো করুন:
+</p>
+
+<ol>
+  <li>একটি <code>const</code> variable-এ নিজের নাম রাখুন</li>
+  <li>একটি <code>let</code> variable-এ নিজের বয়স রাখুন</li>
+  <li>বয়স পরিবর্তন করে নতুন value দিন</li>
+  <li>একটি price এবং quantity variable তৈরি করুন</li>
+  <li>দুটির গুণ করে total variable তৈরি করুন</li>
+  <li>HTML heading-এর মধ্যে variable-এর value দেখান</li>
+</ol>
+
+
+<h2>28. Quick Revision</h2>
+
+<ul>
+  <li><code>var</code> → পুরোনো variable declaration keyword</li>
+  <li><code>let</code> → value পরে পরিবর্তন করা যেতে পারে</li>
+  <li><code>const</code> → variable reassign করা যায় না</li>
+  <li>Variable → data/value নিয়ে কাজ করতে সাহায্য করে</li>
+  <li>Variable name → case-sensitive</li>
+  <li><code>let</code> ও <code>const</code> → block scoped</li>
+</ul>
+
+
+<h2>29. Frequently Asked Questions</h2>
+
+<div class="faq">
+
+  <h3>JavaScript-এ let এবং const-এর মধ্যে পার্থক্য কী?</h3>
+
+  <p>
+    <code>let</code> variable-এর value পরে reassign করা যায়।
+    <code>const</code> variable-কে পরে নতুন value দিয়ে reassign করা যায় না।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>var কি এখনো ব্যবহার করা যায়?</h3>
+
+  <p>
+    হ্যাঁ, JavaScript-এ <code>var</code> এখনো language-এর অংশ।
+    তবে নতুন code-এ এর scope behaviour-এর কারণে অনেক developer
+    প্রয়োজন অনুযায়ী <code>let</code> ও <code>const</code> ব্যবহার করেন।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>const variable-এর value কি কখনো পরিবর্তন করা যায়?</h3>
+
+  <p>
+    একটি primitive value-এর ক্ষেত্রে <code>const</code> variable-কে
+    নতুন value দিয়ে reassign করা যায় না।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>Beginner হিসেবে কোনটি আগে শিখব?</h3>
+
+  <p>
+    প্রথমে variable concept বুঝুন, তারপর <code>const</code>,
+    <code>let</code> এবং <code>var</code>-এর পার্থক্য practice করুন।
+  </p>
+
+</div>
+
+
+<h2>30. উপসংহার</h2>
+
+<p>
+  JavaScript variable হলো programming শেখার অন্যতম basic concept।
+  Variable ব্যবহার করে data সংরক্ষণ, পরিবর্তন এবং calculation করা যায়।
+</p>
+
+<p>
+  Modern JavaScript শেখার সময় <code>let</code> এবং <code>const</code>
+  ভালোভাবে বোঝার পাশাপাশি <code>var</code>-এর behaviour জানা গুরুত্বপূর্ণ।
+</p>
+
+
+<h2>আরও পড়ুন</h2>
+
+<div class="related-links">
+
+  <a href="javascript-ki-beginner-guide.html">
+    JavaScript কী? Beginnerদের জন্য সম্পূর্ণ Guide
+  </a>
+
+  <a href="javascript-html-integration-guide.html">
+    JavaScript কীভাবে HTML-এর সাথে কাজ করে?
+  </a>
+
+  <a href="javascript-tutorial.html">
+    Complete JavaScript Tutorial
+  </a>
+
+  <a href="css-grid-beginners-guide.html">
+    CSS Grid কী?
+  </a>
+
+  <a href="css-flexbox-beginners-guide.html">
+    CSS Flexbox কী?
+  </a>
+
+  <a href="html-ki-beginner-guide.html">
+    HTML কী? Beginner Guide
+  </a>
+
+</div>
+
+
+<div class="info-box">
+
+  <strong>Munna Tech</strong>
+
+  <p>
+    Web Development এবং PC Tips সহজ বাংলায় শেখার জন্য
+    Munna Tech-এর অন্যান্য tutorial ও article পড়ুন।
+  </p>
+
+</div>
+
+
+<!-- Adsterra Native Banner -->
+
+<script async="async"
+  data-cfasync="false"
+  src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js">
+</script>
+
+<div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+```
+
+  </main>
+
+  <footer>
+
+```
+<p>
+  © 2026 Munna Tech — Web Development & PC Tips
+</p>
+```
+
+  </footer>
+
+  <script>
+
+    const darkModeBtn =
+      document.getElementById("darkModeBtn");
+
+    darkModeBtn.addEventListener("click", function () {
+
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+
+        darkModeBtn.textContent = "☀️ Light Mode";
+
+        localStorage.setItem(
+          "darkMode",
+          "enabled"
+        );
+
+      } else {
+
+        darkModeBtn.textContent = "🌙 Dark Mode";
+
+        localStorage.setItem(
+          "darkMode",
+          "disabled"
+        );
+
+      }
+
+    });
+
+
+    if (
+      localStorage.getItem("darkMode") === "enabled"
+    ) {
+
+      document.body.classList.add("dark-mode");
+
+      darkModeBtn.textContent =
+        "☀️ Light Mode";
+
+    }
+
+
+    function showLetDemo() {
+
+      let message = "let-এর value পরিবর্তন করা যায়।";
+
+      document.getElementById("demoTitle").innerText =
+        message;
+
+    }
+
+
+    function showConstDemo() {
+
+      const message =
+        "const variable reassign করা যায় না।";
+
+      document.getElementById("demoTitle").innerText =
+        message;
+
+    }
+
+  </script>
+
+</body>
+</html>
