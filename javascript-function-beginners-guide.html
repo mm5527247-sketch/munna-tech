@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>JavaScript Function কী? Beginnerদের জন্য সম্পূর্ণ Guide | Munna Tech</title>
+
+  <meta name="description" content="JavaScript Function কী এবং কীভাবে function তৈরি ও ব্যবহার করতে হয় তা সহজ বাংলায় শিখুন। Parameter, argument, return, arrow function এবং practical examples সহ beginner guide।">
+
+  <meta name="keywords" content="JavaScript function, JavaScript function বাংলা, JavaScript function tutorial, function কী JavaScript, JavaScript parameter argument, JavaScript return, JavaScript beginners">
+
+  <meta name="author" content="Munna Tech">
+
+  <meta property="og:title" content="JavaScript Function কী? Beginnerদের জন্য সম্পূর্ণ Guide | Munna Tech">
+  <meta property="og:description" content="JavaScript Function সহজ বাংলায় শিখুন। Function declaration, parameter, argument, return, arrow function এবং practical project।">
+  <meta property="og:type" content="article">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .article-container h1 {
+      font-size: 36px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .article-container h2 {
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
+
+    .article-container p,
+    .article-container li {
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .article-container pre {
+      background: #111827;
+      color: #ffffff;
+      padding: 18px;
+      border-radius: 10px;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    .article-container code {
+      background: #f1f5f9;
+      padding: 3px 6px;
+      border-radius: 5px;
+    }
+
+    .article-container pre code {
+      background: transparent;
+      padding: 0;
+    }
+
+    .info-box {
+      padding: 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      background: #eef6ff;
+      border-left: 5px solid #2563eb;
+    }
+
+    .warning-box {
+      padding: 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      background: #fff7ed;
+      border-left: 5px solid #f97316;
+    }
+
+    .demo-box {
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .demo-box button {
+      padding: 10px 18px;
+      margin: 5px;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .faq {
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      background: #f8fafc;
+    }
+
+    .related-links a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #f1f5f9;
+    }
+
+    @media (max-width: 700px) {
+      .article-container h1 {
+        font-size: 28px;
+      }
+
+      .article-container p,
+      .article-container li {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Munna Tech</div>
+
+```
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="html-tutorial.html">HTML</a>
+    <a href="css-tutorial.html">CSS</a>
+    <a href="javascript-tutorial.html">JavaScript</a>
+    <a href="pc-tips.html">PC Tips</a>
+    <a href="index.html#contact">Contact</a>
+    <button id="darkModeBtn">🌙 Dark Mode</button>
+  </div>
+</nav>
+```
+
+  </header>
+
+  <main class="article-container">
+
+```
+<h1>JavaScript Function কী? Beginnerদের জন্য সম্পূর্ণ Guide</h1>
+
+<p>
+  JavaScript শেখার সময় <strong>Function</strong> একটি অত্যন্ত গুরুত্বপূর্ণ concept।
+  Function ব্যবহার করে একটি নির্দিষ্ট কাজের code এক জায়গায় রাখা যায় এবং
+  প্রয়োজন হলে সেটি বারবার ব্যবহার করা যায়।
+</p>
+
+<p>
+  সহজভাবে বললে, Function হলো এমন একটি code block যা একটি নির্দিষ্ট কাজ সম্পন্ন করে।
+</p>
+
+
+<div class="info-box">
+
+  <strong>এই article-এ আপনি শিখবেন:</strong>
+
+  <ul>
+    <li>Function কী</li>
+    <li>Function কেন ব্যবহার করা হয়</li>
+    <li>Function তৈরি করার নিয়ম</li>
+    <li>Function call করা</li>
+    <li>Parameter এবং Argument</li>
+    <li>Return statement</li>
+    <li>Multiple parameter</li>
+    <li>Default parameter</li>
+    <li>Arrow Function</li>
+    <li>HTML-এর সাথে Function ব্যবহার</li>
+    <li>Common mistakes</li>
+    <li>Beginner practice project</li>
+  </ul>
+
+</div>
+
+
+<h2>1. JavaScript Function কী?</h2>
+
+<p>
+  Function হলো reusable code block।
+  অর্থাৎ একটি কাজের জন্য code লিখে সেটিকে একটি নাম দেওয়া যায়।
+  পরে সেই নাম ব্যবহার করে function চালানো যায়।
+</p>
+
+<pre><code>function sayHello() {
+```
+
+console.log("Hello Munna!");
+}</code></pre>
+
+```
+<h2>2. Function কেন ব্যবহার করা হয়?</h2>
+
+<p>
+  একই code বারবার লেখার পরিবর্তে function ব্যবহার করলে code ছোট,
+  পরিষ্কার এবং সহজে পরিচালনা করা যায়।
+</p>
+
+<p>উদাহরণ:</p>
+
+<pre><code>function welcome() {
+```
+
+console.log("Welcome to Munna Tech");
+}</code></pre>
+
+```
+<p>
+  এখন প্রয়োজন অনুযায়ী <code>welcome()</code> লিখে function চালানো যাবে।
+</p>
+
+
+<h2>3. Function তৈরি করার Syntax</h2>
+
+<pre><code>function functionName() {
+```
+
+// code এখানে থাকবে
+
+}</code></pre>
+
+```
+<p>
+  এখানে <code>function</code> হলো keyword এবং
+  <code>functionName</code> হলো function-এর নাম।
+</p>
+
+
+<h2>4. Function Call কী?</h2>
+
+<p>
+  Function তৈরি করলেই সেটি নিজে থেকে সবসময় execute হয় না।
+  Function চালানোর জন্য function call করতে হয়।
+</p>
+
+<pre><code>function sayHello() {
+```
+
+console.log("Hello!");
+
+}
+
+sayHello();</code></pre>
+
+```
+<p>
+  এখানে <code>sayHello()</code> হলো function call।
+</p>
+
+
+<h2>5. Simple Function Example</h2>
+
+<pre><code>function showMessage() {
+```
+
+console.log("JavaScript শিখছি");
+
+}
+
+showMessage();</code></pre>
+
+```
+<h2>6. Function-এর ভিতরে একাধিক Code</h2>
+
+<pre><code>function studentInfo() {
+```
+
+let name = "Munna";
+let age = 20;
+
+console.log(name);
+console.log(age);
+
+}
+
+studentInfo();</code></pre>
+
+```
+<h2>7. Parameter কী?</h2>
+
+<p>
+  Function-এর parentheses-এর মধ্যে যে variable লেখা হয় তাকে
+  <strong>Parameter</strong> বলা হয়।
+</p>
+
+<pre><code>function greet(name) {
+```
+
+console.log("Hello " + name);
+
+}</code></pre>
+
+```
+<p>
+  এখানে <code>name</code> হলো parameter।
+</p>
+
+
+<h2>8. Argument কী?</h2>
+
+<p>
+  Function call করার সময় parameter-এর জন্য যে actual value পাঠানো হয়
+  তাকে <strong>Argument</strong> বলা হয়।
+</p>
+
+<pre><code>function greet(name) {
+```
+
+console.log("Hello " + name);
+
+}
+
+greet("Munna");</code></pre>
+
+```
+<p>
+  এখানে <code>"Munna"</code> হলো argument।
+</p>
+
+
+<h2>9. Multiple Parameters</h2>
+
+<p>
+  একটি function-এ একাধিক parameter থাকতে পারে।
+</p>
+
+<pre><code>function student(name, age) {
+```
+
+console.log("Name: " + name);
+console.log("Age: " + age);
+
+}
+
+student("Munna", 20);</code></pre>
+
+```
+<h2>10. Function দিয়ে Calculation</h2>
+
+<pre><code>function add(a, b) {
+```
+
+console.log(a + b);
+
+}
+
+add(10, 20);</code></pre>
+
+```
+<p>
+  Output হবে:
+</p>
+
+<pre><code>30</code></pre>
+
+
+<h2>11. Return Statement কী?</h2>
+
+<p>
+  Function থেকে কোনো value বাইরে পাঠানোর জন্য
+  <code>return</code> ব্যবহার করা হয়।
+</p>
+
+<pre><code>function add(a, b) {
+```
+
+return a + b;
+
+}
+
+let result = add(10, 20);
+
+console.log(result);</code></pre>
+
+```
+<p>
+  এখানে function-এর result <code>result</code> variable-এ রাখা হয়েছে।
+</p>
+
+
+<h2>12. Return কেন গুরুত্বপূর্ণ?</h2>
+
+<p>
+  Return ব্যবহার করলে function-এর result অন্য জায়গায় ব্যবহার করা যায়।
+</p>
+
+<pre><code>function multiply(a, b) {
+```
+
+return a * b;
+
+}
+
+let total = multiply(5, 4);
+
+console.log(total);</code></pre>
+
+```
+<p>
+  Output:
+</p>
+
+<pre><code>20</code></pre>
+
+
+<h2>13. String Return করা</h2>
+
+<pre><code>function getName() {
+```
+
+return "Munna";
+
+}
+
+let name = getName();
+
+console.log(name);</code></pre>
+
+```
+<h2>14. Boolean Return করা</h2>
+
+<pre><code>function isAdult(age) {
+```
+
+return age >= 18;
+
+}
+
+console.log(isAdult(20));</code></pre>
+
+```
+<p>
+  এখানে result হবে <code>true</code>।
+</p>
+
+
+<h2>15. Default Parameter</h2>
+
+<p>
+  কোনো argument না পাঠালে default value ব্যবহার করার জন্য
+  default parameter ব্যবহার করা যায়।
+</p>
+
+<pre><code>function greet(name = "Guest") {
+```
+
+console.log("Hello " + name);
+
+}
+
+greet();
+
+greet("Munna");</code></pre>
+
+```
+<h2>16. Function Expression</h2>
+
+<p>
+  Function-কে একটি variable-এর মধ্যেও রাখা যায়।
+</p>
+
+<pre><code>const greet = function() {
+```
+
+console.log("Hello Munna");
+
+};
+
+greet();</code></pre>
+
+```
+<h2>17. Arrow Function</h2>
+
+<p>
+  Modern JavaScript-এ function লেখার একটি সংক্ষিপ্ত syntax হলো
+  <strong>Arrow Function</strong>।
+</p>
+
+<pre><code>const greet = () => {
+```
+
+console.log("Hello Munna");
+
+};
+
+greet();</code></pre>
+
+```
+<h2>18. Arrow Function with Parameter</h2>
+
+<pre><code>const greet = (name) => {
+```
+
+console.log("Hello " + name);
+
+};
+
+greet("Munna");</code></pre>
+
+```
+<h2>19. Short Arrow Function</h2>
+
+<p>
+  যদি function শুধু একটি expression return করে,
+  তাহলে আরও ছোট করে লেখা যায়।
+</p>
+
+<pre><code>const add = (a, b) => a + b;
+```
+
+console.log(add(10, 20));</code></pre>
+
+```
+<h2>20. Function এবং Variable</h2>
+
+<p>
+  Function-এর parameter-এ variable-এর value পাঠানো যায়।
+</p>
+
+<pre><code>const userName = "Munna";
+```
+
+function welcome(name) {
+
+console.log("Welcome " + name);
+
+}
+
+welcome(userName);</code></pre>
+
+```
+<h2>21. Function এবং HTML</h2>
+
+<p>
+  JavaScript function ব্যবহার করে HTML-এর content পরিবর্তন করা যায়।
+</p>
+
+<pre><code>&lt;h2 id="message"&gt;Hello&lt;/h2&gt;
+```
+
+<button onclick="changeMessage()">
+Click Me
+</button>
+
+<script>
+
+function changeMessage() {
+
+document.getElementById("message").innerText =
+"Welcome to Munna Tech!";
+
+}
+
+</script></code></pre>
+
+```
+<h2>22. Live Function Demo</h2>
+
+<div class="demo-box">
+
+  <h2 id="functionDemo">
+    Button চাপুন
+  </h2>
+
+  <button onclick="showWelcome()">
+    Welcome
+  </button>
+
+  <button onclick="showName()">
+    Show Name
+  </button>
+
+  <button onclick="calculateSum()">
+    Calculate
+  </button>
+
+</div>
+
+
+<h2>23. Function দিয়ে দুইটি Number যোগ</h2>
+
+<pre><code>function addNumbers(a, b) {
+```
+
+return a + b;
+
+}
+
+let result = addNumbers(25, 15);
+
+console.log(result);</code></pre>
+
+```
+<h2>24. Function দিয়ে Age Check</h2>
+
+<pre><code>function checkAge(age) {
+```
+
+if (age >= 18) {
+
+```
+return "You are an adult.";
+```
+
+} else {
+
+```
+return "You are under 18.";
+```
+
+}
+
+}
+
+console.log(checkAge(20));</code></pre>
+
+```
+<h2>25. Beginner Mini Project</h2>
+
+<p>
+  এবার function ব্যবহার করে একটি ছোট Greeting Project তৈরি করি।
+</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+```
+
+<html lang="bn">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Greeting App</title>
+
+</head>
+
+<body>
+
+<h1 id="result">Hello</h1>
+
+<button onclick="greetUser()">
+Click Me
+</button>
+
+<script>
+
+```
+function greetUser() {
+
+  const name = "Munna";
+
+  document.getElementById("result").innerText =
+    "Welcome " + name + "!";
+
+}
+```
+
+</script>
+
+</body>
+
+</html></code></pre>
+
+```
+<h2>26. Function Reuse করা</h2>
+
+<p>
+  Function-এর সবচেয়ে বড় সুবিধাগুলোর একটি হলো একই function
+  অনেকবার ব্যবহার করা যায়।
+</p>
+
+<pre><code>function greet(name) {
+```
+
+console.log("Hello " + name);
+
+}
+
+greet("Munna");
+greet("Rahim");
+greet("Karim");</code></pre>
+
+```
+<h2>27. Function Naming Rules</h2>
+
+<ul>
+  <li>Function-এর নাম meaningful হওয়া ভালো</li>
+  <li>Space ব্যবহার করা যাবে না</li>
+  <li>Number দিয়ে নাম শুরু করা যাবে না</li>
+  <li>camelCase ব্যবহার করা যায়</li>
+  <li>নাম দেখে function কী করে বোঝা গেলে code পরিষ্কার থাকে</li>
+</ul>
+
+<pre><code>function calculateTotal() {
+```
+
+}
+
+function showUserName() {
+
+}
+
+function changeBackground() {
+
+}</code></pre>
+
+```
+<h2>28. Common Mistakes</h2>
+
+<ul>
+  <li>Function তৈরি করে call না করা</li>
+  <li>Function name ভুল লেখা</li>
+  <li>Parameter ও argument-এর ধারণা গুলিয়ে ফেলা</li>
+  <li>Return করতে ভুলে যাওয়া</li>
+  <li>Parentheses ভুলে যাওয়া</li>
+  <li>Curly bracket ভুল করা</li>
+  <li>HTML element-এর ID ভুল লেখা</li>
+</ul>
+
+
+<div class="warning-box">
+
+  <strong>Beginner Tip:</strong>
+
+  প্রথমে simple function practice করুন।
+  তারপর parameter, return এবং arrow function শিখুন।
+  প্রতিটি concept নিজে code লিখে পরীক্ষা করলে দ্রুত বুঝতে পারবেন।
+
+</div>
+
+
+<h2>29. Practice Task</h2>
+
+<ol>
+  <li><code>sayHello()</code> নামে একটি function তৈরি করুন</li>
+  <li>Function দিয়ে নিজের নাম console-এ দেখান</li>
+  <li>দুইটি number যোগ করার function তৈরি করুন</li>
+  <li>একটি parameter দিয়ে greeting function তৈরি করুন</li>
+  <li>একটি function থেকে <code>return</code> ব্যবহার করুন</li>
+  <li>একটি button click করলে function চালান</li>
+  <li>শেষে একটি ছোট Greeting App তৈরি করুন</li>
+</ol>
+
+
+<h2>30. Quick Revision</h2>
+
+<ul>
+  <li>Function → reusable code block</li>
+  <li>Function declaration → <code>function name() { }</code></li>
+  <li>Function call → <code>name()</code></li>
+  <li>Parameter → function-এর ভিতরের input variable</li>
+  <li>Argument → function call-এর সময় পাঠানো value</li>
+  <li>Return → function থেকে value ফেরত পাঠায়</li>
+  <li>Arrow Function → function লেখার modern short syntax</li>
+</ul>
+
+
+<h2>31. Frequently Asked Questions</h2>
+
+<div class="faq">
+
+  <h3>JavaScript Function কী?</h3>
+
+  <p>
+    Function হলো reusable code block যা একটি নির্দিষ্ট কাজ সম্পন্ন করতে পারে।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>Function call কী?</h3>
+
+  <p>
+    Function execute করার জন্য function-এর নামের পরে parentheses দিয়ে
+    function call করা হয়।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>Parameter এবং Argument-এর পার্থক্য কী?</h3>
+
+  <p>
+    Function তৈরির সময় যে variable নেওয়া হয় সেটি parameter।
+    Function call করার সময় যে actual value দেওয়া হয় সেটি argument।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>return কী করে?</h3>
+
+  <p>
+    <code>return</code> function থেকে একটি value caller-এর কাছে ফেরত পাঠায়।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>Arrow Function কী?</h3>
+
+  <p>
+    Arrow Function হলো JavaScript-এ function লেখার একটি সংক্ষিপ্ত syntax।
+  </p>
+
+</div>
+
+
+<h2>32. উপসংহার</h2>
+
+<p>
+  JavaScript Function programming-এর একটি গুরুত্বপূর্ণ building block।
+  Function ব্যবহার করলে code reuse করা যায় এবং বড় project-কে ছোট ছোট
+  অংশে ভাগ করে কাজ করা সহজ হয়।
+</p>
+
+<p>
+  JavaScript শেখার পরবর্তী ধাপে Function-এর সাথে DOM, Events,
+  Array এবং Object নিয়ে practice করলে আপনার programming skill আরও শক্ত হবে।
+</p>
+
+
+<h2>আরও পড়ুন</h2>
+
+<div class="related-links">
+
+  <a href="javascript-ki-beginner-guide.html">
+    JavaScript কী? Beginnerদের জন্য সম্পূর্ণ Guide
+  </a>
+
+  <a href="javascript-html-integration-guide.html">
+    JavaScript কীভাবে HTML-এর সাথে কাজ করে?
+  </a>
+
+  <a href="javascript-variable-var-let-const-guide.html">
+    JavaScript Variable: var, let, const
+  </a>
+
+  <a href="javascript-tutorial.html">
+    Complete JavaScript Tutorial
+  </a>
+
+  <a href="css-grid-beginners-guide.html">
+    CSS Grid কী?
+  </a>
+
+  <a href="css-flexbox-beginners-guide.html">
+    CSS Flexbox কী?
+  </a>
+
+</div>
+
+
+<div class="info-box">
+
+  <strong>Munna Tech</strong>
+
+  <p>
+    Web Development এবং PC Tips সহজ বাংলায় শেখার জন্য
+    Munna Tech-এর আরও tutorial ও article পড়ুন।
+  </p>
+
+</div>
+
+
+<!-- Adsterra Native Banner -->
+
+<script async="async"
+  data-cfasync="false"
+  src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js">
+</script>
+
+<div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+```
+
+  </main>
+
+  <footer>
+
+```
+<p>
+  © 2026 Munna Tech — Web Development & PC Tips
+</p>
+```
+
+  </footer>
+
+  <script>
+
+    const darkModeBtn =
+      document.getElementById("darkModeBtn");
+
+    darkModeBtn.addEventListener("click", function () {
+
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+
+        darkModeBtn.textContent = "☀️ Light Mode";
+
+        localStorage.setItem(
+          "darkMode",
+          "enabled"
+        );
+
+      } else {
+
+        darkModeBtn.textContent = "🌙 Dark Mode";
+
+        localStorage.setItem(
+          "darkMode",
+          "disabled"
+        );
+
+      }
+
+    });
+
+
+    if (
+      localStorage.getItem("darkMode") === "enabled"
+    ) {
+
+      document.body.classList.add("dark-mode");
+
+      darkModeBtn.textContent =
+        "☀️ Light Mode";
+
+    }
+
+
+    function showWelcome() {
+
+      document.getElementById("functionDemo").innerText =
+        "Welcome to Munna Tech!";
+
+    }
+
+
+    function showName() {
+
+      const name = "Munna";
+
+      document.getElementById("functionDemo").innerText =
+        "My name is " + name;
+
+    }
+
+
+    function calculateSum() {
+
+      function add(a, b) {
+        return a + b;
+      }
+
+      const result = add(25, 15);
+
+      document.getElementById("functionDemo").innerText =
+        "25 + 15 = " + result;
+
+    }
+
+  </script>
+
+</body>
+</html>
