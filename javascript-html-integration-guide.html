@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>JavaScript কীভাবে HTML-এর সাথে কাজ করে? | Munna Tech</title>
+
+  <meta name="description" content="JavaScript কীভাবে HTML-এর সাথে কাজ করে তা সহজ বাংলায় শিখুন। Script tag, DOM, button click, text change, image change, input এবং event listener সহ beginner guide।">
+
+  <meta name="keywords" content="JavaScript HTML, JavaScript HTML বাংলা, JavaScript কীভাবে HTML এর সাথে কাজ করে, JavaScript DOM বাংলা, JavaScript tutorial বাংলা, JavaScript beginners">
+
+  <meta name="author" content="Munna Tech">
+
+  <meta property="og:title" content="JavaScript কীভাবে HTML-এর সাথে কাজ করে? | Munna Tech">
+  <meta property="og:description" content="JavaScript এবং HTML-এর সম্পর্ক সহজ বাংলায় শিখুন। DOM, button click, text change এবং event listener সহ সম্পূর্ণ beginner guide।">
+  <meta property="og:type" content="article">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .article-container h1 {
+      font-size: 36px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .article-container h2 {
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
+
+    .article-container p,
+    .article-container li {
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .article-container pre {
+      background: #111827;
+      color: #ffffff;
+      padding: 18px;
+      border-radius: 10px;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    .article-container code {
+      background: #f1f5f9;
+      padding: 3px 6px;
+      border-radius: 5px;
+    }
+
+    .article-container pre code {
+      background: transparent;
+      padding: 0;
+    }
+
+    .info-box {
+      padding: 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      background: #eef6ff;
+      border-left: 5px solid #2563eb;
+    }
+
+    .warning-box {
+      padding: 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      background: #fff7ed;
+      border-left: 5px solid #f97316;
+    }
+
+    .demo-box {
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .demo-box button {
+      padding: 10px 20px;
+      margin: 6px;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .demo-box input {
+      padding: 10px;
+      width: 80%;
+      max-width: 400px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .faq {
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      background: #f8fafc;
+    }
+
+    .related-links a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 700px) {
+      .article-container h1 {
+        font-size: 28px;
+      }
+
+      .article-container p,
+      .article-container li {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Munna Tech</div>
+
+```
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="html-tutorial.html">HTML</a>
+    <a href="css-tutorial.html">CSS</a>
+    <a href="javascript-tutorial.html">JavaScript</a>
+    <a href="pc-tips.html">PC Tips</a>
+    <a href="index.html#contact">Contact</a>
+    <button id="darkModeBtn">🌙 Dark Mode</button>
+  </div>
+</nav>
+```
+
+  </header>
+
+  <main class="article-container">
+
+```
+<h1>JavaScript কীভাবে HTML-এর সাথে কাজ করে?</h1>
+
+<p>
+  HTML দিয়ে আমরা website-এর structure তৈরি করি এবং JavaScript ব্যবহার করে
+  সেই HTML element-গুলোকে পরিবর্তন ও control করতে পারি।
+</p>
+
+<p>
+  Beginner হিসেবে JavaScript শেখার সময় HTML-এর সাথে JavaScript-এর
+  সম্পর্ক বোঝা খুবই গুরুত্বপূর্ণ। কারণ browser-এর HTML document-এর
+  বিভিন্ন element JavaScript-এর মাধ্যমে পরিবর্তন করা যায়।
+</p>
+
+
+<div class="info-box">
+
+  <strong>এই article-এ আপনি শিখবেন:</strong>
+
+  <ul>
+    <li>HTML ও JavaScript-এর সম্পর্ক</li>
+    <li>Script tag কী</li>
+    <li>Internal JavaScript</li>
+    <li>External JavaScript</li>
+    <li>DOM কী</li>
+    <li>getElementById()</li>
+    <li>querySelector()</li>
+    <li>HTML text পরিবর্তন</li>
+    <li>CSS style পরিবর্তন</li>
+    <li>Button click event</li>
+    <li>Input থেকে data নেওয়া</li>
+    <li>Event Listener</li>
+    <li>একটি ছোট project</li>
+  </ul>
+
+</div>
+
+
+<h2>1. HTML এবং JavaScript-এর সম্পর্ক</h2>
+
+<p>
+  HTML website-এর বিভিন্ন element তৈরি করে। যেমন:
+</p>
+
+<ul>
+  <li>Heading</li>
+  <li>Paragraph</li>
+  <li>Button</li>
+  <li>Image</li>
+  <li>Input</li>
+  <li>Form</li>
+  <li>Div</li>
+</ul>
+
+<p>
+  JavaScript এই element-গুলোকে খুঁজে বের করে তাদের content, style,
+  value অথবা behavior পরিবর্তন করতে পারে।
+</p>
+
+
+<h2>2. Script Tag কী?</h2>
+
+<p>
+  HTML-এর মধ্যে JavaScript যুক্ত করার জন্য সাধারণত
+  <code>&lt;script&gt;</code> tag ব্যবহার করা হয়।
+</p>
+
+<pre><code>&lt;script&gt;
+```
+
+alert("Hello Munna Tech!");
+
+</script></code></pre>
+
+```
+<p>
+  Browser এই script-এর ভিতরের JavaScript code execute করবে।
+</p>
+
+
+<h2>3. Internal JavaScript</h2>
+
+<p>
+  HTML file-এর মধ্যেই JavaScript লিখলে সেটিকে Internal JavaScript বলা হয়।
+</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+```
+
+<html>
+
+<body>
+
+<h1>My Website</h1>
+
+<script>
+
+```
+alert("Welcome!");
+```
+
+</script>
+
+</body>
+
+</html></code></pre>
+
+```
+<h2>4. External JavaScript</h2>
+
+<p>
+  বড় project-এর ক্ষেত্রে JavaScript আলাদা file-এ রাখা সুবিধাজনক।
+</p>
+
+<p>
+  ধরুন JavaScript file-এর নাম:
+</p>
+
+<pre><code>script.js</code></pre>
+
+<p>
+  HTML-এর সাথে যুক্ত করতে:
+</p>
+
+<pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+
+<p>
+  এতে HTML এবং JavaScript আলাদা রাখা যায় এবং project maintain করা সহজ হয়।
+</p>
+
+
+<h2>5. DOM কী?</h2>
+
+<p>
+  DOM-এর পূর্ণরূপ হলো <strong>Document Object Model</strong>।
+</p>
+
+<p>
+  Browser HTML document-কে একটি object structure হিসেবে তৈরি করে।
+  JavaScript এই DOM ব্যবহার করে HTML element খুঁজে বের করতে এবং
+  পরিবর্তন করতে পারে।
+</p>
+
+<div class="info-box">
+  <strong>সহজভাবে:</strong>
+  HTML হলো page-এর structure আর DOM হলো JavaScript-এর মাধ্যমে সেই
+  structure-এর element-গুলোর সাথে কাজ করার একটি interface।
+</div>
+
+
+<h2>6. getElementById()</h2>
+
+<p>
+  HTML-এর কোনো element-এর <code>id</code> ব্যবহার করে সেটিকে খুঁজে
+  বের করতে <code>getElementById()</code> ব্যবহার করা যায়।
+</p>
+
+<pre><code>&lt;h2 id="title"&gt;Hello&lt;/h2&gt;
+```
+
+<script>
+
+const title = document.getElementById("title");
+
+</script></code></pre>
+
+```
+<h2>7. HTML Text পরিবর্তন</h2>
+
+<p>
+  JavaScript দিয়ে HTML element-এর text পরিবর্তন করা যায়।
+</p>
+
+<pre><code>&lt;h2 id="title"&gt;Old Text&lt;/h2&gt;
+```
+
+<script>
+
+document.getElementById("title").innerText =
+"New Text";
+
+</script></code></pre>
+
+```
+<h2>8. Button Click করে Text পরিবর্তন</h2>
+
+<pre><code>&lt;h2 id="title"&gt;Hello!&lt;/h2&gt;
+```
+
+<button onclick="changeText()">
+Change Text
+</button>
+
+<script>
+
+function changeText() {
+
+document.getElementById("title").innerText =
+"Text Changed!";
+
+}
+
+</script></code></pre>
+
+```
+<h2>9. JavaScript দিয়ে CSS Style পরিবর্তন</h2>
+
+<p>
+  JavaScript দিয়ে কোনো HTML element-এর style-ও পরিবর্তন করা যায়।
+</p>
+
+<pre><code>&lt;h2 id="title"&gt;Munna Tech&lt;/h2&gt;
+```
+
+<script>
+
+document.getElementById("title").style.fontSize =
+"40px";
+
+</script></code></pre>
+
+```
+<h2>10. Button দিয়ে Style পরিবর্তন</h2>
+
+<pre><code>&lt;h2 id="title"&gt;Munna Tech&lt;/h2&gt;
+```
+
+<button onclick="changeStyle()">
+Change Style
+</button>
+
+<script>
+
+function changeStyle() {
+
+const title =
+document.getElementById("title");
+
+title.style.fontSize = "40px";
+title.style.textAlign = "center";
+
+}
+
+</script></code></pre>
+
+```
+<h2>11. querySelector()</h2>
+
+<p>
+  CSS selector ব্যবহার করে HTML element খুঁজে বের করার জন্য
+  <code>querySelector()</code> ব্যবহার করা যায়।
+</p>
+
+<pre><code>&lt;h2 class="title"&gt;Munna Tech&lt;/h2&gt;
+```
+
+<script>
+
+const title =
+document.querySelector(".title");
+
+</script></code></pre>
+
+```
+<h2>12. Input থেকে Value নেওয়া</h2>
+
+<p>
+  User input দিলে JavaScript সেই input-এর value পড়তে পারে।
+</p>
+
+<pre><code>&lt;input id="nameInput" type="text"&gt;
+```
+
+<button onclick="showName()">
+Submit
+</button>
+
+<script>
+
+function showName() {
+
+const name =
+document.getElementById("nameInput").value;
+
+alert(name);
+
+}
+
+</script></code></pre>
+
+```
+<h2>13. Input এবং HTML একসাথে ব্যবহার</h2>
+
+<pre><code>&lt;input id="nameInput" type="text"
+```
+
+placeholder="Enter your name">
+
+<button onclick="showName()">
+Show Name
+</button>
+
+<h2 id="result"></h2>
+
+<script>
+
+function showName() {
+
+const name =
+document.getElementById("nameInput").value;
+
+document.getElementById("result").innerText =
+"Hello " + name + "!";
+
+}
+
+</script></code></pre>
+
+```
+<h2>14. Event কী?</h2>
+
+<p>
+  Website-এ user কোনো action করলে সেটিকে event বলা হয়।
+</p>
+
+<p>উদাহরণ:</p>
+
+<ul>
+  <li>Button click</li>
+  <li>Mouse move</li>
+  <li>Keyboard press</li>
+  <li>Input change</li>
+  <li>Form submit</li>
+</ul>
+
+
+<h2>15. addEventListener()</h2>
+
+<p>
+  JavaScript-এ event handle করার জন্য <code>addEventListener()</code>
+  ব্যবহার করা যায়।
+</p>
+
+<pre><code>&lt;button id="myButton"&gt;
+```
+
+Click Me
+</button>
+
+<script>
+
+const button =
+document.getElementById("myButton");
+
+button.addEventListener("click", function() {
+
+alert("Button clicked!");
+
+});
+
+</script></code></pre>
+
+```
+<h2>16. JavaScript দিয়ে Image পরিবর্তন</h2>
+
+<p>
+  JavaScript ব্যবহার করে HTML image-এর <code>src</code> পরিবর্তন করা যায়।
+</p>
+
+<pre><code>&lt;img id="myImage"
+```
+
+src="image1.jpg"
+width="300">
+
+<button onclick="changeImage()">
+Change Image
+</button>
+
+<script>
+
+function changeImage() {
+
+document.getElementById("myImage").src =
+"image2.jpg";
+
+}
+
+</script></code></pre>
+
+```
+<h2>17. JavaScript দিয়ে HTML Content যোগ করা</h2>
+
+<p>
+  <code>innerHTML</code> ব্যবহার করে কোনো element-এর HTML content
+  পরিবর্তন করা যায়।
+</p>
+
+<pre><code>&lt;div id="box"&gt;&lt;/div&gt;
+```
+
+<script>
+
+document.getElementById("box").innerHTML =
+"<strong>Hello Munna Tech!</strong>";
+
+</script></code></pre>
+
+```
+<h2>18. একটি Live Demo</h2>
+
+<div class="demo-box">
+
+  <h2 id="demoTitle">Hello Munna Tech!</h2>
+
+  <button onclick="changeDemoText()">
+    Change Text
+  </button>
+
+  <button onclick="changeDemoStyle()">
+    Change Style
+  </button>
+
+</div>
+
+
+<h2>19. Input-এর Live Demo</h2>
+
+<div class="demo-box">
+
+  <input
+    id="demoInput"
+    type="text"
+    placeholder="এখানে আপনার নাম লিখুন"
+  >
+
+  <br>
+
+  <button onclick="showDemoName()">
+    Show Name
+  </button>
+
+  <h3 id="demoResult"></h3>
+
+</div>
+
+
+<h2>20. ছোট একটি সম্পূর্ণ Project</h2>
+
+<p>
+  নিচের project-এ HTML, CSS এবং JavaScript একসাথে কাজ করছে।
+  User-এর নাম input দিলে JavaScript সেই নাম HTML-এর মধ্যে দেখাবে।
+</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+```
+
+<html>
+
+<head>
+
+<title>Name Project</title>
+
+</head>
+
+<body>
+
+<h1>Welcome</h1>
+
+<input
+id="name"
+type="text"
+placeholder="Your Name"
+>
+
+<button onclick="welcomeUser()">
+Submit
+</button>
+
+<h2 id="message"></h2>
+
+<script>
+
+function welcomeUser() {
+
+```
+const name =
+  document.getElementById("name").value;
+
+document.getElementById("message").innerText =
+  "Welcome, " + name + "!";
+```
+
+}
+
+</script>
+
+</body>
+
+</html></code></pre>
+
+```
+<h2>21. Common Mistakes</h2>
+
+<ul>
+  <li>HTML id এবং JavaScript-এর id এক না রাখা</li>
+  <li>JavaScript file-এর ভুল path দেওয়া</li>
+  <li>Function-এর নাম ভুল লেখা</li>
+  <li>Bracket বন্ধ করতে ভুলে যাওয়া</li>
+  <li>script tag ভুলভাবে লেখা</li>
+  <li>Element তৈরি হওয়ার আগে JavaScript চালানো</li>
+  <li>Variable-এর spelling ভুল করা</li>
+</ul>
+
+
+<div class="warning-box">
+
+  <strong>Beginner Tip:</strong>
+
+  JavaScript code কাজ না করলে Browser-এর
+  <strong>Inspect → Console</strong> খুলে error message দেখুন।
+  অনেক সময় ছোট spelling বা syntax error-এর কারণে code কাজ করে না।
+
+</div>
+
+
+<h2>22. Practice Task</h2>
+
+<p>
+  এখন নিজে এই project তৈরি করার চেষ্টা করুন:
+</p>
+
+<ol>
+  <li>একটি heading তৈরি করুন</li>
+  <li>একটি input box তৈরি করুন</li>
+  <li>একটি button তৈরি করুন</li>
+  <li>Button click করলে input-এর নাম heading-এ দেখান</li>
+  <li>আরেকটি button দিয়ে heading-এর style পরিবর্তন করুন</li>
+</ol>
+
+
+<h2>23. Quick Revision</h2>
+
+<ul>
+  <li><code>&lt;script&gt;</code> → HTML-এ JavaScript যোগ করে</li>
+  <li><code>src</code> → External JavaScript file যুক্ত করে</li>
+  <li><code>getElementById()</code> → ID দিয়ে element খুঁজে</li>
+  <li><code>querySelector()</code> → CSS selector দিয়ে element খুঁজে</li>
+  <li><code>innerText</code> → Text পরিবর্তন করে</li>
+  <li><code>innerHTML</code> → HTML content পরিবর্তন করে</li>
+  <li><code>style</code> → CSS style পরিবর্তন করতে সাহায্য করে</li>
+  <li><code>addEventListener()</code> → Event handle করে</li>
+</ul>
+
+
+<h2>24. Frequently Asked Questions</h2>
+
+<div class="faq">
+
+  <h3>JavaScript কি HTML ছাড়া কাজ করতে পারে?</h3>
+
+  <p>
+    JavaScript আলাদাভাবে বিভিন্ন environment-এ চলতে পারে। তবে browser-based
+    website-এ HTML-এর element-এর সাথে কাজ করার জন্য JavaScript DOM ব্যবহার করে।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>HTML-এর কোথায় JavaScript লিখব?</h3>
+
+  <p>
+    Beginner project-এ <code>&lt;script&gt;</code> tag ব্যবহার করতে পারেন।
+    বড় project-এ আলাদা JavaScript file ব্যবহার করা সুবিধাজনক।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>DOM শেখা কি JavaScript-এর জন্য গুরুত্বপূর্ণ?</h3>
+
+  <p>
+    Browser-based frontend development-এর জন্য DOM-এর basic ধারণা
+    গুরুত্বপূর্ণ, কারণ এর মাধ্যমে HTML element-এর সাথে JavaScript দিয়ে কাজ
+    করা যায়।
+  </p>
+
+</div>
+
+
+<div class="faq">
+
+  <h3>JavaScript দিয়ে কি HTML-এর design পরিবর্তন করা যায়?</h3>
+
+  <p>
+    হ্যাঁ। JavaScript দিয়ে element-এর style, class বা content পরিবর্তন
+    করা যায়।
+  </p>
+
+</div>
+
+
+<h2>25. উপসংহার</h2>
+
+<p>
+  JavaScript এবং HTML একসাথে ব্যবহার করলে একটি static webpage-কে
+  interactive করা যায়। Button click, text change, input, image change,
+  form এবং বিভিন্ন user interaction JavaScript দিয়ে নিয়ন্ত্রণ করা যায়।
+</p>
+
+<p>
+  আপনি যদি Web Development শিখছেন, তাহলে প্রথমে HTML ও CSS-এর basic
+  ভালোভাবে শিখে JavaScript-এর DOM এবং event practice করুন।
+</p>
+
+
+<h2>আরও পড়ুন</h2>
+
+<div class="related-links">
+
+  <a href="javascript-ki-beginner-guide.html">
+    JavaScript কী? Beginnerদের জন্য সম্পূর্ণ Guide
+  </a>
+
+  <a href="javascript-tutorial.html">
+    Complete JavaScript Tutorial
+  </a>
+
+  <a href="css-grid-beginners-guide.html">
+    CSS Grid কী?
+  </a>
+
+  <a href="css-flexbox-beginners-guide.html">
+    CSS Flexbox কী?
+  </a>
+
+  <a href="css-ki-beginner-guide.html">
+    CSS কী? Beginner Guide
+  </a>
+
+  <a href="html-ki-beginner-guide.html">
+    HTML কী? Beginner Guide
+  </a>
+
+</div>
+
+
+<div class="info-box">
+
+  <strong>Munna Tech</strong>
+
+  <p>
+    Web Development এবং PC Tips সহজ বাংলায় শেখার জন্য
+    Munna Tech-এর অন্যান্য tutorial ও article পড়ুন।
+  </p>
+
+</div>
+
+
+<!-- Adsterra Native Banner -->
+
+<script async="async"
+  data-cfasync="false"
+  src="https://pl31509583.profitableratecpmnetwork.com/b741f1fe8be520cb1d272cd9b990d026/invoke.js">
+</script>
+
+<div id="container-b741f1fe8be520cb1d272cd9b990d026"></div>
+```
+
+  </main>
+
+  <footer>
+
+```
+<p>
+  © 2026 Munna Tech — Web Development & PC Tips
+</p>
+```
+
+  </footer>
+
+  <script>
+
+    const darkModeBtn =
+      document.getElementById("darkModeBtn");
+
+    darkModeBtn.addEventListener("click", function () {
+
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+
+        darkModeBtn.textContent = "☀️ Light Mode";
+
+        localStorage.setItem(
+          "darkMode",
+          "enabled"
+        );
+
+      } else {
+
+        darkModeBtn.textContent = "🌙 Dark Mode";
+
+        localStorage.setItem(
+          "darkMode",
+          "disabled"
+        );
+
+      }
+
+    });
+
+
+    if (
+      localStorage.getItem("darkMode") === "enabled"
+    ) {
+
+      document.body.classList.add("dark-mode");
+
+      darkModeBtn.textContent =
+        "☀️ Light Mode";
+
+    }
+
+
+    function changeDemoText() {
+
+      document.getElementById("demoTitle").innerText =
+        "JavaScript HTML-এর সাথে কাজ করছে! 🚀";
+
+    }
+
+
+    function changeDemoStyle() {
+
+      const title =
+        document.getElementById("demoTitle");
+
+      title.style.fontSize = "32px";
+      title.style.textAlign = "center";
+
+    }
+
+
+    function showDemoName() {
+
+      const name =
+        document.getElementById("demoInput").value;
+
+      document.getElementById("demoResult").innerText =
+        "Hello " + name + "!";
+
+    }
+
+  </script>
+
+</body>
+</html>
