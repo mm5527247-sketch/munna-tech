@@ -1,61 +1,50 @@
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <url>
-        <loc>https://mm5527247-sketch.github.io/munna-tech/</loc>
-    </url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/</loc></url>
 
-    <url>
-        <loc>https://mm5527247-sketch.github.io/munna-tech/html-tutorial.html</loc>
-    </url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/html-tutorial.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/css-tutorial.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/javascript-tutorial.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/pc-tips.html</loc></url>
 
-    <url>
-        <loc>https://mm5527247-sketch.github.io/munna-tech/css-tutorial.html</loc>
-    </url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/html-ki-beginner-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/html-diye-website-bananor-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/html-tags-beginners-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/html-heading-paragraph-link-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/html-image-beginners-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/html-form-beginners-guide.html</loc></url>
 
-    <url>
-        <loc>https://mm5527247-sketch.github.io/munna-tech/javascript-tutorial.html</loc>
-    </url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/css-ki-beginner-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/css-diye-website-design-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/css-color-font-text-style-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/css-box-model-beginners-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/css-flexbox-beginners-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/css-grid-beginners-guide.html</loc></url>
 
-    <url>
-        <loc>https://mm5527247-sketch.github.io/munna-tech/pc-tips.html</loc>
-    </url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/javascript-ki-beginner-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/javascript-html-integration-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/javascript-variable-var-let-const-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/javascript-function-beginners-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/javascript-button-click-event-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/javascript-calculator-beginners-guide.html</loc></url>
 
-    <url>
-        <loc>https://mm5527247-sketch.github.io/munna-tech/windows-11-speed.html</loc>
-    </url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/web-development-ki-beginner-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/frontend-developer-ki-koren.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/vs-code-install-use-beginners-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/windows-11-keyboard-shortcuts-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/pc-slow-windows-fast-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/windows-11-startup-apps-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/windows-11-screenshot-7-ways.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/windows-11-hidden-files-show-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/chrome-browser-fast-10-tips.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/pc-software-install-beginners-guide.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/web-development-beginner-roadmap.html</loc></url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/web-development-freelancing-beginner-guide.html</loc></url>
 
-    <url>
-        <loc>https://mm5527247-sketch.github.io/munna-tech/pc-slow-fix.html</loc>
-    </url>
-
-    <url>
-        <loc>https://mm5527247-sketch.github.io/munna-tech/html-beginner-guide.html</loc>
-    </url>
-
-    <url>
-        <loc>https://mm5527247-sketch.github.io/munna-tech/css-beginner-guide.html</loc>
-    </url>
-
-    <url>
-        <loc>https://mm5527247-sketch.github.io/munna-tech/javascript-beginner-guide.html</loc>
-    </url>
-
-    <url>
-        <loc>https://mm5527247-sketch.github.io/munna-tech/vscode-html-beginner-guide.html</loc>
-    </url>
-
-    <url>
-        <loc>https://mm5527247-sketch.github.io/munna-tech/windows-11-pc-fast-guide.html</loc>
-    </url>
-
-    <url>
-        <loc>https://mm5527247-sketch.github.io/munna-tech/windows-11-slow-reasons.html</loc>
-    </url>
-
-    <url>
-        <loc>https://mm5527247-sketch.github.io/munna-tech/privacy-policy.html</loc>
-    </url>
+    <url><loc>https://mm5527247-sketch.github.io/munna-tech/privacy-policy.html</loc></url>
 
 </urlset>
+```
